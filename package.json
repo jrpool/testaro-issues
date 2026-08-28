@@ -1,0 +1,34 @@
+{
+  "name": "testaro-issues",
+  "version": "0.1.0",
+  "description": "A classification of about 1300 rules of 10 rule engines into about 300 issues. The rule engines are those in the ensemble of Testaro, which tests web pages for front-end quality (accessibility, usability, and standards conformance).",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "accessibility",
+    "usability",
+    "web",
+    "testing",
+    "testaro",
+    "testilo"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tsdown": "^0.22.14",
+    "typescript": "^7.0.0"
+  }
+}
