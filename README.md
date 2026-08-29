@@ -54,10 +54,6 @@ The `issues` and `rules` objects represent more than a thousand individual decis
 
 ## Development
 
-Clone the repository and install the dev dependencies:
-
-`npm install`
-
-Build the CommonJS and ESM bundles plus type declarations into `dist/`:
-
-`npm run build`
+- Clone the repository.
+- Install the dev dependencies: `npm install`.
+- Build the CommonJS and ESM bundles plus type declarations into `dist/`: `npm run build`
