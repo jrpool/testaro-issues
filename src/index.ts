@@ -9727,3 +9727,9 @@ export const makeIssueRules = (
 };
 
 export const issueRules = makeIssueRules(rules);
+
+export const getEditableData = () => ({
+  issues: structuredClone(issues),
+  rules: structuredClone(rules),
+  issueRules: structuredClone(issueRules)
+});
