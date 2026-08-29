@@ -1,3 +1,5 @@
+// INTERFACES
+
 interface Issue {
   summary: string;
   why: string;
@@ -6,13 +8,29 @@ interface Issue {
   max?: number;
 }
 
-const deepFreeze = <T>(obj: T): T => {
-  Object.values(obj as object).forEach(value => {
-    if (value && typeof value === 'object') deepFreeze(value);
-  });
-  return Object.freeze(obj);
-};
+export interface IssueRuleGroup {
+  invariant: string[];
+  variable: string[];
+}
 
+interface RuleEntry {
+  issueID: IssueID;
+  quality: number;
+  what: string;
+}
+
+interface ToolRules {
+  invariant: Record<string, RuleEntry>;
+  variable: Record<string, RuleEntry>;
+}
+
+// TYPES
+
+type IssueID = keyof typeof issuesData;
+
+// DATA
+
+// Data for the issues object.
 const issuesData = {
   'ignorable': {
     'summary': 'ignorable',
@@ -2229,21 +2247,7 @@ const issuesData = {
   }
 } as const;
 
-export const issues: Readonly<Record<string, Issue>> = deepFreeze(issuesData);
-
-type IssueID = keyof typeof issuesData;
-
-interface RuleEntry {
-  issueID: IssueID;
-  quality: number;
-  what: string;
-}
-
-interface ToolRules {
-  invariant: Record<string, RuleEntry>;
-  variable: Record<string, RuleEntry>;
-}
-
+// Data for the rules object.
 const rulesData = {
   'alfa': {
     'invariant': {
@@ -9700,36 +9704,71 @@ const rulesData = {
   }
 } as const;
 
+// FUNCTIONS
+
+// Freezes an object and all its nested objects recursively
+const deepFreeze = <T>(obj: T): T => {
+  Object.values(obj as object).forEach(value => {
+    if (value && typeof value === 'object') deepFreeze(value);
+  });
+  return Object.freeze(obj);
+};
+
+// Create the issues object from its data.
+export const issues: Readonly<Record<string, Issue>> = deepFreeze(issuesData);
+
+// Create the rules object from its data.
 export const rules: Readonly<Record<string, ToolRules>> = deepFreeze(rulesData);
 
-export interface IssueRuleGroup {
-  invariant: string[];
-  variable: string[];
-}
-
+// Creates an issueRules object to facilitate issue-to-rules searches.
 export const makeIssueRules = (
-  ruleTable: Record<string, ToolRules>
+  ruleTable: Record<string, ToolRules>,
+  issueTable: Record<string, Issue> = issues
 ): Record<string, Record<string, IssueRuleGroup>> => {
+  const errors: string[] = [];
+  const checkEntry = (toolID: string, groupName: string, ruleID: string, entry: RuleEntry) => {
+    const {issueID, quality, what} = entry as unknown as Record<string, unknown>;
+    if (typeof issueID !== 'string' || !(issueID in issueTable)) {
+      errors.push(`${toolID}.${groupName}.${ruleID} has an invalid issueID (${JSON.stringify(issueID)})`);
+    }
+    if (typeof quality !== 'number') {
+      errors.push(`${toolID}.${groupName}.${ruleID} has a non-numeric quality (${JSON.stringify(quality)})`);
+    }
+    if (typeof what !== 'string') {
+      errors.push(`${toolID}.${groupName}.${ruleID} has a non-string what (${JSON.stringify(what)})`);
+    }
+  };
   const issueRules: Record<string, Record<string, IssueRuleGroup>> = {};
   Object.entries(ruleTable).forEach(([toolID, {invariant, variable}]) => {
-    Object.entries(invariant).forEach(([ruleID, {issueID}]) => {
+    Object.entries(invariant).forEach(([ruleID, entry]) => {
+      checkEntry(toolID, 'invariant', ruleID, entry);
+      const {issueID} = entry;
       issueRules[issueID] ??= {};
       issueRules[issueID][toolID] ??= {invariant: [], variable: []};
       issueRules[issueID][toolID].invariant.push(ruleID);
     });
-    Object.entries(variable).forEach(([ruleID, {issueID}]) => {
+    Object.entries(variable).forEach(([ruleID, entry]) => {
+      checkEntry(toolID, 'variable', ruleID, entry);
+      const {issueID} = entry;
       issueRules[issueID] ??= {};
       issueRules[issueID][toolID] ??= {invariant: [], variable: []};
       issueRules[issueID][toolID].variable.push(ruleID);
     });
   });
+  if (errors.length) {
+    throw new Error(`${errors[0]} (1 of ${errors.length} problems found)`);
+  }
   return issueRules;
 };
 
-export const issueRules = makeIssueRules(rules);
-
+// Returns deep copies of the objects, none frozen.
 export const getEditableData = () => ({
   issues: structuredClone(issues),
   rules: structuredClone(rules),
   issueRules: structuredClone(issueRules)
 });
+
+// EXECUTION
+
+// Create an issueRules object.
+export const issueRules = makeIssueRules(rules);
