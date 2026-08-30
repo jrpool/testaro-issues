@@ -23,7 +23,7 @@ interface RuleEntry {
   what: string;
 }
 
-interface ToolRules {
+interface EngineRules {
   invariant: Record<string, RuleEntry>;
   variable: Record<string, RuleEntry>;
 }
@@ -9718,11 +9718,11 @@ const deepFreeze = <T>(obj: T): T => {
 export const issues: Readonly<Record<string, Issue>> = deepFreeze(issuesData);
 
 // Create the rules object from its data.
-export const rules: Readonly<Record<string, ToolRules>> = deepFreeze(rulesData);
+export const rules: Readonly<Record<string, EngineRules>> = deepFreeze(rulesData);
 
 // Creates an issueRules object to facilitate issue-to-rules searches.
 export const makeIssueRules = (
-  ruleTable: Record<string, ToolRules>,
+  ruleTable: Record<string, EngineRules>,
   issueTable: Record<string, Issue> = issues
 ): Record<string, Record<string, IssueRuleGroup>> => {
   const errors: string[] = [];
