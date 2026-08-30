@@ -1,3 +1,7 @@
+// TYPES
+
+type IssueID = keyof typeof issuesData;
+
 // INTERFACES
 
 interface Issue {
@@ -23,10 +27,6 @@ interface ToolRules {
   invariant: Record<string, RuleEntry>;
   variable: Record<string, RuleEntry>;
 }
-
-// TYPES
-
-type IssueID = keyof typeof issuesData;
 
 // DATA
 
@@ -4743,7 +4743,7 @@ const rulesData = {
       }
     },
     'variable': {
-      'E-^AAA.4_1_2.H91.Input[-a-zA-Z]+.Name': {
+      'E-AAA\\.4_1_2\\.H91\\.Input[-a-zA-Z]+\\.Name': {
         'issueID': 'inputNoText',
         'quality': 1,
         'what': 'input element has no accessible name'
@@ -6419,7 +6419,7 @@ const rulesData = {
         'quality': 1,
         'what': 'script-src content attribute blocks a script'
       },
-      'Discarding unrecognized token .+ from value of attribute role. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
+      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
         'issueID': 'roleBad',
         'quality': 1,
         'what': 'Invalid role'
@@ -6479,7 +6479,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Attribute has an empty value'
       },
-      'Potentially bad value .+ for attribute .+ on element .+Typo for .+?.*': {
+      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?.*': {
         'issueID': 'attributeValueRisk',
         'quality': 1,
         'what': 'Attribute value may be a typographical error'
@@ -6734,7 +6734,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Invalid closing tag'
       },
-      'End tag [a-z]+.': {
+      'End tag [a-z]+\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Closing tag of an ineligible element'
@@ -7965,7 +7965,7 @@ const rulesData = {
         'quality': 1,
         'what': 'script-src content attribute blocks a script'
       },
-      'Discarding unrecognized token .+ from value of attribute role. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
+      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
         'issueID': 'roleBad',
         'quality': 1,
         'what': 'Invalid role'
@@ -8025,7 +8025,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Attribute has an empty value'
       },
-      'Potentially bad value .+ for attribute .+ on element .+Typo for .+?.*': {
+      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?.*': {
         'issueID': 'attributeValueRisk',
         'quality': 1,
         'what': 'Attribute value may be a typographical error'
@@ -8280,7 +8280,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Invalid closing tag'
       },
-      'End tag [a-z]+.': {
+      'End tag [a-z]+\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Closing tag of an ineligible element'
@@ -9726,16 +9726,35 @@ export const makeIssueRules = (
   issueTable: Record<string, Issue> = issues
 ): Record<string, Record<string, IssueRuleGroup>> => {
   const errors: string[] = [];
-  const checkEntry = (toolID: string, groupName: string, ruleID: string, entry: RuleEntry) => {
+  const checkEntry = (
+    toolID: string,
+    variabilityName: string,
+    ruleID: string,
+    entry: RuleEntry
+  ) => {
     const {issueID, quality, what} = entry as unknown as Record<string, unknown>;
-    if (typeof issueID !== 'string' || !(issueID in issueTable)) {
-      errors.push(`${toolID}.${groupName}.${ruleID} has an invalid issueID (${JSON.stringify(issueID)})`);
+    if (!ruleID.length) {
+      errors.push(`${toolID}.${variabilityName} has a rule with an empty ruleID`);
+    }
+    if (typeof issueID !== 'string' || !issueID.length || !(issueID in issueTable)) {
+      errors.push(`${toolID}.${variabilityName}.${ruleID} has an invalid issueID (${JSON.stringify(issueID)})`);
     }
     if (typeof quality !== 'number') {
-      errors.push(`${toolID}.${groupName}.${ruleID} has a non-numeric quality (${JSON.stringify(quality)})`);
+      errors.push(`${toolID}.${variabilityName}.${ruleID} has a non-numeric quality (${JSON.stringify(quality)})`);
     }
-    if (typeof what !== 'string') {
-      errors.push(`${toolID}.${groupName}.${ruleID} has a non-string what (${JSON.stringify(what)})`);
+    if (typeof what !== 'string' || !what.length) {
+      errors.push(`${toolID}.${variabilityName}.${ruleID} has a non-string or empty what (${JSON.stringify(what)})`);
+    }
+    if (variabilityName === 'variable') {
+      if (!/[.*+?^${}()|[\]\\]/.test(ruleID)) {
+        errors.push(`${toolID}.${variabilityName}.${ruleID} has no regex metacharacters, so it should be an invariant rule`);
+      } else {
+        try {
+          new RegExp(ruleID);
+        } catch (error) {
+          errors.push(`${toolID}.${variabilityName}.${ruleID} is not a valid regular expression (${(error as Error).message})`);
+        }
+      }
     }
   };
   const issueRules: Record<string, Record<string, IssueRuleGroup>> = {};
