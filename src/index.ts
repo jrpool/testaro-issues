@@ -9727,51 +9727,51 @@ export const makeIssueRules = (
 ): Record<string, Record<string, IssueRuleGroup>> => {
   const errors: string[] = [];
   const checkEntry = (
-    toolID: string,
+    engineID: string,
     variabilityName: string,
     ruleID: string,
     entry: RuleEntry
   ) => {
     const {issueID, quality, what} = entry as unknown as Record<string, unknown>;
     if (!ruleID.length) {
-      errors.push(`${toolID}.${variabilityName} has a rule with an empty ruleID`);
+      errors.push(`${engineID}.${variabilityName} has a rule with an empty ruleID`);
     }
     if (typeof issueID !== 'string' || !issueID.length || !(issueID in issueTable)) {
-      errors.push(`${toolID}.${variabilityName}.${ruleID} has an invalid issueID (${JSON.stringify(issueID)})`);
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid issueID (${JSON.stringify(issueID)})`);
     }
     if (typeof quality !== 'number') {
-      errors.push(`${toolID}.${variabilityName}.${ruleID} has a non-numeric quality (${JSON.stringify(quality)})`);
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-numeric quality (${JSON.stringify(quality)})`);
     }
     if (typeof what !== 'string' || !what.length) {
-      errors.push(`${toolID}.${variabilityName}.${ruleID} has a non-string or empty what (${JSON.stringify(what)})`);
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-string or empty what (${JSON.stringify(what)})`);
     }
     if (variabilityName === 'variable') {
       if (!/[.*+?^${}()|[\]\\]/.test(ruleID)) {
-        errors.push(`${toolID}.${variabilityName}.${ruleID} has no regex metacharacters, so it should be an invariant rule`);
+        errors.push(`${engineID}.${variabilityName}.${ruleID} has no regex metacharacters, so it should be an invariant rule`);
       } else {
         try {
           new RegExp(ruleID);
         } catch (error) {
-          errors.push(`${toolID}.${variabilityName}.${ruleID} is not a valid regular expression (${(error as Error).message})`);
+          errors.push(`${engineID}.${variabilityName}.${ruleID} is not a valid regular expression (${(error as Error).message})`);
         }
       }
     }
   };
   const issueRules: Record<string, Record<string, IssueRuleGroup>> = {};
-  Object.entries(ruleTable).forEach(([toolID, {invariant, variable}]) => {
+  Object.entries(ruleTable).forEach(([engineID, {invariant, variable}]) => {
     Object.entries(invariant).forEach(([ruleID, entry]) => {
-      checkEntry(toolID, 'invariant', ruleID, entry);
+      checkEntry(engineID, 'invariant', ruleID, entry);
       const {issueID} = entry;
       issueRules[issueID] ??= {};
-      issueRules[issueID][toolID] ??= {invariant: [], variable: []};
-      issueRules[issueID][toolID].invariant.push(ruleID);
+      issueRules[issueID][engineID] ??= {invariant: [], variable: []};
+      issueRules[issueID][engineID].invariant.push(ruleID);
     });
     Object.entries(variable).forEach(([ruleID, entry]) => {
-      checkEntry(toolID, 'variable', ruleID, entry);
+      checkEntry(engineID, 'variable', ruleID, entry);
       const {issueID} = entry;
       issueRules[issueID] ??= {};
-      issueRules[issueID][toolID] ??= {invariant: [], variable: []};
-      issueRules[issueID][toolID].variable.push(ruleID);
+      issueRules[issueID][engineID] ??= {invariant: [], variable: []};
+      issueRules[issueID][engineID].variable.push(ruleID);
     });
   });
   if (errors.length) {
