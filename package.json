@@ -1,6 +1,6 @@
 {
   "name": "testaro-issues",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A classification of about 1300 rules of 10 rule engines into about 300 issues. The rule engines are those in the ensemble of Testaro, which tests web pages for front-end quality (accessibility, usability, and standards conformance).",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -15,7 +15,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown src/index.ts --format cjs,esm --dts",
+    "build": "npm run typecheck && tsdown src/index.ts --format cjs,esm --dts",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
