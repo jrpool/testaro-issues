@@ -28,6 +28,8 @@ interface RuleEntry {
   issueID: IssueID;
   quality: number;
   what: string;
+  // If obsolete, the superseding rule ID, or null if none or multiple.
+  supersededBy?: string | null;
 }
 
 // Data about all the rules of a rule engine.
@@ -2286,7 +2288,8 @@ const rulesData = {
       'cantTellTextContrast': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Test of text contrast could not give a conclusive result [invalid]'
+        'what': 'Test of text contrast could not give a conclusive result [invalid]',
+        'supersededBy': null
       },
       'r73': {
         'issueID': 'ignorable',
@@ -2601,7 +2604,8 @@ const rulesData = {
       'cantTell': {
         'issueID': 'notValidatable',
         'quality': 1,
-        'what': 'Test could not give a conclusive result'
+        'what': 'Test could not give a conclusive result',
+        'supersededBy': 'r66'
       }
     },
     'variable': {}
@@ -4962,7 +4966,8 @@ const rulesData = {
       'Rpt_Aria_ContentinfoWithNoMain_Implicit': {
         'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Element has a contentinfo role when no element has a main role'
+        'what': 'Element has a contentinfo role when no element has a main role',
+        'supersededBy': 'aria_contentinfo_misuse'
       },
       'aria_contentinfo_misuse': {
         'issueID': 'roleBad',
@@ -4972,22 +4977,24 @@ const rulesData = {
       'Rpt_Aria_ValidRole': {
         'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Element has an invalid role'
+        'what': 'Element has an invalid role',
+        'supersededBy': 'aria_role_allowed'
       },
       'aria_role_allowed': {
         'issueID': 'roleBad',
         'quality': 1,
         'what': 'Element has an invalid role'
       },
+      'Rpt_Aria_EventHandlerMissingRole_Native_Host_Sematics': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element has an event handler but no valid ARIA role',
+        'supersededBy': 'aria_eventhandler_role_valid'
+      },
       'aria_eventhandler_role_valid': {
         'issueID': 'roleBad',
         'quality': 1,
         'what': 'Element with an onclick, onmouseout, or onmouseover attribute has no valid ARIA role'
-      },
-      'Rpt_Aria_EventHandlerMissingRole_Native_Host_Sematics': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element has an event handler but no valid ARIA role'
       },
       'combobox_haspopup_valid': {
         'issueID': 'roleBad',
@@ -5014,11 +5021,6 @@ const rulesData = {
         'quality': 1,
         'what': 'ARIA attribute is invalid for the role of its element'
       },
-      'aria_attribute_value_valid': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Value of an attribute on the element is not valid'
-      },
       'aria_attribute_required': {
         'issueID': 'ariaMissing',
         'quality': 1,
@@ -5032,7 +5034,8 @@ const rulesData = {
       'Rpt_Aria_ValidProperty': {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'ARIA attribute is invalid for the role'
+        'what': 'ARIA attribute is invalid for the role',
+        'supersededBy': 'aria_attribute_allowed'
       },
       'aria_attribute_allowed': {
         'issueID': 'ariaAttributeBad',
@@ -5045,9 +5048,15 @@ const rulesData = {
         'what': 'ARIA attribute has an empty value'
       },
       'Rpt_Aria_ValidPropertyValue': {
-        'issueID': 'ariaAttributeBad',
+        'issueID': 'attributeValueBad',
         'quality': 1,
-        'what': 'ARIA property value is invalid'
+        'what': 'ARIA property value is invalid',
+        'supersededBy': 'aria_attribute_value_valid'
+      },
+      'aria_attribute_value_valid': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Value of an ARIA attribute on the element is invalid'
       },
       'aria_attribute_redundant': {
         'issueID': 'ariaRedundant',
@@ -5189,12 +5198,13 @@ const rulesData = {
         'quality': 1,
         'what': 'input element label invisible?'
       },
-      'label_name_visible': {
+      'WCAG21_Label_Accessible': {
         'issueID': 'visibleLabelNotInName',
         'quality': 1,
-        'what': 'Accessible name does not match or contain the visible label text'
+        'what': 'Accessible name does not match or contain the visible label text',
+        'supersededBy': 'label_name_visible'
       },
-      'WCAG21_Label_Accessible': {
+      'label_name_visible': {
         'issueID': 'visibleLabelNotInName',
         'quality': 1,
         'what': 'Accessible name does not match or contain the visible label text'
@@ -9762,9 +9772,10 @@ export const makeIssueRules = (
     engineID: string,
     variabilityName: string,
     ruleID: string,
-    entry: RuleEntry
+    entry: RuleEntry,
+    engineRuleIDs: Set<string>
   ) => {
-    const {issueID, quality, what} = entry as unknown as Record<string, unknown>;
+    const {issueID, quality, what, supersededBy} = entry as unknown as Record<string, unknown>;
     if (!ruleID.length) {
       errors.push(`${engineID}.${variabilityName} has a rule with an empty ruleID`);
     }
@@ -9776,6 +9787,15 @@ export const makeIssueRules = (
     }
     if (typeof what !== 'string' || !what.length) {
       errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-string or empty what (${JSON.stringify(what)})`);
+    }
+    if (supersededBy !== undefined && supersededBy !== null) {
+      if (typeof supersededBy !== 'string' || !supersededBy.length) {
+        errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-string, non-null, or empty supersededBy (${JSON.stringify(supersededBy)})`);
+      } else if (supersededBy === ruleID) {
+        errors.push(`${engineID}.${variabilityName}.${ruleID} has supersededBy naming itself`);
+      } else if (!engineRuleIDs.has(supersededBy)) {
+        errors.push(`${engineID}.${variabilityName}.${ruleID} has supersededBy (${supersededBy}), which is not a rule of ${engineID}`);
+      }
     }
     if (variabilityName === 'variable') {
       if (!/[.*+?^${}()|[\]\\]/.test(ruleID)) {
@@ -9791,15 +9811,16 @@ export const makeIssueRules = (
   };
   const issueRules: Record<string, Record<string, ruleIDsByType>> = {};
   Object.entries(ruleTable).forEach(([engineID, {invariant, variable}]) => {
+    const engineRuleIDs = new Set([...Object.keys(invariant), ...Object.keys(variable)]);
     Object.entries(invariant).forEach(([ruleID, entry]) => {
-      checkEntry(engineID, 'invariant', ruleID, entry);
+      checkEntry(engineID, 'invariant', ruleID, entry, engineRuleIDs);
       const {issueID} = entry;
       issueRules[issueID] ??= {};
       issueRules[issueID][engineID] ??= {invariant: [], variable: []};
       issueRules[issueID][engineID].invariant.push(ruleID);
     });
     Object.entries(variable).forEach(([ruleID, entry]) => {
-      checkEntry(engineID, 'variable', ruleID, entry);
+      checkEntry(engineID, 'variable', ruleID, entry, engineRuleIDs);
       const {issueID} = entry;
       issueRules[issueID] ??= {};
       issueRules[issueID][engineID] ??= {invariant: [], variable: []};
