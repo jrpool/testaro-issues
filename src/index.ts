@@ -1,6 +1,9 @@
 // TYPES
 
 type IssueID = keyof typeof issuesData;
+// Counts of rules, by rule-engine ID, belonging to an issue.
+export type IssueEngineRuleCounts = Record<string, number>;
+
 
 // INTERFACES
 
@@ -9787,7 +9790,35 @@ export const getEditableData = () => ({
   issueRules: structuredClone(issueRules)
 });
 
+// Summarizes, for each issue, how many rules of each rule engine belong to it.
+export const makeIssueStats = (
+  issueRuleTable: Record<string, Record<string, IssueRuleGroup>> = issueRules
+): Record<string, IssueEngineRuleCounts> => {
+  const stats: Record<string, IssueEngineRuleCounts> = {};
+  Object.entries(issueRuleTable).forEach(([issueID, engineData]) => {
+    stats[issueID] = {};
+    Object.entries(engineData).forEach(([engineID, {invariant, variable}]) => {
+      stats[issueID][engineID] = invariant.length + variable.length;
+    });
+  });
+  return stats;
+};
+
+// Returns issues whose rules all come from a single rule engine, sorted by descending rule count.
+export const getSingleEngineIssues = (
+  stats: Record<string, IssueEngineRuleCounts> = issueStats
+): Array<{issueID: string; engineID: string; ruleCount: number}> => Object.entries(stats)
+.filter(([, engineCounts]) => Object.keys(engineCounts).length === 1)
+.map(([issueID, engineCounts]) => {
+  const [engineID, ruleCount] = Object.entries(engineCounts)[0];
+  return {issueID, engineID, ruleCount};
+})
+.sort((a, b) => b.ruleCount - a.ruleCount);
+
 // EXECUTION
 
 // Create an issueRules object.
 export const issueRules = makeIssueRules(rules);
+
+// Create statistics on rule counts of issues.
+export const issueStats = makeIssueStats(issueRules);
