@@ -743,37 +743,37 @@ const issuesData = {
   },
   'metaAttributesWrong': {
     'summary': 'prohibited or missing meta attributes',
-    'why': 'Browser cannot find the data it needs to process the page',
+    'why': 'Browser processes the page incorrectly',
     'wcag': '4.1',
     'weight': 3
   },
   'metaAttributeBad': {
     'summary': 'meta attribute value invalid',
-    'why': 'Browser cannot understand instructions for processing the page',
+    'why': 'Browser processes the page incorrectly',
     'wcag': '4.1',
     'weight': 3
   },
   'metaDuplicated': {
     'summary': 'meta element duplicated',
-    'why': 'Browser may be confused by the invalid duplication of instructions',
+    'why': 'Browser may process the page incorrectly',
     'wcag': '4.1',
     'weight': 3
   },
   'metaCharsetLate': {
     'summary': 'meta charset declared too late',
-    'why': 'Browser may start decoding the page without being told how',
+    'why': 'Browser may display incorrect text',
     'wcag': '4.1',
-    'weight': 3
+    'weight': 4
   },
   'metaXUACompatible': {
     'summary': 'meta X-UA-Compatible incomplete',
-    'why': 'Internet Explorer may misrender the page',
+    'why': 'Internet Explorer may display the page incorrectly',
     'wcag': '4.1',
     'weight': 3
   },
   'metaMisplaced': {
     'summary': 'meta element in invalid location',
-    'why': 'Document fails to provide needed data',
+    'why': 'Browser may process the page incorrectly',
     'wcag': '4.1',
     'weight': 4
   },
@@ -9848,6 +9848,17 @@ export const getSingleEngineIssues = (
   return {issueID, engineID, ruleCount};
 })
 .sort((a, b) => b.ruleCount - a.ruleCount);
+
+// Returns, for each rule engine, its rule count.
+export const getEngineRuleCounts = (
+  ruleTable: Record<string, EngineRules> = rules
+): Record<string, number> => {
+  const counts: Record<string, number> = {};
+  Object.keys(ruleTable).forEach(engineID => {
+    counts[engineID] = Object.keys(ruleTable[engineID].invariant).length + Object.keys(ruleTable[engineID].variable).length;
+  });
+  return counts;
+};
 
 // EXECUTION
 
