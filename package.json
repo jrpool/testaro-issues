@@ -16,8 +16,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run typecheck && tsdown src/index.ts --format cjs,esm --dts",
+    "build": "npm run typecheck && tsdown src/index.ts --format cjs,esm --dts && npm test",
     "typecheck": "tsc --noEmit",
+    "test": "node -e \"import('./dist/index.mjs')\"",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

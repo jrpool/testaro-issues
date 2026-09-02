@@ -191,7 +191,7 @@ const issuesData = {
     'weight': 4
   },
   'gapBad': {
-    'summary': 'CSS padding invalid',
+    'summary': 'CSS gap invalid',
     'why': 'Content is displayed improperly',
     'wcag': '4.1',
     'weight': 4
@@ -730,7 +730,7 @@ const issuesData = {
     'weight': 4
   },
   'linkElementMisplaced': {
-    'summary': 'link element invalid',
+    'summary': 'link element misplaced',
     'why': 'Document fails to get a needed external resource',
     'wcag': '1.3.1',
     'weight': 4
@@ -9860,6 +9860,23 @@ export const getEngineRuleCounts = (
   return counts;
 };
 
+// Throws an error if any issue summary is not unique.
+const checkIssuesData = (issueTable: Record<string, Issue>): void => {
+  const errors: string[] = [];
+  const issueIDsBySummary: Record<string, string> = {};
+  Object.entries(issueTable).forEach(([issueID, {summary}]) => {
+    const ownerID = issueIDsBySummary[summary];
+    if (ownerID) {
+      errors.push(`issues.${issueID} has the summary "${summary}", already used by issues.${ownerID}`);
+    } else {
+      issueIDsBySummary[summary] = issueID;
+    }
+  });
+  if (errors.length) {
+    throw new Error(`${errors[0]} (1 of ${errors.length} problems found)`);
+  }
+};
+
 // EXECUTION
 
 // Create an issueRules object.
@@ -9867,3 +9884,6 @@ export const issueRules = makeIssueRules(rules);
 
 // Create statistics on rule counts of issues.
 export const issueStats = makeIssueStats(issueRules);
+
+// Check uniqueness of issue summaries.
+checkIssuesData(issues);
