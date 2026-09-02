@@ -741,16 +741,40 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
-  'metaBad': {
-    'summary': 'meta invalid',
-    'why': 'Document fails to include needed data',
-    'wcag': '1.3.1',
+  'metaAttributesWrong': {
+    'summary': 'prohibited or missing meta attributes',
+    'why': 'Browser cannot find the data it needs to process the page',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'metaAttributeBad': {
+    'summary': 'meta attribute value invalid',
+    'why': 'Browser cannot understand instructions for processing the page',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'metaDuplicated': {
+    'summary': 'meta element duplicated',
+    'why': 'Browser may be confused by the invalid duplication of instructions',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'metaCharsetLate': {
+    'summary': 'meta charset declared too late',
+    'why': 'Browser may start decoding the page without being told how',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'metaXUACompatible': {
+    'summary': 'meta X-UA-Compatible incomplete',
+    'why': 'Internet Explorer may misrender the page',
+    'wcag': '4.1',
     'weight': 3
   },
   'metaMisplaced': {
     'summary': 'meta element in invalid location',
     'why': 'Document fails to provide needed data',
-    'wcag': '1.3.1',
+    'wcag': '4.1',
     'weight': 4
   },
   'stylesheetBanned': {
@@ -5551,32 +5575,32 @@ const rulesData = {
         'what': 'Element has a color attribute but no rel attribute with mask-icon as its value'
       },
       'A document must not include more than one meta element with its name attribute set to the value description.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'Element with name="description" is not the only meta element with that name'
       },
       'A document must not include both a meta element with an http-equiv attribute whose value is content-type, and a meta element with a charset attribute.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'Element with http-equiv="content-type" is incompatible with the meta element with a charset attribute'
       },
       'A document must not include more than one meta element with a http-equiv attribute whose value is content-type.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'Page has more than 1 meta element with http-equiv="content-type"'
       },
       'A meta element with an http-equiv attribute whose value is X-UA-Compatible must have a content attribute with the value IE=edge.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaXUACompatible',
         'quality': 1,
         'what': 'Element with http-equiv="X-UA-Compatible" has no content="IE=edge"'
       },
       'A document must not include more than one meta element with a charset attribute.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'More than 1 meta element has a charset attribute'
       },
       'A charset attribute on a meta element found after the first 1024 bytes.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaCharsetLate',
         'quality': 1,
         'what': 'charset attribute on a meta element appears after 1024 bytes'
       },
@@ -6403,17 +6427,17 @@ const rulesData = {
         'what': 'Element does not exist in HTML'
       },
       'Attribute .+ not allowed on element meta at this point.*': {
-        'issueID': 'metaBad',
+        'issueID': 'metaAttributesWrong',
         'quality': 1,
         'what': 'Attribute is not allowed on a meta element here'
       },
       'Element meta is missing one or more of the following attributes: .+': {
-        'issueID': 'metaBad',
+        'issueID': 'metaAttributesWrong',
         'quality': 1,
         'what': 'Element is missing a required attribute'
       },
       'Bad value .+ for attribute .+ on element meta.*': {
-        'issueID': 'metaBad',
+        'issueID': 'metaAttributeBad',
         'quality': 1,
         'what': 'Attribute of a meta element has an invalid value'
       },
@@ -7097,32 +7121,32 @@ const rulesData = {
         'what': 'Element has a color attribute but no rel attribute with mask-icon as its value'
       },
       'A document must not include more than one meta element with its name attribute set to the value description.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'Element with name="description" is not the only meta element with that name'
       },
       'A document must not include both a meta element with an http-equiv attribute whose value is content-type, and a meta element with a charset attribute.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'Element with http-equiv="content-type" is incompatible with the meta element with a charset attribute'
       },
       'A document must not include more than one meta element with a http-equiv attribute whose value is content-type.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'Page has more than 1 meta element with http-equiv="content-type"'
       },
       'A meta element with an http-equiv attribute whose value is X-UA-Compatible must have a content attribute with the value IE=edge.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaXUACompatible',
         'quality': 1,
         'what': 'Element with http-equiv="X-UA-Compatible" has no content="IE=edge"'
       },
       'A document must not include more than one meta element with a charset attribute.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaDuplicated',
         'quality': 1,
         'what': 'More than 1 meta element has a charset attribute'
       },
       'A charset attribute on a meta element found after the first 1024 bytes.': {
-        'issueID': 'metaBad',
+        'issueID': 'metaCharsetLate',
         'quality': 1,
         'what': 'charset attribute on a meta element appears after 1024 bytes'
       },
@@ -7949,17 +7973,17 @@ const rulesData = {
         'what': 'Element does not exist in HTML'
       },
       'Attribute .+ not allowed on element meta at this point.*': {
-        'issueID': 'metaBad',
+        'issueID': 'metaAttributesWrong',
         'quality': 1,
         'what': 'Attribute is not allowed on a meta element here'
       },
       'Element meta is missing one or more of the following attributes: .+': {
-        'issueID': 'metaBad',
+        'issueID': 'metaAttributesWrong',
         'quality': 1,
         'what': 'Element is missing a required attribute'
       },
       'Bad value .+ for attribute .+ on element meta.*': {
-        'issueID': 'metaBad',
+        'issueID': 'metaAttributeBad',
         'quality': 1,
         'what': 'Attribute of a meta element has an invalid value'
       },
