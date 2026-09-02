@@ -48,7 +48,7 @@ const issuesData = {
   },
   'duplicateAttribute': {
     'summary': 'duplicate attribute',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '4.1.1',
     'weight': 2
   },
@@ -78,7 +78,7 @@ const issuesData = {
   },
   'regionNoText': {
     'summary': 'region not named',
-    'why': 'User cannot get help surveying the parts of the document',
+    'why': 'User cannot get help surveying the parts of the page',
     'wcag': '4.1.2',
     'weight': 4
   },
@@ -252,14 +252,14 @@ const issuesData = {
   },
   'pageLanguage': {
     'summary': 'page language missing',
-    'why': 'Speaking helper may mispronounce the document text',
+    'why': 'Speaking helper may mispronounce the page text',
     'wcag': '3.1.1',
     'weight': 4,
     'max': 1
   },
   'pageLanguageBad': {
     'summary': 'page language invalid',
-    'why': 'Speaking helper may mispronounce the document text',
+    'why': 'Speaking helper may mispronounce the page text',
     'wcag': '3.1.1',
     'weight': 4,
     'max': 1
@@ -338,7 +338,7 @@ const issuesData = {
   },
   'internalLinkBroken': {
     'summary': 'internal link broken',
-    'why': 'User cannot reach a promised document location',
+    'why': 'User cannot reach a promised page location',
     'wcag': '1.3.1',
     'weight': 4
   },
@@ -536,7 +536,7 @@ const issuesData = {
   },
   'pageNewWindow': {
     'summary': 'page immediately opens window',
-    'why': 'User promised a document gets another document, too',
+    'why': 'User promised a page gets another page, too',
     'wcag': '3.2.5',
     'weight': 3,
     'max': 1
@@ -646,7 +646,7 @@ const issuesData = {
   },
   'metaBansZoom': {
     'summary': 'meta bans zoom',
-    'why': 'User cannot adjust the document size for readability',
+    'why': 'User cannot adjust the page size for readability',
     'wcag': '1.4.4',
     'weight': 4,
     'max': 1
@@ -779,25 +779,25 @@ const issuesData = {
   },
   'stylesheetBanned': {
     'summary': 'stylesheet prohibited',
-    'why': 'Browser displays the document improperly',
+    'why': 'Browser displays the page improperly',
     'wcag': '1.4',
     'weight': 3
   },
   'scriptNotDeferrable': {
     'summary': 'script element invalidly deferred',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '1.3.1',
     'weight': 4
   },
   'scriptBanned': {
     'summary': 'script prohibited',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '4.1',
     'weight': 3
   },
   'scriptElementBad': {
     'summary': 'script element invalid',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '1.3.1',
     'weight': 4
   },
@@ -821,7 +821,7 @@ const issuesData = {
   },
   'iframeTitleBad': {
     'summary': 'iframe not named',
-    'why': 'User cannot get help on the topic of an embedded document',
+    'why': 'User cannot get help on the topic of an embedded page',
     'wcag': '4.1.2',
     'weight': 4
   },
@@ -1019,13 +1019,13 @@ const issuesData = {
   },
   'headingEmpty': {
     'summary': 'heading empty',
-    'why': 'User cannot get help on the topic of a part of the document',
+    'why': 'User cannot get help on the topic of a part of the page',
     'wcag': '2.4.6',
     'weight': 3
   },
   'headingOfNothing': {
     'summary': 'heading heads nothing',
-    'why': 'Helper misdescribes the document',
+    'why': 'Helper misdescribes the page',
     'wcag': '1.3.1',
     'weight': 2
   },
@@ -1067,112 +1067,112 @@ const issuesData = {
   },
   'docTypeMissing': {
     'summary': 'DOCTYPE missing',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '1.3.1',
     'weight': 4,
     'max': 1
   },
   'docTypeMisplaced': {
     'summary': 'DOCTYPE in invalid location',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '1.3.1',
     'weight': 4,
     'max': 1
   },
   'docTypeBad': {
     'summary': 'DOCTYPE invalid',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '1.3.1',
     'weight': 3,
     'max': 1
   },
   'pageTitleBad': {
     'summary': 'page title invalid',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '1.3.1',
     'weight': 3,
     'max': 1
   },
   'pageTitle': {
     'summary': 'page title missing',
-    'why': 'User is not informed of the topic of the document',
+    'why': 'User is not informed of the topic of the page',
     'wcag': '2.4.2',
     'weight': 4,
     'max': 1
   },
   'headElementsBad': {
     'summary': 'element in head invalid',
-    'why': 'Browser processes the document improperly',
+    'why': 'Browser processes the page improperly',
     'wcag': '4.1.1',
     'weight': 3
   },
   'headingLevelSkip': {
     'summary': 'heading level skipped',
-    'why': 'Helper misdescribes the document',
+    'why': 'Helper misdescribes the page',
     'wcag': '1.3.1',
     'weight': 2
   },
   'headingStructure': {
     'summary': 'heading structure illogical',
-    'why': 'Helper misdescribes the document',
+    'why': 'Helper misdescribes the page',
     'wcag': '1.3.1',
     'weight': 2
   },
   'headingConfusion': {
     'summary': 'heading names repeated',
-    'why': 'User cannot differentiate parts of the document',
+    'why': 'User cannot differentiate parts of the page',
     'wcag': '1.3.1',
     'weight': 2
   },
   'headingMisuseRisk': {
     'summary': 'heading used for styling?',
-    'why': 'User cannot understand the document structure',
+    'why': 'User cannot understand the page structure',
     'wcag': '1.3.1',
     'weight': 2
   },
   'headingNone': {
     'summary': 'headings missing',
-    'why': 'User cannot survey parts of the document',
+    'why': 'User cannot survey parts of the page',
     'wcag': '1.3.1',
     'weight': 3,
     'max': 1
   },
   'h1Not1': {
     'summary': 'not exactly 1 h1 heading',
-    'why': 'User cannot understand the topic of the document',
+    'why': 'User cannot understand the topic of the page',
     'wcag': '1.3.1',
     'weight': 2,
     'max': 1
   },
   'h1Not1st': {
     'summary': 'h1 not 1st heading',
-    'why': 'User cannot understand the topic of the document',
+    'why': 'User cannot understand the topic of the page',
     'wcag': '1.3.1',
     'weight': 3,
     'max': 1
   },
   'docHeadingNotH1': {
     'summary': 'primary heading not h1',
-    'why': 'User cannot understand the topic of the document',
+    'why': 'User cannot understand the topic of the page',
     'wcag': '1.3.1',
     'weight': 2,
     'max': 1
   },
   'articleHeadingless': {
     'summary': 'article heading missing',
-    'why': 'User cannot understand the topic of a part of the document',
+    'why': 'User cannot understand the topic of a part of the page',
     'wcag': '1.3.1',
     'weight': 1
   },
   'sectionHeadingless': {
     'summary': 'section heading missing',
-    'why': 'User cannot understand the topic of a part of the document',
+    'why': 'User cannot understand the topic of a part of the page',
     'wcag': '1.3.1',
     'weight': 1
   },
   'headingLength': {
     'summary': 'heading abnormally long',
-    'why': 'User has difficulty understanding the topic of a part of the document',
+    'why': 'User has difficulty understanding the topic of a part of the page',
     'wcag': '1.3.1',
     'weight': 1
   },
@@ -1202,7 +1202,7 @@ const issuesData = {
   },
   'hrConfusionRisk': {
     'summary': 'hr misused',
-    'why': 'User cannot get help on the nature of segments of the document',
+    'why': 'User cannot get help on the nature of segments of the page',
     'wcag': '1.3.1',
     'weight': 1
   },
@@ -1220,7 +1220,7 @@ const issuesData = {
   },
   'pseudoHeadingRisk': {
     'summary': 'heading-like styles dubious',
-    'why': 'User may be unable to understand the topic of a part of the document',
+    'why': 'User may be unable to understand the topic of a part of the page',
     'wcag': '1.3.1',
     'weight': 1
   },
@@ -1550,7 +1550,7 @@ const issuesData = {
   },
   'visibleBulk': {
     'summary': 'large visible-element count',
-    'why': 'User cannot easily find items in the document',
+    'why': 'User cannot easily find items in the page',
     'wcag': '2.4',
     'weight': 1,
     'max': 1
@@ -1617,90 +1617,90 @@ const issuesData = {
   },
   'noLandmarks': {
     'summary': 'no landmarks',
-    'why': 'User cannot get help on how the document is organized',
+    'why': 'User cannot get help on how the page is organized',
     'wcag': '1.3.6',
     'weight': 2,
     'max': 1
   },
   'contentBeyondLandmarks': {
     'summary': 'content beyond landmarks',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 1
   },
   'footerNotTop': {
     'summary': 'footer child of landmark',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 1
   },
   'asideNotTop': {
     'summary': 'aside child of landmark',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 2
   },
   'mainNotTop': {
     'summary': 'main child of landmark',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 2
   },
   'mainConfusion': {
     'summary': 'mains not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'mainNone': {
     'summary': 'main missing',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 2,
     'max': 1
   },
   'mainNot1': {
     'summary': 'multiple mains',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 2,
     'max': 1
   },
   'bannerNot1': {
     'summary': 'multiple banners',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 2,
     'max': 1
   },
   'bannerNotTop': {
     'summary': 'banner child of landmark',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 2
   },
   'footerConfusion': {
     'summary': 'contentinfos not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'footerNot1': {
     'summary': 'multiple contentinfos',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 2,
     'max': 1
   },
   'landmarkConfusion': {
     'summary': 'landmarks not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'documentConfusion': {
-    'summary': 'document elements not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'summary': 'page elements not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
@@ -1712,61 +1712,61 @@ const issuesData = {
   },
   'formConfusion': {
     'summary': 'forms not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'applicationNoText': {
     'summary': 'application not named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 4
   },
   'applicationConfusion': {
     'summary': 'applications not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'asideConfusion': {
     'summary': 'asides not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'bannerConfusion': {
     'summary': 'banners not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'navConfusion': {
     'summary': 'navigations not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'landmarkInNav': {
     'summary': 'invalid landmark child of navigation role',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 4
   },
   'regionConfusion': {
     'summary': 'regions not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'searchConfusion': {
     'summary': 'searches not distinctly named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 3
   },
   'complementaryNoText': {
     'summary': 'complementary not named',
-    'why': 'User cannot get help on how some of the document is organized',
+    'why': 'User cannot get help on how some of the page is organized',
     'wcag': '1.3.6',
     'weight': 1
   },
@@ -1826,14 +1826,14 @@ const issuesData = {
   },
   'contentHidden': {
     'summary': 'page hidden',
-    'why': 'User cannot get the document content',
+    'why': 'User cannot get the page content',
     'wcag': '2.4.7',
     'weight': 4,
     'max': 1
   },
   'hideFailureRisk': {
     'summary': 'false aria-hidden value risky',
-    'why': 'User may be misled by erroneously hidden or revealed document content',
+    'why': 'User may be misled by erroneously hidden or revealed page content',
     'wcag': '2.4.6',
     'weight': 1
   },
@@ -1851,19 +1851,19 @@ const issuesData = {
   },
   'hoverIndication': {
     'summary': 'hover indication poor',
-    'why': 'User cannot explore the document reliably with a mouse',
+    'why': 'User cannot explore the page reliably with a mouse',
     'wcag': '3.3.2',
     'weight': 3
   },
   'hoverSurprise': {
     'summary': 'hovering changes content',
-    'why': 'User cannot explore the document reliably with a mouse',
+    'why': 'User cannot explore the page reliably with a mouse',
     'wcag': '3.2.5',
     'weight': 1
   },
   'formSurpriseRisk': {
     'summary': 'form interaction changes content?',
-    'why': 'User experiences unexpected document change when using a form',
+    'why': 'User experiences unexpected page change when using a form',
     'wcag': '3.2.5',
     'weight': 1
   },
@@ -2110,14 +2110,14 @@ const issuesData = {
   },
   'skipRepeatedContent': {
     'summary': 'skip method missing or invalid',
-    'why': 'Keyboard-only user cannot easily reach the specific content of the document',
+    'why': 'Keyboard-only user cannot easily reach the specific content of the page',
     'wcag': '2.4.1',
     'weight': 3,
     'max': 2
   },
   'repeatedContentRisk': {
     'summary': 'skip method missing or invalid?',
-    'why': 'Keyboard-only user may be unable easily to reach the specific content of the document',
+    'why': 'Keyboard-only user may be unable easily to reach the specific content of the page',
     'wcag': '2.4.1',
     'weight': 1,
     'max': 2
@@ -2209,25 +2209,25 @@ const issuesData = {
   },
   'characterBad': {
     'summary': 'invalid character',
-    'why': 'Invalid character makes the document behave incorrectly',
+    'why': 'Invalid character makes the page behave incorrectly',
     'wcag': '4.1',
     'weight': 3
   },
   'entityBad': {
     'summary': 'named character reference invalid',
-    'why': 'User may be unable to read all the document text',
+    'why': 'User may be unable to read all the page text',
     'wcag': '4.1',
     'weight': 4
   },
   'textContentBad': {
     'summary': 'element text content invalid',
-    'why': 'User may be unable to read all the document text',
+    'why': 'User may be unable to read all the page text',
     'wcag': '4.1',
     'weight': 3
   },
   'parseError': {
     'summary': 'code invalid',
-    'why': 'Invalid code in the document may prevent a helper from working',
+    'why': 'Invalid code in the page may prevent a helper from working',
     'wcag': '4.1',
     'weight': 3
   },
@@ -2253,7 +2253,7 @@ const issuesData = {
   },
   'captcha2': {
     'summary': 'captcha2',
-    'why': 'User is prevented from consuming the document',
+    'why': 'User is prevented from consuming the page',
     'wcag': '1.1.1',
     'weight': 1,
     'max': 1
