@@ -1,5 +1,6 @@
 // TYPES
 
+// Issue ID.
 type IssueID = keyof typeof issuesData;
 // Counts of rules, by rule-engine ID, belonging to an issue.
 export type IssueEngineRuleCounts = Record<string, number>;
@@ -7,6 +8,7 @@ export type IssueEngineRuleCounts = Record<string, number>;
 
 // INTERFACES
 
+// Data about an issue aside from what rules belong to it.
 interface Issue {
   summary: string;
   why: string;
@@ -15,17 +17,20 @@ interface Issue {
   max?: number;
 }
 
-export interface IssueRuleGroup {
+// Rule IDs belonging to an issue, grouped by variability.
+export interface ruleIDsByType {
   invariant: string[];
   variable: string[];
 }
 
+// Data about a rule of a rule engine.
 interface RuleEntry {
   issueID: IssueID;
   quality: number;
   what: string;
 }
 
+// Data about all the rules of a rule engine.
 interface EngineRules {
   invariant: Record<string, RuleEntry>;
   variable: Record<string, RuleEntry>;
@@ -9727,7 +9732,7 @@ export const rules: Readonly<Record<string, EngineRules>> = deepFreeze(rulesData
 export const makeIssueRules = (
   ruleTable: Record<string, EngineRules>,
   issueTable: Record<string, Issue> = issues
-): Record<string, Record<string, IssueRuleGroup>> => {
+): Record<string, Record<string, ruleIDsByType>> => {
   const errors: string[] = [];
   const checkEntry = (
     engineID: string,
@@ -9760,7 +9765,7 @@ export const makeIssueRules = (
       }
     }
   };
-  const issueRules: Record<string, Record<string, IssueRuleGroup>> = {};
+  const issueRules: Record<string, Record<string, ruleIDsByType>> = {};
   Object.entries(ruleTable).forEach(([engineID, {invariant, variable}]) => {
     Object.entries(invariant).forEach(([ruleID, entry]) => {
       checkEntry(engineID, 'invariant', ruleID, entry);
@@ -9790,9 +9795,9 @@ export const getEditableData = () => ({
   issueRules: structuredClone(issueRules)
 });
 
-// Summarizes, for each issue, how many rules of each rule engine belong to it.
+// Returns, for each issue, how many rules of each rule engine belong to it.
 export const makeIssueStats = (
-  issueRuleTable: Record<string, Record<string, IssueRuleGroup>> = issueRules
+  issueRuleTable: Record<string, Record<string, ruleIDsByType>> = issueRules
 ): Record<string, IssueEngineRuleCounts> => {
   const stats: Record<string, IssueEngineRuleCounts> = {};
   Object.entries(issueRuleTable).forEach(([issueID, engineData]) => {
@@ -9804,11 +9809,16 @@ export const makeIssueStats = (
   return stats;
 };
 
-// Returns issues whose rules all come from a single rule engine, sorted by descending rule count.
+// Returns single-engine issues, excluding NuVnu, sorted by descending rule count.
 export const getSingleEngineIssues = (
   stats: Record<string, IssueEngineRuleCounts> = issueStats
 ): Array<{issueID: string; engineID: string; ruleCount: number}> => Object.entries(stats)
-.filter(([, engineCounts]) => Object.keys(engineCounts).length === 1)
+.filter(
+  ([, engineCounts]) => Object
+  .keys(engineCounts)
+  .filter(engineID => engineID !== `nuVnu`)
+  .length === 1
+)
 .map(([issueID, engineCounts]) => {
   const [engineID, ruleCount] = Object.entries(engineCounts)[0];
   return {issueID, engineID, ruleCount};
