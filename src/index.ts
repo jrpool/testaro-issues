@@ -72,331 +72,17 @@ interface EngineRules {
 
 // Data for the issues object.
 const issuesData = {
-  'ignorable': {
-    'summary': 'ignorable',
-    'why': 'No known impact, because the test is unreliable or invalid',
-    'wcag': '',
-    'weight': 1
-  },
-  'duplicateAttribute': {
-    'summary': 'duplicate attribute',
-    'why': 'Browser processes the page improperly',
-    'wcag': '4.1.1',
-    'weight': 2
-  },
-  'duplicateID': {
-    'summary': 'ID not unique',
-    'why': 'User may be pointed to the wrong item',
-    'wcag': '4.1.1',
+  'abbreviationNoTitle': {
+    'summary': 'abbr title missing',
+    'why': 'User cannot get help understanding an abbreviation',
+    'wcag': '3.1.4',
     'weight': 4
   },
-  'roleNoText': {
-    'summary': 'no role-required name',
-    'why': 'User cannot get help understanding an item',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'progressNoText': {
-    'summary': 'progress bar not named',
-    'why': 'User cannot get help understanding the state of a process',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'componentNoText': {
-    'summary': 'interactive component not named',
-    'why': 'User cannot get help understanding a custom item',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'regionNoText': {
-    'summary': 'region not named',
-    'why': 'User cannot get help surveying the parts of the page',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'headingImageNoText': {
-    'summary': 'heading image not named',
-    'why': 'User cannot get help understanding an image used as a heading',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'inputNoText': {
-    'summary': 'input not named',
-    'why': 'User cannot get help on what information to enter in a form item',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'inputOnlyPlaceholder': {
-    'summary': 'input has placeholder instead of name',
-    'why': 'User cannot get reliable help on what information to enter in a form item',
-    'wcag': '4.1.2',
+  'accessKeyDuplicate': {
+    'summary': 'duplicate access key',
+    'why': 'Keyboard shortcut does not reliably trigger the intended action',
+    'wcag': '1.3.1',
     'weight': 3
-  },
-  'placeholderPlusAria': {
-    'summary': 'element has competing placeholder attributes',
-    'why': 'User gets conflicting help on what information to enter in a form item',
-    'wcag': '4.1.2',
-    'weight': 3
-  },
-  'imageButtonNoText': {
-    'summary': 'image button not named',
-    'why': 'User cannot get help understanding an image used as a button',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'imageInputNoText': {
-    'summary': 'image input not named',
-    'why': 'User cannot get help understanding an image used as a submission button',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'figureNoText': {
-    'summary': 'figure not named',
-    'why': 'User cannot get help on the topic of a figure',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'imageNoText': {
-    'summary': 'image not named',
-    'why': 'User cannot get help to know what is in an image',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'svgNoText': {
-    'summary': 'SVG image not named',
-    'why': 'User cannot get help to know what is in an image',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'imageTextSpaces': {
-    'summary': 'image name contains only spacing characters',
-    'why': 'User cannot get help understanding an image',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'imageTextImage': {
-    'summary': 'image name contains image',
-    'why': 'User is redundantly told an image is an image',
-    'wcag': '1.1.1',
-    'weight': 1
-  },
-  'decorativeAlt': {
-    'summary': 'decorative image is named',
-    'why': 'User gets an uninformative image description or misses an informative image',
-    'wcag': '1.1.1',
-    'weight': 1
-  },
-  'imageTextBad': {
-    'summary': 'image named with filename',
-    'why': 'Helper gives a user the filename of an image instead of describing it',
-    'wcag': '1.1.1',
-    'weight': 3
-  },
-  'imageTextRisk': {
-    'summary': 'image dubiously named',
-    'why': 'Helper may describe an image inadequately',
-    'wcag': '1.1.1',
-    'weight': 1
-  },
-  'sourceEmpty': {
-    'summary': 'src empty',
-    'why': 'Image, audio, or video to be shown cannot be found',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'borderBad': {
-    'summary': 'CSS border invalid',
-    'why': 'Border is displayed improperly',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'flexBad': {
-    'summary': 'CSS flex invalid',
-    'why': 'Content is displayed improperly',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'paddingBad': {
-    'summary': 'CSS padding invalid',
-    'why': 'Content is displayed improperly',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'gapBad': {
-    'summary': 'CSS gap invalid',
-    'why': 'Content is displayed improperly',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'backgroundBad': {
-    'summary': 'CSS background invalid',
-    'why': 'Background is displayed improperly',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'backgroundImageBad': {
-    'summary': 'background image invalid',
-    'why': 'Background image is displayed improperly',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'imagesSameAlt': {
-    'summary': 'nearby images have same alt',
-    'why': 'User cannot get help differentiating two adjacent images',
-    'wcag': '1.1.1',
-    'weight': 1
-  },
-  'imageTextLong': {
-    'summary': 'image alt long',
-    'why': 'Helper gives a user an overly verbose explanation of an image',
-    'wcag': '1.1.1',
-    'weight': 2
-  },
-  'imageBanned': {
-    'summary': 'image prohibited',
-    'why': 'Browser fails to display an image',
-    'wcag': '1.4',
-    'weight': 3
-  },
-  'titleLong': {
-    'summary': 'title long',
-    'why': 'Hovering makes an overly verbose explanation pop up',
-    'wcag': '3.1.5',
-    'weight': 2
-  },
-  'titleNotText': {
-    'summary': 'title contains ASCII art',
-    'why': 'Hovering makes a hard-to-understand explanation pop up',
-    'wcag': '3.1.5',
-    'weight': 2
-  },
-  'decorativeImageRisk': {
-    'summary': 'image dubiously marked decorative',
-    'why': 'Helper ignores an image that is apparently informative',
-    'wcag': '1.1.1',
-    'weight': 1
-  },
-  'decorativeElementExposed': {
-    'summary': 'decorative element exposed',
-    'why': 'Helper alerts a user to an uninformative image',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'pageLanguage': {
-    'summary': 'page language missing',
-    'why': 'Speaking helper may mispronounce the page text',
-    'wcag': '3.1.1',
-    'weight': 4,
-    'max': 1
-  },
-  'pageLanguageBad': {
-    'summary': 'page language invalid',
-    'why': 'Speaking helper may mispronounce the page text',
-    'wcag': '3.1.1',
-    'weight': 4,
-    'max': 1
-  },
-  'elementLanguageBad': {
-    'summary': 'element language invalid',
-    'why': 'Speaking helper may mispronounce the text of an item',
-    'wcag': '3.1.2',
-    'weight': 4
-  },
-  'languageChange': {
-    'summary': 'language change invalid',
-    'why': 'Speaking helper may mispronounce the text of an item',
-    'wcag': '3.1.2',
-    'weight': 3
-  },
-  'dialogNoText': {
-    'summary': 'dialog not named',
-    'why': 'User cannot get help explaining a pop-up window',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'objectNoText': {
-    'summary': 'object not named',
-    'why': 'User cannot get help explaining a custom item',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'objectTextRisk': {
-    'summary': 'object dubiously named',
-    'why': 'Helper may explain a custom item inadequately',
-    'wcag': '1.1.1',
-    'weight': 1
-  },
-  'objectAudioRisk': {
-    'summary': 'non-audio element plays audio?',
-    'why': 'User may get inadequate help consuming audio content',
-    'wcag': '1.1.1',
-    'weight': 1
-  },
-  'appletNoText': {
-    'summary': 'applet not named',
-    'why': 'User cannot get help on how to use a custom item',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'imageMapNoText': {
-    'summary': 'image map not named',
-    'why': 'User cannot get help on the topic of an interactive image',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'imageMapAreaNoText': {
-    'summary': 'image map area not named',
-    'why': 'User cannot get help on how to use an interactive image',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'customKeyboardRisk': {
-    'summary': 'custom button keyboard-inoperable?',
-    'why': 'Custom item may prevent a keyboard-only user from operating it',
-    'wcag': '2.1.1',
-    'weight': 1
-  },
-  'objectBlurKeyboardRisk': {
-    'summary': 'object not keyboard-blurrable?',
-    'why': 'Custom item may trap a keyboard-only user',
-    'wcag': '2.1.1',
-    'weight': 1
-  },
-  'eventKeyboardRisk': {
-    'summary': 'event not keyboard-triggerable?',
-    'why': 'Keyboard-only user may be unable to perform an action',
-    'wcag': '2.1.1',
-    'weight': 1
-  },
-  'internalLinkBroken': {
-    'summary': 'internal link broken',
-    'why': 'User cannot reach a promised page location',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'labelForBad': {
-    'summary': 'label referent ineligible',
-    'why': 'User cannot get help understanding an item in a form',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'controlIDInLabelBad': {
-    'summary': 'label contains control with nonmatching ID',
-    'why': 'User cannot get help understanding an item in a form',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'nonLabelableRole': {
-    'summary': 'aria-label on non-labelable role',
-    'why': 'User is misinformed about an item',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'ariaLabelWrongRisk': {
-    'summary': 'dubious aria-label',
-    'why': 'User may fail to get help understanding an item in a form',
-    'wcag': '1.3.1',
-    'weight': 1
   },
   'activeDescendantBadID': {
     'summary': 'aria-activedescendant invalid',
@@ -404,34 +90,46 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
-  'governedBadID': {
-    'summary': 'aria-controls or -owns invalid',
-    'why': 'Keyboard-only user cannot reach an item',
-    'wcag': '1.3.1',
-    'weight': 4
+  'activeEmbedding': {
+    'summary': 'control child of link or button',
+    'why': 'User cannot reliably choose an item to click or tap',
+    'wcag': '2.5.5',
+    'weight': 3
   },
-  'descriptionBadID': {
-    'summary': 'aria-describedby invalid',
-    'why': 'User cannot get help understanding an item in detail',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'labelConfusionRisk': {
-    'summary': 'label location dubious',
-    'why': 'User may fail to notice the explanation of an item in a form',
-    'wcag': '3.3.2',
+  'allCaps': {
+    'summary': 'all-capital text',
+    'why': 'Text is difficult to read',
+    'wcag': '3.1.5',
     'weight': 1
   },
-  'labelBadID': {
-    'summary': 'label reference invalid',
-    'why': 'User cannot get help understanding an item in a form',
-    'wcag': '1.3.1',
+  'allItalics': {
+    'summary': 'all-italic text',
+    'why': 'Text is difficult to read',
+    'wcag': '3.1.5',
+    'weight': 1
+  },
+  'animationLong': {
+    'summary': 'animation long or repetitive',
+    'why': 'Motion-sensitive user may suffer harm',
+    'wcag': '2.2.2',
+    'weight': 3
+  },
+  'appletNoText': {
+    'summary': 'applet not named',
+    'why': 'User cannot get help on how to use a custom item',
+    'wcag': '1.1.1',
     'weight': 4
   },
-  'haspopupBad': {
-    'summary': 'aria-haspopup invalid',
-    'why': 'Keyboard-only user cannot operate a custom tool',
-    'wcag': '1.3.1',
+  'applicationConfusion': {
+    'summary': 'applications not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'applicationNoText': {
+    'summary': 'application not named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
     'weight': 4
   },
   'applicationRisk': {
@@ -440,493 +138,16 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 1
   },
-  'directionRisk': {
-    'summary': 'dubious direction',
-    'why': 'Item may behave incorrectly',
-    'wcag': '1.3.2',
-    'weight': 1
-  },
-  'clickOnly': {
-    'summary': 'name dubiously mouse-specific',
-    'why': 'User may misunderstand how to activate a link',
-    'wcag': '2.4.4',
-    'weight': 1
-  },
-  'linkNoText': {
-    'summary': 'link not named',
-    'why': 'User cannot get help understanding what a link points to',
-    'wcag': '2.4.4',
-    'weight': 4
-  },
-  'imageLinkNoText': {
-    'summary': 'image link not named',
-    'why': 'User cannot get help understanding what a link points to',
-    'wcag': '2.4.4',
-    'weight': 4
-  },
-  'linkImageTextURL': {
-    'summary': 'text alternative of link image a URL',
-    'why': 'User cannot understand what a link points to',
-    'wcag': '2.4.4',
-    'weight': 3
-  },
-  'linkBrokenRisk': {
-    'summary': 'link incomplete',
-    'why': 'User may fail to reach a promised location',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'linkElNoHref': {
-    'summary': 'link element href missing',
-    'why': 'User cannot reach a promised location',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'linkElNoSource': {
-    'summary': 'link element href or imagesrcset missing',
-    'why': 'User cannot reach a promised location',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'destinationNotURL': {
-    'summary': 'link destination not URL',
-    'why': 'Helper cannot properly explain a link to a user',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'destinationLink': {
-    'summary': 'link href missing',
-    'why': 'Helper cannot properly explain a link to a user',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'emailLinkBad': {
-    'summary': 'Microsoft will bounce email from link',
-    'why': 'User cannot send email',
-    'wcag': '2.4.4',
-    'weight': 4
-  },
-  'abbreviationNoTitle': {
-    'summary': 'abbr title missing',
-    'why': 'User cannot get help understanding an abbreviation',
-    'wcag': '3.1.4',
-    'weight': 4
-  },
-  'editableHow': {
-    'summary': 'contenteditable element incomplete',
-    'why': 'User cannot get help on how to edit editable content',
-    'wcag': '1.3.1',
-    'weight': 3
-  },
-  'textAreaNoText': {
-    'summary': 'text area not named',
-    'why': 'User cannot get help on what information to enter in a form item',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'linkAltSame': {
-    'summary': 'link image alt duplicative',
-    'why': 'Helper repeats the explanation of a link',
-    'wcag': '1.1.1',
-    'weight': 2
-  },
-  'linkTextsSame': {
-    'summary': 'links named identically',
-    'why': 'User cannot get help differentiating links',
-    'wcag': '2.4.4',
-    'weight': 2
-  },
-  'linkConfusionRisk': {
-    'summary': 'links dubiously share name',
-    'why': 'User may be unable to get help differentiating links',
-    'wcag': '2.4.4',
-    'weight': 1
-  },
-  'linksNoNav': {
-    'summary': 'links not grouped as nav',
-    'why': 'User cannot get help identifying links as a navigation tool',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'linkPair': {
-    'summary': 'adjacent links not combined',
-    'why': 'Keyboard-only user expends extra effort to skip a link',
-    'wcag': '2.4.4',
-    'weight': 2
-  },
-  'linkPairRisk': {
-    'summary': 'text and image link may merit combination',
-    'why': 'Keyboard-only user may expend extra effort to skip a link',
-    'wcag': '2.4.4',
-    'weight': 1
-  },
-  'linkNameRisk': {
-    'summary': 'image link text suspect',
-    'why': 'Keyboard-only user may misunderstand the effect of following a link',
-    'wcag': '2.4.4',
-    'weight': 1
-  },
-  'pageNewWindow': {
-    'summary': 'page immediately opens window',
-    'why': 'User promised a page gets another page, too',
-    'wcag': '3.2.5',
-    'weight': 3,
-    'max': 1
-  },
-  'newTabSurprise': {
-    'summary': 'tab-opening link action unstated',
-    'why': 'Following a link opens a new window, surprising a user',
-    'wcag': '3.2.5',
-    'weight': 3
-  },
-  'newTabSurpriseRisk': {
-    'summary': 'tab-opening link action unstated?',
-    'why': 'Following a link opens a new window, possibly surprising a user',
-    'wcag': '3.2.5',
-    'weight': 1
-  },
-  'selectNavSurpriseRisk': {
-    'summary': 'navigating selection-change action unstated?',
-    'why': 'Changing a selected option opens a new window, possibly surprising a user',
-    'wcag': '3.2.5',
-    'weight': 1
-  },
-  'preselectedOption': {
-    'summary': 'no default option',
-    'why': 'User may risk erroneously submitting a form',
-    'wcag': '4.1.2',
-    'weight': 1
-  },
-  'selectBad': {
-    'summary': 'select element invalid',
-    'why': 'User cannot properly select among options',
+  'ariaAttributeBad': {
+    'summary': 'aria attribute invalid',
+    'why': 'Item behavior violates user expectations',
     'wcag': '4.1.2',
     'weight': 4
   },
-  'buttonAlt': {
-    'summary': 'button has alt',
-    'why': 'User cannot get help explaing a button',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'buttonNoContent': {
-    'summary': 'button name not visible',
-    'why': 'User cannot get help explaining a button',
-    'wcag': '4.1.2',
-    'weight': 1
-  },
-  'buttonNoText': {
-    'summary': 'button not named',
-    'why': 'User cannot get help explaining a button',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'menuItemNoText': {
-    'summary': 'menu item not named',
-    'why': 'User cannot get help explaing a menu item',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'parentMissing': {
-    'summary': 'parent missing',
-    'why': 'Keyboard-only user cannot operate a custom tool',
+  'ariaLabelWrongRisk': {
+    'summary': 'dubious aria-label',
+    'why': 'User may fail to get help understanding an item in a form',
     'wcag': '1.3.1',
-    'weight': 4
-  },
-  'descendantMissing': {
-    'summary': 'descendant missing',
-    'why': 'Keyboard-only user cannot operate a custom tool',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'presentationChild': {
-    'summary': 'presentation element has child',
-    'why': 'Keyboard-only user cannot reach an item intended to be reachable',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'svgImageNoText': {
-    'summary': 'svg image not named',
-    'why': 'User cannot get help understanding an image',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'svgLabelID': {
-    'summary': 'svg label referent invalid',
-    'why': 'User cannot get help understanding an image',
-    'wcag': '1.1.1',
-    'weight': 4
-  },
-  'cssBansPageRotate': {
-    'summary': 'CSS bans page rotation',
-    'why': 'User must read sideways after rotating a device',
-    'wcag': '1.3.4',
-    'weight': 4
-  },
-  'cssBansElementRotate': {
-    'summary': 'CSS bans element rotation',
-    'why': 'User must read sideways after rotating a device',
-    'wcag': '1.3.4',
-    'weight': 4
-  },
-  'orientationRisk': {
-    'summary': 'orientation issues not testable',
-    'why': 'User may need to read sideways after rotating a device',
-    'wcag': '1.3.4',
-    'weight': 1,
-    'max': 1
-  },
-  'metaBansZoom': {
-    'summary': 'meta bans zoom',
-    'why': 'User cannot adjust the page size for readability',
-    'wcag': '1.4.4',
-    'weight': 4,
-    'max': 1
-  },
-  'fontSizeAbsolute': {
-    'summary': 'font size absolute',
-    'why': 'User cannot adjust the text size for readability',
-    'wcag': '1.4.4',
-    'weight': 2
-  },
-  'fontSmall': {
-    'summary': 'font small',
-    'why': 'Text is difficult to read',
-    'wcag': '1.4',
-    'weight': 3
-  },
-  'horizontalSpacingFrozen': {
-    'summary': 'horizontal text spacing frozen',
-    'why': 'User cannot adjust the horizontal text spacing for readability',
-    'wcag': '1.4.12',
-    'weight': 4
-  },
-  'verticalSpacingFrozen': {
-    'summary': 'vertical text spacing frozen',
-    'why': 'User cannot adjust the vertical text spacing for readability',
-    'wcag': '1.4.12',
-    'weight': 4
-  },
-  'lineHeightAbsolute': {
-    'summary': 'line height absolute',
-    'why': 'User cannot adjust the line height of text for readability',
-    'wcag': '1.4.12',
-    'weight': 2
-  },
-  'lineHeightLow': {
-    'summary': 'line height low',
-    'why': 'Text is difficult to read',
-    'wcag': '1.4.8',
-    'weight': 2
-  },
-  'lineHeightBad': {
-    'summary': 'line height misdefined',
-    'why': 'Text is difficult to read',
-    'wcag': '1.4.8',
-    'weight': 4
-  },
-  'overflowHidden': {
-    'summary': 'overflow hidden',
-    'why': 'User cannot enlarge the text for readability',
-    'wcag': '1.4.4',
-    'weight': 4
-  },
-  'overflowHiddenRisk': {
-    'summary': 'overflow hidden?',
-    'why': 'User may be unable to enlarge the text for readability',
-    'wcag': '1.4.4',
-    'weight': 1
-  },
-  'boxSizeAbsolute': {
-    'summary': 'box size absolute',
-    'why': 'User cannot enlarge the content of an item for readability',
-    'wcag': '1.4.4',
-    'weight': 3
-  },
-  'elementBad': {
-    'summary': 'nonexistent element',
-    'why': 'User cannot understand the content',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'titleBad': {
-    'summary': 'title attribute invalid',
-    'why': 'User gets too little, too much, or repeated help explaining an item',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'baseElementMissing': {
-    'summary': 'base element missing where required',
-    'why': 'Browser cannot find a needed external resource',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'linkElementMisplaced': {
-    'summary': 'link element misplaced',
-    'why': 'Document fails to get a needed external resource',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'linkElementBad': {
-    'summary': 'link element invalid',
-    'why': 'Document fails to get a needed external resource',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'metaAttributesWrong': {
-    'summary': 'prohibited or missing meta attributes',
-    'why': 'Browser processes the page incorrectly',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'metaAttributeBad': {
-    'summary': 'meta attribute value invalid',
-    'why': 'Browser processes the page incorrectly',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'metaDuplicated': {
-    'summary': 'meta element duplicated',
-    'why': 'Browser may process the page incorrectly',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'metaCharsetLate': {
-    'summary': 'meta charset declared too late',
-    'why': 'Browser may display incorrect text',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'metaXUACompatible': {
-    'summary': 'meta X-UA-Compatible incomplete',
-    'why': 'Internet Explorer may display the page incorrectly',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'metaMisplaced': {
-    'summary': 'meta element in invalid location',
-    'why': 'Browser may process the page incorrectly',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'stylesheetBanned': {
-    'summary': 'stylesheet prohibited',
-    'why': 'Browser displays the page improperly',
-    'wcag': '1.4',
-    'weight': 3
-  },
-  'scriptNotDeferrable': {
-    'summary': 'script element invalidly deferred',
-    'why': 'Browser processes the page improperly',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'scriptBanned': {
-    'summary': 'script prohibited',
-    'why': 'Browser processes the page improperly',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'scriptElementBad': {
-    'summary': 'script element invalid',
-    'why': 'Browser processes the page improperly',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'specRulesScriptBad': {
-    'summary': 'speculation rules script element invalid',
-    'why': 'Document navigation performs poorly',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'itemIDBad': {
-    'summary': 'itemid invalid',
-    'why': 'User cannot get help to identify a referent',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'itemTypeBad': {
-    'summary': 'itemtype invalid',
-    'why': 'User cannot get help on the definition of a term',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'iframeTitleBad': {
-    'summary': 'iframe not named',
-    'why': 'User cannot get help on the topic of an embedded page',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'roleBad': {
-    'summary': 'role invalid',
-    'why': 'User cannot get help on the nature of an item',
-    'wcag': '4.1.2',
-    'weight': 3
-  },
-  'roleHierarchyBad': {
-    'summary': 'ancestor and descendant roles incompatible',
-    'why': 'User may misunderstand or be blocked from exposure to an item',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'roleRedundant': {
-    'summary': 'role redundant',
-    'why': 'Document includes unnecessary code',
-    'wcag': '4.1.2',
-    'weight': 1
-  },
-  'roleConfusion': {
-    'summary': 'role assigned instead of implicit',
-    'why': 'User may misunderstand the purpose of an item',
-    'wcag': '4.1.2',
-    'weight': 1
-  },
-  'dirBad': {
-    'summary': 'dir invalid',
-    'why': 'Item may behave improperly',
-    'wcag': '4.1.2',
-    'weight': 1
-  },
-  'attributeBad': {
-    'summary': 'attribute invalid',
-    'why': 'Item behaves improperly',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'sizesAttributeBad': {
-    'summary': 'sizes attribute invalid',
-    'why': 'Item behaves improperly',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'attributeValueBad': {
-    'summary': 'attribute value invalid',
-    'why': 'Item behaves improperly',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'attributeValueRisk': {
-    'summary': 'attribute value bad?',
-    'why': 'Item may behave improperly',
-    'wcag': '4.1.2',
-    'weight': 1
-  },
-  'attributeMissing': {
-    'summary': 'attribute missing',
-    'why': 'Item behaves improperly',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'roleMissing': {
-    'summary': 'role missing',
-    'why': 'Item behaves improperly',
-    'wcag': '4.1.2',
-    'weight': 3
-  },
-  'roleMissingRisk': {
-    'summary': 'role missing?',
-    'why': 'Item may behave improperly',
-    'wcag': '4.1.2',
     'weight': 1
   },
   'ariaMissing': {
@@ -941,17 +162,17 @@ const issuesData = {
     'wcag': '4.1.2',
     'weight': 2
   },
-  'ariaAttributeBad': {
-    'summary': 'aria attribute invalid',
-    'why': 'Item behavior violates user expectations',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
   'ariaRedundant': {
     'summary': 'aria attribute redundant',
     'why': 'Document includes unnecessary code',
     'wcag': '4.1.2',
     'weight': 1
+  },
+  'ariaReferenceBad': {
+    'summary': 'aria reference invalid',
+    'why': 'Item behavior violates user expectations',
+    'wcag': '1.3.1',
+    'weight': 4
   },
   'ariaVersusHTML': {
     'summary': 'aria and HTML attributes have conflicting value',
@@ -959,11 +180,71 @@ const issuesData = {
     'wcag': '4.1.2',
     'weight': 4
   },
-  'ariaReferenceBad': {
-    'summary': 'aria reference invalid',
-    'why': 'Item behavior violates user expectations',
+  'articleHeadingless': {
+    'summary': 'article heading missing',
+    'why': 'User cannot understand the topic of a part of the page',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'asideConfusion': {
+    'summary': 'asides not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'asideNotTop': {
+    'summary': 'aside child of landmark',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2
+  },
+  'atRuleInvalid': {
+    'summary': 'invalid at-rule',
+    'why': 'Document cannot be properly displayed in particular contexts',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'attributeBad': {
+    'summary': 'attribute invalid',
+    'why': 'Item behaves improperly',
     'wcag': '1.3.1',
     'weight': 4
+  },
+  'attributeMissing': {
+    'summary': 'attribute missing',
+    'why': 'Item behaves improperly',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'attributeObsolete': {
+    'summary': 'attribute obsolete',
+    'why': 'Document includes obsolete code that the browser may fail to process',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'attributeValueBad': {
+    'summary': 'attribute value invalid',
+    'why': 'Item behaves improperly',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'attributeValueRisk': {
+    'summary': 'attribute value bad?',
+    'why': 'Item may behave improperly',
+    'wcag': '4.1.2',
+    'weight': 1
+  },
+  'audioNoText': {
+    'summary': 'audio track missing',
+    'why': 'User cannot get help reading speech as text',
+    'wcag': '1.2.1',
+    'weight': 4
+  },
+  'audioTextRisk': {
+    'summary': 'audio not named?',
+    'why': 'User may be unable to get help reading speech as text',
+    'wcag': '1.2.1',
+    'weight': 1
   },
   'autocompleteBad': {
     'summary': 'autocomplete invalid',
@@ -983,17 +264,188 @@ const issuesData = {
     'wcag': '1.3.5',
     'weight': 1
   },
-  'requirementBad': {
-    'summary': 'requirement invalid',
-    'why': 'User may fail to get help determining whether a form item must be completed',
-    'wcag': '1.3.5',
+  'autoplay': {
+    'summary': 'autoplay',
+    'why': 'Motion- or noise-sensitive user may suffer harm',
+    'wcag': '1.4.2',
+    'weight': 2
+  },
+  'autoplayControl': {
+    'summary': 'autoplay control',
+    'why': 'Motion- or noise-sensitive user may suffer harm',
+    'wcag': '1.4.2',
+    'weight': 2
+  },
+  'autoplayLong': {
+    'summary': 'autoplay long',
+    'why': 'Motion- or noise-sensitive user may suffer harm',
+    'wcag': '1.4.2',
+    'weight': 2
+  },
+  'avNoText': {
+    'summary': 'audio or video caption track missing',
+    'why': 'User cannot get help reading speech as text',
+    'wcag': '1.2.1',
     'weight': 4
   },
-  'requirementRedundant': {
-    'summary': 'requirement redundant',
-    'why': 'Help determining whether a form item must be completed is at risk of corruption',
-    'wcag': '1.3.5',
+  'backgroundBad': {
+    'summary': 'CSS background invalid',
+    'why': 'Background is displayed improperly',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'backgroundImageBad': {
+    'summary': 'background image invalid',
+    'why': 'Background image is displayed improperly',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'bannerConfusion': {
+    'summary': 'banners not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'bannerNot1': {
+    'summary': 'multiple banners',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2,
+    'max': 1
+  },
+  'bannerNotTop': {
+    'summary': 'banner child of landmark',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2
+  },
+  'baseElementMissing': {
+    'summary': 'base element missing where required',
+    'why': 'Browser cannot find a needed external resource',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'blink': {
+    'summary': 'blink element',
+    'why': 'Motion-sensitive user may suffer harm',
+    'wcag': '2.2.2',
+    'weight': 4
+  },
+  'blockQuoteShort': {
+    'summary': 'block quote abnormally short',
+    'why': 'Content can be made easier to read',
+    'wcag': '1.4.8',
     'weight': 1
+  },
+  'borderBad': {
+    'summary': 'CSS border invalid',
+    'why': 'Border is displayed improperly',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'boxInvisibleRisk': {
+    'summary': 'border or outline invisible?',
+    'why': 'User cannot perceive the boundary of an item',
+    'wcag': '2.5.8',
+    'weight': 1
+  },
+  'boxSizeAbsolute': {
+    'summary': 'box size absolute',
+    'why': 'User cannot enlarge the content of an item for readability',
+    'wcag': '1.4.4',
+    'weight': 3
+  },
+  'browserSupportRisk': {
+    'summary': 'inputmode attribute',
+    'why': 'Document may include code that the browser cannot process',
+    'wcag': '4.1',
+    'weight': 1
+  },
+  'buttonAlt': {
+    'summary': 'button has alt',
+    'why': 'User cannot get help explaing a button',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'buttonNoContent': {
+    'summary': 'button name not visible',
+    'why': 'User cannot get help explaining a button',
+    'wcag': '4.1.2',
+    'weight': 1
+  },
+  'buttonNoText': {
+    'summary': 'button not named',
+    'why': 'User cannot get help explaining a button',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'captcha2': {
+    'summary': 'captcha2',
+    'why': 'User is prevented from consuming the page',
+    'wcag': '1.1.1',
+    'weight': 1,
+    'max': 1
+  },
+  'cellHeadersAmbiguityRisk': {
+    'summary': 'cell headers ambiguous?',
+    'why': 'User may be unable to get help on relationships in a table',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'cellHeadersNotInferrable': {
+    'summary': 'cell headers not inferrable',
+    'why': 'User cannot get help on relationships in a table',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'cellHeadersOutsideTable': {
+    'summary': 'cell headers outside table',
+    'why': 'User cannot get help on relationships in a table',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'characterBad': {
+    'summary': 'invalid character',
+    'why': 'Invalid character makes the page behave incorrectly',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'clickOnly': {
+    'summary': 'name dubiously mouse-specific',
+    'why': 'User may misunderstand how to activate a link',
+    'wcag': '2.4.4',
+    'weight': 1
+  },
+  'colorNamedRisk': {
+    'summary': 'color perception required?',
+    'why': 'Content is impossible to perceive under some conditions',
+    'wcag': '1.4.1',
+    'weight': 1
+  },
+  'complementaryNoText': {
+    'summary': 'complementary not named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 1
+  },
+  'componentNoText': {
+    'summary': 'interactive component not named',
+    'why': 'User cannot get help understanding a custom item',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'contentBeyondLandmarks': {
+    'summary': 'content beyond landmarks',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 1
+  },
+  'contentHidden': {
+    'summary': 'page hidden',
+    'why': 'User cannot get the page content',
+    'wcag': '2.4.7',
+    'weight': 4,
+    'max': 1
   },
   'contrastAA': {
     'summary': 'contrast poor',
@@ -1013,69 +465,69 @@ const issuesData = {
     'wcag': '1.4.3',
     'weight': 1
   },
-  'infoNeedsColor': {
-    'summary': 'color the only classifier?',
-    'why': 'Categories are indistinguishable',
-    'wcag': '1.4.1',
-    'weight': 1
-  },
-  'colorNamedRisk': {
-    'summary': 'color perception required?',
-    'why': 'Content is impossible to perceive under some conditions',
-    'wcag': '1.4.1',
-    'weight': 1
-  },
-  'sensoryDependenceRisk': {
-    'summary': 'instruction requires particular sense?',
-    'why': 'Content is impossible to perceive under some conditions',
-    'wcag': '1.4.1',
-    'weight': 1
-  },
-  'idEmpty': {
-    'summary': 'ID empty',
-    'why': 'Item behaves improperly',
+  'controlIDInLabelBad': {
+    'summary': 'label contains control with nonmatching ID',
+    'why': 'User cannot get help understanding an item in a form',
     'wcag': '1.3.1',
     'weight': 4
   },
-  'targetEmpty': {
-    'summary': 'target empty',
-    'why': 'Item is displayed improperly',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'headingsEmbedded': {
-    'summary': 'heading within a heading',
-    'why': 'User cannot understand the page organization',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'headingEmpty': {
-    'summary': 'heading empty',
-    'why': 'User cannot get help on the topic of a part of the page',
+  'controlLabelInvisible': {
+    'summary': 'control label invisible',
+    'why': 'User cannot understand how to operate a form item',
     'wcag': '2.4.6',
+    'weight': 4
+  },
+  'controlNoText': {
+    'summary': 'control not named',
+    'why': 'User cannot get help on how to operate a form item',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'cssBansElementRotate': {
+    'summary': 'CSS bans element rotation',
+    'why': 'User must read sideways after rotating a device',
+    'wcag': '1.3.4',
+    'weight': 4
+  },
+  'cssBansPageRotate': {
+    'summary': 'CSS bans page rotation',
+    'why': 'User must read sideways after rotating a device',
+    'wcag': '1.3.4',
+    'weight': 4
+  },
+  'cssInvalid': {
+    'summary': 'CSS invalid',
+    'why': 'Document cannot be properly displayed',
+    'wcag': '4.1',
     'weight': 3
   },
-  'headingOfNothing': {
-    'summary': 'heading heads nothing',
-    'why': 'Helper misdescribes the page',
+  'customKeyboardRisk': {
+    'summary': 'custom button keyboard-inoperable?',
+    'why': 'Custom item may prevent a keyboard-only user from operating it',
+    'wcag': '2.1.1',
+    'weight': 1
+  },
+  'datalistRef': {
+    'summary': 'ambiguous or missing datalist reference',
+    'why': 'User cannot get help on the permitted input values',
+    'wcag': '3.3.2',
+    'weight': 4
+  },
+  'decorativeAlt': {
+    'summary': 'decorative image is named',
+    'why': 'User gets an uninformative image description or misses an informative image',
+    'wcag': '1.1.1',
+    'weight': 1
+  },
+  'decorativeElementExposed': {
+    'summary': 'decorative element exposed',
+    'why': 'Helper alerts a user to an uninformative image',
     'wcag': '1.3.1',
     'weight': 2
   },
-  'typeBad': {
-    'summary': 'type invalid',
-    'why': 'Document styles are at risk of corruption',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'typeRedundant': {
-    'summary': 'type redundant',
-    'why': 'Document includes unnecessary code',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'imageTextRedundant': {
-    'summary': 'image name redundant',
-    'why': 'Helper repeats the explanation of an image',
+  'decorativeImageRisk': {
+    'summary': 'image dubiously marked decorative',
+    'why': 'Helper ignores an image that is apparently informative',
     'wcag': '1.1.1',
     'weight': 1
   },
@@ -1085,30 +537,71 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 2
   },
-  'titleRedundant': {
-    'summary': 'title attribute redundant',
-    'why': 'Helper repeats the explanation of an item',
+  'descendantMissing': {
+    'summary': 'descendant missing',
+    'why': 'Keyboard-only user cannot operate a custom tool',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'descriptionBadID': {
+    'summary': 'aria-describedby invalid',
+    'why': 'User cannot get help understanding an item in detail',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'descriptionOrder': {
+    'summary': 'description list misordered',
+    'why': 'User cannot get help on the structure of a list',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'descriptionOrphan': {
+    'summary': 'description list orphan',
+    'why': 'User cannot get help on whether an item is in a list',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'destinationLink': {
+    'summary': 'link href missing',
+    'why': 'Helper cannot properly explain a link to a user',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'destinationNotURL': {
+    'summary': 'link destination not URL',
+    'why': 'Helper cannot properly explain a link to a user',
     'wcag': '1.3.1',
     'weight': 1
   },
-  'titleEmpty': {
-    'summary': 'title attribute empty',
-    'why': 'Hovering does not get the promised explanation of an item',
-    'wcag': '1.3.1',
+  'dialogNoText': {
+    'summary': 'dialog not named',
+    'why': 'User cannot get help explaining a pop-up window',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'dirBad': {
+    'summary': 'dir invalid',
+    'why': 'Item may behave improperly',
+    'wcag': '4.1.2',
     'weight': 1
   },
-  'docTypeMissing': {
-    'summary': 'DOCTYPE missing',
-    'why': 'Browser processes the page improperly',
-    'wcag': '1.3.1',
-    'weight': 4,
-    'max': 1
+  'directionRisk': {
+    'summary': 'dubious direction',
+    'why': 'Item may behave incorrectly',
+    'wcag': '1.3.2',
+    'weight': 1
   },
-  'docTypeMisplaced': {
-    'summary': 'DOCTYPE in invalid location',
-    'why': 'Browser processes the page improperly',
+  'divInTable': {
+    'summary': 'div embedded in table',
+    'why': 'Blocks of content within a table cell may confuse a user',
+    'wcag': '1.4',
+    'weight': 1
+  },
+  'docHeadingNotH1': {
+    'summary': 'primary heading not h1',
+    'why': 'User cannot understand the topic of the page',
     'wcag': '1.3.1',
-    'weight': 4,
+    'weight': 2,
     'max': 1
   },
   'docTypeBad': {
@@ -1118,19 +611,308 @@ const issuesData = {
     'weight': 3,
     'max': 1
   },
-  'pageTitleBad': {
-    'summary': 'page title invalid',
+  'docTypeMisplaced': {
+    'summary': 'DOCTYPE in invalid location',
     'why': 'Browser processes the page improperly',
+    'wcag': '1.3.1',
+    'weight': 4,
+    'max': 1
+  },
+  'docTypeMissing': {
+    'summary': 'DOCTYPE missing',
+    'why': 'Browser processes the page improperly',
+    'wcag': '1.3.1',
+    'weight': 4,
+    'max': 1
+  },
+  'documentConfusion': {
+    'summary': 'page elements not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'duplicateAttribute': {
+    'summary': 'duplicate attribute',
+    'why': 'Browser processes the page improperly',
+    'wcag': '4.1.1',
+    'weight': 2
+  },
+  'duplicateID': {
+    'summary': 'ID not unique',
+    'why': 'User may be pointed to the wrong item',
+    'wcag': '4.1.1',
+    'weight': 4
+  },
+  'editableHow': {
+    'summary': 'contenteditable element incomplete',
+    'why': 'User cannot get help on how to edit editable content',
+    'wcag': '1.3.1',
+    'weight': 3
+  },
+  'elementBad': {
+    'summary': 'nonexistent element',
+    'why': 'User cannot understand the content',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'elementClosure': {
+    'summary': 'element closure invalid',
+    'why': 'Document contains invalid code',
+    'wcag': '4.1.1',
+    'weight': 3
+  },
+  'elementLanguageBad': {
+    'summary': 'element language invalid',
+    'why': 'Speaking helper may mispronounce the text of an item',
+    'wcag': '3.1.2',
+    'weight': 4
+  },
+  'elementObsolete': {
+    'summary': 'element obsolete',
+    'why': 'Document includes obsolete code that the browser may fail to process',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'emailLinkBad': {
+    'summary': 'Microsoft will bounce email from link',
+    'why': 'User cannot send email',
+    'wcag': '2.4.4',
+    'weight': 4
+  },
+  'encodingBad': {
+    'summary': 'text not Unicode-compliant',
+    'why': 'User cannot read all of the text',
+    'wcag': '3.1.3',
+    'weight': 4
+  },
+  'encodingMisdeclared': {
+    'summary': 'text encoding wrongly declared',
+    'why': 'User cannot read all of the text',
+    'wcag': '3.1.3',
+    'weight': 4,
+    'max': 1
+  },
+  'encodingPrivate': {
+    'summary': 'text in Private Use Area',
+    'why': 'User cannot read all of the text',
+    'wcag': '3.1.3',
+    'weight': 4,
+    'max': 1
+  },
+  'entityBad': {
+    'summary': 'named character reference invalid',
+    'why': 'User may be unable to read all the page text',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'errorReferenceBad': {
+    'summary': 'error reference invalid',
+    'why': 'User cannot correct a form error',
+    'wcag': '3.3.1',
+    'weight': 4
+  },
+  'eventKeyboardRisk': {
+    'summary': 'event not keyboard-triggerable?',
+    'why': 'Keyboard-only user may be unable to perform an action',
+    'wcag': '2.1.1',
+    'weight': 1
+  },
+  'fatalError': {
+    'summary': 'fatal error',
+    'why': 'Document prevents testing for accessibility',
+    'wcag': '4.1',
+    'weight': 4,
+    'max': 1
+  },
+  'fieldSetMissing': {
+    'summary': 'fieldset missing',
+    'why': 'User cannot get help recognizing a group of related form items',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'fieldSetRisk': {
+    'summary': 'fieldset missing?',
+    'why': 'User may be unable to get help recognizing a group of related form items',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'figureNoText': {
+    'summary': 'figure not named',
+    'why': 'User cannot get help on the topic of a figure',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'flash': {
+    'summary': 'flash content',
+    'why': 'Document includes code that may not work and may jeopardize user security',
+    'wcag': '4.1',
+    'weight': 1,
+    'max': 1
+  },
+  'flexBad': {
+    'summary': 'CSS flex invalid',
+    'why': 'Content is displayed improperly',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'focusableDescendants': {
+    'summary': 'presentational child focusable',
+    'why': 'Keyboard-only user cannot navigate properly to the operable items',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'focusableHidden': {
+    'summary': 'focusable element hidden',
+    'why': 'Keyboard-only user cannot navigate properly to the operable items',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'focusableOperable': {
+    'summary': 'element focusability and operability conflict',
+    'why': 'Keyboard-only user cannot operate an item',
+    'wcag': '2.1.1',
+    'weight': 3
+  },
+  'focusableRole': {
+    'summary': 'focusable element not active',
+    'why': 'Keyboard-only user cannot navigate properly to the operable items',
+    'wcag': '4.1.2',
+    'weight': 3
+  },
+  'focusDiscrepancy': {
+    'summary': 'Tab-focusable elements wrong',
+    'why': 'Item selections by a keyboard-only user are useless or impossible',
+    'wcag': '2.1.1',
+    'weight': 4
+  },
+  'focusedAway': {
+    'summary': 'element beyond display when focused',
+    'why': 'Keyboard-only user cannot navigate properly to the operable items',
+    'wcag': '1.4.10',
+    'weight': 3
+  },
+  'focusIndicationBad': {
+    'summary': 'focus indication poor',
+    'why': 'Keyboard-only user cannot choose an item to operate',
+    'wcag': '2.4.7',
+    'weight': 4
+  },
+  'focusIndicationImprovable': {
+    'summary': 'focus indication improvable',
+    'why': 'Keyboard-only user cannot easily choose an item to operate',
+    'wcag': '2.4.7',
+    'weight': 2
+  },
+  'focusIndicationRisk': {
+    'summary': 'focus indication poor?',
+    'why': 'Keyboard-only user cannot choose an item to operate',
+    'wcag': '2.4.7',
+    'weight': 1
+  },
+  'fontSizeAbsolute': {
+    'summary': 'font size absolute',
+    'why': 'User cannot adjust the text size for readability',
+    'wcag': '1.4.4',
+    'weight': 2
+  },
+  'fontSmall': {
+    'summary': 'font small',
+    'why': 'Text is difficult to read',
+    'wcag': '1.4',
+    'weight': 3
+  },
+  'footerConfusion': {
+    'summary': 'contentinfos not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'footerNot1': {
+    'summary': 'multiple contentinfos',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2,
+    'max': 1
+  },
+  'footerNotTop': {
+    'summary': 'footer child of landmark',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 1
+  },
+  'formConfusion': {
+    'summary': 'forms not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'formInTable': {
+    'summary': 'form embedded in table',
+    'why': 'Navigation in a form may confuse a keyboard-only user',
+    'wcag': '2.1.1',
+    'weight': 1
+  },
+  'formsNested': {
+    'summary': 'form nested in another form',
+    'why': 'User cannot predict effect of actions in a form',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'formSurpriseRisk': {
+    'summary': 'form interaction changes content?',
+    'why': 'User experiences unexpected page change when using a form',
+    'wcag': '3.2.5',
+    'weight': 1
+  },
+  'fragmentaryNoticeRisk': {
+    'summary': 'assertive region not atomic',
+    'why': 'User may be unable to get help on what content has changed',
+    'wcag': '4.1.3',
+    'weight': 2
+  },
+  'frameSandboxRisk': {
+    'summary': 'iframe sandbox attributes risky',
+    'why': 'Document may be unsafe to use',
+    'wcag': '4.1',
+    'weight': 2
+  },
+  'gapBad': {
+    'summary': 'CSS gap invalid',
+    'why': 'Content is displayed improperly',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'governedBadID': {
+    'summary': 'aria-controls or -owns invalid',
+    'why': 'Keyboard-only user cannot reach an item',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'groupName': {
+    'summary': 'group not named',
+    'why': 'User cannot get help on the topic of a group of form items',
+    'wcag': '4.1.2',
+    'weight': 3
+  },
+  'h1Not1': {
+    'summary': 'not exactly 1 h1 heading',
+    'why': 'User cannot understand the topic of the page',
+    'wcag': '1.3.1',
+    'weight': 2,
+    'max': 1
+  },
+  'h1Not1st': {
+    'summary': 'h1 not 1st heading',
+    'why': 'User cannot understand the topic of the page',
     'wcag': '1.3.1',
     'weight': 3,
     'max': 1
   },
-  'pageTitle': {
-    'summary': 'page title missing',
-    'why': 'User is not informed of the topic of the page',
-    'wcag': '2.4.2',
-    'weight': 4,
-    'max': 1
+  'haspopupBad': {
+    'summary': 'aria-haspopup invalid',
+    'why': 'Keyboard-only user cannot operate a custom tool',
+    'wcag': '1.3.1',
+    'weight': 4
   },
   'headElementsBad': {
     'summary': 'element in head invalid',
@@ -1138,21 +920,33 @@ const issuesData = {
     'wcag': '4.1.1',
     'weight': 3
   },
-  'headingLevelSkip': {
-    'summary': 'heading level skipped',
-    'why': 'Helper misdescribes the page',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'headingStructure': {
-    'summary': 'heading structure illogical',
-    'why': 'Helper misdescribes the page',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
   'headingConfusion': {
     'summary': 'heading names repeated',
     'why': 'User cannot differentiate parts of the page',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'headingEmpty': {
+    'summary': 'heading empty',
+    'why': 'User cannot get help on the topic of a part of the page',
+    'wcag': '2.4.6',
+    'weight': 3
+  },
+  'headingImageNoText': {
+    'summary': 'heading image not named',
+    'why': 'User cannot get help understanding an image used as a heading',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'headingLength': {
+    'summary': 'heading abnormally long',
+    'why': 'User has difficulty understanding the topic of a part of the page',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'headingLevelSkip': {
+    'summary': 'heading level skipped',
+    'why': 'Helper misdescribes the page',
     'wcag': '1.3.1',
     'weight': 2
   },
@@ -1169,50 +963,209 @@ const issuesData = {
     'weight': 3,
     'max': 1
   },
-  'h1Not1': {
-    'summary': 'not exactly 1 h1 heading',
-    'why': 'User cannot understand the topic of the page',
+  'headingOfNothing': {
+    'summary': 'heading heads nothing',
+    'why': 'Helper misdescribes the page',
     'wcag': '1.3.1',
-    'weight': 2,
-    'max': 1
+    'weight': 2
   },
-  'h1Not1st': {
-    'summary': 'h1 not 1st heading',
-    'why': 'User cannot understand the topic of the page',
+  'headingsEmbedded': {
+    'summary': 'heading within a heading',
+    'why': 'User cannot understand the page organization',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'headingStructure': {
+    'summary': 'heading structure illogical',
+    'why': 'Helper misdescribes the page',
     'wcag': '1.3.1',
-    'weight': 3,
-    'max': 1
+    'weight': 2
   },
-  'docHeadingNotH1': {
-    'summary': 'primary heading not h1',
-    'why': 'User cannot understand the topic of the page',
-    'wcag': '1.3.1',
-    'weight': 2,
-    'max': 1
+  'hideFailureRisk': {
+    'summary': 'false aria-hidden value risky',
+    'why': 'User may be misled by erroneously hidden or revealed page content',
+    'wcag': '2.4.6',
+    'weight': 1
   },
-  'articleHeadingless': {
-    'summary': 'article heading missing',
-    'why': 'User cannot understand the topic of a part of the page',
+  'horizontalSpacingFrozen': {
+    'summary': 'horizontal text spacing frozen',
+    'why': 'User cannot adjust the horizontal text spacing for readability',
+    'wcag': '1.4.12',
+    'weight': 4
+  },
+  'hoverIndication': {
+    'summary': 'hover indication poor',
+    'why': 'User cannot explore the page reliably with a mouse',
+    'wcag': '3.3.2',
+    'weight': 3
+  },
+  'hoverSurprise': {
+    'summary': 'hovering changes content',
+    'why': 'User cannot explore the page reliably with a mouse',
+    'wcag': '3.2.5',
+    'weight': 1
+  },
+  'hrConfusionRisk': {
+    'summary': 'hr misused',
+    'why': 'User cannot get help on the nature of segments of the page',
     'wcag': '1.3.1',
     'weight': 1
   },
-  'sectionHeadingless': {
-    'summary': 'section heading missing',
-    'why': 'User cannot understand the topic of a part of the page',
+  'idEmpty': {
+    'summary': 'ID empty',
+    'why': 'Item behaves improperly',
     'wcag': '1.3.1',
+    'weight': 4
+  },
+  'iframeTitleBad': {
+    'summary': 'iframe not named',
+    'why': 'User cannot get help on the topic of an embedded page',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'ignorable': {
+    'summary': 'ignorable',
+    'why': 'No known impact, because the test is unreliable or invalid',
+    'wcag': '',
     'weight': 1
   },
-  'headingLength': {
-    'summary': 'heading abnormally long',
-    'why': 'User has difficulty understanding the topic of a part of the page',
-    'wcag': '1.3.1',
+  'imageBanned': {
+    'summary': 'image prohibited',
+    'why': 'Browser fails to display an image',
+    'wcag': '1.4',
+    'weight': 3
+  },
+  'imageButtonNoText': {
+    'summary': 'image button not named',
+    'why': 'User cannot get help understanding an image used as a button',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'imageInputNoText': {
+    'summary': 'image input not named',
+    'why': 'User cannot get help understanding an image used as a submission button',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'imageLinkNoText': {
+    'summary': 'image link not named',
+    'why': 'User cannot get help understanding what a link points to',
+    'wcag': '2.4.4',
+    'weight': 4
+  },
+  'imageMapAreaNoText': {
+    'summary': 'image map area not named',
+    'why': 'User cannot get help on how to use an interactive image',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'imageMapNoText': {
+    'summary': 'image map not named',
+    'why': 'User cannot get help on the topic of an interactive image',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'imageNoText': {
+    'summary': 'image not named',
+    'why': 'User cannot get help to know what is in an image',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'imagesSameAlt': {
+    'summary': 'nearby images have same alt',
+    'why': 'User cannot get help differentiating two adjacent images',
+    'wcag': '1.1.1',
     'weight': 1
   },
-  'blockQuoteShort': {
-    'summary': 'block quote abnormally short',
-    'why': 'Content can be made easier to read',
-    'wcag': '1.4.8',
+  'imageTextBad': {
+    'summary': 'image named with filename',
+    'why': 'Helper gives a user the filename of an image instead of describing it',
+    'wcag': '1.1.1',
+    'weight': 3
+  },
+  'imageTextImage': {
+    'summary': 'image name contains image',
+    'why': 'User is redundantly told an image is an image',
+    'wcag': '1.1.1',
     'weight': 1
+  },
+  'imageTextLong': {
+    'summary': 'image alt long',
+    'why': 'Helper gives a user an overly verbose explanation of an image',
+    'wcag': '1.1.1',
+    'weight': 2
+  },
+  'imageTextRedundant': {
+    'summary': 'image name redundant',
+    'why': 'Helper repeats the explanation of an image',
+    'wcag': '1.1.1',
+    'weight': 1
+  },
+  'imageTextRisk': {
+    'summary': 'image dubiously named',
+    'why': 'Helper may describe an image inadequately',
+    'wcag': '1.1.1',
+    'weight': 1
+  },
+  'imageTextSpaces': {
+    'summary': 'image name contains only spacing characters',
+    'why': 'User cannot get help understanding an image',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'inconsistentStyles': {
+    'summary': 'inconsistent heading, link, or button styles',
+    'why': 'User cannot easily distinguish items of different types',
+    'wcag': '3.2.4',
+    'weight': 1
+  },
+  'infoNeedsColor': {
+    'summary': 'color the only classifier?',
+    'why': 'Categories are indistinguishable',
+    'wcag': '1.4.1',
+    'weight': 1
+  },
+  'inputInTable': {
+    'summary': 'input embedded in table',
+    'why': 'Entry of data in a form may confuse a keyboard-only user',
+    'wcag': '2.1.1',
+    'weight': 1
+  },
+  'inputLabelInvisibleRisk': {
+    'summary': 'input label invisible?',
+    'why': 'User cannot understand where to enter information',
+    'wcag': '2.4.6',
+    'weight': 1
+  },
+  'inputNoText': {
+    'summary': 'input not named',
+    'why': 'User cannot get help on what information to enter in a form item',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'inputOnlyPlaceholder': {
+    'summary': 'input has placeholder instead of name',
+    'why': 'User cannot get reliable help on what information to enter in a form item',
+    'wcag': '4.1.2',
+    'weight': 3
+  },
+  'internalLinkBroken': {
+    'summary': 'internal link broken',
+    'why': 'User cannot reach a promised page location',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'itemIDBad': {
+    'summary': 'itemid invalid',
+    'why': 'User cannot get help to identify a referent',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'itemTypeBad': {
+    'summary': 'itemtype invalid',
+    'why': 'User cannot get help on the definition of a term',
+    'wcag': '1.3.1',
+    'weight': 4
   },
   'justification': {
     'summary': 'text fully justified',
@@ -1226,26 +1179,570 @@ const issuesData = {
     'wcag': '1.4.8',
     'weight': 1
   },
+  'keyboardScroll': {
+    'summary': 'element not scrollable',
+    'why': 'Keyboard-only user cannot scroll an item',
+    'wcag': '2.1.1',
+    'weight': 4
+  },
+  'labelBadID': {
+    'summary': 'label reference invalid',
+    'why': 'User cannot get help understanding an item in a form',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'labelClash': {
+    'summary': 'label types incompatible',
+    'why': 'User cannot get reliable help on the topics of form items',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'labelConfusionRisk': {
+    'summary': 'label location dubious',
+    'why': 'User may fail to notice the explanation of an item in a form',
+    'wcag': '3.3.2',
+    'weight': 1
+  },
+  'labeledHidden': {
+    'summary': 'control hidden but labeled',
+    'why': 'Document includes unnecessary code',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'labelEmpty': {
+    'summary': 'label empty',
+    'why': 'User cannot get help on the topics of form items',
+    'wcag': '1.3.1',
+    'weight': 3
+  },
+  'labelForBad': {
+    'summary': 'label referent ineligible',
+    'why': 'User cannot get help understanding an item in a form',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'labelNot1': {
+    'summary': 'element referenced by multiple labels',
+    'why': 'User cannot get reliable help on the topics of form items',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'labelNoText': {
+    'summary': 'label not named',
+    'why': 'User cannot get help on the topic of a form item',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'labelRisk': {
+    'summary': 'labeling risky',
+    'why': 'User may misunderstand a form control',
+    'wcag': '3.3.2',
+    'weight': 1
+  },
+  'landmarkConfusion': {
+    'summary': 'landmarks not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'landmarkInNav': {
+    'summary': 'invalid landmark child of navigation role',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 4
+  },
+  'languageChange': {
+    'summary': 'language change invalid',
+    'why': 'Speaking helper may mispronounce the text of an item',
+    'wcag': '3.1.2',
+    'weight': 3
+  },
+  'layoutTable': {
+    'summary': 'table misused',
+    'why': 'Helper misinforms a user about whether items are cells of a table',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'legendMisplaced': {
+    'summary': 'legend location invalid',
+    'why': 'User cannot get help on the topic of a group of form items',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'legendMissing': {
+    'summary': 'legend missing',
+    'why': 'User cannot get help on the topic of a group of form items',
+    'wcag': '4.1.2',
+    'weight': 2
+  },
+  'lineHeightAbsolute': {
+    'summary': 'line height absolute',
+    'why': 'User cannot adjust the line height of text for readability',
+    'wcag': '1.4.12',
+    'weight': 2
+  },
+  'lineHeightBad': {
+    'summary': 'line height misdefined',
+    'why': 'Text is difficult to read',
+    'wcag': '1.4.8',
+    'weight': 4
+  },
+  'lineHeightLow': {
+    'summary': 'line height low',
+    'why': 'Text is difficult to read',
+    'wcag': '1.4.8',
+    'weight': 2
+  },
+  'linkAltSame': {
+    'summary': 'link image alt duplicative',
+    'why': 'Helper repeats the explanation of a link',
+    'wcag': '1.1.1',
+    'weight': 2
+  },
+  'linkBrokenRisk': {
+    'summary': 'link incomplete',
+    'why': 'User may fail to reach a promised location',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'linkConfusionRisk': {
+    'summary': 'links dubiously share name',
+    'why': 'User may be unable to get help differentiating links',
+    'wcag': '2.4.4',
+    'weight': 1
+  },
+  'linkElementBad': {
+    'summary': 'link element invalid',
+    'why': 'Document fails to get a needed external resource',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'linkElementMisplaced': {
+    'summary': 'link element misplaced',
+    'why': 'Document fails to get a needed external resource',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'linkElNoHref': {
+    'summary': 'link element href missing',
+    'why': 'User cannot reach a promised location',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'linkElNoSource': {
+    'summary': 'link element href or imagesrcset missing',
+    'why': 'User cannot reach a promised location',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'linkFileName': {
+    'summary': 'link names a file instead of a purpose',
+    'why': 'User may fail to understand what a link points to',
+    'wcag': '2.4.4',
+    'weight': 1
+  },
+  'linkImageTextURL': {
+    'summary': 'text alternative of link image a URL',
+    'why': 'User cannot understand what a link points to',
+    'wcag': '2.4.4',
+    'weight': 3
+  },
+  'linkIndication': {
+    'summary': 'link indication poor',
+    'why': 'User cannot differentiate a link from plain text',
+    'wcag': '1.3.3',
+    'weight': 2
+  },
+  'linkNameRisk': {
+    'summary': 'image link text suspect',
+    'why': 'Keyboard-only user may misunderstand the effect of following a link',
+    'wcag': '2.4.4',
+    'weight': 1
+  },
+  'linkNoText': {
+    'summary': 'link not named',
+    'why': 'User cannot get help understanding what a link points to',
+    'wcag': '2.4.4',
+    'weight': 4
+  },
+  'linkPair': {
+    'summary': 'adjacent links not combined',
+    'why': 'Keyboard-only user expends extra effort to skip a link',
+    'wcag': '2.4.4',
+    'weight': 2
+  },
+  'linkPairRisk': {
+    'summary': 'text and image link may merit combination',
+    'why': 'Keyboard-only user may expend extra effort to skip a link',
+    'wcag': '2.4.4',
+    'weight': 1
+  },
+  'linksNoNav': {
+    'summary': 'links not grouped as nav',
+    'why': 'User cannot get help identifying links as a navigation tool',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
+  'linkTextsSame': {
+    'summary': 'links named identically',
+    'why': 'User cannot get help differentiating links',
+    'wcag': '2.4.4',
+    'weight': 2
+  },
+  'linkVaguenessRisk': {
+    'summary': 'link name vague',
+    'why': 'User may misunderstand what a link points to',
+    'wcag': '2.4.4',
+    'weight': 1
+  },
+  'listChild': {
+    'summary': 'list child invalid',
+    'why': 'User cannot get help on which items are in a list',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'listItemOrphan': {
+    'summary': 'list item orphan',
+    'why': 'User cannot get help on whether an item is in a list',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'mainConfusion': {
+    'summary': 'mains not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'mainNone': {
+    'summary': 'main missing',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2,
+    'max': 1
+  },
+  'mainNot1': {
+    'summary': 'multiple mains',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2,
+    'max': 1
+  },
+  'mainNotTop': {
+    'summary': 'main child of landmark',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2
+  },
+  'menuItemless': {
+    'summary': 'menu items missing',
+    'why': 'User cannot reach promised menu items',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'menuItemNoText': {
+    'summary': 'menu item not named',
+    'why': 'User cannot get help explaing a menu item',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'menuNavigation': {
+    'summary': 'menu navigation nonstandard',
+    'why': 'Menus behave improperly for a keyboard-only user',
+    'wcag': '2.1.1',
+    'weight': 2
+  },
+  'metaAttributeBad': {
+    'summary': 'meta attribute value invalid',
+    'why': 'Browser processes the page incorrectly',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'metaAttributesWrong': {
+    'summary': 'prohibited or missing meta attributes',
+    'why': 'Browser processes the page incorrectly',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'metaBansZoom': {
+    'summary': 'meta bans zoom',
+    'why': 'User cannot adjust the page size for readability',
+    'wcag': '1.4.4',
+    'weight': 4,
+    'max': 1
+  },
+  'metaCharsetLate': {
+    'summary': 'meta charset declared too late',
+    'why': 'Browser may display incorrect text',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'metaDuplicated': {
+    'summary': 'meta element duplicated',
+    'why': 'Browser may process the page incorrectly',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'metaMisplaced': {
+    'summary': 'meta element in invalid location',
+    'why': 'Browser may process the page incorrectly',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'metaXUACompatible': {
+    'summary': 'meta X-UA-Compatible incomplete',
+    'why': 'Internet Explorer may display the page incorrectly',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'multipleLabelees': {
+    'summary': 'labeled element ambiguous',
+    'why': 'User cannot get help on the topic of a form item',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'navConfusion': {
+    'summary': 'navigations not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'negativeIndent': {
+    'summary': 'negative text-indent',
+    'why': 'Helper may hide content from a user',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'nestingBad': {
+    'summary': 'nesting invalid',
+    'why': 'Document contains invalid code',
+    'wcag': '4.1.1',
+    'weight': 3
+  },
+  'newTabSurprise': {
+    'summary': 'tab-opening link action unstated',
+    'why': 'Following a link opens a new window, surprising a user',
+    'wcag': '3.2.5',
+    'weight': 3
+  },
+  'newTabSurpriseRisk': {
+    'summary': 'tab-opening link action unstated?',
+    'why': 'Following a link opens a new window, possibly surprising a user',
+    'wcag': '3.2.5',
+    'weight': 1
+  },
+  'noLandmarks': {
+    'summary': 'no landmarks',
+    'why': 'User cannot get help on how the page is organized',
+    'wcag': '1.3.6',
+    'weight': 2,
+    'max': 1
+  },
+  'nonElement': {
+    'summary': 'element unknown',
+    'why': 'Document includes an unknown element that the browser cannot process',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'nonLabelableRole': {
+    'summary': 'aria-label on non-labelable role',
+    'why': 'User is misinformed about an item',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'nonQuoteRisk': {
+    'summary': 'nonquotation coded as block quote?',
+    'why': 'User may misunderstand text as a quotation',
+    'wcag': '3.2.4',
+    'weight': 1
+  },
   'nonSemanticText': {
     'summary': 'semantic properties represented with styles',
     'why': 'User cannot get help to fully understand the text',
     'wcag': '1.3.1',
     'weight': 2
   },
-  'hrConfusionRisk': {
-    'summary': 'hr misused',
-    'why': 'User cannot get help on the nature of segments of the page',
+  'nonWebLink': {
+    'summary': 'link to non-web resource',
+    'why': 'Document points to harder-to-use resources',
+    'wcag': '1.3.3',
+    'weight': 1
+  },
+  'noOptionFocusable': {
+    'summary': 'no option focusable',
+    'why': 'Keyboard-only user cannot choose an option',
+    'wcag': '2.1.1',
+    'weight': 1
+  },
+  'noScriptRisk': {
+    'summary': 'noscript element not equivalent?',
+    'why': 'User who has disabled JavaScript may be denied some content',
+    'wcag': '4.1',
+    'weight': 1
+  },
+  'notValidatable': {
+    'summary': 'item makes testing inconclusive',
+    'why': 'Item prevents a conclusive accessibility test',
+    'wcag': '4.1',
+    'weight': 1
+  },
+  'objectAudioRisk': {
+    'summary': 'non-audio element plays audio?',
+    'why': 'User may get inadequate help consuming audio content',
+    'wcag': '1.1.1',
+    'weight': 1
+  },
+  'objectBlurKeyboardRisk': {
+    'summary': 'object not keyboard-blurrable?',
+    'why': 'Custom item may trap a keyboard-only user',
+    'wcag': '2.1.1',
+    'weight': 1
+  },
+  'objectNoText': {
+    'summary': 'object not named',
+    'why': 'User cannot get help explaining a custom item',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'objectTextRisk': {
+    'summary': 'object dubiously named',
+    'why': 'Helper may explain a custom item inadequately',
+    'wcag': '1.1.1',
+    'weight': 1
+  },
+  'obsolete': {
+    'summary': 'code obsolete',
+    'why': 'Document contains code that is no longer standard',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'optionNoText': {
+    'summary': 'option not named',
+    'why': 'User cannot get help to understand an option',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'orientationRisk': {
+    'summary': 'orientation issues not testable',
+    'why': 'User may need to read sideways after rotating a device',
+    'wcag': '1.3.4',
+    'weight': 1,
+    'max': 1
+  },
+  'overflowHidden': {
+    'summary': 'overflow hidden',
+    'why': 'User cannot enlarge the text for readability',
+    'wcag': '1.4.4',
+    'weight': 4
+  },
+  'overflowHiddenRisk': {
+    'summary': 'overflow hidden?',
+    'why': 'User may be unable to enlarge the text for readability',
+    'wcag': '1.4.4',
+    'weight': 1
+  },
+  'paddingBad': {
+    'summary': 'CSS padding invalid',
+    'why': 'Content is displayed improperly',
+    'wcag': '4.1',
+    'weight': 4
+  },
+  'pageLanguage': {
+    'summary': 'page language missing',
+    'why': 'Speaking helper may mispronounce the page text',
+    'wcag': '3.1.1',
+    'weight': 4,
+    'max': 1
+  },
+  'pageLanguageBad': {
+    'summary': 'page language invalid',
+    'why': 'Speaking helper may mispronounce the page text',
+    'wcag': '3.1.1',
+    'weight': 4,
+    'max': 1
+  },
+  'pageNewWindow': {
+    'summary': 'page immediately opens window',
+    'why': 'User promised a page gets another page, too',
+    'wcag': '3.2.5',
+    'weight': 3,
+    'max': 1
+  },
+  'pageTitle': {
+    'summary': 'page title missing',
+    'why': 'User is not informed of the topic of the page',
+    'wcag': '2.4.2',
+    'weight': 4,
+    'max': 1
+  },
+  'pageTitleBad': {
+    'summary': 'page title invalid',
+    'why': 'Browser processes the page improperly',
+    'wcag': '1.3.1',
+    'weight': 3,
+    'max': 1
+  },
+  'parentBad': {
+    'summary': 'parent invalid',
+    'why': 'User cannot properly operate an item',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'parentMissing': {
+    'summary': 'parent missing',
+    'why': 'Keyboard-only user cannot operate a custom tool',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'parseError': {
+    'summary': 'code invalid',
+    'why': 'Invalid code in the page may prevent a helper from working',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'placeholderPlusAria': {
+    'summary': 'element has competing placeholder attributes',
+    'why': 'User gets conflicting help on what information to enter in a form item',
+    'wcag': '4.1.2',
+    'weight': 3
+  },
+  'positionSticky': {
+    'summary': 'position sticky',
+    'why': 'User may be unable to see needed content or may be forced to scroll in both dimensions',
+    'wcag': '1.4.10',
+    'weight': 1
+  },
+  'preselectedOption': {
+    'summary': 'no default option',
+    'why': 'User may risk erroneously submitting a form',
+    'wcag': '4.1.2',
+    'weight': 1
+  },
+  'presentationChild': {
+    'summary': 'presentation element has child',
+    'why': 'Keyboard-only user cannot reach an item intended to be reachable',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'presentationGlobal': {
+    'summary': 'global ARIA attribute nullifies presentation role',
+    'why': 'User encounters content intended to be hidden',
     'wcag': '1.3.1',
     'weight': 1
+  },
+  'presentationTabIndexed': {
+    'summary': 'tabindex attribute nullifies presentation role',
+    'why': 'User encounters content intended to be hidden',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'progressNoText': {
+    'summary': 'progress bar not named',
+    'why': 'User cannot get help understanding the state of a process',
+    'wcag': '4.1.2',
+    'weight': 4
   },
   'pseudoCodeRisk': {
     'summary': 'pre use dubious',
-    'why': 'User may be unable to get help to fully understand the text',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'pseudoParagraphRisk': {
-    'summary': 'double br use dubious',
     'why': 'User may be unable to get help to fully understand the text',
     'wcag': '1.3.1',
     'weight': 1
@@ -1268,30 +1765,6 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 1
   },
-  'listChild': {
-    'summary': 'list child invalid',
-    'why': 'User cannot get help on which items are in a list',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'listItemOrphan': {
-    'summary': 'list item orphan',
-    'why': 'User cannot get help on whether an item is in a list',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'descriptionOrphan': {
-    'summary': 'description list orphan',
-    'why': 'User cannot get help on whether an item is in a list',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'descriptionOrder': {
-    'summary': 'description list misordered',
-    'why': 'User cannot get help on the structure of a list',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
   'pseudoList': {
     'summary': 'list-like br use dubious',
     'why': 'User cannot get help recognizing a list of items',
@@ -1304,17 +1777,23 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 1
   },
+  'pseudoNavList': {
+    'summary': 'nav links not list',
+    'why': 'User cannot get help recognizing a list of navigation links',
+    'wcag': '1.3.1',
+    'weight': 2
+  },
   'pseudoOrderedListRisk': {
     'summary': 'ordered list not coded as such?',
     'why': 'User may be unable to get help on whether a list is ordered',
     'wcag': '1.3.1',
     'weight': 1
   },
-  'pseudoNavList': {
-    'summary': 'nav links not list',
-    'why': 'User cannot get help recognizing a list of navigation links',
+  'pseudoParagraphRisk': {
+    'summary': 'double br use dubious',
+    'why': 'User may be unable to get help to fully understand the text',
     'wcag': '1.3.1',
-    'weight': 2
+    'weight': 1
   },
   'pseudoQuoteRisk': {
     'summary': 'quotation miscoded?',
@@ -1322,21 +1801,130 @@ const issuesData = {
     'wcag': '3.2.4',
     'weight': 1
   },
-  'nonQuoteRisk': {
-    'summary': 'nonquotation coded as block quote?',
-    'why': 'User may misunderstand text as a quotation',
-    'wcag': '3.2.4',
+  'refresh': {
+    'summary': 'element reloads or redirects',
+    'why': 'Document change may surprise a user',
+    'wcag': '2.2.1',
+    'weight': 3
+  },
+  'regionConfusion': {
+    'summary': 'regions not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'regionNoText': {
+    'summary': 'region not named',
+    'why': 'User cannot get help surveying the parts of the page',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'repeatedContentRisk': {
+    'summary': 'skip method missing or invalid?',
+    'why': 'Keyboard-only user may be unable easily to reach the specific content of the page',
+    'wcag': '2.4.1',
+    'weight': 1,
+    'max': 2
+  },
+  'requirementBad': {
+    'summary': 'requirement invalid',
+    'why': 'User may fail to get help determining whether a form item must be completed',
+    'wcag': '1.3.5',
+    'weight': 4
+  },
+  'requirementRedundant': {
+    'summary': 'requirement redundant',
+    'why': 'Help determining whether a form item must be completed is at risk of corruption',
+    'wcag': '1.3.5',
     'weight': 1
   },
-  'selectNoText': {
-    'summary': 'select not named',
-    'why': 'User cannot get help on the topic of a list of options',
+  'roleBad': {
+    'summary': 'role invalid',
+    'why': 'User cannot get help on the nature of an item',
     'wcag': '4.1.2',
     'weight': 3
   },
-  'optionNoText': {
-    'summary': 'option not named',
-    'why': 'User cannot get help to understand an option',
+  'roleConfusion': {
+    'summary': 'role assigned instead of implicit',
+    'why': 'User may misunderstand the purpose of an item',
+    'wcag': '4.1.2',
+    'weight': 1
+  },
+  'roleHierarchyBad': {
+    'summary': 'ancestor and descendant roles incompatible',
+    'why': 'User may misunderstand or be blocked from exposure to an item',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'roleMissing': {
+    'summary': 'role missing',
+    'why': 'Item behaves improperly',
+    'wcag': '4.1.2',
+    'weight': 3
+  },
+  'roleMissingRisk': {
+    'summary': 'role missing?',
+    'why': 'Item may behave improperly',
+    'wcag': '4.1.2',
+    'weight': 1
+  },
+  'roleNoText': {
+    'summary': 'no role-required name',
+    'why': 'User cannot get help understanding an item',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
+  'roleRedundant': {
+    'summary': 'role redundant',
+    'why': 'Document includes unnecessary code',
+    'wcag': '4.1.2',
+    'weight': 1
+  },
+  'scriptBanned': {
+    'summary': 'script prohibited',
+    'why': 'Browser processes the page improperly',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'scriptElementBad': {
+    'summary': 'script element invalid',
+    'why': 'Browser processes the page improperly',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'scriptNotDeferrable': {
+    'summary': 'script element invalidly deferred',
+    'why': 'Browser processes the page improperly',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'scrollFocus': {
+    'summary': 'scrollable element and children nonfocusable',
+    'why': 'User may be unable to see all of an item without scrolling in both dimensions',
+    'wcag': '2.1.1',
+    'weight': 3
+  },
+  'scrollRisk': {
+    'summary': 'container size unit not percentage',
+    'why': 'User may be unable to see all of an item without scrolling in both dimensions',
+    'wcag': '1.4.10',
+    'weight': 1
+  },
+  'searchConfusion': {
+    'summary': 'searches not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
+  'sectionHeadingless': {
+    'summary': 'section heading missing',
+    'why': 'User cannot understand the topic of a part of the page',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'selectBad': {
+    'summary': 'select element invalid',
+    'why': 'User cannot properly select among options',
     'wcag': '4.1.2',
     'weight': 4
   },
@@ -1346,65 +1934,127 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 1
   },
-  'noOptionFocusable': {
-    'summary': 'no option focusable',
-    'why': 'Keyboard-only user cannot choose an option',
-    'wcag': '2.1.1',
+  'selectNavSurpriseRisk': {
+    'summary': 'navigating selection-change action unstated?',
+    'why': 'Changing a selected option opens a new window, possibly surprising a user',
+    'wcag': '3.2.5',
     'weight': 1
   },
-  'accessKeyDuplicate': {
-    'summary': 'duplicate access key',
-    'why': 'Keyboard shortcut does not reliably trigger the intended action',
-    'wcag': '1.3.1',
+  'selectNoText': {
+    'summary': 'select not named',
+    'why': 'User cannot get help on the topic of a list of options',
+    'wcag': '4.1.2',
     'weight': 3
   },
-  'fieldSetMissing': {
-    'summary': 'fieldset missing',
-    'why': 'User cannot get help recognizing a group of related form items',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'fieldSetRisk': {
-    'summary': 'fieldset missing?',
-    'why': 'User may be unable to get help recognizing a group of related form items',
-    'wcag': '1.3.1',
+  'sensoryDependenceRisk': {
+    'summary': 'instruction requires particular sense?',
+    'why': 'Content is impossible to perceive under some conditions',
+    'wcag': '1.4.1',
     'weight': 1
   },
-  'legendMisplaced': {
-    'summary': 'legend location invalid',
-    'why': 'User cannot get help on the topic of a group of form items',
-    'wcag': '4.1.2',
+  'sizesAttributeBad': {
+    'summary': 'sizes attribute invalid',
+    'why': 'Item behaves improperly',
+    'wcag': '1.3.1',
     'weight': 4
   },
-  'legendMissing': {
-    'summary': 'legend missing',
-    'why': 'User cannot get help on the topic of a group of form items',
-    'wcag': '4.1.2',
-    'weight': 2
+  'skipRepeatedContent': {
+    'summary': 'skip method missing or invalid',
+    'why': 'Keyboard-only user cannot easily reach the specific content of the page',
+    'wcag': '2.4.1',
+    'weight': 3,
+    'max': 2
   },
-  'groupName': {
-    'summary': 'group not named',
-    'why': 'User cannot get help on the topic of a group of form items',
-    'wcag': '4.1.2',
+  'sourceEmpty': {
+    'summary': 'src empty',
+    'why': 'Image, audio, or video to be shown cannot be found',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'specRulesScriptBad': {
+    'summary': 'speculation rules script element invalid',
+    'why': 'Document navigation performs poorly',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'spontaneousMotion': {
+    'summary': 'page content moves spontaneously',
+    'why': 'Motion-sensitive user may suffer harm',
+    'wcag': '2.2.2',
+    'weight': 2,
+    'max': 1
+  },
+  'stylesheetBanned': {
+    'summary': 'stylesheet prohibited',
+    'why': 'Browser displays the page improperly',
+    'wcag': '1.4',
     'weight': 3
   },
-  'layoutTable': {
-    'summary': 'table misused',
-    'why': 'Helper misinforms a user about whether items are cells of a table',
+  'submitButton': {
+    'summary': 'form submission button missing',
+    'why': 'User cannot easily submit a form',
+    'wcag': '3.2.2',
+    'weight': 3
+  },
+  'svgImageNoText': {
+    'summary': 'svg image not named',
+    'why': 'User cannot get help understanding an image',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'svgLabelID': {
+    'summary': 'svg label referent invalid',
+    'why': 'User cannot get help understanding an image',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'svgNoText': {
+    'summary': 'SVG image not named',
+    'why': 'User cannot get help to know what is in an image',
+    'wcag': '1.1.1',
+    'weight': 4
+  },
+  'svgNotValidatable': {
+    'summary': 'SVG version not 1.1',
+    'why': 'Item prevents testing image for accessibility',
+    'wcag': '4.1',
+    'weight': 1
+  },
+  'tabIndexEmpty': {
+    'summary': 'tabindex empty',
+    'why': 'Keyboard-only user cannot follow the intended navigation sequence',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'tabIndexExtra': {
+    'summary': 'tabindex redundant',
+    'why': 'Revision risks interfering with navigation by a keyboard-only user',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'tabIndexInt': {
+    'summary': 'tabindex not integer',
+    'why': 'Keyboard-only user cannot follow the intended navigation sequence',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
+  'tabIndexPositive': {
+    'summary': 'tabindex positive',
+    'why': 'Keyboard-only user cannot predict the navigation sequence',
+    'wcag': '2.4.3',
+    'weight': 1
+  },
+  'tableBody': {
+    'summary': 'tbody missing',
+    'why': 'User cannot get help on parts of a table',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'tableCapSum': {
+    'summary': 'table summary duplicative',
+    'why': 'Helper informs a user repetitively about the topic of a table',
     'wcag': '1.3.1',
     'weight': 2
-  },
-  'tabularTableless': {
-    'summary': 'table not marked as such',
-    'why': 'Helper misinforms a user about whether items are cells of a table',
-    'wcag': '1.3.1',
-    'weight': 3
-  },
-  'tableColumnsVary': {
-    'summary': 'table column counts vary',
-    'why': 'User cannot get help on the dimensions of a table',
-    'wcag': '1.3.1',
-    'weight': 3
   },
   'tableCaption': {
     'summary': 'table caption missing',
@@ -1418,23 +2068,17 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 3
   },
-  'tableCapSum': {
-    'summary': 'table summary duplicative',
-    'why': 'Helper informs a user repetitively about the topic of a table',
+  'tableCellHeaderless': {
+    'summary': 'table-cell header missing',
+    'why': 'User cannot get help on the topic of a table cell',
     'wcag': '1.3.1',
-    'weight': 2
+    'weight': 3
   },
-  'tableSum': {
-    'summary': 'table summary empty',
-    'why': 'User cannot get help summarizing a table',
+  'tableColumnsVary': {
+    'summary': 'table column counts vary',
+    'why': 'User cannot get help on the dimensions of a table',
     'wcag': '1.3.1',
-    'weight': 4
-  },
-  'tableLabelID': {
-    'summary': 'table aria-labelledby invalid',
-    'why': 'User cannot get help on the topic of a table',
-    'wcag': '1.3.1',
-    'weight': 4
+    'weight': 3
   },
   'tableDescriptionID': {
     'summary': 'table aria-describedby invalid',
@@ -1442,50 +2086,8 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
-  'cellHeadersNotInferrable': {
-    'summary': 'cell headers not inferrable',
-    'why': 'User cannot get help on relationships in a table',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'cellHeadersOutsideTable': {
-    'summary': 'cell headers outside table',
-    'why': 'User cannot get help on relationships in a table',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'cellHeadersAmbiguityRisk': {
-    'summary': 'cell headers ambiguous?',
-    'why': 'User may be unable to get help on relationships in a table',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'tableHeaderless': {
-    'summary': 'table headers missing',
-    'why': 'User cannot get help on relationships in a table',
-    'wcag': '1.3.1',
-    'weight': 3
-  },
-  'tableCellHeaderless': {
-    'summary': 'table-cell header missing',
-    'why': 'User cannot get help on the topic of a table cell',
-    'wcag': '1.3.1',
-    'weight': 3
-  },
-  'tableHeaderCellless': {
-    'summary': 'table-header cell missing',
-    'why': 'User cannot get help on relationships in a table',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'TableHeaderScopeRisk': {
-    'summary': 'Table scope ambiguous?',
-    'why': 'User may be unable to get help on relationships in a table',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'tableHeaderEmpty': {
-    'summary': 'table header empty',
+  'tableEmbedded': {
+    'summary': 'table embedded in table',
     'why': 'User cannot get help on relationships in a table',
     'wcag': '1.3.1',
     'weight': 2
@@ -1496,34 +2098,28 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 1
   },
-  'tableBody': {
-    'summary': 'tbody missing',
-    'why': 'User cannot get help on parts of a table',
+  'tableHeaderCellless': {
+    'summary': 'table-header cell missing',
+    'why': 'User cannot get help on relationships in a table',
     'wcag': '1.3.1',
-    'weight': 1
+    'weight': 4
   },
-  'tableEmbedded': {
-    'summary': 'table embedded in table',
+  'tableHeaderEmpty': {
+    'summary': 'table header empty',
     'why': 'User cannot get help on relationships in a table',
     'wcag': '1.3.1',
     'weight': 2
   },
-  'divInTable': {
-    'summary': 'div embedded in table',
-    'why': 'Blocks of content within a table cell may confuse a user',
-    'wcag': '1.4',
-    'weight': 1
+  'tableHeaderless': {
+    'summary': 'table headers missing',
+    'why': 'User cannot get help on relationships in a table',
+    'wcag': '1.3.1',
+    'weight': 3
   },
-  'formInTable': {
-    'summary': 'form embedded in table',
-    'why': 'Navigation in a form may confuse a keyboard-only user',
-    'wcag': '2.1.1',
-    'weight': 1
-  },
-  'inputInTable': {
-    'summary': 'input embedded in table',
-    'why': 'Entry of data in a form may confuse a keyboard-only user',
-    'wcag': '2.1.1',
+  'TableHeaderScopeRisk': {
+    'summary': 'Table scope ambiguous?',
+    'why': 'User may be unable to get help on relationships in a table',
+    'wcag': '1.3.1',
     'weight': 1
   },
   'tableHeading': {
@@ -1532,430 +2128,15 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 1
   },
-  'controlNoText': {
-    'summary': 'control not named',
-    'why': 'User cannot get help on how to operate a form item',
+  'tableLabelID': {
+    'summary': 'table aria-labelledby invalid',
+    'why': 'User cannot get help on the topic of a table',
     'wcag': '1.3.1',
     'weight': 4
   },
-  'controlLabelInvisible': {
-    'summary': 'control label invisible',
-    'why': 'User cannot understand how to operate a form item',
-    'wcag': '2.4.6',
-    'weight': 4
-  },
-  'inputLabelInvisibleRisk': {
-    'summary': 'input label invisible?',
-    'why': 'User cannot understand where to enter information',
-    'wcag': '2.4.6',
-    'weight': 1
-  },
-  'titleAsLabel': {
-    'summary': 'control has title instead of label',
-    'why': 'User cannot get help on how to operate a form item',
-    'wcag': '2.4.6',
-    'weight': 3
-  },
-  'visibleLabelNotInName': {
-    'summary': 'visible label not in name',
-    'why': 'User cannot get help choosing a form control to operate',
-    'wcag': '2.5.3',
-    'weight': 3
-  },
-  'targetSmall': {
-    'summary': 'target small',
-    'why': 'User cannot reliably choose an item to click or tap',
-    'wcag': '2.5.5',
-    'weight': 1
-  },
-  'targetTiny': {
-    'summary': 'target very small',
-    'why': 'User cannot reliably choose an item to click or tap',
-    'wcag': '2.5.8',
-    'weight': 3
-  },
-  'targetsNear': {
-    'summary': 'small targets too near to each other',
-    'why': 'User cannot reliably choose an item to click or tap',
-    'wcag': '2.5.8',
-    'weight': 3
-  },
-  'visibleBulk': {
-    'summary': 'large visible-element count',
-    'why': 'User cannot easily find items in the page',
-    'wcag': '2.4',
-    'weight': 1,
-    'max': 1
-  },
-  'activeEmbedding': {
-    'summary': 'control child of link or button',
-    'why': 'User cannot reliably choose an item to click or tap',
-    'wcag': '2.5.5',
-    'weight': 3
-  },
-  'unfocusability': {
-    'summary': 'element not focusable',
-    'why': 'Keyboard-only user cannot choose an item to operate',
-    'wcag': '2.1.1',
-    'weight': 4
-  },
-  'focusDiscrepancy': {
-    'summary': 'Tab-focusable elements wrong',
-    'why': 'Item selections by a keyboard-only user are useless or impossible',
-    'wcag': '2.1.1',
-    'weight': 4
-  },
-  'focusIndicationBad': {
-    'summary': 'focus indication poor',
-    'why': 'Keyboard-only user cannot choose an item to operate',
-    'wcag': '2.4.7',
-    'weight': 4
-  },
-  'focusIndicationImprovable': {
-    'summary': 'focus indication improvable',
-    'why': 'Keyboard-only user cannot easily choose an item to operate',
-    'wcag': '2.4.7',
-    'weight': 2
-  },
-  'focusIndicationRisk': {
-    'summary': 'focus indication poor?',
-    'why': 'Keyboard-only user cannot choose an item to operate',
-    'wcag': '2.4.7',
-    'weight': 1
-  },
-  'boxInvisibleRisk': {
-    'summary': 'border or outline invisible?',
-    'why': 'User cannot perceive the boundary of an item',
-    'wcag': '2.5.8',
-    'weight': 1
-  },
-  'allCaps': {
-    'summary': 'all-capital text',
-    'why': 'Text is difficult to read',
-    'wcag': '3.1.5',
-    'weight': 1
-  },
-  'allItalics': {
-    'summary': 'all-italic text',
-    'why': 'Text is difficult to read',
-    'wcag': '3.1.5',
-    'weight': 1
-  },
-  'textDistortion': {
-    'summary': 'text distortion',
-    'why': 'Text is difficult to read',
-    'wcag': '3.1.5',
-    'weight': 1
-  },
-  'noLandmarks': {
-    'summary': 'no landmarks',
-    'why': 'User cannot get help on how the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2,
-    'max': 1
-  },
-  'contentBeyondLandmarks': {
-    'summary': 'content beyond landmarks',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 1
-  },
-  'footerNotTop': {
-    'summary': 'footer child of landmark',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 1
-  },
-  'asideNotTop': {
-    'summary': 'aside child of landmark',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2
-  },
-  'mainNotTop': {
-    'summary': 'main child of landmark',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2
-  },
-  'mainConfusion': {
-    'summary': 'mains not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'mainNone': {
-    'summary': 'main missing',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2,
-    'max': 1
-  },
-  'mainNot1': {
-    'summary': 'multiple mains',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2,
-    'max': 1
-  },
-  'bannerNot1': {
-    'summary': 'multiple banners',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2,
-    'max': 1
-  },
-  'bannerNotTop': {
-    'summary': 'banner child of landmark',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2
-  },
-  'footerConfusion': {
-    'summary': 'contentinfos not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'footerNot1': {
-    'summary': 'multiple contentinfos',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 2,
-    'max': 1
-  },
-  'landmarkConfusion': {
-    'summary': 'landmarks not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'documentConfusion': {
-    'summary': 'page elements not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'formsNested': {
-    'summary': 'form nested in another form',
-    'why': 'User cannot predict effect of actions in a form',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'formConfusion': {
-    'summary': 'forms not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'applicationNoText': {
-    'summary': 'application not named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 4
-  },
-  'applicationConfusion': {
-    'summary': 'applications not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'asideConfusion': {
-    'summary': 'asides not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'bannerConfusion': {
-    'summary': 'banners not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'navConfusion': {
-    'summary': 'navigations not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'landmarkInNav': {
-    'summary': 'invalid landmark child of navigation role',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 4
-  },
-  'regionConfusion': {
-    'summary': 'regions not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'searchConfusion': {
-    'summary': 'searches not distinctly named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 3
-  },
-  'complementaryNoText': {
-    'summary': 'complementary not named',
-    'why': 'User cannot get help on how some of the page is organized',
-    'wcag': '1.3.6',
-    'weight': 1
-  },
-  'labelNoText': {
-    'summary': 'label not named',
-    'why': 'User cannot get help on the topic of a form item',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'focusableOperable': {
-    'summary': 'element focusability and operability conflict',
-    'why': 'Keyboard-only user cannot operate an item',
-    'wcag': '2.1.1',
-    'weight': 3
-  },
-  'focusableRole': {
-    'summary': 'focusable element not active',
-    'why': 'Keyboard-only user cannot navigate properly to the operable items',
-    'wcag': '4.1.2',
-    'weight': 3
-  },
-  'focusableHidden': {
-    'summary': 'focusable element hidden',
-    'why': 'Keyboard-only user cannot navigate properly to the operable items',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'focusedAway': {
-    'summary': 'element beyond display when focused',
-    'why': 'Keyboard-only user cannot navigate properly to the operable items',
-    'wcag': '1.4.10',
-    'weight': 3
-  },
-  'focusableDescendants': {
-    'summary': 'presentational child focusable',
-    'why': 'Keyboard-only user cannot navigate properly to the operable items',
-    'wcag': '4.1.2',
-    'weight': 4
-  },
-  'datalistRef': {
-    'summary': 'ambiguous or missing datalist reference',
-    'why': 'User cannot get help on the permitted input values',
-    'wcag': '3.3.2',
-    'weight': 4
-  },
-  'multipleLabelees': {
-    'summary': 'labeled element ambiguous',
-    'why': 'User cannot get help on the topic of a form item',
-    'wcag': '1.3.1',
-    'weight': 4
-  },
-  'labeledHidden': {
-    'summary': 'control hidden but labeled',
-    'why': 'Document includes unnecessary code',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'contentHidden': {
-    'summary': 'page hidden',
-    'why': 'User cannot get the page content',
-    'wcag': '2.4.7',
-    'weight': 4,
-    'max': 1
-  },
-  'hideFailureRisk': {
-    'summary': 'false aria-hidden value risky',
-    'why': 'User may be misled by erroneously hidden or revealed page content',
-    'wcag': '2.4.6',
-    'weight': 1
-  },
-  'negativeIndent': {
-    'summary': 'negative text-indent',
-    'why': 'Helper may hide content from a user',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'frameSandboxRisk': {
-    'summary': 'iframe sandbox attributes risky',
-    'why': 'Document may be unsafe to use',
-    'wcag': '4.1',
-    'weight': 2
-  },
-  'hoverIndication': {
-    'summary': 'hover indication poor',
-    'why': 'User cannot explore the page reliably with a mouse',
-    'wcag': '3.3.2',
-    'weight': 3
-  },
-  'hoverSurprise': {
-    'summary': 'hovering changes content',
-    'why': 'User cannot explore the page reliably with a mouse',
-    'wcag': '3.2.5',
-    'weight': 1
-  },
-  'formSurpriseRisk': {
-    'summary': 'form interaction changes content?',
-    'why': 'User experiences unexpected page change when using a form',
-    'wcag': '3.2.5',
-    'weight': 1
-  },
-  'labelClash': {
-    'summary': 'label types incompatible',
-    'why': 'User cannot get reliable help on the topics of form items',
-    'wcag': '1.3.1',
-    'weight': 2
-  },
-  'labelNot1': {
-    'summary': 'element referenced by multiple labels',
-    'why': 'User cannot get reliable help on the topics of form items',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'labelEmpty': {
-    'summary': 'label empty',
-    'why': 'User cannot get help on the topics of form items',
-    'wcag': '1.3.1',
-    'weight': 3
-  },
-  'labelRisk': {
-    'summary': 'labeling risky',
-    'why': 'User may misunderstand a form control',
-    'wcag': '3.3.2',
-    'weight': 1
-  },
-  'linkVaguenessRisk': {
-    'summary': 'link name vague',
-    'why': 'User may misunderstand what a link points to',
-    'wcag': '2.4.4',
-    'weight': 1
-  },
-  'linkFileName': {
-    'summary': 'link names a file instead of a purpose',
-    'why': 'User may fail to understand what a link points to',
-    'wcag': '2.4.4',
-    'weight': 1
-  },
-  'nonWebLink': {
-    'summary': 'link to non-web resource',
-    'why': 'Document points to harder-to-use resources',
-    'wcag': '1.3.3',
-    'weight': 1
-  },
-  'linkIndication': {
-    'summary': 'link indication poor',
-    'why': 'User cannot differentiate a link from plain text',
-    'wcag': '1.3.3',
-    'weight': 2
-  },
-  'menuNavigation': {
-    'summary': 'menu navigation nonstandard',
-    'why': 'Menus behave improperly for a keyboard-only user',
-    'wcag': '2.1.1',
-    'weight': 2
-  },
-  'menuItemless': {
-    'summary': 'menu items missing',
-    'why': 'User cannot reach promised menu items',
+  'tableSum': {
+    'summary': 'table summary empty',
+    'why': 'User cannot get help summarizing a table',
     'wcag': '1.3.1',
     'weight': 4
   },
@@ -1965,131 +2146,118 @@ const issuesData = {
     'wcag': '2.1.1',
     'weight': 2
   },
-  'spontaneousMotion': {
-    'summary': 'page content moves spontaneously',
-    'why': 'Motion-sensitive user may suffer harm',
-    'wcag': '2.2.2',
-    'weight': 2,
-    'max': 1
-  },
-  'animationLong': {
-    'summary': 'animation long or repetitive',
-    'why': 'Motion-sensitive user may suffer harm',
-    'wcag': '2.2.2',
+  'tabularTableless': {
+    'summary': 'table not marked as such',
+    'why': 'Helper misinforms a user about whether items are cells of a table',
+    'wcag': '1.3.1',
     'weight': 3
   },
-  'blink': {
-    'summary': 'blink element',
-    'why': 'Motion-sensitive user may suffer harm',
-    'wcag': '2.2.2',
+  'targetEmpty': {
+    'summary': 'target empty',
+    'why': 'Item is displayed improperly',
+    'wcag': '1.3.1',
     'weight': 4
   },
-  'autoplay': {
-    'summary': 'autoplay',
-    'why': 'Motion- or noise-sensitive user may suffer harm',
-    'wcag': '1.4.2',
-    'weight': 2
+  'targetSmall': {
+    'summary': 'target small',
+    'why': 'User cannot reliably choose an item to click or tap',
+    'wcag': '2.5.5',
+    'weight': 1
   },
-  'autoplayLong': {
-    'summary': 'autoplay long',
-    'why': 'Motion- or noise-sensitive user may suffer harm',
-    'wcag': '1.4.2',
-    'weight': 2
-  },
-  'autoplayControl': {
-    'summary': 'autoplay control',
-    'why': 'Motion- or noise-sensitive user may suffer harm',
-    'wcag': '1.4.2',
-    'weight': 2
-  },
-  'refresh': {
-    'summary': 'element reloads or redirects',
-    'why': 'Document change may surprise a user',
-    'wcag': '2.2.1',
+  'targetsNear': {
+    'summary': 'small targets too near to each other',
+    'why': 'User cannot reliably choose an item to click or tap',
+    'wcag': '2.5.8',
     'weight': 3
   },
-  'parentBad': {
-    'summary': 'parent invalid',
-    'why': 'User cannot properly operate an item',
+  'targetTiny': {
+    'summary': 'target very small',
+    'why': 'User cannot reliably choose an item to click or tap',
+    'wcag': '2.5.8',
+    'weight': 3
+  },
+  'textAreaNoText': {
+    'summary': 'text area not named',
+    'why': 'User cannot get help on what information to enter in a form item',
     'wcag': '1.3.1',
     'weight': 4
   },
-  'inconsistentStyles': {
-    'summary': 'inconsistent heading, link, or button styles',
-    'why': 'User cannot easily distinguish items of different types',
-    'wcag': '3.2.4',
+  'textContentBad': {
+    'summary': 'element text content invalid',
+    'why': 'User may be unable to read all the page text',
+    'wcag': '4.1',
+    'weight': 3
+  },
+  'textDistortion': {
+    'summary': 'text distortion',
+    'why': 'Text is difficult to read',
+    'wcag': '3.1.5',
     'weight': 1
   },
-  'zIndexNotZero': {
-    'summary': 'z-index not zero',
-    'why': 'User cannot predict the effect of clicking',
-    'wcag': '1.4',
+  'titleAsLabel': {
+    'summary': 'control has title instead of label',
+    'why': 'User cannot get help on how to operate a form item',
+    'wcag': '2.4.6',
+    'weight': 3
+  },
+  'titleBad': {
+    'summary': 'title attribute invalid',
+    'why': 'User gets too little, too much, or repeated help explaining an item',
+    'wcag': '1.3.1',
     'weight': 1
   },
-  'tabIndexPositive': {
-    'summary': 'tabindex positive',
-    'why': 'Keyboard-only user cannot predict the navigation sequence',
-    'wcag': '2.4.3',
+  'titleEmpty': {
+    'summary': 'title attribute empty',
+    'why': 'Hovering does not get the promised explanation of an item',
+    'wcag': '1.3.1',
     'weight': 1
   },
-  'tabIndexEmpty': {
-    'summary': 'tabindex empty',
-    'why': 'Keyboard-only user cannot follow the intended navigation sequence',
+  'titleLong': {
+    'summary': 'title long',
+    'why': 'Hovering makes an overly verbose explanation pop up',
+    'wcag': '3.1.5',
+    'weight': 2
+  },
+  'titleNotText': {
+    'summary': 'title contains ASCII art',
+    'why': 'Hovering makes a hard-to-understand explanation pop up',
+    'wcag': '3.1.5',
+    'weight': 2
+  },
+  'titleRedundant': {
+    'summary': 'title attribute redundant',
+    'why': 'Helper repeats the explanation of an item',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
+  'typeBad': {
+    'summary': 'type invalid',
+    'why': 'Document styles are at risk of corruption',
     'wcag': '1.3.1',
     'weight': 4
   },
-  'tabIndexInt': {
-    'summary': 'tabindex not integer',
-    'why': 'Keyboard-only user cannot follow the intended navigation sequence',
+  'typeRedundant': {
+    'summary': 'type redundant',
+    'why': 'Document includes unnecessary code',
     'wcag': '1.3.1',
+    'weight': 1
+  },
+  'unfocusability': {
+    'summary': 'element not focusable',
+    'why': 'Keyboard-only user cannot choose an item to operate',
+    'wcag': '2.1.1',
     'weight': 4
   },
-  'tabIndexExtra': {
-    'summary': 'tabindex redundant',
-    'why': 'Revision risks interfering with navigation by a keyboard-only user',
-    'wcag': '1.3.1',
-    'weight': 1
+  'verticalSpacingFrozen': {
+    'summary': 'vertical text spacing frozen',
+    'why': 'User cannot adjust the vertical text spacing for readability',
+    'wcag': '1.4.12',
+    'weight': 4
   },
-  'presentationGlobal': {
-    'summary': 'global ARIA attribute nullifies presentation role',
-    'why': 'User encounters content intended to be hidden',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'presentationTabIndexed': {
-    'summary': 'tabindex attribute nullifies presentation role',
-    'why': 'User encounters content intended to be hidden',
-    'wcag': '1.3.1',
-    'weight': 1
-  },
-  'avNoText': {
-    'summary': 'audio or video caption track missing',
-    'why': 'User cannot get help reading speech as text',
+  'videoAlternative': {
+    'summary': 'video alternative missing',
+    'why': 'User cannot get help consuming a video recording as text or speech',
     'wcag': '1.2.1',
-    'weight': 4
-  },
-  'audioNoText': {
-    'summary': 'audio track missing',
-    'why': 'User cannot get help reading speech as text',
-    'wcag': '1.2.1',
-    'weight': 4
-  },
-  'audioTextRisk': {
-    'summary': 'audio not named?',
-    'why': 'User may be unable to get help reading speech as text',
-    'wcag': '1.2.1',
-    'weight': 1
-  },
-  'videoNoText': {
-    'summary': 'video not named',
-    'why': 'User cannot get help reading video content as text',
-    'wcag': '1.2.2',
-    'weight': 4
-  },
-  'videoNoTranscript': {
-    'summary': 'video transcript missing',
-    'why': 'User cannot get help reading video content as text',
-    'wcag': '1.2.2',
     'weight': 4
   },
   'videoCaptionRisk': {
@@ -2110,203 +2278,35 @@ const issuesData = {
     'wcag': '1.2.1',
     'weight': 4
   },
-  'videoAlternative': {
-    'summary': 'video alternative missing',
-    'why': 'User cannot get help consuming a video recording as text or speech',
-    'wcag': '1.2.1',
+  'videoNoText': {
+    'summary': 'video not named',
+    'why': 'User cannot get help reading video content as text',
+    'wcag': '1.2.2',
     'weight': 4
   },
-  'keyboardScroll': {
-    'summary': 'element not scrollable',
-    'why': 'Keyboard-only user cannot scroll an item',
-    'wcag': '2.1.1',
+  'videoNoTranscript': {
+    'summary': 'video transcript missing',
+    'why': 'User cannot get help reading video content as text',
+    'wcag': '1.2.2',
     'weight': 4
   },
-  'positionSticky': {
-    'summary': 'position sticky',
-    'why': 'User may be unable to see needed content or may be forced to scroll in both dimensions',
-    'wcag': '1.4.10',
-    'weight': 1
-  },
-  'scrollFocus': {
-    'summary': 'scrollable element and children nonfocusable',
-    'why': 'User may be unable to see all of an item without scrolling in both dimensions',
-    'wcag': '2.1.1',
-    'weight': 3
-  },
-  'scrollRisk': {
-    'summary': 'container size unit not percentage',
-    'why': 'User may be unable to see all of an item without scrolling in both dimensions',
-    'wcag': '1.4.10',
-    'weight': 1
-  },
-  'skipRepeatedContent': {
-    'summary': 'skip method missing or invalid',
-    'why': 'Keyboard-only user cannot easily reach the specific content of the page',
-    'wcag': '2.4.1',
-    'weight': 3,
-    'max': 2
-  },
-  'repeatedContentRisk': {
-    'summary': 'skip method missing or invalid?',
-    'why': 'Keyboard-only user may be unable easily to reach the specific content of the page',
-    'wcag': '2.4.1',
-    'weight': 1,
-    'max': 2
-  },
-  'submitButton': {
-    'summary': 'form submission button missing',
-    'why': 'User cannot easily submit a form',
-    'wcag': '3.2.2',
-    'weight': 3
-  },
-  'fragmentaryNoticeRisk': {
-    'summary': 'assertive region not atomic',
-    'why': 'User may be unable to get help on what content has changed',
-    'wcag': '4.1.3',
-    'weight': 2
-  },
-  'errorReferenceBad': {
-    'summary': 'error reference invalid',
-    'why': 'User cannot correct a form error',
-    'wcag': '3.3.1',
-    'weight': 4
-  },
-  'noScriptRisk': {
-    'summary': 'noscript element not equivalent?',
-    'why': 'User who has disabled JavaScript may be denied some content',
-    'wcag': '4.1',
-    'weight': 1
-  },
-  'flash': {
-    'summary': 'flash content',
-    'why': 'Document includes code that may not work and may jeopardize user security',
-    'wcag': '4.1',
+  'visibleBulk': {
+    'summary': 'large visible-element count',
+    'why': 'User cannot easily find items in the page',
+    'wcag': '2.4',
     'weight': 1,
     'max': 1
   },
-  'browserSupportRisk': {
-    'summary': 'inputmode attribute',
-    'why': 'Document may include code that the browser cannot process',
-    'wcag': '4.1',
-    'weight': 1
-  },
-  'attributeObsolete': {
-    'summary': 'attribute obsolete',
-    'why': 'Document includes obsolete code that the browser may fail to process',
-    'wcag': '4.1',
+  'visibleLabelNotInName': {
+    'summary': 'visible label not in name',
+    'why': 'User cannot get help choosing a form control to operate',
+    'wcag': '2.5.3',
     'weight': 3
   },
-  'nonElement': {
-    'summary': 'element unknown',
-    'why': 'Document includes an unknown element that the browser cannot process',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'elementObsolete': {
-    'summary': 'element obsolete',
-    'why': 'Document includes obsolete code that the browser may fail to process',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'obsolete': {
-    'summary': 'code obsolete',
-    'why': 'Document contains code that is no longer standard',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'atRuleInvalid': {
-    'summary': 'invalid at-rule',
-    'why': 'Document cannot be properly displayed in particular contexts',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'cssInvalid': {
-    'summary': 'CSS invalid',
-    'why': 'Document cannot be properly displayed',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'elementClosure': {
-    'summary': 'element closure invalid',
-    'why': 'Document contains invalid code',
-    'wcag': '4.1.1',
-    'weight': 3
-  },
-  'nestingBad': {
-    'summary': 'nesting invalid',
-    'why': 'Document contains invalid code',
-    'wcag': '4.1.1',
-    'weight': 3
-  },
-  'characterBad': {
-    'summary': 'invalid character',
-    'why': 'Invalid character makes the page behave incorrectly',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'entityBad': {
-    'summary': 'named character reference invalid',
-    'why': 'User may be unable to read all the page text',
-    'wcag': '4.1',
-    'weight': 4
-  },
-  'textContentBad': {
-    'summary': 'element text content invalid',
-    'why': 'User may be unable to read all the page text',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'parseError': {
-    'summary': 'code invalid',
-    'why': 'Invalid code in the page may prevent a helper from working',
-    'wcag': '4.1',
-    'weight': 3
-  },
-  'encodingMisdeclared': {
-    'summary': 'text encoding wrongly declared',
-    'why': 'User cannot read all of the text',
-    'wcag': '3.1.3',
-    'weight': 4,
-    'max': 1
-  },
-  'encodingBad': {
-    'summary': 'text not Unicode-compliant',
-    'why': 'User cannot read all of the text',
-    'wcag': '3.1.3',
-    'weight': 4
-  },
-  'encodingPrivate': {
-    'summary': 'text in Private Use Area',
-    'why': 'User cannot read all of the text',
-    'wcag': '3.1.3',
-    'weight': 4,
-    'max': 1
-  },
-  'captcha2': {
-    'summary': 'captcha2',
-    'why': 'User is prevented from consuming the page',
-    'wcag': '1.1.1',
-    'weight': 1,
-    'max': 1
-  },
-  'fatalError': {
-    'summary': 'fatal error',
-    'why': 'Document prevents testing for accessibility',
-    'wcag': '4.1',
-    'weight': 4,
-    'max': 1
-  },
-  'notValidatable': {
-    'summary': 'item makes testing inconclusive',
-    'why': 'Item prevents a conclusive accessibility test',
-    'wcag': '4.1',
-    'weight': 1
-  },
-  'svgNotValidatable': {
-    'summary': 'SVG version not 1.1',
-    'why': 'Item prevents testing image for accessibility',
-    'wcag': '4.1',
+  'zIndexNotZero': {
+    'summary': 'z-index not zero',
+    'why': 'User cannot predict the effect of clicking',
+    'wcag': '1.4',
     'weight': 1
   }
 } as const;
