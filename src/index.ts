@@ -25,7 +25,7 @@ export type Outcome = typeof outcomes[number];
 // Why a suspected violation is suspected.
 export type Uncertainty = typeof uncertainties[number];
 // Why a rule is deprecated.
-export type Ignore = typeof whyIgnore[number];
+export type WhyIgnore = typeof whyIgnore[number];
 
 
 // INTERFACES
@@ -57,9 +57,9 @@ interface RuleEntry {
   // Why suspected violations are suspected, if not specified by an instance.
   uncertainty?: Uncertainty;
   // How to check suspected violations, if not specified by an instance.
-  review?: string;
+  toCheck?: string;
   // Why the rule is deprecated.
-  ignore?: Ignore;
+  whyIgnore?: WhyIgnore;
 }
 
 // Data about all the rules of a rule engine.
@@ -9874,7 +9874,7 @@ export const makeIssueRules = (
     if (review !== undefined && (typeof review !== 'string' || !review.length)) {
       errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-string or empty review (${JSON.stringify(review)})`);
     }
-    if (ignore !== undefined && !whyIgnore.includes(ignore as Ignore)) {
+    if (ignore !== undefined && !whyIgnore.includes(ignore as WhyIgnore)) {
       errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid ignore (${JSON.stringify(ignore)})`);
     }
     if (variabilityName === 'variable') {
