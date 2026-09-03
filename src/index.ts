@@ -12,7 +12,7 @@ const uncertainties = [
   'out-of-scope'
 ] as const;
 // Valid values of the ignore property of a rule entry.
-const whyIgnore = ['invalid', 'irrelevant', 'duplicative', 'unreliable'] as const;
+const whyIgnore = ['duplicative', 'invalid', 'irrelevant', 'speculative', 'unreliable'] as const;
 
 // TYPES
 
@@ -2318,18 +2318,21 @@ const rulesData = {
       'cantTellTextContrast': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Test of text contrast could not give a conclusive result [invalid]',
+        'what': 'Test of text contrast could not give a conclusive result',
+        'whyIgnore': 'invalid',
         'supersededBy': null
       },
       'r73': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Text line height is not at least 1.5 [invalid]'
+        'what': 'Text line height is not at least 1.5',
+        'whyIgnore': 'invalid'
       },
       'r87': {
         'issueID': 'ignorable',
         'quality': 0.5,
-        'what': 'First focusable element is not a link to the main content [invalid]'
+        'what': 'First focusable element is not a link to the main content',
+        'whyIgnore': 'invalid'
       },
       'r3': {
         'issueID': 'duplicateID',
@@ -2645,87 +2648,104 @@ const rulesData = {
       'capital_letters_words': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Element or its title has entirely upper-case words [invalid]'
+        'what': 'Element or its title has entirely upper-case words',
+        'whyIgnore': 'invalid'
       },
       'color_contrast_aa': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Text has contrast less than 4.5:1 [speculative]'
+        'what': 'Text has contrast less than 4.5:1',
+        'whyIgnore': 'speculative'
       },
       'color_contrast_aaa': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Text contrast may be less than enhanced but the element is invisible [invalid]'
+        'what': 'Text contrast may be less than enhanced but the element is invisible',
+        'whyIgnore': 'invalid'
       },
       'css_images_convey_information': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Background image may be informative [speculative]'
+        'what': 'Background image may be informative',
+        'whyIgnore': 'speculative'
       },
       'empty_link_element': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Element has no visible and accessible name [invalid]'
+        'what': 'Element has no visible and accessible name',
+        'whyIgnore': 'invalid'
       },
       'fieldset_no_legend': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'First child element of the element is not a legend [duplicative]'
+        'what': 'First child element of the element is not a legend',
+        'whyIgnore': 'duplicative'
       },
       'flickering': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Excessive flashing may exist [speculative]'
+        'what': 'Excessive flashing may exist',
+        'whyIgnore': 'speculative'
       },
       'links_language_destination': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Link destination has a named host and may be in an unexpected language [speculative]'
+        'what': 'Link destination has a named host and may be in an unexpected language',
+        'whyIgnore': 'speculative'
       },
       'links_not_visually_evident_without_color_vision': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Element is a link, but its style properties do not differentiate it from its parent [irrelevant]'
+        'what': 'Element is a link, but its style properties do not differentiate it from its parent',
+        'whyIgnore': 'irrelevant'
       },
       'links_same_content_different_url': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Links with the same text content have different destination URLs [invalid]'
+        'what': 'Links with the same text content have different destination URLs',
+        'whyIgnore': 'invalid'
       },
       'meaningful_content_sequence': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'The content sequence may fail to be meaningful [speculative]'
+        'what': 'The content sequence may fail to be meaningful',
+        'whyIgnore': 'speculative'
       },
       'missing_alt_attribute': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Image has no alt attribute [invalid]'
+        'what': 'Image has no alt attribute',
+        'whyIgnore': 'invalid'
       },
       'motion_actuation': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document listens for device motion or rotation [speculative]'
+        'what': 'Document listens for device motion or rotation',
+        'whyIgnore': 'speculative'
       },
       'overlay': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document contains a commercial overlay modifier that may fail or invalidate test results [unreliable]'
+        'what': 'Document contains a commercial overlay modifier that may fail or invalidate test results',
+        'whyIgnore': 'unreliable'
       },
       'object_missing_body': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'object element has no body to act as a text alternative [invalid]'
+        'what': 'object element has no body to act as a text alternative',
+        'whyIgnore': 'invalid'
       },
       'reflow': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Page may require horizontal scrolling [speculative]'
+        'what': 'Page may require horizontal scrolling',
+        'whyIgnore': 'speculative'
       },
       'text_color_convey_information': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Color may give information not given also by text [speculative]'
+        'what': 'Color may give information not given also by text',
+        'whyIgnore': 'speculative'
       },
       'duplicated_id_attribute': {
         'issueID': 'duplicateID',
@@ -3345,17 +3365,20 @@ const rulesData = {
       'css-orientation-lock': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'CSS media query locks display orientation [unreliable]'
+        'what': 'CSS media query locks display orientation',
+        'whyIgnore': 'unreliable'
       },
       'frame-tested': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Some content is in an iframe and so may not be testable for accessibility [speculative]'
+        'what': 'Some content is in an iframe and so may not be testable for accessibility',
+        'whyIgnore': 'speculative'
       },
       'hidden-content': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Some content is hidden and so may not be testable for accessibility [speculative]'
+        'what': 'Some content is hidden and so may not be testable for accessibility',
+        'whyIgnore': 'speculative'
       },
       'duplicate-id': {
         'issueID': 'duplicateID',
@@ -3775,37 +3798,44 @@ const rulesData = {
       'altNull': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'img element not inside a link has an empty alt attribute [speculative]'
+        'what': 'img element not inside a link has an empty alt attribute',
+        'whyIgnore': 'speculative'
       },
       'altPartOfLinkWithText': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Name of the link enclosing the img element includes its alt attribute, so may be unclear [speculative]'
+        'what': 'Name of the link enclosing the img element includes its alt attribute, so may be unclear',
+        'whyIgnore': 'speculative'
       },
       'embedAudio': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Element is audio, so may lack an accurate transcript [speculative]'
+        'what': 'Element is audio, so may lack an accurate transcript',
+        'whyIgnore': 'speculative'
       },
       'embedCustom': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Embedded custom element may fail to be accessible [speculative]'
+        'what': 'Embedded custom element may fail to be accessible',
+        'whyIgnore': 'speculative'
       },
       'embedTwitter': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Element is a Twitter feed, so may add many items on scroll and thus be impractical to exit by keyboard [speculative]'
+        'what': 'Element is a Twitter feed, so may add many items on scroll and thus be impractical to exit by keyboard',
+        'whyIgnore': 'speculative'
       },
       'embedVideo': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Element is video, so may lack captions [speculative]'
+        'what': 'Element is video, so may lack captions',
+        'whyIgnore': 'speculative'
       },
       'embedVisualization': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Element is a visualization, so may lack a nonvisual equivalent [speculative]'
+        'what': 'Element is a visualization, so may lack a nonvisual equivalent',
+        'whyIgnore': 'speculative'
       },
       'altMissing': {
         'issueID': 'imageNoText',
@@ -3950,7 +3980,8 @@ const rulesData = {
       'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'If element contains a navigation section, it is recommended that it be marked up as a list [speculative]'
+        'what': 'If element contains a navigation section, it is recommended that it be marked up as a list',
+        'whyIgnore': 'speculative'
       },
       'E-AAA.4_1_1.F77': {
         'issueID': 'duplicateID',
@@ -4857,22 +4888,26 @@ const rulesData = {
       'aria_child_valid': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Child element has a role not allowed for the role of the parent [invalid]'
+        'what': 'Child element has a role not allowed for the role of the parent',
+        'whyIgnore': 'invalid'
       },
       'aria_landmark_name_unique': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Multiple landmarks with the same parent region are not distinguished from one another [invalid on invisible elements]'
+        'what': 'Multiple landmarks with the same parent region are not distinguished from one another (invalid on invisible elements)',
+        'whyIgnore': 'invalid'
       },
       'html_lang_exists': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Page detected as HTML, but has no lang attribute [invalid]'
+        'what': 'Page detected as HTML, but has no lang attribute',
+        'whyIgnore': 'invalid'
       },
       'style_background_decorative': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'CSS background image may be informative [speculative]'
+        'what': 'CSS background image may be informative',
+        'whyIgnore': 'speculative'
       },
       'element_id_unique': {
         'issueID': 'duplicateID',
@@ -5478,22 +5513,26 @@ const rulesData = {
       'Element head is missing a required instance of child element title.': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'head element has no child title element [invalid]'
+        'what': 'head element has no child title element',
+        'whyIgnore': 'invalid'
       },
       'Element img is missing required attribute src.': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'img element has no src attribute [invalid]'
+        'what': 'img element has no src attribute',
+        'whyIgnore': 'invalid'
       },
       'Element mediaelementwrapper not allowed as child of element div in this context. (Suppressing further errors from this subtree.)': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Element contains a prohibited mediaelementwrapper element [invalid]'
+        'what': 'Element contains a prohibited mediaelementwrapper element',
+        'whyIgnore': 'invalid'
       },
       'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Void element has a useless trailing slash. [invalid]'
+        'what': 'Void element has a useless trailing slash.',
+        'whyIgnore': 'invalid'
       },
       'The aria-placeholder attribute must not be specified on elements that have a placeholder attribute.': {
         'issueID': 'placeholderPlusAria',
@@ -7024,22 +7063,26 @@ const rulesData = {
       'Element head is missing a required instance of child element title.': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'head element has no child title element [invalid]'
+        'what': 'head element has no child title element',
+        'whyIgnore': 'invalid'
       },
       'Element img is missing required attribute src.': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'img element has no src attribute [invalid]'
+        'what': 'img element has no src attribute',
+        'whyIgnore': 'invalid'
       },
       'Element mediaelementwrapper not allowed as child of element div in this context. (Suppressing further errors from this subtree.)': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Element contains a prohibited mediaelementwrapper element [invalid]'
+        'what': 'Element contains a prohibited mediaelementwrapper element',
+        'whyIgnore': 'invalid'
       },
       'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Void element has a useless trailing slash. [invalid]'
+        'what': 'Void element has a useless trailing slash.',
+        'whyIgnore': 'invalid'
       },
       'The aria-placeholder attribute must not be specified on elements that have a placeholder attribute.': {
         'issueID': 'placeholderPlusAria',
@@ -8570,157 +8613,188 @@ const rulesData = {
       'QW-ACT-R10': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'iframe elements with identical accessible names have different purposes [invalid on invisible elements]'
+        'what': 'iframe elements with identical accessible names have different purposes (on invisible elements)',
+        'whyIgnore': 'invalid'
       },
       'QW-ACT-R13': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Element with aria-hidden has focusable content [invalid]'
+        'what': 'Element with aria-hidden has focusable content',
+        'whyIgnore': 'invalid'
       },
       'QW-ACT-R41': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Error message describes no invalid form field value [speculative]'
+        'what': 'Error message describes no invalid form field value',
+        'whyIgnore': 'speculative'
       },
       'QW-ACT-R52': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'video element visual-only content has no description track [description tracks and this ACT rule have been deprecated]'
+        'what': 'video element visual-only content has no description track (description tracks and this ACT rule have been deprecated)',
+        'whyIgnore': 'irrelevant'
       },
       'QW-ACT-R57': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'video element visual content has no description track [description tracks and this ACT rule have been deprecated]'
+        'what': 'video element visual content has no description track (description tracks and this ACT rule have been deprecated)',
+        'whyIgnore': 'irrelevant'
       },
       'QW-ACT-R62': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Element in the sequential focus order may have no visible focus [speculative]'
+        'what': 'Element in the sequential focus order may have no visible focus',
+        'whyIgnore': 'speculative'
       },
       'QW-ACT-R63': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document has no landmark with non-repeated content [invalid]'
+        'what': 'Document has no landmark with non-repeated content',
+        'whyIgnore': 'invalid'
       },
       'QW-ACT-R64': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document has no heading for non-repeated content [invalid]'
+        'what': 'Document has no heading for non-repeated content',
+        'whyIgnore': 'invalid'
       },
       'QW-ACT-R73': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Block of repeated content is not collapsible [invalid]'
+        'what': 'Block of repeated content is not collapsible',
+        'whyIgnore': 'invalid'
       },
       'QW-ACT-R74': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document has no instrument to move focus to non-repeated content [invalid]'
+        'what': 'Document has no instrument to move focus to non-repeated content',
+        'whyIgnore': 'invalid'
       },
       'QW-ACT-R75': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Blocks of repeated content cannot be bypassed [invalid]'
+        'what': 'Blocks of repeated content cannot be bypassed',
+        'whyIgnore': 'invalid'
       },
       'QW-BP1': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'h1-h6 may fail to be used to identify headings [speculative]'
+        'what': 'h1-h6 may fail to be used to identify headings',
+        'whyIgnore': 'speculative'
       },
       'QW-BP2': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Image text alternative is not concise [invalid]'
+        'what': 'Image text alternative is not concise',
+        'whyIgnore': 'invalid'
       },
       'QW-BP17': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'No link at the beginning of a block of repeated content goes to the end of the block [invalid]'
+        'what': 'No link at the beginning of a block of repeated content goes to the end of the block',
+        'whyIgnore': 'invalid'
       },
       'QW-BP20': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Document has more than 1 banner landmark [invalid; counts hidden elements]'
+        'what': 'Document has more than 1 banner landmark (counts hidden elements)',
+        'whyIgnore': 'invalid'
       },
       'QW-BP22': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Document has more than 1 element with a main role [invalid]'
+        'what': 'Document has more than 1 element with a main role',
+        'whyIgnore': 'invalid'
       },
       'QW-BP23': {
         'issueID': 'ignorable',
         'quality': 0.1,
-        'what': 'Element is not in a true list [invalid]'
+        'what': 'Element is not in a true list',
+        'whyIgnore': 'invalid'
       },
       'QW-BP24': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'ul or ol element has a child other than li, script, or template [invalid]'
+        'what': 'ul or ol element has a child other than li, script, or template',
+        'whyIgnore': 'invalid'
       },
       'QW-BP28': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'h1 element missing or used more than once [invalid]'
+        'what': 'h1 element missing or used more than once',
+        'whyIgnore': 'invalid'
       },
       'QW-BP29': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'lang and xml:lang attribute of html element differ [invalid]'
+        'what': 'lang and xml:lang attribute of html element differ',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T4': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'summary attribute is not used to give an overview of a data table [invalid]'
+        'what': 'summary attribute is not used to give an overview of a data table',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T8': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Text alternative is suspect [invalid]'
+        'what': 'Text alternative is suspect',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T9': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Page may fail to be organized using headings [speculative]'
+        'what': 'Page may fail to be organized using headings',
+        'whyIgnore': 'speculative'
       },
       'QW-WCAG-T15': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'link element may be used for navigation but not in the head [invalid]'
+        'what': 'link element may be used for navigation but not in the head',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T20': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Link title may fail to describe the link correctly [speculative]'
+        'what': 'Link title may fail to describe the link correctly',
+        'whyIgnore': 'speculative'
       },
       'QW-WCAG-T23': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'No link at the top of the page goes directly to the main content area [invalid]'
+        'what': 'No link at the top of the page goes directly to the main content area',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T24': {
         'issueID': 'ignorable',
         'quality': 0.5,
-        'what': 'Script removes the focus when focus is received [invalid]'
+        'what': 'Script removes the focus when focus is received',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T28': {
         'issueID': 'ignorable',
         'quality': 0.8,
-        'what': 'Font size set to an absolute unit value [invalid]'
+        'what': 'Font size set to an absolute unit value',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T31': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Foreground or background color is specified but not both [invalid on invisible elements'
+        'what': 'Foreground or background color is specified but not both (on invisible elements)',
+        'whyIgnore': 'invalid'
       },
       'QW-WCAG-T32': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'ol, ul or dl may fail to be used for a list or group of links [speculative]'
+        'what': 'ol, ul or dl may fail to be used for a list or group of links',
+        'whyIgnore': 'speculative'
       },
       'QW-WCAG-T35': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Several elements have this id attribute value [invalid]'
+        'what': 'Several elements have this id attribute value',
+        'whyIgnore': 'invalid'
       },
       'QW-ACT-R18': {
         'issueID': 'duplicateID',
@@ -9842,7 +9916,7 @@ export const makeIssueRules = (
     engineRuleIDs: Set<string>
   ) => {
     const {
-      issueID, quality, what, supersededBy, outcome, uncertainty, review, ignore
+      issueID, quality, what, supersededBy, outcome, uncertainty, toCheck, whyIgnore: entryWhyIgnore
     } = entry as unknown as Record<string, unknown>;
     if (!ruleID.length) {
       errors.push(`${engineID}.${variabilityName} has a rule with an empty ruleID`);
@@ -9871,11 +9945,11 @@ export const makeIssueRules = (
     if (uncertainty !== undefined && !uncertainties.includes(uncertainty as Uncertainty)) {
       errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid uncertainty (${JSON.stringify(uncertainty)})`);
     }
-    if (review !== undefined && (typeof review !== 'string' || !review.length)) {
-      errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-string or empty review (${JSON.stringify(review)})`);
+    if (toCheck !== undefined && (typeof toCheck !== 'string' || !toCheck.length)) {
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-string or empty toCheck (${JSON.stringify(toCheck)})`);
     }
-    if (ignore !== undefined && !whyIgnore.includes(ignore as WhyIgnore)) {
-      errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid ignore (${JSON.stringify(ignore)})`);
+    if (entryWhyIgnore !== undefined && !whyIgnore.includes(entryWhyIgnore as WhyIgnore)) {
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid whyIgnore (${JSON.stringify(entryWhyIgnore)})`);
     }
     if (variabilityName === 'variable') {
       if (!/[.*+?^${}()|[\]\\]/.test(ruleID)) {
