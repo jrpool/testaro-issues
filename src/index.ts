@@ -164,7 +164,7 @@ const issuesData = {
   },
   'ariaRedundant': {
     'summary': 'aria attribute redundant',
-    'why': 'Document includes unnecessary code',
+    'why': 'Page includes unnecessary code',
     'wcag': '4.1.2',
     'weight': 1
   },
@@ -200,7 +200,7 @@ const issuesData = {
   },
   'atRuleInvalid': {
     'summary': 'invalid at-rule',
-    'why': 'Document cannot be properly displayed in particular contexts',
+    'why': 'Page cannot be properly displayed in particular contexts',
     'wcag': '4.1',
     'weight': 3
   },
@@ -218,7 +218,7 @@ const issuesData = {
   },
   'attributeObsolete': {
     'summary': 'attribute obsolete',
-    'why': 'Document includes obsolete code that the browser may fail to process',
+    'why': 'Page includes obsolete code that the browser may fail to process',
     'wcag': '4.1',
     'weight': 3
   },
@@ -346,7 +346,7 @@ const issuesData = {
   'boxInvisibleRisk': {
     'summary': 'border or outline invisible?',
     'why': 'User cannot perceive the boundary of an item',
-    'wcag': '2.5.8',
+    'wcag': '1.4.11',
     'weight': 1
   },
   'boxSizeAbsolute': {
@@ -357,7 +357,7 @@ const issuesData = {
   },
   'browserSupportRisk': {
     'summary': 'inputmode attribute',
-    'why': 'Document may include code that the browser cannot process',
+    'why': 'Page may include code that the browser cannot process',
     'wcag': '4.1',
     'weight': 1
   },
@@ -413,7 +413,7 @@ const issuesData = {
   'clickOnly': {
     'summary': 'name dubiously mouse-specific',
     'why': 'User may misunderstand how to activate a link',
-    'wcag': '2.4.4',
+    'wcag': '2.1.1',
     'weight': 1
   },
   'colorNamedRisk': {
@@ -443,7 +443,7 @@ const issuesData = {
   'contentHidden': {
     'summary': 'page hidden',
     'why': 'User cannot get the page content',
-    'wcag': '2.4.7',
+    'wcag': '1',
     'weight': 4,
     'max': 1
   },
@@ -497,7 +497,7 @@ const issuesData = {
   },
   'cssInvalid': {
     'summary': 'CSS invalid',
-    'why': 'Document cannot be properly displayed',
+    'why': 'Page cannot be properly displayed',
     'wcag': '4.1',
     'weight': 3
   },
@@ -607,21 +607,21 @@ const issuesData = {
   'docTypeBad': {
     'summary': 'DOCTYPE invalid',
     'why': 'Browser processes the page improperly',
-    'wcag': '1.3.1',
+    'wcag': '4.1',
     'weight': 3,
     'max': 1
   },
   'docTypeMisplaced': {
     'summary': 'DOCTYPE in invalid location',
     'why': 'Browser processes the page improperly',
-    'wcag': '1.3.1',
+    'wcag': '4.1',
     'weight': 4,
     'max': 1
   },
   'docTypeMissing': {
     'summary': 'DOCTYPE missing',
     'why': 'Browser processes the page improperly',
-    'wcag': '1.3.1',
+    'wcag': '4.1',
     'weight': 4,
     'max': 1
   },
@@ -634,13 +634,13 @@ const issuesData = {
   'duplicateAttribute': {
     'summary': 'duplicate attribute',
     'why': 'Browser processes the page improperly',
-    'wcag': '4.1.1',
+    'wcag': '4.1',
     'weight': 2
   },
   'duplicateID': {
     'summary': 'ID not unique',
     'why': 'User may be pointed to the wrong item',
-    'wcag': '4.1.1',
+    'wcag': '4.1',
     'weight': 4
   },
   'editableHow': {
@@ -657,8 +657,8 @@ const issuesData = {
   },
   'elementClosure': {
     'summary': 'element closure invalid',
-    'why': 'Document contains invalid code',
-    'wcag': '4.1.1',
+    'why': 'Page contains invalid code',
+    'wcag': '4.1',
     'weight': 3
   },
   'elementLanguageBad': {
@@ -669,7 +669,7 @@ const issuesData = {
   },
   'elementObsolete': {
     'summary': 'element obsolete',
-    'why': 'Document includes obsolete code that the browser may fail to process',
+    'why': 'Page includes obsolete code that the browser may fail to process',
     'wcag': '4.1',
     'weight': 3
   },
@@ -682,7 +682,7 @@ const issuesData = {
   'encodingBad': {
     'summary': 'text not Unicode-compliant',
     'why': 'User cannot read all of the text',
-    'wcag': '3.1.3',
+    'wcag': '4.1',
     'weight': 4
   },
   'encodingMisdeclared': {
@@ -719,7 +719,7 @@ const issuesData = {
   },
   'fatalError': {
     'summary': 'fatal error',
-    'why': 'Document prevents testing for accessibility',
+    'why': 'Page prevents testing for accessibility',
     'wcag': '4.1',
     'weight': 4,
     'max': 1
@@ -744,7 +744,7 @@ const issuesData = {
   },
   'flash': {
     'summary': 'flash content',
-    'why': 'Document includes code that may not work and may jeopardize user security',
+    'why': 'Page includes code that may not work and may jeopardize user security',
     'wcag': '4.1',
     'weight': 1,
     'max': 1
@@ -872,7 +872,7 @@ const issuesData = {
   },
   'frameSandboxRisk': {
     'summary': 'iframe sandbox attributes risky',
-    'why': 'Document may be unsafe to use',
+    'why': 'Page may be unsafe to use',
     'wcag': '4.1',
     'weight': 2
   },
@@ -917,7 +917,7 @@ const issuesData = {
   'headElementsBad': {
     'summary': 'element in head invalid',
     'why': 'Browser processes the page improperly',
-    'wcag': '4.1.1',
+    'wcag': '4.1',
     'weight': 3
   },
   'headingConfusion': {
@@ -984,7 +984,7 @@ const issuesData = {
   'hideFailureRisk': {
     'summary': 'false aria-hidden value risky',
     'why': 'User may be misled by erroneously hidden or revealed page content',
-    'wcag': '2.4.6',
+    'wcag': '1.3.1',
     'weight': 1
   },
   'horizontalSpacingFrozen': {
@@ -996,7 +996,7 @@ const issuesData = {
   'hoverIndication': {
     'summary': 'hover indication poor',
     'why': 'User cannot explore the page reliably with a mouse',
-    'wcag': '3.3.2',
+    'wcag': '2.4',
     'weight': 3
   },
   'hoverSurprise': {
@@ -1205,7 +1205,7 @@ const issuesData = {
   },
   'labeledHidden': {
     'summary': 'control hidden but labeled',
-    'why': 'Document includes unnecessary code',
+    'why': 'Page includes unnecessary code',
     'wcag': '1.3.1',
     'weight': 1
   },
@@ -1313,13 +1313,13 @@ const issuesData = {
   },
   'linkElementBad': {
     'summary': 'link element invalid',
-    'why': 'Document fails to get a needed external resource',
+    'why': 'Page fails to get a needed external resource',
     'wcag': '1.3.1',
     'weight': 4
   },
   'linkElementMisplaced': {
     'summary': 'link element misplaced',
-    'why': 'Document fails to get a needed external resource',
+    'why': 'Page fails to get a needed external resource',
     'wcag': '1.3.1',
     'weight': 4
   },
@@ -1514,8 +1514,8 @@ const issuesData = {
   },
   'nestingBad': {
     'summary': 'nesting invalid',
-    'why': 'Document contains invalid code',
-    'wcag': '4.1.1',
+    'why': 'Page contains invalid code',
+    'wcag': '4.1',
     'weight': 3
   },
   'newTabSurprise': {
@@ -1539,7 +1539,7 @@ const issuesData = {
   },
   'nonElement': {
     'summary': 'element unknown',
-    'why': 'Document includes an unknown element that the browser cannot process',
+    'why': 'Page includes an unknown element that the browser cannot process',
     'wcag': '4.1',
     'weight': 4
   },
@@ -1563,8 +1563,8 @@ const issuesData = {
   },
   'nonWebLink': {
     'summary': 'link to non-web resource',
-    'why': 'Document points to harder-to-use resources',
-    'wcag': '1.3.3',
+    'why': 'Page points to harder-to-use resources',
+    'wcag': '4.1',
     'weight': 1
   },
   'noOptionFocusable': {
@@ -1588,7 +1588,7 @@ const issuesData = {
   'objectAudioRisk': {
     'summary': 'non-audio element plays audio?',
     'why': 'User may get inadequate help consuming audio content',
-    'wcag': '1.1.1',
+    'wcag': '3.2',
     'weight': 1
   },
   'objectBlurKeyboardRisk': {
@@ -1611,7 +1611,7 @@ const issuesData = {
   },
   'obsolete': {
     'summary': 'code obsolete',
-    'why': 'Document contains code that is no longer standard',
+    'why': 'Page contains code that is no longer standard',
     'wcag': '4.1',
     'weight': 3
   },
@@ -1677,7 +1677,7 @@ const issuesData = {
   'pageTitleBad': {
     'summary': 'page title invalid',
     'why': 'Browser processes the page improperly',
-    'wcag': '1.3.1',
+    'wcag': '2.4.2',
     'weight': 3,
     'max': 1
   },
@@ -1803,7 +1803,7 @@ const issuesData = {
   },
   'refresh': {
     'summary': 'element reloads or redirects',
-    'why': 'Document change may surprise a user',
+    'why': 'Page change may surprise a user',
     'wcag': '2.2.1',
     'weight': 3
   },
@@ -1876,7 +1876,7 @@ const issuesData = {
   },
   'roleRedundant': {
     'summary': 'role redundant',
-    'why': 'Document includes unnecessary code',
+    'why': 'Page includes unnecessary code',
     'wcag': '4.1.2',
     'weight': 1
   },
@@ -1973,7 +1973,7 @@ const issuesData = {
   },
   'specRulesScriptBad': {
     'summary': 'speculation rules script element invalid',
-    'why': 'Document navigation performs poorly',
+    'why': 'Page navigation performs poorly',
     'wcag': '1.3.1',
     'weight': 1
   },
@@ -2179,7 +2179,7 @@ const issuesData = {
   'textAreaNoText': {
     'summary': 'text area not named',
     'why': 'User cannot get help on what information to enter in a form item',
-    'wcag': '1.3.1',
+    'wcag': '4.1.2',
     'weight': 4
   },
   'textContentBad': {
@@ -2215,13 +2215,13 @@ const issuesData = {
   'titleLong': {
     'summary': 'title long',
     'why': 'Hovering makes an overly verbose explanation pop up',
-    'wcag': '3.1.5',
+    'wcag': '1.3.1',
     'weight': 2
   },
   'titleNotText': {
     'summary': 'title contains ASCII art',
     'why': 'Hovering makes a hard-to-understand explanation pop up',
-    'wcag': '3.1.5',
+    'wcag': '1.3.1',
     'weight': 2
   },
   'titleRedundant': {
@@ -2232,13 +2232,13 @@ const issuesData = {
   },
   'typeBad': {
     'summary': 'type invalid',
-    'why': 'Document styles are at risk of corruption',
+    'why': 'Page styles are at risk of corruption',
     'wcag': '1.3.1',
     'weight': 4
   },
   'typeRedundant': {
     'summary': 'type redundant',
-    'why': 'Document includes unnecessary code',
+    'why': 'Page includes unnecessary code',
     'wcag': '1.3.1',
     'weight': 1
   },
@@ -2269,7 +2269,7 @@ const issuesData = {
   'videoNoAudioDescription': {
     'summary': 'video audio description missing',
     'why': 'User cannot get help hearing video content as speech',
-    'wcag': '1.2.1',
+    'wcag': '1.2.5',
     'weight': 4
   },
   'videoNoAudioTrack': {
@@ -2279,7 +2279,7 @@ const issuesData = {
     'weight': 4
   },
   'videoNoText': {
-    'summary': 'video not named',
+    'summary': 'no video text alternative',
     'why': 'User cannot get help reading video content as text',
     'wcag': '1.2.2',
     'weight': 4
@@ -2287,7 +2287,7 @@ const issuesData = {
   'videoNoTranscript': {
     'summary': 'video transcript missing',
     'why': 'User cannot get help reading video content as text',
-    'wcag': '1.2.2',
+    'wcag': '1.2.1',
     'weight': 4
   },
   'visibleBulk': {
@@ -2517,7 +2517,7 @@ const rulesData = {
       'r1': {
         'issueID': 'pageTitle',
         'quality': 1,
-        'what': 'Document has no valid title element'
+        'what': 'Page has no valid title element'
       },
       'r53': {
         'issueID': 'headingLevelSkip',
@@ -2527,7 +2527,7 @@ const rulesData = {
       'r59': {
         'issueID': 'headingNone',
         'quality': 1,
-        'what': 'Document has no headings'
+        'what': 'Page has no headings'
       },
       'r61': {
         'issueID': 'h1Not1st',
@@ -2720,13 +2720,13 @@ const rulesData = {
       'motion_actuation': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document listens for device motion or rotation',
+        'what': 'Page listens for device motion or rotation',
         'whyIgnore': 'speculative'
       },
       'overlay': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document contains a commercial overlay modifier that may fail or invalidate test results',
+        'what': 'Page contains a commercial overlay modifier that may fail or invalidate test results',
         'whyIgnore': 'unreliable'
       },
       'object_missing_body': {
@@ -3075,7 +3075,7 @@ const rulesData = {
       'no_headings': {
         'issueID': 'headingNone',
         'quality': 1,
-        'what': 'Document has no headings'
+        'what': 'Page has no headings'
       },
       'h1_must_be': {
         'issueID': 'h1Not1',
@@ -3175,7 +3175,7 @@ const rulesData = {
       'main_element_only_one': {
         'issueID': 'mainNot1',
         'quality': 1,
-        'what': 'Document has more than 1 main landmark'
+        'what': 'Page has more than 1 main landmark'
       },
       'contentinfo_landmark_only_one': {
         'issueID': 'footerNot1',
@@ -3335,7 +3335,7 @@ const rulesData = {
       'flash_content': {
         'issueID': 'flash',
         'quality': 1,
-        'what': 'Document contains Adobe Flash content'
+        'what': 'Page contains Adobe Flash content'
       },
       'obsolete_html_attributes': {
         'issueID': 'attributeObsolete',
@@ -3355,7 +3355,7 @@ const rulesData = {
       'captcha_google': {
         'issueID': 'captcha2',
         'quality': 1,
-        'what': 'Document employs Google CAPTCHA version 2'
+        'what': 'Page employs Google CAPTCHA version 2'
       }
     },
     'variable': {}
@@ -3588,7 +3588,7 @@ const rulesData = {
       'document-title': {
         'issueID': 'pageTitle',
         'quality': 1,
-        'what': 'Document contains no title element'
+        'what': 'Page contains no title element'
       },
       'heading-order': {
         'issueID': 'headingLevelSkip',
@@ -3598,7 +3598,7 @@ const rulesData = {
       'page-has-heading-one': {
         'issueID': 'h1Not1',
         'quality': 1,
-        'what': 'Document contains no level-one heading'
+        'what': 'Page contains no level-one heading'
       },
       'p-as-heading': {
         'issueID': 'pseudoHeadingRisk',
@@ -4589,12 +4589,12 @@ const rulesData = {
       'E-AAA.2_4_2.H25.1.NoTitleEl': {
         'issueID': 'pageTitle',
         'quality': 1,
-        'what': 'Document head element contains no title element'
+        'what': 'Page head element contains no title element'
       },
       'E-AAA.2_4_2.H25.1.EmptyTitle': {
         'issueID': 'pageTitle',
         'quality': 1,
-        'what': 'Document head element contains an empty title element'
+        'what': 'Page head element contains an empty title element'
       },
       'E-AAA.1_3_1_AAA.G141': {
         'issueID': 'headingStructure',
@@ -8649,13 +8649,13 @@ const rulesData = {
       'QW-ACT-R63': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document has no landmark with non-repeated content',
+        'what': 'Page has no landmark with non-repeated content',
         'whyIgnore': 'invalid'
       },
       'QW-ACT-R64': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document has no heading for non-repeated content',
+        'what': 'Page has no heading for non-repeated content',
         'whyIgnore': 'invalid'
       },
       'QW-ACT-R73': {
@@ -8667,7 +8667,7 @@ const rulesData = {
       'QW-ACT-R74': {
         'issueID': 'ignorable',
         'quality': 0,
-        'what': 'Document has no instrument to move focus to non-repeated content',
+        'what': 'Page has no instrument to move focus to non-repeated content',
         'whyIgnore': 'invalid'
       },
       'QW-ACT-R75': {
@@ -8697,13 +8697,13 @@ const rulesData = {
       'QW-BP20': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Document has more than 1 banner landmark (counts hidden elements)',
+        'what': 'Page has more than 1 banner landmark (counts hidden elements)',
         'whyIgnore': 'invalid'
       },
       'QW-BP22': {
         'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Document has more than 1 element with a main role',
+        'what': 'Page has more than 1 element with a main role',
         'whyIgnore': 'invalid'
       },
       'QW-BP23': {
