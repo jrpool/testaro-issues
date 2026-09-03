@@ -4380,7 +4380,8 @@ const rulesData = {
       'E-AAA.1_4_6.G18.Fail': {
         'issueID': 'contrastAA',
         'quality': 1,
-        'what': 'Contrast between the text and its background is less than 4.5:1'
+        'what': 'Contrast between the text and its background is less than 4.5:1',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail'
       },
       'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail': {
         'issueID': 'contrastAA',
