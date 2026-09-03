@@ -114,6 +114,12 @@ const issuesData = {
     'wcag': '2.2.2',
     'weight': 3
   },
+  'animationTriggered': {
+    'summary': 'interaction triggers unpreventable animation',
+    'why': 'Motion-sensitive user may suffer harm',
+    'wcag': '2.3.3',
+    'weight': 3
+  },
   'appletNoText': {
     'summary': 'applet not named',
     'why': 'User cannot get help on how to use a custom item',
@@ -637,6 +643,12 @@ const issuesData = {
     'wcag': '1.3.6',
     'weight': 3
   },
+  'dragAlt': {
+    'summary': 'no single-pointer alternative to dragging',
+    'why': 'Click-only user cannot perform an operation',
+    'wcag': '2.5.7',
+    'weight': 4
+  },
   'duplicateAttribute': {
     'summary': 'duplicate attribute',
     'why': 'Browser processes the page improperly',
@@ -820,6 +832,12 @@ const issuesData = {
     'why': 'Keyboard-only user cannot choose an item to operate',
     'wcag': '2.4.7',
     'weight': 1
+  },
+  'focusSurprise': {
+    'summary': 'autofocus unexpected',
+    'why': 'Unexpected navigation to an item confuses the user',
+    'wcag': '3.2.5',
+    'weight': 2
   },
   'fontSizeAbsolute': {
     'summary': 'font size absolute',
@@ -1156,10 +1174,22 @@ const issuesData = {
     'weight': 4
   },
   'inputOnlyPlaceholder': {
-    'summary': 'input has placeholder instead of name',
+    'summary': 'Input has placeholder instead of name',
     'why': 'User cannot get reliable help on what information to enter in a form item',
     'wcag': '4.1.2',
     'weight': 3
+  },
+  'inputRepeat': {
+    'summary': 'Form requires non-automatic duplicate re-entry',
+    'why': 'Form completion is slower and more difficult than necessary',
+    'wcag': '3.3.7',
+    'weight': 4
+  },
+  'inputSurprise': {
+    'summary': 'Operating on an input unexpectedly alters the page',
+    'why': 'User cannot predict the effect of using a form',
+    'wcag': '3.2.2',
+    'weight': 4
   },
   'internalLinkBroken': {
     'summary': 'internal link broken',
@@ -8946,12 +8976,12 @@ const rulesData = {
         'what': 'CSS reordering makes the reading order diverge from the visual order'
       },
       'drag-alternative': {
-        'issueID': 'customKeyboardRisk',
+        'issueID': 'dragAlt',
         'quality': 1,
         'what': 'Dragging has no single-pointer alternative'
       },
       'redundant-entry': {
-        'issueID': 'formSurpriseRisk',
+        'issueID': 'inputRepeat',
         'quality': 1,
         'what': 'Form asks for the same information twice'
       },
@@ -8961,12 +8991,12 @@ const rulesData = {
         'what': 'popovertarget or commandfor references no valid element'
       },
       'reduced-motion': {
-        'issueID': 'spontaneousMotion',
+        'issueID': 'animationTriggered',
         'quality': 1,
         'what': 'Interaction-triggered motion cannot be switched off'
       },
       'on-input-navigation': {
-        'issueID': 'formSurpriseRisk',
+        'issueID': 'inputSurprise',
         'quality': 1,
         'what': 'Changing a control unexpectedly changes context'
       },
@@ -9066,7 +9096,7 @@ const rulesData = {
         'what': 'Button inside a form has no type attribute declared'
       },
       'no-autofocus': {
-        'issueID': 'focusDiscrepancy',
+        'issueID': 'focusSurprise',
         'quality': 1,
         'what': 'autofocus attribute disorients assistive-technology users'
       },
