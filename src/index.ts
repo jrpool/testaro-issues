@@ -1,9 +1,31 @@
+// CONSTANTS
+
+// Valid values of the outcome property of a rule entry.
+const outcomes = ['failed', 'cantTell'] as const;
+// Valid values of the uncertainty property of a rule entry.
+const uncertainties = [
+  'not-computable',
+  'judgement-required',
+  'runtime-dependent',
+  'spec-only',
+  'equivalence-unknown',
+  'out-of-scope'
+] as const;
+// Valid values of the ignore property of a rule entry.
+const whyIgnore = ['invalid', 'irrelevant', 'duplicative', 'unreliable'] as const;
+
 // TYPES
 
 // Issue ID.
 type IssueID = keyof typeof issuesData;
 // Counts of rules, by rule-engine ID, belonging to an issue.
 export type IssueEngineRuleCounts = Record<string, number>;
+// Whether a violation is definitive or suspected.
+export type Outcome = typeof outcomes[number];
+// Why a suspected violation is suspected.
+export type Uncertainty = typeof uncertainties[number];
+// Why a rule is deprecated.
+export type Ignore = typeof whyIgnore[number];
 
 
 // INTERFACES
@@ -30,6 +52,14 @@ interface RuleEntry {
   what: string;
   // If obsolete, the superseding rule ID, or null if none or multiple.
   supersededBy?: string | null;
+  // Whether all violations of the rule are deemed definitive or suspected.
+  outcome?: Outcome;
+  // Why suspected violations are suspected, if not specified by an instance.
+  uncertainty?: Uncertainty;
+  // How to check suspected violations, if not specified by an instance.
+  review?: string;
+  // Why the rule is deprecated.
+  ignore?: Ignore;
 }
 
 // Data about all the rules of a rule engine.
@@ -9811,7 +9841,9 @@ export const makeIssueRules = (
     entry: RuleEntry,
     engineRuleIDs: Set<string>
   ) => {
-    const {issueID, quality, what, supersededBy} = entry as unknown as Record<string, unknown>;
+    const {
+      issueID, quality, what, supersededBy, outcome, uncertainty, review, ignore
+    } = entry as unknown as Record<string, unknown>;
     if (!ruleID.length) {
       errors.push(`${engineID}.${variabilityName} has a rule with an empty ruleID`);
     }
@@ -9832,6 +9864,18 @@ export const makeIssueRules = (
       } else if (!engineRuleIDs.has(supersededBy)) {
         errors.push(`${engineID}.${variabilityName}.${ruleID} has supersededBy (${supersededBy}), which is not a rule of ${engineID}`);
       }
+    }
+    if (outcome !== undefined && !outcomes.includes(outcome as Outcome)) {
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid outcome (${JSON.stringify(outcome)})`);
+    }
+    if (uncertainty !== undefined && !uncertainties.includes(uncertainty as Uncertainty)) {
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid uncertainty (${JSON.stringify(uncertainty)})`);
+    }
+    if (review !== undefined && (typeof review !== 'string' || !review.length)) {
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has a non-string or empty review (${JSON.stringify(review)})`);
+    }
+    if (ignore !== undefined && !whyIgnore.includes(ignore as Ignore)) {
+      errors.push(`${engineID}.${variabilityName}.${ruleID} has an invalid ignore (${JSON.stringify(ignore)})`);
     }
     if (variabilityName === 'variable') {
       if (!/[.*+?^${}()|[\]\\]/.test(ruleID)) {

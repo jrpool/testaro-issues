@@ -1,6 +1,6 @@
 {
   "name": "testaro-issues",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "type": "module",
   "description": "A classification of about 1500 rules of 10 rule engines into about 400 issues. The rule engines are those in the ensemble of Testaro, which tests web pages for front-end quality (accessibility, usability, and standards conformance).",
   "main": "./dist/index.cjs",
