@@ -1,6 +1,6 @@
 # testaro-issues
 
-A classification of about 1200 rules of 10 rule engines into about 400 issues. The rule engines are those in the ensemble of [Testaro](https://github.com/YRA-tech/testaro), which tests web pages for front-end quality (accessibility, usability, and standards conformance).
+A classification of about 1300 rules of 11 rule engines into about 400 issues. The rule engines are those in the ensemble of [Testaro](https://github.com/YRA-tech/testaro), which tests web pages for front-end quality (accessibility, usability, and standards conformance).
 
 A _rule engine_ is an application, such as HTML CodeSniffer, that tests software.
 

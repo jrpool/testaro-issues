@@ -1174,19 +1174,19 @@ const issuesData = {
     'weight': 4
   },
   'inputOnlyPlaceholder': {
-    'summary': 'Input has placeholder instead of name',
+    'summary': 'input has placeholder instead of name',
     'why': 'User cannot get reliable help on what information to enter in a form item',
     'wcag': '4.1.2',
     'weight': 3
   },
   'inputRepeat': {
-    'summary': 'Form requires non-automatic duplicate re-entry',
+    'summary': 'form requires non-automatic duplicate re-entry',
     'why': 'Form completion is slower and more difficult than necessary',
     'wcag': '3.3.7',
     'weight': 4
   },
   'inputSurprise': {
-    'summary': 'Operating on an input unexpectedly alters the page',
+    'summary': 'operating on an input unexpectedly alters the page',
     'why': 'User cannot predict the effect of using a form',
     'wcag': '3.2.2',
     'weight': 4
@@ -8668,7 +8668,7 @@ const rulesData = {
       }
     }
   },
-    'pour': {
+  'pour': {
     'invariant': {
       'document-title': {
         'issueID': 'pageTitle',
@@ -8895,15 +8895,15 @@ const rulesData = {
         'quality': 1,
         'what': 'Data table has no properly associated header cells'
       },
-      'contrast-enhanced': {
+      'color-contrast-enhanced': {
         'issueID': 'contrastAAA',
         'quality': 1,
-        'what': 'Text has insufficient enhanced contrast (Level AAA)'
+        'what': 'Text contrast can be improved'
       },
       'target-size-enhanced': {
         'issueID': 'targetSmall',
         'quality': 1,
-        'what': 'Interactive target is smaller than 44 CSS pixels (Level AAA)'
+        'what': 'Interactive target is smaller than 44 CSS pixels'
       },
       'dialog-name': {
         'issueID': 'dialogNoText',
