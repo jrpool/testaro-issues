@@ -246,6 +246,12 @@ const issuesData = {
     'wcag': '1.2.1',
     'weight': 1
   },
+  'autoAuthBanned': {
+    'summary': 'login automation prohibited',
+    'why': 'User cannot get help needed for logging in',
+    'wcag': '3.3.8',
+    'weight': 4
+  },
   'autocompleteBad': {
     'summary': 'autocomplete invalid',
     'why': 'User cannot get help entering personal information in a form item',
@@ -586,9 +592,9 @@ const issuesData = {
     'weight': 1
   },
   'directionRisk': {
-    'summary': 'dubious direction',
-    'why': 'Item may behave incorrectly',
-    'wcag': '1.3.2',
+    'summary': 'text direction wrong?',
+    'why': 'Helper may misread text to the user',
+    'wcag': '4.1',
     'weight': 1
   },
   'divInTable': {
@@ -778,6 +784,12 @@ const issuesData = {
     'why': 'Keyboard-only user cannot navigate properly to the operable items',
     'wcag': '4.1.2',
     'weight': 3
+  },
+  'focusCovered': {
+    'summary': 'focused element covered',
+    'why': 'User cannot see which item will be operated on',
+    'wcag': '2.4.11',
+    'weight': 4
   },
   'focusDiscrepancy': {
     'summary': 'Tab-focusable elements wrong',
@@ -1801,6 +1813,12 @@ const issuesData = {
     'wcag': '3.2.4',
     'weight': 1
   },
+  'reflow': {
+    'summary': 'non-reflowing content forces 2D scrolling',
+    'why': 'Reading content is slow and difficult',
+    'wcag': '1.4.10',
+    'weight': 4
+  },
   'refresh': {
     'summary': 'element reloads or redirects',
     'why': 'Page change may surprise a user',
@@ -2146,6 +2164,12 @@ const issuesData = {
     'wcag': '2.1.1',
     'weight': 2
   },
+  'tabOrderBad': {
+    'summary': 'keyboard navigation sequence wrong',
+    'why': 'Sequential navigation moves in a meaningless or useless order',
+    'wcag': '2.4.3',
+    'weight': 3
+  },
   'tabularTableless': {
     'summary': 'table not marked as such',
     'why': 'Helper misinforms a user about whether items are cells of a table',
@@ -2302,6 +2326,12 @@ const issuesData = {
     'why': 'User cannot get help choosing a form control to operate',
     'wcag': '2.5.3',
     'weight': 3
+  },
+  'visualSequenceDeviant': {
+    'summary': 'visual and programmatic content sequences differ',
+    'why': 'Sequence of page items confuses the user',
+    'wcag': '1.3.2',
+    'weight': 2
   },
   'zIndexNotZero': {
     'summary': 'z-index not zero',
@@ -8607,6 +8637,451 @@ const rulesData = {
         'what': 'Invalid Unicode code point'
       }
     }
+  },
+    'pour': {
+    'invariant': {
+      'document-title': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'Page has no title element'
+      },
+      'html-lang': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'html element has no lang attribute or an invalid one'
+      },
+      'valid-lang-parts': {
+        'issueID': 'languageChange',
+        'quality': 1,
+        'what': 'lang attribute on an element has an invalid value'
+      },
+      'image-alt': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'Image has no text alternative'
+      },
+      'svg-img-alt': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'SVG element has no accessible name'
+      },
+      'button-name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Button has no accessible name'
+      },
+      'link-name': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has no accessible name'
+      },
+      'link-text-generic': {
+        'issueID': 'linkVaguenessRisk',
+        'quality': 1,
+        'what': 'Link text does not describe its destination'
+      },
+      'link-text-generic-only': {
+        'issueID': 'linkVaguenessRisk',
+        'quality': 1,
+        'what': 'Link text alone does not identify its destination'
+      },
+      'form-label': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Form field has no label'
+      },
+      'autocomplete-valid': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute has invalid tokens'
+      },
+      'orientation-lock': {
+        'issueID': 'cssBansPageRotate',
+        'quality': 1,
+        'what': 'CSS locks content to one display orientation'
+      },
+      'meta-viewport': {
+        'issueID': 'metaBansZoom',
+        'quality': 1,
+        'what': 'Viewport prevents user zoom'
+      },
+      'color-contrast': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text has insufficient contrast against its background'
+      },
+      'frame-title': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'Frame has no accessible name'
+      },
+      'aria-valid-refs': {
+        'issueID': 'ariaReferenceBad',
+        'quality': 1,
+        'what': 'ARIA id reference points to no existing element'
+      },
+      'valid-role': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'role attribute has an invalid value'
+      },
+      'aria-hidden-focus': {
+        'issueID': 'focusableHidden',
+        'quality': 1,
+        'what': 'aria-hidden element is focusable or contains a focusable element'
+      },
+      'list-structure': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'List contains a child other than a list item'
+      },
+      'nested-interactive': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'Interactive control contains another interactive control'
+      },
+      'bypass-blocks': {
+        'issueID': 'skipRepeatedContent',
+        'quality': 1,
+        'what': 'Page has no way to bypass repeated blocks'
+      },
+      'target-size': {
+        'issueID': 'targetTiny',
+        'quality': 1,
+        'what': 'Interactive target is smaller than 24 CSS pixels'
+      },
+      'audio-control': {
+        'issueID': 'autoplay',
+        'quality': 1,
+        'what': 'Auto-playing audio cannot be stopped or muted'
+      },
+      'pause-stop-hide': {
+        'issueID': 'animationLong',
+        'quality': 1,
+        'what': 'Moving content cannot be paused'
+      },
+      'media-captions': {
+        'issueID': 'videoNoText',
+        'quality': 1,
+        'what': 'Video has no captions'
+      },
+      'aria-attr-valid': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute has an invalid name or value'
+      },
+      'aria-allowed-attr': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute is not allowed for the role of its element'
+      },
+      'aria-field-name': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'ARIA field or value widget has no accessible name'
+      },
+      'aria-label-misuse': {
+        'issueID': 'nonLabelableRole',
+        'quality': 1,
+        'what': 'aria-label or aria-labelledby on a plain container is prohibited by ARIA'
+      },
+      'role-required-aria': {
+        'issueID': 'ariaMissing',
+        'quality': 1,
+        'what': 'Role is missing a required state or property attribute'
+      },
+      'label-for-valid': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'label for attribute references no existing form control'
+      },
+      'listitem-parent': {
+        'issueID': 'listItemOrphan',
+        'quality': 1,
+        'what': 'li element is not inside a ul or ol element'
+      },
+      'definition-list': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'dl element contains a child other than dt or dd'
+      },
+      'dlitem-parent': {
+        'issueID': 'descriptionOrphan',
+        'quality': 1,
+        'what': 'dt or dd element is not inside a dl element'
+      },
+      'area-alt': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'Image map area has no text alternative'
+      },
+      'object-alt': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'object element has no text alternative'
+      },
+      'input-image-alt': {
+        'issueID': 'imageButtonNoText',
+        'quality': 1,
+        'what': 'Image input has no alt text'
+      },
+      'multiple-labels': {
+        'issueID': 'labelNot1',
+        'quality': 1,
+        'what': 'Form field has multiple label elements'
+      },
+      'meta-refresh': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Page uses a timed refresh'
+      },
+      'link-in-text-block': {
+        'issueID': 'linkIndication',
+        'quality': 1,
+        'what': 'Link is not distinguishable from surrounding text without color'
+      },
+      'p-as-heading': {
+        'issueID': 'pseudoHeadingRisk',
+        'quality': 1,
+        'what': 'Styled paragraph is used as a heading'
+      },
+      'aria-required-children': {
+        'issueID': 'descendantMissing',
+        'quality': 1,
+        'what': 'ARIA role is missing a required child'
+      },
+      'aria-required-parent': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'ARIA role is not inside its required parent'
+      },
+      'scrollable-region-focusable': {
+        'issueID': 'keyboardScroll',
+        'quality': 1,
+        'what': 'Scrollable region is not reachable by keyboard'
+      },
+      'table-headers': {
+        'issueID': 'tableHeaderless',
+        'quality': 1,
+        'what': 'Data table has no properly associated header cells'
+      },
+      'contrast-enhanced': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text has insufficient enhanced contrast (Level AAA)'
+      },
+      'target-size-enhanced': {
+        'issueID': 'targetSmall',
+        'quality': 1,
+        'what': 'Interactive target is smaller than 44 CSS pixels (Level AAA)'
+      },
+      'dialog-name': {
+        'issueID': 'dialogNoText',
+        'quality': 1,
+        'what': 'Dialog has no accessible name'
+      },
+      'control-contrast': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text inside a form control has insufficient contrast'
+      },
+      'non-text-contrast': {
+        'issueID': 'boxInvisibleRisk',
+        'quality': 1,
+        'what': 'Form field boundary has contrast below 3:1'
+      },
+      'text-spacing': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'Text spacing overrides prevent user adjustment of spacing'
+      },
+      'reflow': {
+        'issueID': 'reflow',
+        'quality': 1,
+        'what': 'Content does not reflow to permit one-dimensional scrolling'
+      },
+      'focus-visible': {
+        'issueID': 'focusIndicationBad',
+        'quality': 1,
+        'what': 'Keyboard focus is not visible'
+      },
+      'focus-not-obscured': {
+        'issueID': 'focusCovered',
+        'quality': 1,
+        'what': 'Focused element is fully obscured by an overlay'
+      },
+      'auth-field-obstruction': {
+        'issueID': 'autoAuthBanned',
+        'quality': 1,
+        'what': 'Login input blocks paste or password managers'
+      },
+      'embed-alt': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'embed element has no accessible name'
+      },
+      'canvas-alt': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'canvas element has no accessible name or fallback'
+      },
+      'video-loop-motion': {
+        'issueID': 'animationLong',
+        'quality': 1,
+        'what': 'Looping autoplay video cannot be paused'
+      },
+      'visual-order-divergence': {
+        'issueID': 'tabOrderBad',
+        'quality': 1,
+        'what': 'CSS reordering makes the tab order diverge from the visual order'
+      },
+      'audio-transcript': {
+        'issueID': 'videoNoTranscript',
+        'quality': 1,
+        'what': 'Prerecorded audio-only content has no transcript'
+      },
+      'reading-order-divergence': {
+        'issueID': 'visualSequenceDeviant',
+        'quality': 1,
+        'what': 'CSS reordering makes the reading order diverge from the visual order'
+      },
+      'drag-alternative': {
+        'issueID': 'customKeyboardRisk',
+        'quality': 1,
+        'what': 'Dragging has no single-pointer alternative'
+      },
+      'redundant-entry': {
+        'issueID': 'formSurpriseRisk',
+        'quality': 1,
+        'what': 'Form asks for the same information twice'
+      },
+      'invoker-target': {
+        'issueID': 'ariaReferenceBad',
+        'quality': 1,
+        'what': 'popovertarget or commandfor references no valid element'
+      },
+      'reduced-motion': {
+        'issueID': 'spontaneousMotion',
+        'quality': 1,
+        'what': 'Interaction-triggered motion cannot be switched off'
+      },
+      'on-input-navigation': {
+        'issueID': 'formSurpriseRisk',
+        'quality': 1,
+        'what': 'Changing a control unexpectedly changes context'
+      },
+      'error-message-linkage': {
+        'issueID': 'errorReferenceBad',
+        'quality': 1,
+        'what': 'Field marked invalid has no text error description'
+      },
+      'composite-widget-name': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Tab, menu item, option, or tree item has no accessible name'
+      },
+      'summary-name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'summary element has no accessible name'
+      },
+      'heading-order': {
+        'issueID': 'headingLevelSkip',
+        'quality': 1,
+        'what': 'Heading levels do not increase by only one'
+      },
+      'empty-heading': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Heading contains no text'
+      },
+      'positive-tabindex': {
+        'issueID': 'tabIndexPositive',
+        'quality': 1,
+        'what': 'Positive tabindex disrupts the natural focus order'
+      },
+      'region': {
+        'issueID': 'contentBeyondLandmarks',
+        'quality': 1,
+        'what': 'Content is not inside a landmark region'
+      },
+      'landmark-one-main': {
+        'issueID': 'mainNone',
+        'quality': 1,
+        'what': 'Page has no main landmark'
+      },
+      'page-heading-one': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page has no h1 heading'
+      },
+      'landmark-unique': {
+        'issueID': 'landmarkConfusion',
+        'quality': 1,
+        'what': 'Landmarks of the same type are not distinguished by a label'
+      },
+      'redundant-role': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'role attribute repeats the built-in role of its element'
+      },
+      'redundant-aria': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'aria attribute duplicates a native HTML attribute'
+      },
+      'redundant-aria-label': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'aria-label repeats the visible text of its element'
+      },
+      'redundant-alt-phrase': {
+        'issueID': 'imageTextRedundant',
+        'quality': 1,
+        'what': 'alt text starts with a redundant phrase such as "image of"'
+      },
+      'redundant-tabindex': {
+        'issueID': 'tabIndexExtra',
+        'quality': 1,
+        'what': 'tabindex of 0 is unnecessary on a natively focusable element'
+      },
+      'redundant-image-alt': {
+        'issueID': 'imageTextRedundant',
+        'quality': 1,
+        'what': 'Image alt repeats adjacent link or button text'
+      },
+      'landmark-top-level': {
+        'issueID': 'mainNotTop',
+        'quality': 1,
+        'what': 'Landmark is nested inside another landmark instead of being top level'
+      },
+      'accesskeys': {
+        'issueID': 'accessKeyDuplicate',
+        'quality': 1,
+        'what': 'Same accesskey is assigned to more than one element'
+      },
+      'button-type': {
+        'issueID': 'typeBad',
+        'quality': 1,
+        'what': 'Button inside a form has no type attribute declared'
+      },
+      'no-autofocus': {
+        'issueID': 'focusDiscrepancy',
+        'quality': 1,
+        'what': 'autofocus attribute disorients assistive-technology users'
+      },
+      'new-window-link': {
+        'issueID': 'newTabSurpriseRisk',
+        'quality': 1,
+        'what': 'Link opens a new window without warning'
+      },
+      'fieldset-legend': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'Radio or checkbox group has no fieldset legend'
+      }
+    },
+    'variable': {}
   },
   'qualWeb': {
     'invariant': {
