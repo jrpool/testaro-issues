@@ -150,12 +150,6 @@ const issuesData = {
     'wcag': '4.1.2',
     'weight': 4
   },
-    'ariaBrailleNoEquivalent': {
-    'summary': 'aria braille label has no non-braille equivalent',
-    'why': 'User of a non-braille assistive technology gets no name',
-    'wcag': '4.1.2',
-    'weight': 3
-  },
   'ariaLabelWrongRisk': {
     'summary': 'dubious aria-label',
     'why': 'User may fail to get help understanding an item in a form',
@@ -373,6 +367,12 @@ const issuesData = {
     'wcag': '1.4.4',
     'weight': 3
   },
+  'brailleOnly': {
+    'summary': 'element has only a Braille name or role',
+    'why': 'User cannot get help understanding an item',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
   'browserSupportRisk': {
     'summary': 'inputmode attribute',
     'why': 'Page may include code that the browser cannot process',
@@ -381,7 +381,7 @@ const issuesData = {
   },
   'buttonAlt': {
     'summary': 'button has alt',
-    'why': 'User cannot get help explaing a button',
+    'why': 'User cannot get help explaining a button',
     'wcag': '4.1.2',
     'weight': 4
   },
@@ -1053,7 +1053,7 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
-    'iframeConfusionRisk': {
+  'iframeConfusionRisk': {
     'summary': 'iframes with same name differ?',
     'why': 'User may get inconsistent help on the content of frames',
     'wcag': '4.1.2',
@@ -1107,7 +1107,7 @@ const issuesData = {
     'wcag': '1.1.1',
     'weight': 4
   },
-    'imageMapServerSide': {
+  'imageMapServerSide': {
     'summary': 'server-side image map',
     'why': 'Keyboard-only user cannot choose a region of the image',
     'wcag': '2.1.1',
@@ -1675,7 +1675,7 @@ const issuesData = {
     'wcag': '4.1',
     'weight': 3
   },
-    'obsoleteMotion': {
+  'obsoleteMotion': {
     'summary': 'obsolete non-stoppable motion element',
     'why': 'Motion-sensitive user may suffer harm',
     'wcag': '2.2.2',
@@ -9876,7 +9876,7 @@ const rulesData = {
         'what': 'Explicit role is not permitted for its host element'
       },
       'aria-braille-equivalent': {
-        'issueID': 'ariaBrailleNoEquivalent',
+        'issueID': 'brailleOnly',
         'quality': 1,
         'what': 'aria-braillelabel or aria-brailleroledescription has no non-braille equivalent'
       },
