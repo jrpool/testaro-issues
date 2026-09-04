@@ -1676,8 +1676,8 @@ const issuesData = {
     'weight': 3
   },
   'obsoleteMotion': {
-    'summary': 'obsolete non-stoppable motion element',
-    'why': 'Motion-sensitive user may suffer harm',
+    'summary': 'obsolete element creates non-stoppable motion',
+    'why': 'Motion-sensitive user suffers harm',
     'wcag': '2.2.2',
     'weight': 4
   },
@@ -8732,7 +8732,7 @@ const rulesData = {
       'link-text-generic': {
         'issueID': 'linkVaguenessRisk',
         'quality': 1,
-        'what': 'Link text does not describe its destination'
+        'what': 'Link text does not describe the destination'
       },
       'link-text-generic-only': {
         'issueID': 'linkVaguenessRisk',
@@ -8742,7 +8742,7 @@ const rulesData = {
       'form-label': {
         'issueID': 'controlNoText',
         'quality': 1,
-        'what': 'Form field has no label'
+        'what': 'Form control has no label'
       },
       'autocomplete-valid': {
         'issueID': 'autocompleteBad',
@@ -8772,17 +8772,17 @@ const rulesData = {
       'aria-valid-refs': {
         'issueID': 'ariaReferenceBad',
         'quality': 1,
-        'what': 'ARIA id reference points to no existing element'
+        'what': 'ARIA id refers to no element'
       },
       'valid-role': {
         'issueID': 'roleBad',
         'quality': 1,
-        'what': 'role attribute has an invalid value'
+        'what': 'Element has an invalid role'
       },
       'aria-hidden-focus': {
         'issueID': 'focusableHidden',
         'quality': 1,
-        'what': 'aria-hidden element is focusable or contains a focusable element'
+        'what': 'Element has an aria-hidden attribute but is or has a focusable element'
       },
       'list-structure': {
         'issueID': 'listChild',
@@ -8822,7 +8822,7 @@ const rulesData = {
       'aria-attr-valid': {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'ARIA attribute has an invalid name or value'
+        'what': 'ARIA attribute gives the element an invalid name or value'
       },
       'aria-allowed-attr': {
         'issueID': 'ariaAttributeBad',
@@ -8837,7 +8837,7 @@ const rulesData = {
       'aria-label-misuse': {
         'issueID': 'nonLabelableRole',
         'quality': 1,
-        'what': 'aria-label or aria-labelledby on a plain container is prohibited by ARIA'
+        'what': 'Plain container has an aria-label or aria-labelledby attribute'
       },
       'role-required-aria': {
         'issueID': 'ariaMissing',
@@ -8847,7 +8847,7 @@ const rulesData = {
       'label-for-valid': {
         'issueID': 'labelForBad',
         'quality': 1,
-        'what': 'label for attribute references no existing form control'
+        'what': 'for attribute of a label refers to no form control'
       },
       'listitem-parent': {
         'issueID': 'listItemOrphan',
@@ -8874,7 +8874,7 @@ const rulesData = {
         'quality': 1,
         'what': 'object element has no text alternative'
       },
-      'input-image-alt': {
+      'input-image-alt-present': {
         'issueID': 'imageButtonNoText',
         'quality': 1,
         'what': 'Image input has no alt text'
@@ -8897,7 +8897,7 @@ const rulesData = {
       'p-as-heading': {
         'issueID': 'pseudoHeadingRisk',
         'quality': 1,
-        'what': 'Styled paragraph is used as a heading'
+        'what': 'Styled paragraph is used instead of a heading'
       },
       'aria-required-children': {
         'issueID': 'descendantMissing',
@@ -8942,12 +8942,12 @@ const rulesData = {
       'non-text-contrast': {
         'issueID': 'boxInvisibleRisk',
         'quality': 1,
-        'what': 'Form field boundary has contrast below 3:1'
+        'what': 'Form field boundary has contrast less than 3:1'
       },
       'text-spacing': {
         'issueID': 'horizontalSpacingFrozen',
         'quality': 1,
-        'what': 'Text spacing overrides prevent user adjustment of spacing'
+        'what': 'User adjustment of text spacing is prevented'
       },
       'reflow': {
         'issueID': 'reflow',
@@ -9002,7 +9002,7 @@ const rulesData = {
       'drag-alternative': {
         'issueID': 'dragAlt',
         'quality': 1,
-        'what': 'Dragging has no single-pointer alternative'
+        'what': 'Dragging has no click alternative'
       },
       'redundant-entry': {
         'issueID': 'inputRepeat',
@@ -9012,7 +9012,7 @@ const rulesData = {
       'invoker-target': {
         'issueID': 'ariaReferenceBad',
         'quality': 1,
-        'what': 'popovertarget or commandfor references no valid element'
+        'what': 'popovertarget or commandfor attribute refers to no valid element'
       },
       'reduced-motion': {
         'issueID': 'animationTriggered',
@@ -9022,7 +9022,7 @@ const rulesData = {
       'on-input-navigation': {
         'issueID': 'inputSurprise',
         'quality': 1,
-        'what': 'Changing a control unexpectedly changes context'
+        'what': 'Changing a control unexpectedly changes the context'
       },
       'error-message-linkage': {
         'issueID': 'errorReferenceBad',
@@ -9092,27 +9092,27 @@ const rulesData = {
       'redundant-alt-phrase': {
         'issueID': 'imageTextRedundant',
         'quality': 1,
-        'what': 'alt text starts with a redundant phrase such as "image of"'
+        'what': 'alt attribute value starts with a redundant phrase'
       },
       'redundant-tabindex': {
         'issueID': 'tabIndexExtra',
         'quality': 1,
-        'what': 'tabindex of 0 is unnecessary on a natively focusable element'
+        'what': 'Element is natively focused, so tabindex=0 is unnecessary'
       },
       'redundant-image-alt': {
         'issueID': 'imageTextRedundant',
         'quality': 1,
-        'what': 'Image alt repeats adjacent link or button text'
+        'what': 'Image alt attribute value repeats adjacent link or button text'
       },
       'landmark-top-level': {
         'issueID': 'mainNotTop',
         'quality': 1,
-        'what': 'Landmark is nested inside another landmark instead of being top level'
+        'what': 'Landmark is nested inside another landmark instead of being top-level'
       },
       'accesskeys': {
         'issueID': 'accessKeyDuplicate',
         'quality': 1,
-        'what': 'Same accesskey is assigned to more than one element'
+        'what': 'Multiple element have the same accesskey attribute value'
       },
       'button-type': {
         'issueID': 'typeBad',
@@ -9858,7 +9858,7 @@ const rulesData = {
     },
     'variable': {}
   },
-  'surea11y': {
+  'sureA11y': {
     'invariant': {
       'area-alt-present': {
         'issueID': 'imageMapAreaNoText',
@@ -9873,7 +9873,7 @@ const rulesData = {
       'aria-allowed-role': {
         'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Explicit role is not permitted for its host element'
+        'what': 'Explicit role is not permitted for the element'
       },
       'aria-braille-equivalent': {
         'issueID': 'brailleOnly',
