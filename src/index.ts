@@ -9858,7 +9858,7 @@ const rulesData = {
     },
     'variable': {}
   },
-  'sureA11y': {
+  'surea11y': {
     'invariant': {
       'area-alt-present': {
         'issueID': 'imageMapAreaNoText',
