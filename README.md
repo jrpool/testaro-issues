@@ -1,6 +1,6 @@
 # testaro-issues
 
-A classification of about 1300 rules of 11 rule engines into about 400 issues. The rule engines are those in the ensemble of [Testaro](https://github.com/YRA-tech/testaro), which tests web pages for front-end quality (accessibility, usability, and standards conformance).
+A classification of about 1300 rules of 12 rule engines into about 380 issues. The rule engines are those in the ensemble of [Testaro](https://github.com/YRA-tech/testaro), which tests web pages for front-end quality (accessibility, usability, and standards conformance).
 
 A _rule engine_ is an application, such as HTML CodeSniffer, that tests software.
 
@@ -8,7 +8,9 @@ An _issue_ is a problem, such as a link that does not tell the user what it link
 
 A `rule` is a requirement defined by a rule engine.
 
-When multiple rule engines define rules that require approximately the same thing, the rule engines may test differently and therefore report different results, so [it is advantageous to run an ensemble of rule engines](https://arxiv.org/abs/2304.07591) instead of only one, but it is also helpful to group their reports on similar rules so you can examine their results efficiently. This repository provides such grouping.
+[Rule engines differ substantially in what they test for](https://arxiv.org/abs/2304.07591). But there is also overlap: multiple rule engines defining similar rules. With overlap, the tests are usually not identical, so it is useful to collect the results from similar tests in one place so you can see what the rule engines agree and disagree on. This repository makes that possible by grouping similar rules into issues.
+
+This repository is a utility for applications using Testaro. They can use it to group the outputs of Testaro jobs for analysis and for presentation to users.
 
 ## Data
 
