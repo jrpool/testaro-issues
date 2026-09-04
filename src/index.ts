@@ -186,6 +186,12 @@ const issuesData = {
     'wcag': '4.1.2',
     'weight': 4
   },
+  'articleConfusion': {
+    'summary': 'articles not distinctly named',
+    'why': 'User cannot get help on how some of the page is organized',
+    'wcag': '1.3.6',
+    'weight': 3
+  },
   'articleHeadingless': {
     'summary': 'article heading missing',
     'why': 'User cannot understand the topic of a part of the page',
@@ -5428,6 +5434,11 @@ const rulesData = {
         'issueID': 'mainConfusion',
         'quality': 1,
         'what': 'Element with a main role has no unique label among the main-role elements'
+      },
+      'aria_article_label_unique': {
+        'issueID': 'articleConfusion',
+        'quality': 1,
+        'what': 'Element with an article role has no unique label among the article-role elements'
       },
       'aria_banner_single': {
         'issueID': 'bannerNot1',
