@@ -150,6 +150,12 @@ const issuesData = {
     'wcag': '4.1.2',
     'weight': 4
   },
+    'ariaBrailleNoEquivalent': {
+    'summary': 'aria braille label has no non-braille equivalent',
+    'why': 'User of a non-braille assistive technology gets no name',
+    'wcag': '4.1.2',
+    'weight': 3
+  },
   'ariaLabelWrongRisk': {
     'summary': 'dubious aria-label',
     'why': 'User may fail to get help understanding an item in a form',
@@ -1047,6 +1053,12 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
+    'iframeConfusionRisk': {
+    'summary': 'iframes with same name differ?',
+    'why': 'User may get inconsistent help on the content of frames',
+    'wcag': '4.1.2',
+    'weight': 1
+  },
   'iframeTitleBad': {
     'summary': 'iframe not named',
     'why': 'User cannot get help on the topic of an embedded page',
@@ -1093,6 +1105,12 @@ const issuesData = {
     'summary': 'image map not named',
     'why': 'User cannot get help on the topic of an interactive image',
     'wcag': '1.1.1',
+    'weight': 4
+  },
+    'imageMapServerSide': {
+    'summary': 'server-side image map',
+    'why': 'Keyboard-only user cannot choose a region of the image',
+    'wcag': '2.1.1',
     'weight': 4
   },
   'imageNoText': {
@@ -1656,6 +1674,12 @@ const issuesData = {
     'why': 'Page contains code that is no longer standard',
     'wcag': '4.1',
     'weight': 3
+  },
+    'obsoleteMotion': {
+    'summary': 'obsolete non-stoppable motion element',
+    'why': 'Motion-sensitive user may suffer harm',
+    'wcag': '2.2.2',
+    'weight': 4
   },
   'optionNoText': {
     'summary': 'option not named',
@@ -9830,6 +9854,406 @@ const rulesData = {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'HTML is not used according to spec'
+      }
+    },
+    'variable': {}
+  },
+  'surea11y': {
+    'invariant': {
+      'area-alt-present': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'area element has no alt attribute'
+      },
+      'aria-allowed-attr': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'aria attribute is not permitted for the element role'
+      },
+      'aria-allowed-role': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Explicit role is not permitted for its host element'
+      },
+      'aria-braille-equivalent': {
+        'issueID': 'ariaBrailleNoEquivalent',
+        'quality': 1,
+        'what': 'aria-braillelabel or aria-brailleroledescription has no non-braille equivalent'
+      },
+      'aria-conditional-attr': {
+        'issueID': 'ariaMissing',
+        'quality': 1,
+        'what': 'aria-errormessage is used without aria-invalid set to a non-false value'
+      },
+      'aria-deprecated-role': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'role attribute uses a deprecated or author-discouraged ARIA role'
+      },
+      'aria-hidden-body': {
+        'issueID': 'contentHidden',
+        'quality': 1,
+        'what': 'The body element is aria-hidden'
+      },
+      'aria-hidden-focus': {
+        'issueID': 'focusableHidden',
+        'quality': 1,
+        'what': 'aria-hidden element is focusable or contains a focusable element'
+      },
+      'aria-prohibited-attr': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'ARIA naming attribute is used on a role that prohibits it'
+      },
+      'aria-prohibited-children': {
+        'issueID': 'roleHierarchyBad',
+        'quality': 1,
+        'what': 'Container role owns a child with a disallowed role'
+      },
+      'aria-required-attr': {
+        'issueID': 'ariaMissing',
+        'quality': 1,
+        'what': 'Role is missing a required ARIA state or property'
+      },
+      'aria-required-children': {
+        'issueID': 'descendantMissing',
+        'quality': 1,
+        'what': 'Container role is missing a required child role'
+      },
+      'aria-required-parent': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'Role requiring a specific context is not in that context'
+      },
+      'aria-role-name-present': {
+        'issueID': 'roleNoText',
+        'quality': 1,
+        'what': 'ARIA role that requires an accessible name has none'
+      },
+      'aria-roles-valid': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'role attribute is not a valid non-abstract ARIA role'
+      },
+      'aria-valid-attr': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'aria attribute is not a real defined ARIA attribute'
+      },
+      'aria-valid-attr-value': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'aria attribute value does not match its declared type'
+      },
+      'autocomplete-valid': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute is not a valid autofill value'
+      },
+      'avoid-inline-spacing': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'Inline style forces text spacing below the WCAG metric'
+      },
+      'binary-control-name-present': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'Binary control has no accessible name'
+      },
+      'button-name-present': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Button has no accessible name'
+      },
+      'canvas-text-alternative-present': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'canvas element has no text alternative'
+      },
+      'combobox-name-present': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Combobox has no accessible name'
+      },
+      'contrast-computable': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Color contrast cannot be computed for rendered text'
+      },
+      'contrast-enhanced': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text does not meet enhanced color contrast'
+      },
+      'contrast-minimum': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text does not meet minimum color contrast'
+      },
+      'css-orientation-lock': {
+        'issueID': 'cssBansPageRotate',
+        'quality': 1,
+        'what': 'CSS locks the page to a single orientation'
+      },
+      'definition-list-children-valid': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'Description list contains a child other than dt or dd'
+      },
+      'deprecated-elements-not-used': {
+        'issueID': 'obsoleteMotion',
+        'quality': 1,
+        'what': 'Obsolete non-stoppable motion element (blink or marquee) is used'
+      },
+      'dialog-name-present': {
+        'issueID': 'dialogNoText',
+        'quality': 1,
+        'what': 'Dialog has no accessible name'
+      },
+      'dlitem-parent-valid': {
+        'issueID': 'descriptionOrphan',
+        'quality': 1,
+        'what': 'dt or dd element is not inside a dl element'
+      },
+      'duplicate-id': {
+        'issueID': 'duplicateID',
+        'quality': 1,
+        'what': 'id attribute is not unique'
+      },
+      'duplicate-id-aria': {
+        'issueID': 'duplicateID',
+        'quality': 1,
+        'what': 'id referenced by ARIA is not unique'
+      },
+      'embed-text-alternative-present': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'embed element has no text alternative'
+      },
+      'form-control-programmatic-label-present': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Form control has no programmatic label'
+      },
+      'form-control-single-label': {
+        'issueID': 'labelNot1',
+        'quality': 1,
+        'what': 'Form control has multiple labels'
+      },
+      'html-lang-attr-present': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'html element has no lang attribute'
+      },
+      'html-xml-lang-mismatch': {
+        'issueID': 'pageLanguageBad',
+        'quality': 1,
+        'what': 'lang and xml:lang attributes disagree'
+      },
+      'identical-iframes-same-purpose': {
+        'issueID': 'iframeConfusionRisk',
+        'quality': 1,
+        'what': 'Frames with the same accessible name embed different resources'
+      },
+      'iframe-focusable-content': {
+        'issueID': 'focusableHidden',
+        'quality': 1,
+        'what': 'Frame with tabindex of -1 contains focusable content'
+      },
+      'iframe-name-present': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'Frame has no accessible name'
+      },
+      'iframe-title-unique': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'Frame title is not unique'
+      },
+      'img-alt-present': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'img element has no alt attribute'
+      },
+      'input-image-alt-present': {
+        'issueID': 'imageButtonNoText',
+        'quality': 1,
+        'what': 'Image input has no text alternative'
+      },
+      'label-in-name': {
+        'issueID': 'visibleLabelNotInName',
+        'quality': 1,
+        'what': 'Accessible name does not contain the visible text'
+      },
+      'link-in-text-block': {
+        'issueID': 'linkIndication',
+        'quality': 1,
+        'what': 'Link is not distinguishable from surrounding text without color'
+      },
+      'link-name-present': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has no accessible name'
+      },
+      'list-children-valid': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'List contains a child other than a list item'
+      },
+      'listbox-name-present': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Listbox has no accessible name'
+      },
+      'listitem-parent-valid': {
+        'issueID': 'listItemOrphan',
+        'quality': 1,
+        'what': 'li element is not inside a ul or ol element'
+      },
+      'menuitem-name-present': {
+        'issueID': 'menuItemNoText',
+        'quality': 1,
+        'what': 'Menu item has no accessible name'
+      },
+      'meta-refresh-no-exceptions': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Page uses a meta refresh'
+      },
+      'meta-refresh-timing-absent': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Page uses a timed meta refresh'
+      },
+      'meta-viewport-zoom-enabled': {
+        'issueID': 'metaBansZoom',
+        'quality': 1,
+        'what': 'Viewport meta tag disables zoom'
+      },
+      'meter-name-present': {
+        'issueID': 'progressNoText',
+        'quality': 1,
+        'what': 'Meter has no accessible name'
+      },
+      'nested-interactive-controls-absent': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'Interactive control contains another interactive control'
+      },
+      'object-text-alternative-present': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'object element has no text alternative'
+      },
+      'option-name-present': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Option has no accessible name'
+      },
+      'page-title-present': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'Page has no title or an empty title'
+      },
+      'presentational-children-focusable-absent': {
+        'issueID': 'focusableDescendants',
+        'quality': 1,
+        'what': 'Role with presentational children contains focusable content'
+      },
+      'progressbar-name-present': {
+        'issueID': 'progressNoText',
+        'quality': 1,
+        'what': 'Progress bar has no accessible name'
+      },
+      'role-img-text-alternative-present': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'Element with role of img has no text alternative'
+      },
+      'searchbox-name-present': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'Searchbox has no accessible name'
+      },
+      'server-side-image-map-absent': {
+        'issueID': 'imageMapServerSide',
+        'quality': 1,
+        'what': 'Image uses a server-side image map'
+      },
+      'slider-name-present': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'Slider has no accessible name'
+      },
+      'spinbutton-name-present': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'Spinbutton has no accessible name'
+      },
+      'summary-name-present': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'summary element has no accessible name'
+      },
+      'svg-image-text-alternative-present': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'SVG image element has no text alternative'
+      },
+      'svg-text-alternative-present': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'SVG element has no text alternative'
+      },
+      'tab-name-present': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Tab has no accessible name'
+      },
+      'table-headers-attr-valid': {
+        'issueID': 'tableHeaderless',
+        'quality': 1,
+        'what': 'Table header attributes are invalid'
+      },
+      'table-th-has-data-cells': {
+        'issueID': 'tableHeaderCellless',
+        'quality': 1,
+        'what': 'th element does not describe any data cell'
+      },
+      'target-size-minimum': {
+        'issueID': 'targetTiny',
+        'quality': 1,
+        'what': 'Pointer target is smaller than 24 CSS pixels'
+      },
+      'td-has-header': {
+        'issueID': 'tableCellHeaderless',
+        'quality': 1,
+        'what': 'Data cell in a large table has no associated header'
+      },
+      'textbox-name-present': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'Textbox has no accessible name'
+      },
+      'tooltip-name-present': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Tooltip has no accessible name'
+      },
+      'treeitem-name-present': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Tree item has no accessible name'
+      },
+      'valid-lang': {
+        'issueID': 'elementLanguageBad',
+        'quality': 1,
+        'what': 'Element lang attribute is not syntactically valid'
+      },
+      'video-poster-text-alternative-present': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'Video poster has no text alternative'
       }
     },
     'variable': {}
