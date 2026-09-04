@@ -1053,9 +1053,9 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
-  'iframeConfusionRisk': {
-    'summary': 'iframes with same name differ?',
-    'why': 'User may get inconsistent help on the content of frames',
+  'iframeConfusion': {
+    'summary': 'different iframes named identically',
+    'why': 'User gets incorrect help about parts of a page',
     'wcag': '4.1.2',
     'weight': 1
   },
@@ -1108,8 +1108,8 @@ const issuesData = {
     'weight': 4
   },
   'imageMapServerSide': {
-    'summary': 'server-side image map',
-    'why': 'Keyboard-only user cannot choose a region of the image',
+    'summary': 'image map is server-side',
+    'why': 'Keyboard-only user cannot choose a region of an image',
     'wcag': '2.1.1',
     'weight': 4
   },
@@ -10051,7 +10051,7 @@ const rulesData = {
         'what': 'lang and xml:lang attributes disagree'
       },
       'identical-iframes-same-purpose': {
-        'issueID': 'iframeConfusionRisk',
+        'issueID': 'iframeConfusion',
         'quality': 1,
         'what': 'Frames with the same accessible name embed different resources'
       },
@@ -10178,7 +10178,7 @@ const rulesData = {
       'server-side-image-map-absent': {
         'issueID': 'imageMapServerSide',
         'quality': 1,
-        'what': 'Image uses a server-side image map'
+        'what': 'img element has an ismap attribute'
       },
       'slider-name-present': {
         'issueID': 'inputNoText',
