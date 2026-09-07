@@ -12,6 +12,8 @@ A `rule` is a requirement defined by a rule engine.
 
 This repository is a utility for applications using Testaro. They can use it to group the outputs of Testaro jobs for analysis and for presentation to users.
 
+To see how one application uses this utility together with Testaro, see [Kilotest](https://kilotest.com) and its [MCP server](https://kilotest.com/mcp).
+
 ## Data
 
 The data exported by this repository consist of three objects, defined in `index.ts`:
