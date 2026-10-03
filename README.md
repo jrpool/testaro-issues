@@ -6,7 +6,7 @@ A _rule engine_ is an application, such as HTML CodeSniffer, that tests software
 
 An _issue_ is a problem, such as a link that does not tell the user what it links to.
 
-A `rule` is a requirement defined by a rule engine.
+A _rule_ is a requirement defined by a rule engine.
 
 [Rule engines differ substantially in what they test for](https://arxiv.org/abs/2304.07591). But there is also overlap: multiple rule engines defining similar rules. With overlap, the tests are usually not identical, so it is useful to collect the results from similar tests in one place so you can see what the rule engines agree and disagree on. This repository makes that possible by grouping similar rules into issues.
 
