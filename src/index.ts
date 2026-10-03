@@ -211,7 +211,7 @@ const issuesData = {
     'weight': 2
   },
   'atRuleInvalid': {
-    'summary': 'invalid at-rule',
+    'summary': 'invalid CSS at-rule',
     'why': 'Page cannot be properly displayed in particular contexts',
     'wcag': '4.1',
     'weight': 3
@@ -6494,6 +6494,11 @@ const rulesData = {
         'quality': 1,
         'what': 'style element exists between the head and the body elements'
       },
+      'A style element in body must be the first child of its parent.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'style element in the body is not the first child of its parent element'
+      },
       'A slash was not immediately followed by >.': {
         'issueID': 'parseError',
         'quality': 1,
@@ -6839,7 +6844,12 @@ const rulesData = {
       'CSS: Unrecognized at-rule @.+': {
         'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'At-rule not recognized by CSS'
+        'what': 'At-rule is not recognized by CSS'
+      },
+      'Style rule .* not allowed outside an @scope rule in a style element in body\.': {
+        'issueID': 'atRuleInvalid',
+        'quality': 1,
+        'what': 'At-rule in CSS is not within an @scope rule'
       },
       'CSS: .+: Character .+ is neither a decimal digit number.*': {
         'issueID': 'cssInvalid',
@@ -6856,7 +6866,7 @@ const rulesData = {
         'quality': 1,
         'what': 'CSS font-weight property has a value smaller than 1'
       },
-      'CSS: font-weight: .+ is not valid, only values lower than or equal to 1000.0 are allowed.*': {
+      'CSS: font-weight: .+ is not valid, only values lower than or equal to 1000\.0 are allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS font-weight property has a value greater than 1000'
@@ -8044,6 +8054,11 @@ const rulesData = {
         'quality': 1,
         'what': 'style element exists between the head and the body elements'
       },
+      'A style element in body must be the first child of its parent.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'style element in the body is not the first child of its parent element'
+      },
       'A slash was not immediately followed by >.': {
         'issueID': 'parseError',
         'quality': 1,
@@ -8389,7 +8404,12 @@ const rulesData = {
       'CSS: Unrecognized at-rule @.+': {
         'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'At-rule not recognized by CSS'
+        'what': 'At-rule is not recognized by CSS'
+      },
+      'Style rule .* not allowed outside an @scope rule in a style element in body\.': {
+        'issueID': 'atRuleInvalid',
+        'quality': 1,
+        'what': 'At-rule in CSS is not within an @scope rule'
       },
       'CSS: .+: Character .+ is neither a decimal digit number.*': {
         'issueID': 'cssInvalid',
@@ -8406,7 +8426,7 @@ const rulesData = {
         'quality': 1,
         'what': 'CSS font-weight property has a value smaller than 1'
       },
-      'CSS: font-weight: .+ is not valid, only values lower than or equal to 1000.0 are allowed.*': {
+      'CSS: font-weight: .+ is not valid, only values lower than or equal to 1000\.0 are allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS font-weight property has a value greater than 1000'
