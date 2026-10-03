@@ -4404,6 +4404,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Adjacent links, one with text and the other with a textless image, merit combination?'
       },
+      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG4': {
+        'issueID': 'linkPairRisk',
+        'quality': 1,
+        'what': 'Adjacent links, one with text and the other with a textless image, merit combination?'
+      },
       'W-WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3': {
         'issueID': 'newTabSurpriseRisk',
         'quality': 1,
