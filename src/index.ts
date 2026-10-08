@@ -4099,6 +4099,11 @@ const rulesData = {
         'quality': 1,
         'what': 'file input has no label element or title, aria-label, or aria-labelledby attribute'
       },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputNumber.Name': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'number input has no label element or title, aria-label, or aria-labelledby attribute'
+      },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputRange.Name': {
         'issueID': 'inputNoText',
         'quality': 1,
@@ -4159,7 +4164,8 @@ const rulesData = {
       'W-AAA.1_1_1.H67.2': {
         'issueID': 'decorativeImageRisk',
         'quality': 1,
-        'what': 'Image marked as decorative is informative?'
+        'what': 'Image marked as decorative is informative?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.2'
       },
       'W-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.2': {
         'issueID': 'decorativeImageRisk',
@@ -4248,6 +4254,12 @@ const rulesData = {
       'W-AAA.2_1_1.SCR20.MouseDown': {
         'issueID': 'eventKeyboardRisk',
         'quality': 1,
+        'what': 'Mousing-down functionality is not available by keyboard?',
+        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseDown'
+      },
+      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseDown': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
         'what': 'Mousing-down functionality is not available by keyboard?'
       },
       'W-AAA.2_1_1.SCR20.MouseUp': {
@@ -4269,12 +4281,19 @@ const rulesData = {
       'E-AAA.1_3_1.H44.NotFormControl': {
         'issueID': 'labelForBad',
         'quality': 1,
+        'what': 'Referent of the for attribute of the label is not a form control, so is wrong?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NotFormControl'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NotFormControl': {
+        'issueID': 'labelForBad',
+        'quality': 1,
         'what': 'Referent of the for attribute of the label is not a form control, so is wrong?'
       },
       'E-AAA.1_3_1.H44.NonExistentFragment': {
         'issueID': 'labelBadID',
         'quality': 1,
-        'what': 'Label for attribute references a nonexistent element'
+        'what': 'Label for attribute references a nonexistent element',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NonExistentFragment'
       },
       'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NonExistentFragment': {
         'issueID': 'labelBadID',
@@ -4293,6 +4312,12 @@ const rulesData = {
         'what': 'aria-labelledby attribute references a nonexistent element'
       },
       'E-AAA.4_1_2.ARIA16,ARIA9': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references a nonexistent element',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.ARIA16,ARIA9'
+      },
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.ARIA16,ARIA9': {
         'issueID': 'labelBadID',
         'quality': 1,
         'what': 'aria-labelledby attribute references a nonexistent element'
@@ -4327,7 +4352,8 @@ const rulesData = {
       'E-AAA.4_1_2.H91.A.NoContent': {
         'issueID': 'linkNoText',
         'quality': 1,
-        'what': 'Link has an href attribute but not named'
+        'what': 'Link has an href attribute but not named',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent'
       },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent': {
         'issueID': 'linkNoText',
@@ -4370,7 +4396,8 @@ const rulesData = {
       'E-AAA.4_1_2.H91.A.NoHref': {
         'issueID': 'destinationLink',
         'quality': 1,
-        'what': 'Link is misused as a link destination'
+        'what': 'Link is misused as a link destination',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoHref'
       },
       'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoHref': {
         'issueID': 'destinationLink',
@@ -4402,7 +4429,8 @@ const rulesData = {
       'W-AAA.1_1_1.H2.EG4': {
         'issueID': 'linkPairRisk',
         'quality': 1,
-        'what': 'Adjacent links, one with text and the other with a textless image, merit combination?'
+        'what': 'Adjacent links, one with text and the other with a textless image, merit combination?',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG4'
       },
       'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG4': {
         'issueID': 'linkPairRisk',
@@ -4417,9 +4445,16 @@ const rulesData = {
       'W-AAA.3_2_5.H83.3': {
         'issueID': 'newTabSurpriseRisk',
         'quality': 1,
-        'what': 'Link text fails to indicate that the link will open in a new window?'
+        'what': 'Link text fails to indicate that the link will open in a new window?',
+        'supersededBy': 'W-WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3'
       },
       'E-AAA.4_1_2.H91.A.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Link with button role has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Name'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Name': {
         'issueID': 'buttonNoText',
         'quality': 1,
         'what': 'Link with button role has no accessible name'
@@ -4438,7 +4473,8 @@ const rulesData = {
       'E-AAA.4_1_2.H91.Button.Name': {
         'issueID': 'buttonNoText',
         'quality': 1,
-        'what': 'button element has no accessible name'
+        'what': 'button element has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name'
       },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name': {
         'issueID': 'buttonNoText',
@@ -4453,9 +4489,21 @@ const rulesData = {
       'E-AAA.4_1_2.H91.InputButton.Name': {
         'issueID': 'buttonNoText',
         'quality': 1,
+        'what': 'Button input element has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputButton.Name'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputButton.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
         'what': 'Button input element has no accessible name'
       },
       'E-AAA.4_1_2.H91.Span.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Element with button role has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Span.Name'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Span.Name': {
         'issueID': 'buttonNoText',
         'quality': 1,
         'what': 'Element with button role has no accessible name'
@@ -4474,7 +4522,8 @@ const rulesData = {
       'E-AAA.2_4_8.H59.1': {
         'issueID': 'linkElementMisplaced',
         'quality': 1,
-        'what': 'Element is not in the document head'
+        'what': 'Element is not in the document head',
+        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.1'
       },
       'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.1': {
         'issueID': 'linkElementMisplaced',
@@ -4505,7 +4554,8 @@ const rulesData = {
       'E-AAA.2_4_1.H64.1': {
         'issueID': 'iframeTitleBad',
         'quality': 1,
-        'what': 'iframe element has no non-empty title attribute'
+        'what': 'iframe element has no non-empty title attribute',
+        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1'
       },
       'E-AAA.1_3_5.H98': {
         'issueID': 'autocompleteBad',
@@ -4521,7 +4571,8 @@ const rulesData = {
       'W-AAA.1_3_5.H98': {
         'issueID': 'autocompleteRisk',
         'quality': 1,
-        'what': 'Element contains a potentially faulty value in its autocomplete attribute'
+        'what': 'Element contains a potentially faulty value in its autocomplete attribute',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_5.H98'
       },
       'E-AAA.1_4_3.G145.Fail': {
         'issueID': 'contrastAA',
@@ -4552,7 +4603,8 @@ const rulesData = {
       'W-AAA.1_4_6.G17.Fail': {
         'issueID': 'contrastAAA',
         'quality': 1,
-        'what': 'Text has insufficient contrast'
+        'what': 'Text has insufficient contrast',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail'
       },
       'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail': {
         'issueID': 'contrastAAA',
@@ -4577,7 +4629,8 @@ const rulesData = {
       'W-AAA.1_4_6.G18.BgImage': {
         'issueID': 'contrastRisk',
         'quality': 1,
-        'what': 'Contrast between the text and some part of its background image is less than 4.5:1?'
+        'what': 'Contrast between the text and some part of its background image is less than 4.5:1?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.BgImage'
       },
       'W-AAA.1_4_3_F24.F24.FGColour': {
         'issueID': 'contrastRisk',
@@ -4597,7 +4650,8 @@ const rulesData = {
       'W-AAA.1_4_6.G18.Abs': {
         'issueID': 'contrastRisk',
         'quality': 1,
-        'what': 'Contrast between the absolutely positioned text and its background is less than 4.5:1?'
+        'what': 'Contrast between the absolutely positioned text and its background is less than 4.5:1?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Abs'
       },
       'W-AAA.1_4_3.G18.Alpha': {
         'issueID': 'contrastRisk',
@@ -4632,7 +4686,8 @@ const rulesData = {
       'W-AAA.1_4_6.G17.Abs': {
         'issueID': 'contrastRisk',
         'quality': 1,
-        'what': 'Contrast between the absolutely positioned text and its background is less than 7:1?'
+        'what': 'Contrast between the absolutely positioned text and its background is less than 7:1?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Abs'
       },
       'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Abs': {
         'issueID': 'contrastRisk',
@@ -4647,7 +4702,8 @@ const rulesData = {
       'W-AAA.1_4_6.G17.BgImage': {
         'issueID': 'contrastRisk',
         'quality': 1,
-        'what': 'Contrast between the text and its background image is less than 7:1?'
+        'what': 'Contrast between the text and its background image is less than 7:1?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.BgImage'
       },
       'E-AAA.1_3_1.H42.2': {
         'issueID': 'headingEmpty',
@@ -4663,7 +4719,8 @@ const rulesData = {
       'E-AAA.1_1_1.H67.1': {
         'issueID': 'decorativeTitle',
         'quality': 1,
-        'what': 'Element has an empty alt attribute but has a nonempty title attribute'
+        'what': 'Element has an empty alt attribute but has a nonempty title attribute',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.1'
       },
       'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.1': {
         'issueID': 'decorativeTitle',
@@ -4676,7 +4733,18 @@ const rulesData = {
         'what': 'title attribute of the form control is empty or only whitespace',
         'supersededBy': 'W-AAA.4_1_2.H65'
       },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H65': {
+        'issueID': 'titleEmpty',
+        'quality': 0.5,
+        'what': 'title attribute of the form control is empty or only whitespace'
+      },
       'W-AAA.4_1_2.H65': {
+        'issueID': 'titleEmpty',
+        'quality': 0.5,
+        'what': 'title attribute of the form control is empty or only whitespace',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H65'
+      },
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H65': {
         'issueID': 'titleEmpty',
         'quality': 0.5,
         'what': 'title attribute of the form control is empty or only whitespace'
@@ -4774,12 +4842,14 @@ const rulesData = {
       'E-AAA.1_3_1.H48': {
         'issueID': 'pseudoNavList',
         'quality': 1,
-        'what': 'Navigation links are not coded as a list'
+        'what': 'Navigation links are not coded as a list',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48'
       },
       'E-AAA.4_1_2.H91.Select.Name': {
         'issueID': 'selectNoText',
         'quality': 1,
-        'what': 'Element is select but has no accessible name'
+        'what': 'Element is select but has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Name'
       },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Name': {
         'issueID': 'selectNoText',
@@ -4811,7 +4881,8 @@ const rulesData = {
       'W-AAA.1_3_1.H71.SameName': {
         'issueID': 'fieldSetRisk',
         'quality': 1,
-        'what': 'Radio buttons or check boxes require a fieldset element?'
+        'what': 'Radio buttons or check boxes require a fieldset element?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.SameName'
       },
       'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.SameName': {
         'issueID': 'fieldSetRisk',
@@ -4843,9 +4914,21 @@ const rulesData = {
       'W-AAA.1_3_1.H39.3.NoCaption': {
         'issueID': 'tableCaption',
         'quality': 1,
+        'what': 'Element contains no caption element',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H39.3.NoCaption'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H39.3.NoCaption': {
+        'issueID': 'tableCaption',
+        'quality': 1,
         'what': 'Element contains no caption element'
       },
       'E-AAA.1_3_1.H43.HeadersRequired': {
+        'issueID': 'cellHeadersNotInferrable',
+        'quality': 1,
+        'what': 'Complex table is missing headers attributes of cells',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired': {
         'issueID': 'cellHeadersNotInferrable',
         'quality': 1,
         'what': 'Complex table is missing headers attributes of cells'
@@ -4868,7 +4951,8 @@ const rulesData = {
       'E-AAA.1_3_1.F68': {
         'issueID': 'controlNoText',
         'quality': 1,
-        'what': 'Form control has no label'
+        'what': 'Form control has no label',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68'
       },
       'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68': {
         'issueID': 'controlNoText',
@@ -4878,7 +4962,8 @@ const rulesData = {
       'E-AAA.2_5_3.F96': {
         'issueID': 'visibleLabelNotInName',
         'quality': 1,
-        'what': 'Visible label is not in the accessible name'
+        'what': 'Visible label is not in the accessible name',
+        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_5.2_5_3.F96'
       },
       'W-WCAG2AAA.Principle2.Guideline2_5.2_5_3.F96': {
         'issueID': 'visibleLabelNotInName',
@@ -4886,6 +4971,12 @@ const rulesData = {
         'what': 'Accessible name of the element does not contain the visible label text'
       },
       'W-AAA.1_3_1.F68.Hidden': {
+        'issueID': 'labeledHidden',
+        'quality': 1,
+        'what': 'Hidden form field is needlessly labeled',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68.Hidden'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68.Hidden': {
         'issueID': 'labeledHidden',
         'quality': 1,
         'what': 'Hidden form field is needlessly labeled'
@@ -10449,7 +10540,12 @@ const rulesData = {
       'allCaps': {
         'issueID': 'allCaps',
         'quality': 1,
-        'what': 'Element has a text substring of at least 8 upper-case characters'
+        'what': 'Element has an all-capital substring judged stylistic, not lexical'
+      },
+      'allCapStyle': {
+        'issueID': 'allCaps',
+        'quality': 1,
+        'what': 'Element has text transformed to all-capital by a style property'
       },
       'allSlanted': {
         'issueID': 'allItalics',
