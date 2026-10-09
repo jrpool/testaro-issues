@@ -7012,7 +7012,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Duplicate id'
       },
-      'Duplicate attribute\\.': {
+      'Duplicate attribute .+\\.': {
         'issueID': 'duplicateAttribute',
         'quality': 1,
         'what': 'Source code of the element contains 2 or more of the same attribute'
