@@ -7277,7 +7277,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Heading element is not a permitted descendant of an element with a button role'
       },
-      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading levels\\..*': {
+      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading levels?\\..*': {
         'issueID': 'headingLevelSkip',
         'quality': 1,
         'what': 'Heading level is more than 1 level inferior to the previous heading'
