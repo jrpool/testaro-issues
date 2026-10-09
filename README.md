@@ -24,6 +24,10 @@ The data exported by this repository consist of three objects, defined in `index
 
 The data underlying the `issues` and `rules` objects are statically defined. Those objects are deep-frozen copies of the data. In other words, `issues` and `rules` and every object within them are protected from modification. The `issueRules` object (not frozen) is generated from the `issues` and `rules` objects by the `makeIssueRules` function.
 
+The `rules` object has a property for each rule engine, and each such property has two object subproperties: `invariant` and `variable`. The names of the properties of `invariant` are the IDs of rules of the rule engine. The names of the properties of `variable` are regular expressions that, once wrapped in `^` and `$` anchors, are to be matched, case-sensitively, to the IDs of rules of the rule engines. An application using this classification to classify a rule should check the invariant property names first and use any entry whose property name is identical to the rule ID. If none is found, the application should then check the variable property names and use any entry whose property name, as a regular expression, matches the entire rule ID.
+
+One rule engine, the Nu Html Checker, has two manifestations, `nuVal` and `nuVnu`. Its rules in the `rules` object are stored in the `nuV` subproperty and duplicated for export.
+
 ## Installation
 
 `npm install testaro-issues`

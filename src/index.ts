@@ -6603,7 +6603,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Attribute has a value containing invalid punctuation'
       },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules \\(i\\.e\\., a data block\\) must not have a+ attribute\\.': {
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules \\(i\\.e\\., a data block\\) must not have a.+ attribute\\.': {
         'issueID': 'scriptElementBad',
         'quality': 1,
         'what': 'script element has an attribute it is not eligible for'
@@ -7198,7 +7198,7 @@ const rulesData = {
         'quality': 1,
         'what': 'aria-labelledby attribute references an element not in the document'
       },
-      'The element (?:a|a with the attribute href|input|label|button) should not appear as a descendant of an element with the attribute role=(?:button|menuitem|tab)\\.': {
+      'The element (?:a|a with the attribute href|input|label|button) (must|should) not appear as a descendant of an element with the attribute role=(?:button|menuitem|tab)\\.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'Element is activatable but has an ancestor with an activatable role'
