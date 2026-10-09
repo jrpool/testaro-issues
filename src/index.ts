@@ -6214,11 +6214,6 @@ const rulesData = {
         'quality': 1,
         'what': 'End tag has an attribute'
       },
-      'Found in script content. Typo for ?': {
-        'issueID': 'scriptRisk',
-        'quality': 1,
-        'what': 'Typographical error in script?'
-      },
       'Heading cannot be a child of another heading.': {
         'issueID': 'headingsEmbedded',
         'quality': 1,
@@ -6657,7 +6652,7 @@ const rulesData = {
       }
     },
     'variable': {
-      '.+ in an unquoted attribute value. Probable causes: Attributes running together or a URL query string in an unquoted attribute value.*': {
+      '.+ in an unquoted attribute value\\. Probable causes: Attributes running together or a URL query string in an unquoted attribute value\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'Attribute has a value containing invalid punctuation'
@@ -6667,17 +6662,17 @@ const rulesData = {
         'quality': 1,
         'what': 'script element has an attribute it is not eligible for'
       },
-      'A table row was .+ columns wide and exceeded the column count established by the first row.*': {
+      'A table row was .+ columns wide and exceeded the column count established by the first row\\.': {
         'issueID': 'tableColumnsVary',
         'quality': 1,
         'what': 'Table row has a column count larger than that of the first row'
       },
-      'A table row was .+ columns wide, which is less than the column count established by the first row.*': {
+      'A table row was .+ columns wide, which is less than the column count established by the first row\\.': {
         'issueID': 'tableColumnsVary',
         'quality': 1,
         'what': 'Table row has a column count smaller than that of the first row'
       },
-      'An element with role=.+ must be contained in, or owned by, an element with .*role.+': {
+      'An element with role=.+ must be contained in, or owned by, an element with .*role.+\\.': {
         'issueID': 'parentMissing',
         'quality': 1,
         'what': 'Element has no required container or owner'
@@ -6687,212 +6682,212 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has a role not permitted in a descendant of an element with a button role'
       },
-      'Any .+ descendant of a label element with a for attribute must have an ID value that matches that for attribute.*': {
+      'Any .+ descendant of a label element with a for attribute must have an ID value that matches that for attribute\\.': {
         'issueID': 'controlIDInLabelBad',
         'quality': 1,
         'what': 'label element has a labelable descendant whose ID differs from the for attribute of the label'
       },
-      'Attribute .+ is not serializable as XML 1[.]0.*': {
+      'Attribute .+ is not serializable as XML 1\\.0\\.': {
         'issueID': 'attributeBad',
         'quality': 1,
         'what': 'Attribute is invalidly nonserializable'
       },
-      'Attribute .+ is only allowed when .+': {
+      'Attribute .+ is only allowed when .+\\.': {
         'issueID': 'attributeBad',
         'quality': 1,
         'what': 'Attribute is invalid here'
       },
-      'Attribute .+ not allowed here.*': {
+      'Attribute .+ not allowed here\\.': {
         'issueID': 'attributeBad',
         'quality': 1,
         'what': 'Attribute not allowed here'
       },
-      'Attribute .+ not allowed on element .+ at this point.*': {
+      'Attribute .+ not allowed on element .+ at this point\\.': {
         'issueID': 'attributeBad',
         'quality': 1,
         'what': 'Attribute not allowed on this element'
       },
-      'Attribute .+ not allowed on element meta at this point.*': {
+      'Attribute .+ not allowed on element meta at this point\\.': {
         'issueID': 'metaAttributesWrong',
         'quality': 1,
         'what': 'Attribute is not allowed on a meta element here'
       },
-      'Attribute aria-.+ is unnecessary for elements that have attribute .+': {
+      'Attribute aria-.+ is unnecessary for elements that have attribute .+\\.': {
         'issueID': 'ariaRedundant',
         'quality': 1,
         'what': 'ARIA attribute is redundant with the synonymous native attribute'
       },
-      'Bad character . after <. Probable cause: Unescaped <. Try escaping it as &lt;.*': {
+      'Bad character . after <. Probable cause: Unescaped <. Try escaping it as &lt;\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'Left angle bracket is followed by an invalid character'
       },
-      'Bad element name .*: Code point .* is not allowed*': {
+      'Bad element name .*: Code point .* is not allowed\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'Element name contains an invalid character'
       },
-      'Bad start tag in .+': {
+      'Bad start tag in .+\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Invalid start tag'
       },
-      'Bad value  for attribute (?:width|height) on element img: The empty string is not a valid non-negative integer.*': {
+      'Bad value  for attribute (?:width|height) on element img: The empty string is not a valid non-negative integer\\.': {
         'issueID': 'attributeValueBad',
         'quality': 1,
         'what': 'Attribute has an empty value'
       },
-      'Bad value  for attribute .+ on element .+: An ID must not be the empty string.*': {
+      'Bad value  for attribute .+ on element .+: An ID must not be the empty string\\.': {
         'issueID': 'idEmpty',
         'quality': 1,
         'what': 'id attribute has an empty value'
       },
-      'Bad value  for attribute .+ on element .+: Must be non-empty.*': {
+      'Bad value  for attribute .+ on element .+: Must be non-empty\\.': {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
         'what': 'Attribute value is empty'
       },
-      'Bad value  for attribute .+ on element .+: Must not be empty.*': {
+      'Bad value  for attribute .+ on element .+: Must not be empty\\.': {
         'issueID': 'attributeValueBad',
         'quality': 1,
         'what': 'Attribute has an invalidly empty value'
       },
-      'Bad value  for attribute aria-hidden on element .+': {
+      'Bad value .* for attribute aria-hidden on element .+\\.': {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
         'what': 'aria-hidden attribute has an empty value'
       },
-      'Bad value  for attribute aria-owns on element .+: An IDREFS value must contain at least one non-whitespace character.*': {
+      'Bad value .* for attribute aria-owns on element .+: An IDREFS value must contain at least one non-whitespace character\\.': {
         'issueID': 'idEmpty',
         'quality': 1,
         'what': 'aria-owns attribute has an empty value'
       },
-      'Bad value  for attribute src on element .+: Must be non-empty.*': {
+      'Bad value .* for attribute src on element .+: Must be non-empty\\.': {
         'issueID': 'sourceEmpty',
         'quality': 1,
         'what': 'src attribute is empty'
       },
-      'Bad value  for attribute tabindex on element .+: The empty string is not a valid integer.*': {
+      'Bad value .* for attribute tabindex on element .+: The empty string is not a valid integer\\.': {
         'issueID': 'tabIndexEmpty',
         'quality': 1,
         'what': 'tabindex attribute has an empty value instead of an integer'
       },
-      'Bad value .* for attribute .+ on element .+': {
+      'Bad value .* for attribute .+ on element .+\\.': {
         'issueID': 'attributeValueBad',
         'quality': 1,
         'what': 'Attribute on this element has an invalid value'
       },
-      'Bad value .* for attribute href on element .+: Illegal character in path segment: .+ is not allowed.*': {
+      'Bad value .* for attribute href on element .+: Illegal character in path segment: .+ is not allowed\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'href attribute path value contains an invalid character in a segment'
       },
-      'Bad value .* for attribute href on element .+: Illegal character in query: .+ is not allowed.*': {
+      'Bad value .* for attribute href on element .+: Illegal character in query: .+ is not allowed\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'href attribute query value contains an invalid character'
       },
-      'Bad value .* for attribute src on element .+: Illegal character in path segment: .+ is not allowed.*': {
+      'Bad value .* for attribute src on element .+: Illegal character in path segment: .+ is not allowed\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'src attribute path value contains an invalid character in a segment'
       },
-      'Bad value .* for attribute src on element .+: Illegal character in query: .+ is not allowed.*': {
+      'Bad value .* for attribute src on element .+: Illegal character in query: .+ is not allowed\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'src attribute query value contains an invalid character'
       },
-      'Bad value .+ for attribute .+ on element meta.*': {
+      'Bad value .+ for attribute .+ on element meta\\.': {
         'issueID': 'metaAttributeBad',
         'quality': 1,
         'what': 'Attribute of a meta element has an invalid value'
       },
-      'Bad value .+ for attribute src on element .+: Tab, new line or carriage return found.*': {
+      'Bad value .+ for attribute src on element .+: Tab, new line or carriage return found\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'src attribute value contains a tab, newline, or return character'
       },
-      'Bad value .+ for the attribute .+': {
+      'Bad value .+ for the attribute .+\\.': {
         'issueID': 'attributeValueBad',
         'quality': 1,
         'what': 'Attribute has an invalid value'
       },
-      'Bad value [^`]+ Tab, new line or carriage return found.*': {
+      'Bad value [^`]+ Tab, new line or carriage return found\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'Attribute value contains an illegal spacing character'
       },
-      'CSS: .*Lexical error at line .+, column .+ Encountered: .+': {
+      'CSS: .*Lexical error at line .+, column .+ Encountered: .+\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS property has a value with a lexical error'
       },
-      'CSS: .*only 0 can be a unit. You must put a unit after your number.*': {
+      'CSS: .*only 0 can be a unit. You must put a unit after your number\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Number in CSS is nonzero but has no unit'
       },
-      'CSS: .+ is not a :lang.+ value.*': {
+      'CSS: .+ is not a :lang.+ value\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS pseudo-class :lang() has an invalid value'
       },
-      'CSS: .+:   is an incorrect operator.*': {
+      'CSS: .+:   is an incorrect operator\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Space is misused as a CSS operator'
       },
-      'CSS: .+: , is an incorrect operator.*': {
+      'CSS: .+: , is an incorrect operator\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Comma is misused as a CSS operator'
       },
-      'CSS: .+: .+ is not a .+ value.*': {
+      'CSS: .+: .+ is not a .+ value\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Invalid value in CSS'
       },
-      'CSS: .+: .+ is not a valid color 3 or 6 hexadecimals numbers.*': {
+      'CSS: .+: .+ is not a valid color 3 or 6 hexadecimals numbers\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Invalid hexadecimal color in CSS'
       },
-      'CSS: .+: Character .+ is neither a decimal digit number.*': {
+      'CSS: .+: Character .+ is neither a decimal digit number\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Nonnumeric character in a numeric style property'
       },
-      'CSS: .+: Character array is missing "e" notation exponential mark.*': {
+      'CSS: .+: Character array is missing "e" notation exponential mark\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Character array has no exponent mark e'
       },
-      'CSS: .+: Invalid type: .+': {
+      'CSS: .+: Invalid type: .+\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Invalid type of CSS value'
       },
-      'CSS: .+: Missing a semicolon before the .+': {
+      'CSS: .+: Missing a semicolon before the .+\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'semicolon missing in CSS'
       },
-      'CSS: .+: Parse Error.*': {
+      'CSS: .+: Parse Error\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Invalid CSS'
       },
-      'CSS: .+: The types are incompatible.*': {
+      'CSS: .+: The types are incompatible\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Incompatible types of CSS values'
       },
-      'CSS: .+: Too many values or values are not recognized.*': {
+      'CSS: .+: Too many values or values are not recognized\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Invalid CSS value or too many values'
       },
-      'CSS: .+: Unknown dimension.*': {
+      'CSS: .+: Unknown dimension\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Unknown CSS dimension'
@@ -6902,197 +6897,197 @@ const rulesData = {
         'quality': 1,
         'what': 'CSS property does not exist'
       },
-      'CSS: .+: only 0 can be a length. You must put a unit after your number.*': {
+      'CSS: .+: only 0 can be a length. You must put a unit after your number\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Length in CSS is nonzero but has no unit'
       },
-      'CSS: Deprecated media feature .+': {
+      'CSS: Deprecated media feature .+\\.': {
         'issueID': 'obsolete',
         'quality': 1,
         'what': 'Media feature is deprecated'
       },
-      'CSS: In CSS1, a class name could start with a digit .+, unless it was a dimension .+ In CSS2, such classes are parsed as unknown dimensions .+ To make .+ a valid class, CSS2 requires the first digit to be escaped: .+': {
+      'CSS: In CSS1, a class name could start with a digit .+, unless it was a dimension .+ In CSS2, such classes are parsed as unknown dimensions .+ To make .+ a valid class, CSS2 requires the first digit to be escaped: .+\\.': {
         'issueID': 'cssInvalid',
         'quality': 0.5,
         'what': 'CSS class name starts with an unescaped digit'
       },
-      'CSS: Unknown pseudo-element or pseudo-class :.+': {
+      'CSS: Unknown pseudo-element or pseudo-class :.+\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Unknown pseudo-element or pseudo-class'
       },
-      'CSS: Unrecognized at-rule @.+': {
+      'CSS: Unrecognized at-rule @.+\\.': {
         'issueID': 'atRuleInvalid',
         'quality': 1,
         'what': 'At-rule is not recognized by CSS'
       },
-      'CSS: _background: url.+ is an incorrect URL.*': {
+      'CSS: _background: url.+ is an incorrect URL\\.': {
         'issueID': 'backgroundBad',
         'quality': 1,
         'what': 'CSS background URL is invalid'
       },
-      'CSS: background-image: .+ is not a background-image value.*': {
+      'CSS: background-image: .+ is not a background-image value\\.': {
         'issueID': 'backgroundImageBad',
         'quality': 1,
         'what': 'CSS background image is misdefined'
       },
-      'CSS: background-image: url.+ is an incorrect URL.*': {
+      'CSS: background-image: url.+ is an incorrect URL\\.': {
         'issueID': 'backgroundImageBad',
         'quality': 1,
         'what': 'CSS background image is misdefined'
       },
-      'CSS: background: .+ is not a color value.*': {
+      'CSS: background: .+ is not a color value\\.': {
         'issueID': 'backgroundBad',
         'quality': 1,
         'what': 'CSS background color is misdefined'
       },
-      'CSS: background: The .+ argument to the .+ function should be .+, not .+': {
+      'CSS: background: The .+ argument to the .+ function should be .+, not .+\\.': {
         'issueID': 'backgroundBad',
         'quality': 1,
         'what': 'CSS background function has an invalid argument'
       },
-      'CSS: border-.+ negative values are not allowed.*': {
+      'CSS: border-.+ negative values are not allowed\\.': {
         'issueID': 'borderBad',
         'quality': 1,
         'what': 'CSS border includes a negative-valued property'
       },
-      'CSS: column-count: .+ is not valid, only values greater than 0 allowed.*': {
+      'CSS: column-count: .+ is not valid, only values greater than 0 allowed\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS column-count property has a nonpositive value'
       },
-      'CSS: flex: .+ negative values are not allowed.*': {
+      'CSS: flex: .+ negative values are not allowed\\.': {
         'issueID': 'flexBad',
         'quality': 1,
         'what': 'CSS flex value is negative'
       },
-      'CSS: font-weight: .+ is not valid, only values greater than or equal to 1.0 are allowed.*': {
+      'CSS: font-weight: .+ is not valid, only values greater than or equal to 1.0 are allowed\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS font-weight property has a value smaller than 1'
       },
-      'CSS: font-weight: .+ is not valid, only values lower than or equal to 1000\.0 are allowed.*': {
+      'CSS: font-weight: .+ is not valid, only values lower than or equal to 1000\.0 are allowed\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS font-weight property has a value greater than 1000'
       },
-      'CSS: gap: .+ negative values are not allowed.*': {
+      'CSS: gap: .+ negative values are not allowed\\.': {
         'issueID': 'gapBad',
         'quality': 1,
         'what': 'CSS gap value is negative'
       },
-      'CSS: line-height: .* negative values are not allowed.*': {
+      'CSS: line-height: .* negative values are not allowed\\.': {
         'issueID': 'lineHeightBad',
         'quality': 1,
         'what': 'Text line height is negative'
       },
-      'CSS: padding[-a-z]*: .+ negative values are not allowed.*': {
+      'CSS: padding[-a-z]*: .+ negative values are not allowed\\.': {
         'issueID': 'paddingBad',
         'quality': 1,
         'what': 'One of the CSS padding values is negative'
       },
-      'CSS: perspective: .+ is not valid, only values greater than 0 allowed.*': {
+      'CSS: perspective: .+ is not valid, only values greater than 0 allowed\\.': {
         'issueID': 'cssInvalid',
         'quality': 0.5,
         'what': 'CSS perspective property has a nonpositive value'
       },
-      'CSS: transition: .+ is not valid, only values lower than or equal to 1.0 are allowed.*': {
+      'CSS: transition: .+ is not valid, only values lower than or equal to 1.0 are allowed\\.': {
         'issueID': 'cssInvalid',
         'quality': 0.5,
         'what': 'CSS transition property has a value greater than 1'
       },
-      'CSS: unrecognized media .+': {
+      'CSS: unrecognized media .+\\.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Unrecognized media value'
       },
-      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
+      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role\\.': {
         'issueID': 'roleBad',
         'quality': 1,
         'what': 'Invalid role'
       },
-      'Duplicate ID .+$|^The first occurrence of ID .* was here.*': {
+      'Duplicate ID .+$|^The first occurrence of ID .* was here\\.': {
         'issueID': 'duplicateID',
         'quality': 1,
         'what': 'Duplicate id'
       },
-      'Duplicate attribute.*': {
+      'Duplicate attribute\\.': {
         'issueID': 'duplicateAttribute',
         'quality': 1,
         'what': 'Source code of the element contains 2 or more of the same attribute'
       },
-      'Element .+ does not need a role attribute.*': {
+      'Element .+ does not need a role attribute\\.': {
         'issueID': 'roleRedundant',
         'quality': 1,
         'what': 'Element needs no role attribute'
       },
-      'Element .+ is missing a required instance of child element .+': {
+      'Element .+ is missing a required instance of child element .+\\.': {
         'issueID': 'descendantMissing',
         'quality': 1,
         'what': 'Element is missing a required child'
       },
-      'Element .+ is missing one or more of the following attributes: .+': {
+      'Element .+ is missing one or more of the following attributes: .+\\.': {
         'issueID': 'attributeMissing',
         'quality': 1,
         'what': 'Element is missing a required attribute'
       },
-      'Element .+ is missing one or more of the following attributes: role.*': {
+      'Element .+ is missing one or more of the following attributes: role.*\\.': {
         'issueID': 'roleMissingRisk',
         'quality': 1,
         'what': 'Element has no role attribute but needs one?'
       },
-      'Element .+ is missing required attribute .+': {
+      'Element .+ is missing required attribute .+\\.': {
         'issueID': 'attributeMissing',
         'quality': 1,
         'what': 'Element is missing a required attribute'
       },
-      'Element .+ is missing required attribute aria-.+': {
+      'Element .+ is missing required attribute aria-.+\\.': {
         'issueID': 'ariaMissing',
         'quality': 1,
         'what': 'Element is missing a required ARIA attribute'
       },
-      'Element .+ is missing required attribute role.*': {
+      'Element .+ is missing required attribute role\\.': {
         'issueID': 'roleMissing',
         'quality': 1,
         'what': 'Element has no role attribute'
       },
-      'Element .+ not allowed as child of element .+ in this context.*': {
+      'Element .+ not allowed as child of element .+ in this context\\.': {
         'issueID': 'parentBad',
         'quality': 1,
         'what': 'Element has an invalid parent'
       },
-      'Element image is missing required attribute (?:height|width).*': {
+      'Element image is missing required attribute (?:height|width)\\.': {
         'issueID': 'attributeMissing',
         'quality': 1,
         'what': 'image element has no height attribute or has no width attribute'
       },
-      'Element meta is missing one or more of the following attributes: .+': {
+      'Element meta is missing one or more of the following attributes: .+\\.': {
         'issueID': 'metaAttributesWrong',
         'quality': 1,
         'what': 'Element is missing a required attribute'
       },
-      'Element name .+ cannot be represented as XML 1[.]0.*': {
+      'Element name .+ cannot be represented as XML 1[.]0.*\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Invalid element name'
       },
-      'End tag .+ did not match the name of the current open element .*': {
+      'End tag .+ did not match the name of the current open element .*\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'End tag conflicts with the current open element.'
       },
-      'End tag .+ implied, but there were open elements.*': {
+      'End tag .+ implied, but there were open elements.*\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Element is implicitly closed while an element within it is unclosed'
       },
-      'End tag .+ seen, but there were open elements.*': {
+      'End tag .+ seen, but there were open elements\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Element is closed while an element within it is unclosed'
       },
-      'End tag .+ violates nesting rules.*': {
+      'End tag .+ violates nesting rules.*\\.': {
         'issueID': 'nestingBad',
         'quality': 1,
         'what': 'End tag violates nesting rules'
@@ -7102,162 +7097,167 @@ const rulesData = {
         'quality': 1,
         'what': 'Closing tag of an ineligible element'
       },
-      'End tag for .+ seen, but there were unclosed elements.*': {
+      'End tag for .+ seen, but there were unclosed elements\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Element is closed while an element within it is unclosed'
       },
-      'Forbidden code point U+.*': {
+      'Forbidden code point U+.*\\.': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Invalid Unicode code point'
       },
-      'HTML start tag .+ in a foreign namespace context.*': {
+      'Found .* in script content\\. Typo for .*\\?': {
+        'issueID': 'scriptRisk',
+        'quality': 1,
+        'what': 'Typographical error in script?'
+      },
+      'HTML start tag .+ in a foreign namespace context\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Element is invalid because its namespace is not HTML'
       },
-      'Internal encoding declaration .+ disagrees with the actual encoding of the document.*': {
+      'Internal encoding declaration .+ disagrees with the actual encoding of the document\\.': {
         'issueID': 'encodingMisdeclared',
         'quality': 1,
         'what': 'Encoding declaration disagrees with the actual encoding of the page'
       },
-      'Internal encoding declaration named an unsupported chararacter encoding .*': {
+      'Internal encoding declaration named an unsupported chararacter encoding .+\\.': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Encoding declaration names an unsupported character encoding'
       },
-      'No .+ element in scope but a .+ end tag seen.*': {
+      'No .+ element in scope but a .+ end tag seen\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'End tag for an element that is not in scope'
       },
-      'Potentially bad value .+ for attribute .+ on element .+: The language subtag .+ is deprecated.*': {
+      'Potentially bad value .+ for attribute .+ on element .+: The language subtag .+ is deprecated\\.': {
         'issueID': 'attributeObsolete',
         'quality': 1,
         'what': 'Attribute value is a deprecated language subtag'
       },
-      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?.*': {
+      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?': {
         'issueID': 'attributeValueRisk',
         'quality': 1,
         'what': 'Attribute value may be a typographical error'
       },
-      'Potentially bad value .+ for attribute sandbox on element iframe: Setting both allow-scripts and allow-same-origin is not recommended, because it effectively enables an embedded page to break out of all sandboxing.*': {
+      'Potentially bad value .+ for attribute sandbox on element iframe: Setting both allow-scripts and allow-same-origin is not recommended, because it effectively enables an embedded page to break out of all sandboxing\\.': {
         'issueID': 'frameSandboxRisk',
         'quality': 1,
         'what': 'iframe element has a vulnerable sandbox value containing both allow-scripts and allow-same-origin'
       },
-      'Quote . in attribute name[.] Probable cause: Matching quote missing somewhere earlier.*': {
+      'Quote . in attribute name[.] Probable cause: Matching quote missing somewhere earlier\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Attribute name includes an apostrophe or double quotation mark'
       },
-      'Resource violates Content Security Policy \\(meta tag\\): external script .+ blocked by script-src directive.*': {
+      'Resource violates Content Security Policy \\(meta tag\\): external script .+ blocked by script-src directive\\.': {
         'issueID': 'scriptBanned',
         'quality': 1,
         'what': 'script-src content attribute blocks a script'
       },
-      'Resource violates Content Security Policy \\(meta tag\\): external stylesheet .+ blocked by style-src directive.*': {
+      'Resource violates Content Security Policy \\(meta tag\\): external stylesheet .+ blocked by style-src directive\\.': {
         'issueID': 'stylesheetBanned',
         'quality': 1,
         'what': 'style-src content attribute blocks an external stylesheet'
       },
-      'Resource violates Content Security Policy \\(meta tag\\): image .+ blocked by img-src directive.*': {
+      'Resource violates Content Security Policy \\(meta tag\\): image .+ blocked by img-src directive\\.': {
         'issueID': 'imageBanned',
         'quality': 1,
         'what': 'img-src content attribute blocks an image'
       },
-      'Saw .+ when expecting an attribute name. Probable cause: (?:.+ missing|Missing .+) immediately before.*': {
+      'Saw .+ when expecting an attribute name. Probable cause: (?:.+ missing|Missing .+) immediately before\\.': {
         'issueID': 'characterBad',
         'quality': 1,
         'what': 'Invalid character appears where an attribute name must appear'
       },
-      'Saw a start tag [a-z]+.*': {
+      'Saw a start tag [a-z]+.\\.': {
         'issueID': 'elementBad',
         'quality': 1,
         'what': 'Element does not exist in HTML'
       },
-      'Self-closing syntax .+ used on a non-void HTML element.*': {
+      'Self-closing syntax .+ used on a non-void HTML element\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Self-closing syntax used on a non-void element'
       },
-      'Start tag .+ seen but an element of the same type was already open.*': {
+      'Start tag .+ seen but an element of the same type was already open\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Element is invalidly a descendant of another such element'
       },
-      'Stray end tag .+': {
+      'Stray end tag .+\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Invalid closing tag'
       },
-      'Stray start tag .+': {
+      'Stray start tag .+\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Invalid start tag'
       },
-      'Style rule .* not allowed outside an @scope rule in a style element in body\.': {
+      'Style rule .* not allowed outside an @scope rule in a style element in body\\.': {
         'issueID': 'atRuleInvalid',
         'quality': 1,
         'what': 'At-rule in CSS is not within an @scope rule'
       },
-      'Table column [0-9]+ established by element td has no cells beginning in it.*': {
+      'Table column [0-9]+ established by element td has no cells beginning in it\\.': {
         'issueID': 'tableColumnsVary',
         'quality': 1,
         'what': 'Element is td but the prior cells in its table column do not exist'
       },
-      'Text not allowed in element .+ in this context.*': {
+      'Text not allowed in element .+ in this context\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Element contains text, which is not allowed here'
       },
-      'Text run is not in Unicode Normalization Form C.+': {
+      'Text run is not in Unicode Normalization Form C\\.': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Text run is not in Unicode Normalization Form C'
       },
-      'The .+ attribute must not be used on any label element that is an ancestor of a labelable element.': {
+      'The .+ attribute must not be used on any label element that is an ancestor of a labelable element\\.': {
         'issueID': 'labelClash',
         'quality': 1,
         'what': 'label element has an attribute incompatible with a labelable descendant'
       },
-      'The .+ attribute on the .+ element is obsolete.*': {
+      'The .+ attribute on the .+ element is obsolete\\.': {
         'issueID': 'attributeObsolete',
         'quality': 1,
         'what': 'Attribute is obsolete on its element'
       },
-      'The .+ element is a completely-unknown element that is not allowed anywhere in any HTML content.+': {
+      'The .+ element is a completely-unknown element that is not allowed anywhere in any HTML content\\.': {
         'issueID': 'nonElement',
         'quality': 1,
         'what': 'Element is unknown'
       },
-      'The .+ element must not appear as a descendant of the .+ element.*': {
+      'The .+ element must not appear as a descendant of the .+ element\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Element has an invalid ancestor'
       },
-      'The .+ role is unnecessary for element .+': {
+      'The .+ role is unnecessary for element .+\\.': {
         'issueID': 'roleRedundant',
         'quality': 1,
         'what': 'explicit role is redundant for its element'
       },
-      'The aria-describedby attribute references .+, which is not the ID of any element in this document.+': {
+      'The aria-describedby attribute references .+, which is not the ID of any element in this document\\.': {
         'issueID': 'descriptionBadID',
         'quality': 1,
         'what': 'aria-describedby attribute references an element not in the document'
       },
-      'The aria-hidden attribute must not be specified on the .+ element.*': {
+      'The aria-hidden attribute must not be specified on the .+ element\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'aria-hidden attribute is invalid for its element'
       },
-      'The aria-label.* attribute must not be specified on any .* element unless the element has a role value other than caption, code, deletion, emphasis, generic, insertion, paragraph, presentation, strong, subscript, or superscript.*': {
+      'The aria-label.* attribute must not be specified on any .* element unless the element has a role value other than caption, code, deletion, emphasis, generic, insertion, paragraph, presentation, strong, subscript, or superscript\\.': {
         'issueID': 'nonLabelableRole',
         'quality': 1,
         'what': 'Element with a non-labelable role has an aria-label attribute'
       },
-      'The aria-labelledby attribute references .+, which is not the ID of any element in this document.+': {
+      'The aria-labelledby attribute references .+, which is not the ID of any element in this document\\.': {
         'issueID': 'labelBadID',
         'quality': 1,
         'what': 'aria-labelledby attribute references an element not in the document'
@@ -7267,42 +7267,42 @@ const rulesData = {
         'quality': 1,
         'what': 'Element is activatable but has an ancestor with an activatable role'
       },
-      'The element .+ must not appear as a descendant of the .+ element.*': {
+      'The element .+ must not appear as a descendant of the .+ element\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Element has an invalid ancestor'
       },
-      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading level.+': {
+      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading level\\.': {
         'issueID': 'headingLevelSkip',
         'quality': 1,
         'what': 'Heading level is more than 1 level inferior to the previous heading'
       },
-      'The role attribute must not be used on a .+ element which has a table ancestor with no role attribute, or with a role attribute whose value is table, grid, or treegrid.*': {
+      'The role attribute must not be used on a .+ element which has a table ancestor with no role attribute, or with a role attribute whose value is table, grid, or treegrid\\.': {
         'issueID': 'roleHierarchyBad',
         'quality': 1,
         'what': 'Table cell has a role attribute'
       },
-      'The text content of element .+ was not in the required format: Expected .+ but found .+ instead.*': {
+      'The text content of element .+ was not in the required format: Expected .+ but found .+ instead\\.': {
         'issueID': 'textContentBad',
         'quality': 1,
         'what': 'Element has text content with invalid format'
       },
-      'The value of attribute .+ on element .+ from namespace .+ is not in Unicode Normalization Form C.*': {
+      'The value of attribute .+ on element .+ from namespace .+ is not in Unicode Normalization Form C\\.': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Value of attribute is not in Unicode Normalization Form C'
       },
-      'This document appears to be written in .+ Consider .+ing lang=.+': {
+      'This document appears to be written in .+ Consider .+ing lang=.+\\.': {
         'issueID': 'pageLanguage',
         'quality': 1,
         'what': 'html start tag has no lang attribute to declare the language of the page'
       },
-      'Unclosed element .+': {
+      'Unclosed element .+\\.': {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'Element is unclosed'
       },
-      'java.util.concurrent.TimeoutException: Idle timeout expired: .+ ms.*': {
+      'java.util.concurrent.TimeoutException: Idle timeout expired: .+ ms\\.': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Idle timeout expired'
