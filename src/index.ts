@@ -5812,6 +5812,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Element is not eligible for an async attribute but has one'
       },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a defer attribute.': {
+        'issueID': 'scriptNotDeferrable',
+        'quality': 1,
+        'what': 'Element is not eligible for a defer attribute but has one'
+      },
       'A script element with a type attribute whose value is speculationrules must contain a JSON object with at least one of the properties prefetch or prerender.': {
         'issueID': 'specRulesScriptBad',
         'quality': 1,
@@ -7198,7 +7203,7 @@ const rulesData = {
         'quality': 1,
         'what': 'aria-labelledby attribute references an element not in the document'
       },
-      'The element (?:a|a with the attribute href|input|label|button) (must|should) not appear as a descendant of an element with the attribute role=(?:button|menuitem|tab)\\.': {
+      'The element (?:a|a with the attribute href|button|input|label|select) (must|should) not appear as a descendant of an element with the attribute role=(?:button|menuitem|tab)\\.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'Element is activatable but has an ancestor with an activatable role'
