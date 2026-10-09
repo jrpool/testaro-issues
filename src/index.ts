@@ -882,6 +882,12 @@ const issuesData = {
     'wcag': '1.3.6',
     'weight': 1
   },
+  'formActionEmpty': {
+    'summary': 'form action is empty',
+    'why': 'Submitting a form may cause a navigation failure',
+    'wcag': '4.1',
+    'weight': 1
+  },
   'formConfusion': {
     'summary': 'forms not distinctly named',
     'why': 'User cannot get help on how some of the page is organized',
@@ -896,7 +902,7 @@ const issuesData = {
   },
   'formsNested': {
     'summary': 'form nested in another form',
-    'why': 'User cannot predict effect of actions in a form',
+    'why': 'User cannot predict the effect of actions in a form',
     'wcag': '4.1',
     'weight': 4
   },
@@ -5801,16 +5807,6 @@ const rulesData = {
         'quality': 1,
         'what': 'Element is script and has a src attribute but its type is not empty, a JS MIME type, or module'
       },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a defer attribute.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element is not eligible for a defer attribute but has one'
-      },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a src attribute.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is not eligible for a src attribute but has one'
-      },
       'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have an async attribute.': {
         'issueID': 'scriptElementBad',
         'quality': 1,
@@ -5861,11 +5857,6 @@ const rulesData = {
         'quality': 1,
         'what': 'element has a group role but has an ancestor with a list role'
       },
-      'An element with the attribute role=button must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'Element with a button role is a descendant of an element with a button role'
-      },
       'An element with the attribute role=button must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
@@ -5875,11 +5866,6 @@ const rulesData = {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'Element with a button role is a descendant of a button element'
-      },
-      'An element with the attribute role=menu must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'Element with a menu role is a descendant of an element with a button role'
       },
       'An element with the attribute role=menu must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
@@ -5945,6 +5931,11 @@ const rulesData = {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
         'what': 'img element has no alt attribute but has an ARIA attribute other than aria-hidden'
+      },
+      'An inline classic script element (i.e., a script element without a src attribute and with a type attribute that is either unspecified, empty, or a JavaScript MIME type) must not have an async attribute.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'Element is a classic script but has an async attribute'
       },
       'An inline script element (i.e., a script element without a src attribute and with a type attribute that is either unspecified, empty, or a JavaScript MIME type) must not have a defer attribute.': {
         'issueID': 'scriptNotDeferrable',
@@ -6065,6 +6056,11 @@ const rulesData = {
         'issueID': 'atRuleInvalid',
         'quality': 1,
         'what': 'CSS @charset at-rule has an invalid format'
+      },
+      'CSS: color: Cannot invoke "org.w3c.css.values.CssValue.getType()" because "val" is null.': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid call to a CSS function'
       },
       'CSS: font-size: One operand must be a number.': {
         'issueID': 'cssInvalid',
@@ -6324,11 +6320,6 @@ const rulesData = {
         'quality': 1,
         'what': 'Element is a label but has a label'
       },
-      'The aria-labelledby attribute must not be used on any label element that is an ancestor of a labelable element.': {
-        'issueID': 'labelClash',
-        'quality': 1,
-        'what': 'Element is a label with a labelable descendant but has is an aria-labelledby attribute'
-      },
       'The aria-labelledby attribute must point to an element in the same document.': {
         'issueID': 'labelBadID',
         'quality': 1,
@@ -6389,20 +6380,10 @@ const rulesData = {
         'quality': 1,
         'what': 'select element is not multiple or has no size greater than 1 but has a document role'
       },
-      'The element a must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element is a descendant of an element with a button role'
-      },
       'The element a must not appear as a descendant of an element with the attribute role=link.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'a element is a descendant of an element with a link role'
-      },
-      'The element a should not appear as a descendant of an element with the attribute role=menuitem.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element is a descendant of an element with a menuitem role'
       },
       'The element a with the attribute href must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
@@ -6414,11 +6395,6 @@ const rulesData = {
         'quality': 1,
         'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
       },
-      'The element button must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'button element is a descendant of an element with a button role'
-      },
       'The element button must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
@@ -6428,16 +6404,6 @@ const rulesData = {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'input element is a descendant of an element with a progressbar role'
-      },
-      'The element label must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'label element is a descendant of an element with a button role'
-      },
-      'The element select must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'select element is a descendant of an element with a button role'
       },
       'The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.': {
         'issueID': 'selectBad',
@@ -6574,6 +6540,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Page contains no h1 element'
       },
+      'To set the document\’s location as the action for a form, omit the action attribute.': {
+        'issueID': 'formActionEmpty',
+        'quality': 1,
+        'what': 'form action is empty, instead of omitted, to submit the form to the same document'
+      },
       'Too many messages.': {
         'issueID': 'fatalError',
         'quality': 1,
@@ -6632,6 +6603,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Attribute has a value containing invalid punctuation'
       },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules \\(i\\.e\\., a data block\\) must not have a+ attribute\\.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'script element has an attribute it is not eligible for'
+      },
       'A table row was .+ columns wide and exceeded the column count established by the first row.*': {
         'issueID': 'tableColumnsVary',
         'quality': 1,
@@ -6646,6 +6622,11 @@ const rulesData = {
         'issueID': 'parentMissing',
         'quality': 1,
         'what': 'Element has no required container or owner'
+      },
+      'An element with the attribute role=.+ must not appear as a descendant of an element with the attribute role=button\\.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'Element has a role not permitted in a descendant of an element with a button role'
       },
       'Any .+ descendant of a label element with a for attribute must have an ID value that matches that for attribute.*': {
         'issueID': 'controlIDInLabelBad',
@@ -7172,6 +7153,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Text run is not in Unicode Normalization Form C'
       },
+      'The .+ attribute must not be used on any label element that is an ancestor of a labelable element.': {
+        'issueID': 'labelClash',
+        'quality': 1,
+        'what': 'label element has an attribute incompatible with a labelable descendant'
+      },
       'The .+ attribute on the .+ element is obsolete.*': {
         'issueID': 'attributeObsolete',
         'quality': 1,
@@ -7211,6 +7197,11 @@ const rulesData = {
         'issueID': 'labelBadID',
         'quality': 1,
         'what': 'aria-labelledby attribute references an element not in the document'
+      },
+      'The element (?:a|a with the attribute href|input|label|button) should not appear as a descendant of an element with the attribute role=(?:button|menuitem|tab)\\.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'Element is activatable but has an ancestor with an activatable role'
       },
       'The element .+ must not appear as a descendant of the .+ element.*': {
         'issueID': 'parseError',
@@ -7954,20 +7945,10 @@ const rulesData = {
         'quality': 1,
         'what': 'a element is a descendant of an element with a link role'
       },
-      'The element a should not appear as a descendant of an element with the attribute role=menuitem.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element is a descendant of an element with a menuitem role'
-      },
       'The element a with the attribute href must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'a element with a destination is a descendant of an element with a button role'
-      },
-      'The element a with the attribute href should not appear as a descendant of an element with the attribute role=menuitem.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
       },
       'The element button must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
