@@ -2405,6 +2405,12 @@ const issuesData = {
 const rulesData = {
   'alfa': {
     'invariant': {
+      'cantTell': {
+        'issueID': 'notValidatable',
+        'quality': 1,
+        'what': 'Test could not give a conclusive result',
+        'supersededBy': 'r66'
+      },
       'cantTellTextContrast': {
         'issueID': 'ignorable',
         'quality': 1,
@@ -2412,252 +2418,25 @@ const rulesData = {
         'whyIgnore': 'invalid',
         'supersededBy': null
       },
-      'r73': {
-        'issueID': 'ignorable',
+      'r1': {
+        'issueID': 'pageTitle',
         'quality': 1,
-        'what': 'Text line height is not at least 1.5',
-        'whyIgnore': 'invalid'
-      },
-      'r87': {
-        'issueID': 'ignorable',
-        'quality': 0.5,
-        'what': 'First focusable element is not a link to the main content',
-        'whyIgnore': 'invalid'
-      },
-      'r3': {
-        'issueID': 'duplicateID',
-        'quality': 1,
-        'what': 'Element id attribute value is not unique'
-      },
-      'r40': {
-        'issueID': 'regionNoText',
-        'quality': 1,
-        'what': 'Region has no accessible name'
-      },
-      'r28': {
-        'issueID': 'imageInputNoText',
-        'quality': 1,
-        'what': 'Element is an image input but has no accessible name'
-      },
-      'r2': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'Image has no accessible name'
-      },
-      'r39': {
-        'issueID': 'imageTextBad',
-        'quality': 1,
-        'what': 'Image text alternative is the filename instead'
-      },
-      'r67': {
-        'issueID': 'decorativeElementExposed',
-        'quality': 1,
-        'what': 'Image marked as decorative is in the accessibility tree or has no none/presentation role'
-      },
-      'r86': {
-        'issueID': 'decorativeElementExposed',
-        'quality': 1,
-        'what': 'Element marked as decorative is in the accessibility tree or has no none/presentation role'
-      },
-      'r4': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'lang attribute missing, empty, or only whitespace'
-      },
-      'r5': {
-        'issueID': 'pageLanguageBad',
-        'quality': 1,
-        'what': 'lang attribute has no valid primary language tag'
-      },
-      'r7': {
-        'issueID': 'languageChange',
-        'quality': 1,
-        'what': 'lang attribute has no valid primary language subtag'
-      },
-      'r63': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'object element has no accessible name'
-      },
-      'r11': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has no accessible name'
-      },
-      'r12': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'button element has no accessible name'
-      },
-      'r94': {
-        'issueID': 'menuItemNoText',
-        'quality': 1,
-        'what': 'Element with a menuitem role has no accessible name'
-      },
-      'r42': {
-        'issueID': 'parentMissing',
-        'quality': 1,
-        'what': 'Element is not owned by an element of its required context role'
-      },
-      'r68': {
-        'issueID': 'descendantMissing',
-        'quality': 1,
-        'what': 'Element owns no element required by its semantic role'
-      },
-      'r43': {
-        'issueID': 'svgImageNoText',
-        'quality': 1,
-        'what': 'Element has no accessible name'
-      },
-      'r47': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'Element restricts zooming'
-      },
-      'r74': {
-        'issueID': 'fontSizeAbsolute',
-        'quality': 1,
-        'what': 'Paragraph text has an absolute font size'
-      },
-      'r75': {
-        'issueID': 'fontSmall',
-        'quality': 1,
-        'what': 'Font size is smaller than 9 pixels'
-      },
-      'r91': {
-        'issueID': 'horizontalSpacingFrozen',
-        'quality': 1,
-        'what': 'Style attribute with !important makes letter spacing insufficient'
-      },
-      'r93': {
-        'issueID': 'verticalSpacingFrozen',
-        'quality': 1,
-        'what': 'Style attribute with !important prevents adjusting line height'
-      },
-      'r80': {
-        'issueID': 'lineHeightAbsolute',
-        'quality': 1,
-        'what': 'Paragraph text has an absolute line height'
-      },
-      'r83': {
-        'issueID': 'overflowHidden',
-        'quality': 1,
-        'what': 'Overflow is hidden or clipped if the text is enlarged'
-      },
-      'r13': {
-        'issueID': 'iframeTitleBad',
-        'quality': 1,
-        'what': 'iframe has no accessible name'
-      },
-      'r21': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element has no valid role'
-      },
-      'r110': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'No token in the value of the role attribute is valid'
-      },
-      'r16': {
-        'issueID': 'ariaMissing',
-        'quality': 1,
-        'what': 'Element does not have all required states and properties'
-      },
-      'r18': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA state or property is not allowed for the element on which it is specified'
-      },
-      'r19': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA state or property has an invalid value'
-      },
-      'r20': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute is not defined'
+        'what': 'Page has no valid title element'
       },
       'r10': {
         'issueID': 'autocompleteBad',
         'quality': 1,
         'what': 'autocomplete attribute has no valid value'
       },
-      'r69': {
-        'issueID': 'contrastAA',
+      'r11': {
+        'issueID': 'linkNoText',
         'quality': 1,
-        'what': 'Text outside widget has subminimum contrast'
+        'what': 'Link has no accessible name'
       },
-      'r66': {
-        'issueID': 'contrastAAA',
+      'r110': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Text contrast less than AAA requires'
-      },
-      'r64': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Heading has no non-empty accessible name'
-      },
-      'r78': {
-        'issueID': 'headingOfNothing',
-        'quality': 1,
-        'what': 'No content between two headings of the same level'
-      },
-      'r1': {
-        'issueID': 'pageTitle',
-        'quality': 1,
-        'what': 'Page has no valid title element'
-      },
-      'r53': {
-        'issueID': 'headingLevelSkip',
-        'quality': 1,
-        'what': 'Heading skips one or more levels'
-      },
-      'r59': {
-        'issueID': 'headingNone',
-        'quality': 1,
-        'what': 'Page has no headings'
-      },
-      'r61': {
-        'issueID': 'h1Not1st',
-        'quality': 1,
-        'what': 'First heading is not h1'
-      },
-      'r71': {
-        'issueID': 'justification',
-        'quality': 1,
-        'what': 'Paragraph text is fully justified'
-      },
-      'r79': {
-        'issueID': 'pseudoCodeRisk',
-        'quality': 1,
-        'what': 'pre element is not used for a figure or for code, kbd, and samp elements'
-      },
-      'r60': {
-        'issueID': 'groupName',
-        'quality': 1,
-        'what': 'Form-control group has no accessible name'
-      },
-      'r77': {
-        'issueID': 'tableCellHeaderless',
-        'quality': 1,
-        'what': 'Table cell has no header'
-      },
-      'r46': {
-        'issueID': 'tableHeaderCellless',
-        'quality': 1,
-        'what': 'Header cell is not assigned to any cell'
-      },
-      'r8': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'Form field has no accessible name'
-      },
-      'r14': {
-        'issueID': 'visibleLabelNotInName',
-        'quality': 1,
-        'what': 'Visible label is not in the accessible name'
+        'what': 'No token in the value of the role attribute is valid'
       },
       'r111': {
         'issueID': 'targetSmall',
@@ -2669,77 +2448,438 @@ const rulesData = {
         'quality': 1,
         'what': 'Target size is substandard'
       },
-      'r95': {
-        'issueID': 'unfocusability',
+      'r12': {
+        'issueID': 'buttonNoText',
         'quality': 1,
-        'what': 'iframe element with a negative tabindex attribute contains an interactive element'
+        'what': 'button element has no accessible name'
       },
-      'r65': {
-        'issueID': 'focusIndicationBad',
+      'r13': {
+        'issueID': 'iframeTitleBad',
         'quality': 1,
-        'what': 'Element in the sequential focus order has no visible focus'
+        'what': 'iframe has no accessible name'
       },
-      'r72': {
-        'issueID': 'allCaps',
+      'r14': {
+        'issueID': 'visibleLabelNotInName',
         'quality': 1,
-        'what': 'Paragraph text is uppercased'
+        'what': 'Visible label is not in the accessible name'
       },
-      'r85': {
-        'issueID': 'allItalics',
+      'r16': {
+        'issueID': 'ariaMissing',
         'quality': 1,
-        'what': 'Text of the paragraph is all italic'
-      },
-      'r57': {
-        'issueID': 'contentBeyondLandmarks',
-        'quality': 1,
-        'what': 'Perceivable text content is not included in any landmark'
+        'what': 'Element does not have all required states and properties'
       },
       'r17': {
         'issueID': 'focusableHidden',
         'quality': 1,
         'what': 'Tab-focusable element is or has an ancestor that is aria-hidden'
       },
-      'r90': {
-        'issueID': 'focusableDescendants',
+      'r18': {
+        'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'Element has a role making its children presentational but contains a focusable element'
+        'what': 'ARIA state or property is not allowed for the element on which it is specified'
       },
-      'r62': {
-        'issueID': 'linkIndication',
+      'r19': {
+        'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'Inline link is not distinct from the surrounding text except by color'
+        'what': 'ARIA state or property has an invalid value'
       },
-      'r84': {
-        'issueID': 'keyboardScroll',
+      'r2': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'Element is scrollable but not by keyboard'
+        'what': 'Image has no accessible name'
+      },
+      'r20': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute is not defined'
+      },
+      'r21': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element has no valid role'
+      },
+      'r28': {
+        'issueID': 'imageInputNoText',
+        'quality': 1,
+        'what': 'Element is an image input but has no accessible name'
+      },
+      'r3': {
+        'issueID': 'duplicateID',
+        'quality': 1,
+        'what': 'Element id attribute value is not unique'
+      },
+      'r39': {
+        'issueID': 'imageTextBad',
+        'quality': 1,
+        'what': 'Image text alternative is the filename instead'
+      },
+      'r4': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'lang attribute missing, empty, or only whitespace'
+      },
+      'r40': {
+        'issueID': 'regionNoText',
+        'quality': 1,
+        'what': 'Region has no accessible name'
+      },
+      'r42': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'Element is not owned by an element of its required context role'
+      },
+      'r43': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'Element has no accessible name'
+      },
+      'r46': {
+        'issueID': 'tableHeaderCellless',
+        'quality': 1,
+        'what': 'Header cell is not assigned to any cell'
+      },
+      'r47': {
+        'issueID': 'metaBansZoom',
+        'quality': 1,
+        'what': 'Element restricts zooming'
+      },
+      'r5': {
+        'issueID': 'pageLanguageBad',
+        'quality': 1,
+        'what': 'lang attribute has no valid primary language tag'
+      },
+      'r53': {
+        'issueID': 'headingLevelSkip',
+        'quality': 1,
+        'what': 'Heading skips one or more levels'
       },
       'r54': {
         'issueID': 'fragmentaryNoticeRisk',
         'quality': 1,
         'what': 'Assertive region is not atomic'
       },
+      'r57': {
+        'issueID': 'contentBeyondLandmarks',
+        'quality': 1,
+        'what': 'Perceivable text content is not included in any landmark'
+      },
+      'r59': {
+        'issueID': 'headingNone',
+        'quality': 1,
+        'what': 'Page has no headings'
+      },
+      'r60': {
+        'issueID': 'groupName',
+        'quality': 1,
+        'what': 'Form-control group has no accessible name'
+      },
+      'r61': {
+        'issueID': 'h1Not1st',
+        'quality': 1,
+        'what': 'First heading is not h1'
+      },
+      'r62': {
+        'issueID': 'linkIndication',
+        'quality': 1,
+        'what': 'Inline link is not distinct from the surrounding text except by color'
+      },
+      'r63': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'object element has no accessible name'
+      },
+      'r64': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Heading has no non-empty accessible name'
+      },
+      'r65': {
+        'issueID': 'focusIndicationBad',
+        'quality': 1,
+        'what': 'Element in the sequential focus order has no visible focus'
+      },
+      'r66': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text contrast less than AAA requires'
+      },
+      'r67': {
+        'issueID': 'decorativeElementExposed',
+        'quality': 1,
+        'what': 'Image marked as decorative is in the accessibility tree or has no none/presentation role'
+      },
+      'r68': {
+        'issueID': 'descendantMissing',
+        'quality': 1,
+        'what': 'Element owns no element required by its semantic role'
+      },
+      'r69': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text outside widget has subminimum contrast'
+      },
+      'r7': {
+        'issueID': 'languageChange',
+        'quality': 1,
+        'what': 'lang attribute has no valid primary language subtag'
+      },
       'r70': {
         'issueID': 'elementObsolete',
         'quality': 1,
         'what': 'Element is obsolete or deprecated'
       },
-      'cantTell': {
-        'issueID': 'notValidatable',
+      'r71': {
+        'issueID': 'justification',
         'quality': 1,
-        'what': 'Test could not give a conclusive result',
-        'supersededBy': 'r66'
+        'what': 'Paragraph text is fully justified'
+      },
+      'r72': {
+        'issueID': 'allCaps',
+        'quality': 1,
+        'what': 'Paragraph text is uppercased'
+      },
+      'r73': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Text line height is not at least 1.5',
+        'whyIgnore': 'invalid'
+      },
+      'r74': {
+        'issueID': 'fontSizeAbsolute',
+        'quality': 1,
+        'what': 'Paragraph text has an absolute font size'
+      },
+      'r75': {
+        'issueID': 'fontSmall',
+        'quality': 1,
+        'what': 'Font size is smaller than 9 pixels'
+      },
+      'r77': {
+        'issueID': 'tableCellHeaderless',
+        'quality': 1,
+        'what': 'Table cell has no header'
+      },
+      'r78': {
+        'issueID': 'headingOfNothing',
+        'quality': 1,
+        'what': 'No content between two headings of the same level'
+      },
+      'r79': {
+        'issueID': 'pseudoCodeRisk',
+        'quality': 1,
+        'what': 'pre element is not used for a figure or for code, kbd, and samp elements'
+      },
+      'r8': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Form field has no accessible name'
+      },
+      'r80': {
+        'issueID': 'lineHeightAbsolute',
+        'quality': 1,
+        'what': 'Paragraph text has an absolute line height'
+      },
+      'r83': {
+        'issueID': 'overflowHidden',
+        'quality': 1,
+        'what': 'Overflow is hidden or clipped if the text is enlarged'
+      },
+      'r84': {
+        'issueID': 'keyboardScroll',
+        'quality': 1,
+        'what': 'Element is scrollable but not by keyboard'
+      },
+      'r85': {
+        'issueID': 'allItalics',
+        'quality': 1,
+        'what': 'Text of the paragraph is all italic'
+      },
+      'r86': {
+        'issueID': 'decorativeElementExposed',
+        'quality': 1,
+        'what': 'Element marked as decorative is in the accessibility tree or has no none/presentation role'
+      },
+      'r87': {
+        'issueID': 'ignorable',
+        'quality': 0.5,
+        'what': 'First focusable element is not a link to the main content',
+        'whyIgnore': 'invalid'
+      },
+      'r90': {
+        'issueID': 'focusableDescendants',
+        'quality': 1,
+        'what': 'Element has a role making its children presentational but contains a focusable element'
+      },
+      'r91': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'Style attribute with !important makes letter spacing insufficient'
+      },
+      'r93': {
+        'issueID': 'verticalSpacingFrozen',
+        'quality': 1,
+        'what': 'Style attribute with !important prevents adjusting line height'
+      },
+      'r94': {
+        'issueID': 'menuItemNoText',
+        'quality': 1,
+        'what': 'Element with a menuitem role has no accessible name'
+      },
+      'r95': {
+        'issueID': 'unfocusability',
+        'quality': 1,
+        'what': 'iframe element with a negative tabindex attribute contains an interactive element'
       }
     },
     'variable': {}
   },
   'aslint': {
     'invariant': {
+      'a_area_missing_alt': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'Text alternative of the element is missing or empty'
+      },
+      'accessible_svg': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'Element has no title, description, text, attribute label, or role description'
+      },
+      'accessible_svgI': {
+        'issueID': 'svgLabelID',
+        'quality': 1,
+        'what': 'Element references a nonexisting element as its label'
+      },
+      'accessible_svgT': {
+        'issueID': 'tabIndexInt',
+        'quality': 1,
+        'what': 'Element has a non-integer tabindex attribute'
+      },
+      'alt_color_convey_information': {
+        'issueID': 'imageTextRisk',
+        'quality': 1,
+        'what': 'Text alternative fails to give information provided by colors?'
+      },
+      'alt_text_include_filename': {
+        'issueID': 'imageTextBad',
+        'quality': 1,
+        'what': 'Image text alternative includes a filename'
+      },
+      'animationD': {
+        'issueID': 'animationLong',
+        'quality': 1,
+        'what': 'Animation lasts more than 5 seconds'
+      },
+      'animationI': {
+        'issueID': 'animationLong',
+        'quality': 1,
+        'what': 'Animation is repetitive'
+      },
+      'animationM': {
+        'issueID': 'spontaneousMotion',
+        'quality': 1,
+        'what': 'Animation fails to provide a pause, stop, or hide mechanism?'
+      },
+      'applet_missing_alt': {
+        'issueID': 'appletNoText',
+        'quality': 1,
+        'what': 'Text alternative of the applet is missing or empty'
+      },
+      'applet_missing_body': {
+        'issueID': 'appletNoText',
+        'quality': 1,
+        'what': 'Content of the applet is missing or empty'
+      },
+      'aria_describedby_association': {
+        'issueID': 'descriptionBadID',
+        'quality': 1,
+        'what': 'aria-describedby attribute references a missing or empty element'
+      },
+      'aria_hidden': {
+        'issueID': 'hideFailureRisk',
+        'quality': 1,
+        'what': 'aria-hidden attribute has the value false'
+      },
+      'aria_hidden_false': {
+        'issueID': 'hideFailureRisk',
+        'quality': 1,
+        'what': 'aria-hidden attribute has the value false'
+      },
+      'aria_labelledby_associationE': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute refers to no element'
+      },
+      'aria_labelledby_associationN': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'Element referenced by the aria-labelledby attribute is missing'
+      },
+      'aria_labelledby_association_empty_element': {
+        'issueID': 'labelEmpty',
+        'quality': 1,
+        'what': 'Referenced label has no content'
+      },
+      'aria_role_dialog': {
+        'issueID': 'dialogNoText',
+        'quality': 1,
+        'what': 'Element has a dialog role but has no accessible name'
+      },
+      'audio_alternative': {
+        'issueID': 'objectAudioRisk',
+        'quality': 1,
+        'what': 'Element is inferior to an audio element if it plays audio'
+      },
+      'audio_alternativeA': {
+        'issueID': 'audioTextRisk',
+        'quality': 1,
+        'what': 'Referenced description or another text alternative is missing?'
+      },
+      'audio_alternativeB': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'Element is obsolete and inferior to an audio element'
+      },
+      'audio_alternativeT': {
+        'issueID': 'audioNoText',
+        'quality': 1,
+        'what': 'Element contains no track element'
+      },
+      'audio_video_captions': {
+        'issueID': 'avNoText',
+        'quality': 1,
+        'what': 'Element is audio or video but contains no caption track element'
+      },
+      'autoplay_audio_video': {
+        'issueID': 'autoplay',
+        'quality': 1,
+        'what': 'Element plays automatically'
+      },
+      'blink_element': {
+        'issueID': 'blink',
+        'quality': 1,
+        'what': 'Element is blink'
+      },
+      'broken_same_page_link': {
+        'issueID': 'internalLinkBroken',
+        'quality': 1,
+        'what': 'Same-page destination of the link does not exist'
+      },
       'capital_letters_words': {
         'issueID': 'ignorable',
         'quality': 1,
         'what': 'Element or its title has entirely upper-case words',
         'whyIgnore': 'invalid'
+      },
+      'captcha_google': {
+        'issueID': 'captcha2',
+        'quality': 1,
+        'what': 'Page employs Google CAPTCHA version 2'
+      },
+      'click_verb': {
+        'issueID': 'clickOnly',
+        'quality': 1,
+        'what': 'Mouse-specific word click is in the element text'
       },
       'color_contrast_aa': {
         'issueID': 'ignorable',
@@ -2753,11 +2893,86 @@ const rulesData = {
         'what': 'Text contrast may be less than enhanced but the element is invisible',
         'whyIgnore': 'invalid'
       },
+      'color_contrast_aaa4': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text has contrast less than 4.5:1'
+      },
+      'color_contrast_aaa7': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text has contrast less than 7:1'
+      },
+      'color_contrast_aaaB': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Transparent background color of the element prevents contrast measurement'
+      },
+      'color_contrast_state_pseudo_classes_abstract3': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text has contrast less than 3:1'
+      },
+      'color_contrast_state_pseudo_classes_abstract4': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text has contrast less than 4.5:1'
+      },
+      'color_contrast_state_pseudo_classes_abstractB': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Transparent background color of the element prevents contrast measurement'
+      },
+      'color_contrast_state_pseudo_classes_abstractF': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Fixed position of the element prevents contrast measurement'
+      },
+      'content_editable_missing_attributes': {
+        'issueID': 'editableHow',
+        'quality': 1,
+        'what': 'Element has a true contenteditable attribute but no aria-multiline or labeling attribute'
+      },
+      'contentinfo_landmark_only_one': {
+        'issueID': 'footerNot1',
+        'quality': 1,
+        'what': 'Page has more than 1 contentinfo landmark (footer)'
+      },
       'css_images_convey_information': {
         'issueID': 'ignorable',
         'quality': 1,
         'what': 'Background image may be informative',
         'whyIgnore': 'speculative'
+      },
+      'duplicated_for_attribute': {
+        'issueID': 'labelNot1',
+        'quality': 1,
+        'what': 'More than 1 label element has the same for attribute'
+      },
+      'duplicated_id_attribute': {
+        'issueID': 'duplicateID',
+        'quality': 1,
+        'what': 'Element id attribute value is not unique'
+      },
+      'elements_not_allowed_in_head': {
+        'issueID': 'headElementsBad',
+        'quality': 1,
+        'what': 'Elements in the head are not allowed there'
+      },
+      'empty_button_description': {
+        'issueID': 'buttonNoContent',
+        'quality': 1,
+        'what': 'button element has no visible accessible name'
+      },
+      'empty_heading': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Element is a heading but is empty'
+      },
+      'empty_label_element': {
+        'issueID': 'labelEmpty',
+        'quality': 1,
+        'what': 'Element has no content'
       },
       'empty_link_element': {
         'issueID': 'ignorable',
@@ -2765,11 +2980,21 @@ const rulesData = {
         'what': 'Element has no visible and accessible name',
         'whyIgnore': 'invalid'
       },
+      'empty_title_attribute': {
+        'issueID': 'titleEmpty',
+        'quality': 0.5,
+        'what': 'title attribute of the element is empty or only whitespace'
+      },
       'fieldset_no_legend': {
         'issueID': 'ignorable',
         'quality': 1,
         'what': 'First child element of the element is not a legend',
         'whyIgnore': 'duplicative'
+      },
+      'flash_content': {
+        'issueID': 'flash',
+        'quality': 1,
+        'what': 'Page contains Adobe Flash content'
       },
       'flickering': {
         'issueID': 'ignorable',
@@ -2777,11 +3002,156 @@ const rulesData = {
         'what': 'Excessive flashing may exist',
         'whyIgnore': 'speculative'
       },
+      'font_style_italic': {
+        'issueID': 'allItalics',
+        'quality': 1,
+        'what': 'Text longer than 80 characters has an italic font style'
+      },
+      'general_alt': {
+        'issueID': 'imageTextRisk',
+        'quality': 1,
+        'what': 'Image may be better described by a revised text alternative and an aria-label attribute'
+      },
+      'group_elements_name_attribute': {
+        'issueID': 'fieldSetRisk',
+        'quality': 1,
+        'what': 'Element is an input with a name attribute but has no fieldset parent'
+      },
+      'h1_must_be': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains no h1 element'
+      },
+      'headings_hierarchy': {
+        'issueID': 'headingStructure',
+        'quality': 1,
+        'what': 'Heading level is illogical in its context'
+      },
+      'headings_sibling_unique': {
+        'issueID': 'headingConfusion',
+        'quality': 1,
+        'what': 'Sibling headings have the same accessible name'
+      },
+      'horizontal_rule': {
+        'issueID': 'hrConfusionRisk',
+        'quality': 1,
+        'what': 'hr element has neither a true aria-hidden attribute nor a presentation role'
+      },
+      'html_lang_attrE': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'lang attribute of the html element is empty'
+      },
+      'html_lang_attrN': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'lang attribute missing from the html element'
+      },
+      'html_lang_attrP': {
+        'issueID': 'pageLanguageBad',
+        'quality': 1,
+        'what': 'value of the lang attribute of the html element has too many segments'
+      },
+      'identify_input_purpose': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute has an invalid value'
+      },
+      'img_adjacent_duplicate_text_link': {
+        'issueID': 'linkPair',
+        'quality': 1,
+        'what': 'Link and an adjacent link are logically 1 link but are not combined'
+      },
+      'img_alt_duplicate_text_link': {
+        'issueID': 'imageTextRedundant',
+        'quality': 1,
+        'what': 'Text alternative of the image duplicates the text of the enclosing link'
+      },
+      'img_empty_alt_in_link': {
+        'issueID': 'imageLinkNoText',
+        'quality': 1,
+        'what': 'Element is an image in a link but has no text alternative'
+      },
+      'img_empty_alt_with_empty_title': {
+        'issueID': 'decorativeTitle',
+        'quality': 1,
+        'what': 'Element has an empty alt attribute but a nonempty title attribute'
+      },
+      'incorrect_label_placement': {
+        'issueID': 'labelConfusionRisk',
+        'quality': 1,
+        'what': 'label element precedes the labeled radio button or checkbox'
+      },
+      'incorrect_technique_for_hiding_content': {
+        'issueID': 'negativeIndent',
+        'quality': 1,
+        'what': 'Element has a text-indent style with a negative value'
+      },
+      'input_image_missing_alt': {
+        'issueID': 'imageInputNoText',
+        'quality': 1,
+        'what': 'Element is an image input but its text alternative is missing or empty'
+      },
+      'invalid_attribute_dir_value': {
+        'issueID': 'dirBad',
+        'quality': 1,
+        'what': 'Element has a dir attribute with a value other than rtl, ltr, or auto'
+      },
+      'label_duplicated_content_title': {
+        'issueID': 'titleRedundant',
+        'quality': 1,
+        'what': 'Element has an accessible name identical to the value of its title attribute'
+      },
+      'label_implicitly_associatedM': {
+        'issueID': 'multipleLabelees',
+        'quality': 1,
+        'what': 'Element contains more than 1 labelable element.'
+      },
+      'label_implicitly_associatedW': {
+        'issueID': 'labelEmpty',
+        'quality': 1,
+        'what': 'Element has no labeling content except whitespace'
+      },
+      'label_inappropriate_associationM': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'Element referenced by the for attribute is missing'
+      },
+      'label_inappropriate_associationN': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'Element referenced by the for attribute is not a form control'
+      },
+      'label_visually_hidden_only': {
+        'issueID': 'controlLabelInvisible',
+        'quality': 1,
+        'what': 'Form control has a label but it is not visible'
+      },
+      'legend_first_child_of_fieldset': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'First child element of the element is not a legend'
+      },
+      'link_button_space_key': {
+        'issueID': 'customKeyboardRisk',
+        'quality': 1,
+        'what': 'Element has a button role but fails to be keyboard-operable?'
+      },
+      'link_with_unclear_purpose': {
+        'issueID': 'linkVaguenessRisk',
+        'quality': 1,
+        'what': 'Element is a link but has vague or generic content'
+      },
       'links_language_destination': {
         'issueID': 'ignorable',
         'quality': 1,
         'what': 'Link destination has a named host and may be in an unexpected language',
         'whyIgnore': 'speculative'
+      },
+      'links_new_window_mark': {
+        'issueID': 'newTabSurpriseRisk',
+        'quality': 1,
+        'what': 'Indicator that the link opens a new window or tab is missing?'
       },
       'links_not_visually_evident_without_color_vision': {
         'issueID': 'ignorable',
@@ -2795,11 +3165,26 @@ const rulesData = {
         'what': 'Links with the same text content have different destination URLs',
         'whyIgnore': 'invalid'
       },
+      'main_element_only_one': {
+        'issueID': 'mainNot1',
+        'quality': 1,
+        'what': 'Page has more than 1 main landmark'
+      },
+      'main_landmark_must_be_top_level': {
+        'issueID': 'mainNotTop',
+        'quality': 1,
+        'what': 'Element with a main role is not at the top level'
+      },
       'meaningful_content_sequence': {
         'issueID': 'ignorable',
         'quality': 0,
         'what': 'The content sequence may fail to be meaningful',
         'whyIgnore': 'speculative'
+      },
+      'minimum_font_size': {
+        'issueID': 'fontSmall',
+        'quality': 1,
+        'what': 'Font size is smaller than 10 pixels'
       },
       'missing_alt_attribute': {
         'issueID': 'ignorable',
@@ -2807,525 +3192,10 @@ const rulesData = {
         'what': 'Image has no alt attribute',
         'whyIgnore': 'invalid'
       },
-      'motion_actuation': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Page listens for device motion or rotation',
-        'whyIgnore': 'speculative'
-      },
-      'overlay': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Page contains a commercial overlay modifier that may fail or invalidate test results',
-        'whyIgnore': 'unreliable'
-      },
-      'object_missing_body': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'object element has no body to act as a text alternative',
-        'whyIgnore': 'invalid'
-      },
-      'reflow': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Page may require horizontal scrolling',
-        'whyIgnore': 'speculative'
-      },
-      'text_color_convey_information': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'Color may give information not given also by text',
-        'whyIgnore': 'speculative'
-      },
-      'duplicated_id_attribute': {
-        'issueID': 'duplicateID',
-        'quality': 1,
-        'what': 'Element id attribute value is not unique'
-      },
-      'input_image_missing_alt': {
-        'issueID': 'imageInputNoText',
-        'quality': 1,
-        'what': 'Element is an image input but its text alternative is missing or empty'
-      },
-      'alt_text_include_filename': {
-        'issueID': 'imageTextBad',
-        'quality': 1,
-        'what': 'Image text alternative includes a filename'
-      },
-      'general_alt': {
-        'issueID': 'imageTextRisk',
-        'quality': 1,
-        'what': 'Image may be better described by a revised text alternative and an aria-label attribute'
-      },
-      'alt_color_convey_information': {
-        'issueID': 'imageTextRisk',
-        'quality': 1,
-        'what': 'Text alternative fails to give information provided by colors?'
-      },
-      'html_lang_attrN': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'lang attribute missing from the html element'
-      },
-      'html_lang_attrE': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'lang attribute of the html element is empty'
-      },
-      'html_lang_attrP': {
-        'issueID': 'pageLanguageBad',
-        'quality': 1,
-        'what': 'value of the lang attribute of the html element has too many segments'
-      },
-      'aria_role_dialog': {
-        'issueID': 'dialogNoText',
-        'quality': 1,
-        'what': 'Element has a dialog role but has no accessible name'
-      },
-      'object_general_alt': {
-        'issueID': 'objectTextRisk',
-        'quality': 1,
-        'what': 'Text of the object may better explain it if revised'
-      },
-      'audio_alternative': {
-        'issueID': 'objectAudioRisk',
-        'quality': 1,
-        'what': 'Element is inferior to an audio element if it plays audio'
-      },
-      'applet_missing_alt': {
-        'issueID': 'appletNoText',
-        'quality': 1,
-        'what': 'Text alternative of the applet is missing or empty'
-      },
-      'applet_missing_body': {
-        'issueID': 'appletNoText',
-        'quality': 1,
-        'what': 'Content of the applet is missing or empty'
-      },
-      'a_area_missing_alt': {
-        'issueID': 'imageMapAreaNoText',
-        'quality': 1,
-        'what': 'Text alternative of the element is missing or empty'
-      },
-      'link_button_space_key': {
-        'issueID': 'customKeyboardRisk',
-        'quality': 1,
-        'what': 'Element has a button role but fails to be keyboard-operable?'
-      },
-      'broken_same_page_link': {
-        'issueID': 'internalLinkBroken',
-        'quality': 1,
-        'what': 'Same-page destination of the link does not exist'
-      },
-      'label_inappropriate_associationN': {
-        'issueID': 'labelForBad',
-        'quality': 1,
-        'what': 'Element referenced by the for attribute is not a form control'
-      },
-      'aria_describedby_association': {
-        'issueID': 'descriptionBadID',
-        'quality': 1,
-        'what': 'aria-describedby attribute references a missing or empty element'
-      },
-      'incorrect_label_placement': {
-        'issueID': 'labelConfusionRisk',
-        'quality': 1,
-        'what': 'label element precedes the labeled radio button or checkbox'
-      },
-      'label_inappropriate_associationM': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'Element referenced by the for attribute is missing'
-      },
-      'aria_labelledby_associationN': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'Element referenced by the aria-labelledby attribute is missing'
-      },
-      'aria_labelledby_associationE': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute refers to no element'
-      },
-      'role_application': {
-        'issueID': 'applicationRisk',
-        'quality': 1,
-        'what': 'Element has an application role'
-      },
-      'rtl_content': {
-        'issueID': 'directionRisk',
-        'quality': 1,
-        'what': 'Direction specified as right to left'
-      },
-      'click_verb': {
-        'issueID': 'clickOnly',
-        'quality': 1,
-        'what': 'Mouse-specific word click is in the element text'
-      },
-      'img_empty_alt_in_link': {
-        'issueID': 'imageLinkNoText',
-        'quality': 1,
-        'what': 'Element is an image in a link but has no text alternative'
-      },
-      'unclear_anchor_uri': {
-        'issueID': 'destinationNotURL',
-        'quality': 1,
-        'what': 'Link destination is #, a script, or empty'
-      },
-      'unclear_uri_on_a': {
-        'issueID': 'destinationNotURL',
-        'quality': 1,
-        'what': 'Link destination is #, a script, or empty'
-      },
       'missing_href_on_a': {
         'issueID': 'destinationLink',
         'quality': 1,
         'what': 'Link has no href attribute'
-      },
-      'title_for_abbr': {
-        'issueID': 'abbreviationNoTitle',
-        'quality': 1,
-        'what': 'Element is an abbr but its defining title attribute is missing or empty'
-      },
-      'content_editable_missing_attributes': {
-        'issueID': 'editableHow',
-        'quality': 1,
-        'what': 'Element has a true contenteditable attribute but no aria-multiline or labeling attribute'
-      },
-      'img_adjacent_duplicate_text_link': {
-        'issueID': 'linkPair',
-        'quality': 1,
-        'what': 'Link and an adjacent link are logically 1 link but are not combined'
-      },
-      'links_new_window_mark': {
-        'issueID': 'newTabSurpriseRisk',
-        'quality': 1,
-        'what': 'Indicator that the link opens a new window or tab is missing?'
-      },
-      'select_initial_option': {
-        'issueID': 'preselectedOption',
-        'quality': 1,
-        'what': 'No option has been made the default with a selected attribute'
-      },
-      'empty_button_description': {
-        'issueID': 'buttonNoContent',
-        'quality': 1,
-        'what': 'button element has no visible accessible name'
-      },
-      'accessible_svg': {
-        'issueID': 'svgImageNoText',
-        'quality': 1,
-        'what': 'Element has no title, description, text, attribute label, or role description'
-      },
-      'accessible_svgI': {
-        'issueID': 'svgLabelID',
-        'quality': 1,
-        'what': 'Element references a nonexisting element as its label'
-      },
-      'orientation': {
-        'issueID': 'cssBansPageRotate',
-        'quality': 1,
-        'what': 'CSS media query specifies an orientation'
-      },
-      'orientationT': {
-        'issueID': 'orientationRisk',
-        'quality': 1,
-        'what': 'Failure to read a stylesheet prevents testing for orientation violations'
-      },
-      'zoom_disabled': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'Element specifies a minimum or maximum scale or prohibits zooming'
-      },
-      'minimum_font_size': {
-        'issueID': 'fontSmall',
-        'quality': 1,
-        'what': 'Font size is smaller than 10 pixels'
-      },
-      'title_iframe': {
-        'issueID': 'iframeTitleBad',
-        'quality': 1,
-        'what': 'Element is an iframe or object but its title attribute is missing or empty'
-      },
-      'unsupported_role_on_element': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element has a role that is not valid for it'
-      },
-      'invalid_attribute_dir_value': {
-        'issueID': 'dirBad',
-        'quality': 1,
-        'what': 'Element has a dir attribute with a value other than rtl, ltr, or auto'
-      },
-      'misused_input_attribute': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Element has an attribute that is not valid for input elements'
-      },
-      'identify_input_purpose': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute has an invalid value'
-      },
-      'misused_required_attribute': {
-        'issueID': 'requirementBad',
-        'quality': 1,
-        'what': 'Requirement status of the element is invalid'
-      },
-      'misused_required_attributeR': {
-        'issueID': 'requirementRedundant',
-        'quality': 1,
-        'what': 'Requirement status of the element is stated twice'
-      },
-      'color_contrast_state_pseudo_classes_abstract3': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Text has contrast less than 3:1'
-      },
-      'color_contrast_state_pseudo_classes_abstract4': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Text has contrast less than 4.5:1'
-      },
-      'color_contrast_aaa4': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Text has contrast less than 4.5:1'
-      },
-      'color_contrast_aaa7': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Text has contrast less than 7:1'
-      },
-      'color_contrast_state_pseudo_classes_abstractF': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Fixed position of the element prevents contrast measurement'
-      },
-      'color_contrast_state_pseudo_classes_abstractB': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Transparent background color of the element prevents contrast measurement'
-      },
-      'color_contrast_aaaB': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Transparent background color of the element prevents contrast measurement'
-      },
-      'empty_heading': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Element is a heading but is empty'
-      },
-      'img_alt_duplicate_text_link': {
-        'issueID': 'imageTextRedundant',
-        'quality': 1,
-        'what': 'Text alternative of the image duplicates the text of the enclosing link'
-      },
-      'img_empty_alt_with_empty_title': {
-        'issueID': 'decorativeTitle',
-        'quality': 1,
-        'what': 'Element has an empty alt attribute but a nonempty title attribute'
-      },
-      'label_duplicated_content_title': {
-        'issueID': 'titleRedundant',
-        'quality': 1,
-        'what': 'Element has an accessible name identical to the value of its title attribute'
-      },
-      'empty_title_attribute': {
-        'issueID': 'titleEmpty',
-        'quality': 0.5,
-        'what': 'title attribute of the element is empty or only whitespace'
-      },
-      'page_titleU': {
-        'issueID': 'pageTitleBad',
-        'quality': 1,
-        'what': 'Page title does not identify the contents or purpose of the page'
-      },
-      'page_titleN': {
-        'issueID': 'pageTitle',
-        'quality': 1,
-        'what': 'Page title is missing or empty'
-      },
-      'elements_not_allowed_in_head': {
-        'issueID': 'headElementsBad',
-        'quality': 1,
-        'what': 'Elements in the head are not allowed there'
-      },
-      'headings_hierarchy': {
-        'issueID': 'headingStructure',
-        'quality': 1,
-        'what': 'Heading level is illogical in its context'
-      },
-      'headings_sibling_unique': {
-        'issueID': 'headingConfusion',
-        'quality': 1,
-        'what': 'Sibling headings have the same accessible name'
-      },
-      'no_headings': {
-        'issueID': 'headingNone',
-        'quality': 1,
-        'what': 'Page has no headings'
-      },
-      'h1_must_be': {
-        'issueID': 'h1Not1',
-        'quality': 1,
-        'what': 'Page contains no h1 element'
-      },
-      'horizontal_rule': {
-        'issueID': 'hrConfusionRisk',
-        'quality': 1,
-        'what': 'hr element has neither a true aria-hidden attribute nor a presentation role'
-      },
-      'group_elements_name_attribute': {
-        'issueID': 'fieldSetRisk',
-        'quality': 1,
-        'what': 'Element is an input with a name attribute but has no fieldset parent'
-      },
-      'legend_first_child_of_fieldset': {
-        'issueID': 'legendMissing',
-        'quality': 1,
-        'what': 'First child element of the element is not a legend'
-      },
-      'table_missing_descriptionC': {
-        'issueID': 'tableCaption',
-        'quality': 1,
-        'what': 'Element contains no caption element'
-      },
-      'table_missing_descriptionE': {
-        'issueID': 'tableCaption',
-        'quality': 1,
-        'what': 'Element contains a caption element, but it is empty'
-      },
-      'table_caption_summary_identical': {
-        'issueID': 'tableCapSum',
-        'quality': 1,
-        'what': 'Element has a summary attribute identical to its caption element'
-      },
-      'table_missing_descriptionS': {
-        'issueID': 'tableSum',
-        'quality': 1,
-        'what': 'Element has a summary attribute, but it is empty'
-      },
-      'table_missing_descriptionLM': {
-        'issueID': 'tableLabelID',
-        'quality': 1,
-        'what': 'Element has a broken aria-labelledby ID'
-      },
-      'table_missing_descriptionLE': {
-        'issueID': 'tableLabelID',
-        'quality': 1,
-        'what': 'Element has an aria-labelledby attribute, but it is empty'
-      },
-      'table_missing_descriptionDM': {
-        'issueID': 'tableDescriptionID',
-        'quality': 1,
-        'what': 'Element has a broken aria-describedby ID'
-      },
-      'table_missing_descriptionDE': {
-        'issueID': 'tableDescriptionID',
-        'quality': 1,
-        'what': 'Element has an aria-describedby attribute, but it is empty'
-      },
-      'table_row_and_column_headersRC': {
-        'issueID': 'tableHeaderless',
-        'quality': 1,
-        'what': 'None of the cells in the table is a header'
-      },
-      'table_row_and_column_headersH': {
-        'issueID': 'tableHead',
-        'quality': 1,
-        'what': 'Element contains no thead element'
-      },
-      'table_row_and_column_headersB': {
-        'issueID': 'tableBody',
-        'quality': 1,
-        'what': 'Element contains no tbody element'
-      },
-      'label_visually_hidden_only': {
-        'issueID': 'controlLabelInvisible',
-        'quality': 1,
-        'what': 'Form control has a label but it is not visible'
-      },
-      'outline_zero': {
-        'issueID': 'focusIndicationBad',
-        'quality': 1,
-        'what': 'Element may get invisibly focused because its outline has no thickness'
-      },
-      'font_style_italic': {
-        'issueID': 'allItalics',
-        'quality': 1,
-        'what': 'Text longer than 80 characters has an italic font style'
-      },
-      'main_landmark_must_be_top_level': {
-        'issueID': 'mainNotTop',
-        'quality': 1,
-        'what': 'Element with a main role is not at the top level'
-      },
-      'main_element_only_one': {
-        'issueID': 'mainNot1',
-        'quality': 1,
-        'what': 'Page has more than 1 main landmark'
-      },
-      'contentinfo_landmark_only_one': {
-        'issueID': 'footerNot1',
-        'quality': 1,
-        'what': 'Page has more than 1 contentinfo landmark (footer)'
-      },
-      'navigation_landmark_restrictions': {
-        'issueID': 'landmarkInNav',
-        'quality': 1,
-        'what': 'Element with a navigation role contains a landmark other than region and search'
-      },
-      'misused_aria_on_focusable_element': {
-        'issueID': 'focusableHidden',
-        'quality': 1,
-        'what': 'Visible focusable element has a true aria-hidden attribute or a presentation role'
-      },
-      'label_implicitly_associatedM': {
-        'issueID': 'multipleLabelees',
-        'quality': 1,
-        'what': 'Element contains more than 1 labelable element.'
-      },
-      'aria_hidden': {
-        'issueID': 'hideFailureRisk',
-        'quality': 1,
-        'what': 'aria-hidden attribute has the value false'
-      },
-      'aria_hidden_false': {
-        'issueID': 'hideFailureRisk',
-        'quality': 1,
-        'what': 'aria-hidden attribute has the value false'
-      },
-      'incorrect_technique_for_hiding_content': {
-        'issueID': 'negativeIndent',
-        'quality': 1,
-        'what': 'Element has a text-indent style with a negative value'
-      },
-      'duplicated_for_attribute': {
-        'issueID': 'labelNot1',
-        'quality': 1,
-        'what': 'More than 1 label element has the same for attribute'
-      },
-      'missing_labelM': {
-        'issueID': 'labelNot1',
-        'quality': 1,
-        'what': 'More than 1 label element refers to the element'
-      },
-      'empty_label_element': {
-        'issueID': 'labelEmpty',
-        'quality': 1,
-        'what': 'Element has no content'
-      },
-      'label_implicitly_associatedW': {
-        'issueID': 'labelEmpty',
-        'quality': 1,
-        'what': 'Element has no labeling content except whitespace'
-      },
-      'aria_labelledby_association_empty_element': {
-        'issueID': 'labelEmpty',
-        'quality': 1,
-        'what': 'Referenced label has no content'
       },
       'missing_label': {
         'issueID': 'labelRisk',
@@ -3337,95 +3207,77 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has no id attribute for an explicit label to reference'
       },
+      'missing_labelM': {
+        'issueID': 'labelNot1',
+        'quality': 1,
+        'what': 'More than 1 label element refers to the element'
+      },
       'missing_labelN': {
         'issueID': 'labelRisk',
         'quality': 1,
         'what': 'Element has an id attribute but no explicit label references it'
-      },
-      'link_with_unclear_purpose': {
-        'issueID': 'linkVaguenessRisk',
-        'quality': 1,
-        'what': 'Element is a link but has vague or generic content'
-      },
-      'animationM': {
-        'issueID': 'spontaneousMotion',
-        'quality': 1,
-        'what': 'Animation fails to provide a pause, stop, or hide mechanism?'
-      },
-      'animationD': {
-        'issueID': 'animationLong',
-        'quality': 1,
-        'what': 'Animation lasts more than 5 seconds'
-      },
-      'animationI': {
-        'issueID': 'animationLong',
-        'quality': 1,
-        'what': 'Animation is repetitive'
-      },
-      'blink_element': {
-        'issueID': 'blink',
-        'quality': 1,
-        'what': 'Element is blink'
-      },
-      'autoplay_audio_video': {
-        'issueID': 'autoplay',
-        'quality': 1,
-        'what': 'Element plays automatically'
-      },
-      'no_meta_http_equiv_refresh': {
-        'issueID': 'refresh',
-        'quality': 1,
-        'what': 'Element forces a page reload'
-      },
-      'positive_tabindex': {
-        'issueID': 'tabIndexPositive',
-        'quality': 1,
-        'what': 'Element has a positive tabIndex value'
-      },
-      'accessible_svgT': {
-        'issueID': 'tabIndexInt',
-        'quality': 1,
-        'what': 'Element has a non-integer tabindex attribute'
-      },
-      'misused_tabindex_attribute': {
-        'issueID': 'tabIndexExtra',
-        'quality': 1,
-        'what': 'Element has an implicit tabIndex value 0, but also has a tabindex attribute'
-      },
-      'audio_video_captions': {
-        'issueID': 'avNoText',
-        'quality': 1,
-        'what': 'Element is audio or video but contains no caption track element'
-      },
-      'audio_alternativeT': {
-        'issueID': 'audioNoText',
-        'quality': 1,
-        'what': 'Element contains no track element'
-      },
-      'audio_alternativeA': {
-        'issueID': 'audioTextRisk',
-        'quality': 1,
-        'what': 'Referenced description or another text alternative is missing?'
-      },
-      'video_audio_descriptions': {
-        'issueID': 'videoAlternative',
-        'quality': 1,
-        'what': 'Element has neither an audio source nor a description track'
-      },
-      'position_sticky': {
-        'issueID': 'positionSticky',
-        'quality': 1,
-        'what': 'Element has a sticky position'
       },
       'missing_submit_button': {
         'issueID': 'submitButton',
         'quality': 1,
         'what': 'Element is a form but contains no input or button element for submission'
       },
-      'flash_content': {
-        'issueID': 'flash',
+      'misused_aria_on_focusable_element': {
+        'issueID': 'focusableHidden',
         'quality': 1,
-        'what': 'Page contains Adobe Flash content'
+        'what': 'Visible focusable element has a true aria-hidden attribute or a presentation role'
+      },
+      'misused_input_attribute': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Element has an attribute that is not valid for input elements'
+      },
+      'misused_required_attribute': {
+        'issueID': 'requirementBad',
+        'quality': 1,
+        'what': 'Requirement status of the element is invalid'
+      },
+      'misused_required_attributeR': {
+        'issueID': 'requirementRedundant',
+        'quality': 1,
+        'what': 'Requirement status of the element is stated twice'
+      },
+      'misused_tabindex_attribute': {
+        'issueID': 'tabIndexExtra',
+        'quality': 1,
+        'what': 'Element has an implicit tabIndex value 0, but also has a tabindex attribute'
+      },
+      'motion_actuation': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Page listens for device motion or rotation',
+        'whyIgnore': 'speculative'
+      },
+      'navigation_landmark_restrictions': {
+        'issueID': 'landmarkInNav',
+        'quality': 1,
+        'what': 'Element with a navigation role contains a landmark other than region and search'
+      },
+      'no_headings': {
+        'issueID': 'headingNone',
+        'quality': 1,
+        'what': 'Page has no headings'
+      },
+      'no_meta_http_equiv_refresh': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Element forces a page reload'
+      },
+      'object_general_alt': {
+        'issueID': 'objectTextRisk',
+        'quality': 1,
+        'what': 'Text of the object may better explain it if revised'
+      },
+      'object_missing_body': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'object element has no body to act as a text alternative',
+        'whyIgnore': 'invalid'
       },
       'obsolete_html_attributes': {
         'issueID': 'attributeObsolete',
@@ -3437,38 +3289,314 @@ const rulesData = {
         'quality': 1,
         'what': 'Element is obsolete'
       },
-      'audio_alternativeB': {
-        'issueID': 'elementObsolete',
+      'orientation': {
+        'issueID': 'cssBansPageRotate',
         'quality': 1,
-        'what': 'Element is obsolete and inferior to an audio element'
+        'what': 'CSS media query specifies an orientation'
       },
-      'captcha_google': {
-        'issueID': 'captcha2',
+      'orientationT': {
+        'issueID': 'orientationRisk',
         'quality': 1,
-        'what': 'Page employs Google CAPTCHA version 2'
+        'what': 'Failure to read a stylesheet prevents testing for orientation violations'
+      },
+      'outline_zero': {
+        'issueID': 'focusIndicationBad',
+        'quality': 1,
+        'what': 'Element may get invisibly focused because its outline has no thickness'
+      },
+      'overlay': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Page contains a commercial overlay modifier that may fail or invalidate test results',
+        'whyIgnore': 'unreliable'
+      },
+      'page_titleN': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'Page title is missing or empty'
+      },
+      'page_titleU': {
+        'issueID': 'pageTitleBad',
+        'quality': 1,
+        'what': 'Page title does not identify the contents or purpose of the page'
+      },
+      'position_sticky': {
+        'issueID': 'positionSticky',
+        'quality': 1,
+        'what': 'Element has a sticky position'
+      },
+      'positive_tabindex': {
+        'issueID': 'tabIndexPositive',
+        'quality': 1,
+        'what': 'Element has a positive tabIndex value'
+      },
+      'reflow': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Page may require horizontal scrolling',
+        'whyIgnore': 'speculative'
+      },
+      'role_application': {
+        'issueID': 'applicationRisk',
+        'quality': 1,
+        'what': 'Element has an application role'
+      },
+      'rtl_content': {
+        'issueID': 'directionRisk',
+        'quality': 1,
+        'what': 'Direction specified as right to left'
+      },
+      'select_initial_option': {
+        'issueID': 'preselectedOption',
+        'quality': 1,
+        'what': 'No option has been made the default with a selected attribute'
+      },
+      'table_caption_summary_identical': {
+        'issueID': 'tableCapSum',
+        'quality': 1,
+        'what': 'Element has a summary attribute identical to its caption element'
+      },
+      'table_missing_descriptionC': {
+        'issueID': 'tableCaption',
+        'quality': 1,
+        'what': 'Element contains no caption element'
+      },
+      'table_missing_descriptionDE': {
+        'issueID': 'tableDescriptionID',
+        'quality': 1,
+        'what': 'Element has an aria-describedby attribute, but it is empty'
+      },
+      'table_missing_descriptionDM': {
+        'issueID': 'tableDescriptionID',
+        'quality': 1,
+        'what': 'Element has a broken aria-describedby ID'
+      },
+      'table_missing_descriptionE': {
+        'issueID': 'tableCaption',
+        'quality': 1,
+        'what': 'Element contains a caption element, but it is empty'
+      },
+      'table_missing_descriptionLE': {
+        'issueID': 'tableLabelID',
+        'quality': 1,
+        'what': 'Element has an aria-labelledby attribute, but it is empty'
+      },
+      'table_missing_descriptionLM': {
+        'issueID': 'tableLabelID',
+        'quality': 1,
+        'what': 'Element has a broken aria-labelledby ID'
+      },
+      'table_missing_descriptionS': {
+        'issueID': 'tableSum',
+        'quality': 1,
+        'what': 'Element has a summary attribute, but it is empty'
+      },
+      'table_row_and_column_headersB': {
+        'issueID': 'tableBody',
+        'quality': 1,
+        'what': 'Element contains no tbody element'
+      },
+      'table_row_and_column_headersH': {
+        'issueID': 'tableHead',
+        'quality': 1,
+        'what': 'Element contains no thead element'
+      },
+      'table_row_and_column_headersRC': {
+        'issueID': 'tableHeaderless',
+        'quality': 1,
+        'what': 'None of the cells in the table is a header'
+      },
+      'text_color_convey_information': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Color may give information not given also by text',
+        'whyIgnore': 'speculative'
+      },
+      'title_for_abbr': {
+        'issueID': 'abbreviationNoTitle',
+        'quality': 1,
+        'what': 'Element is an abbr but its defining title attribute is missing or empty'
+      },
+      'title_iframe': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'Element is an iframe or object but its title attribute is missing or empty'
+      },
+      'unclear_anchor_uri': {
+        'issueID': 'destinationNotURL',
+        'quality': 1,
+        'what': 'Link destination is #, a script, or empty'
+      },
+      'unclear_uri_on_a': {
+        'issueID': 'destinationNotURL',
+        'quality': 1,
+        'what': 'Link destination is #, a script, or empty'
+      },
+      'unsupported_role_on_element': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element has a role that is not valid for it'
+      },
+      'video_audio_descriptions': {
+        'issueID': 'videoAlternative',
+        'quality': 1,
+        'what': 'Element has neither an audio source nor a description track'
+      },
+      'zoom_disabled': {
+        'issueID': 'metaBansZoom',
+        'quality': 1,
+        'what': 'Element specifies a minimum or maximum scale or prohibits zooming'
       }
     },
     'variable': {}
   },
   'axe': {
     'invariant': {
+      'accesskeys': {
+        'issueID': 'accessKeyDuplicate',
+        'quality': 1,
+        'what': 'accesskey attribute value is not unique'
+      },
+      'area-alt': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'Element is an active area element but has no text alternative'
+      },
+      'aria-allowed-attr': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute is invalid for the role of its element'
+      },
+      'aria-allowed-role': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'ARIA role is not appropriate for the element'
+      },
+      'aria-command-name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'ARIA command has no accessible name'
+      },
+      'aria-dialog-name': {
+        'issueID': 'dialogNoText',
+        'quality': 1,
+        'what': 'ARIA dialog or alertdialog node has no accessible name'
+      },
+      'aria-hidden-focus': {
+        'issueID': 'focusableHidden',
+        'quality': 1,
+        'what': 'ARIA hidden element is focusable or contains a focusable element'
+      },
+      'aria-input-field-name': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'ARIA input field has no accessible name'
+      },
+      'aria-progressbar-name': {
+        'issueID': 'progressNoText',
+        'quality': 1,
+        'what': 'Progress bar has no accessible name'
+      },
+      'aria-prohibited-attr': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Element has an attribute that is not valid for the role of the element'
+      },
+      'aria-required-attr': {
+        'issueID': 'ariaMissing',
+        'quality': 1,
+        'what': 'Required ARIA attribute is not provided'
+      },
+      'aria-required-children': {
+        'issueID': 'descendantMissing',
+        'quality': 1,
+        'what': 'ARIA role contains no required child'
+      },
+      'aria-required-parent': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'ARIA role is not contained by a required parent'
+      },
+      'aria-roledescription': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'aria-roledescription is on an element with no semantic role'
+      },
+      'aria-roles': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'ARIA role has an invalid value'
+      },
+      'aria-toggle-field-name': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'Toggle field has no accessible name'
+      },
+      'aria-valid-attr': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute has an invalid name'
+      },
+      'aria-valid-attr-value': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute has an invalid value'
+      },
+      'audio-caption': {
+        'issueID': 'audioNoText',
+        'quality': 1,
+        'what': 'Element has no captions track'
+      },
+      'autocomplete-valid': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute is used incorrectly'
+      },
+      'avoid-inline-spacing': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'Inline text spacing is not adjustable with a custom stylesheet'
+      },
+      'blink': {
+        'issueID': 'blink',
+        'quality': 1,
+        'what': 'Element, blink, is deprecated'
+      },
+      'button-name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'button element has no discernible text'
+      },
+      'bypass': {
+        'issueID': 'skipRepeatedContent',
+        'quality': 1,
+        'what': 'Page has no means to bypass repeated blocks'
+      },
+      'color-contrast': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Element has insufficient color contrast'
+      },
+      'color-contrast-enhanced': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Element has insufficient color contrast (Level AAA)'
+      },
       'css-orientation-lock': {
         'issueID': 'ignorable',
         'quality': 0,
         'what': 'CSS media query locks display orientation',
         'whyIgnore': 'unreliable'
       },
-      'frame-tested': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Some content is in an iframe and so may not be testable for accessibility',
-        'whyIgnore': 'speculative'
+      'definition-list': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'List element dl has a child element other than properly ordered dt or dt group, script, template, or div'
       },
-      'hidden-content': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Some content is hidden and so may not be testable for accessibility',
-        'whyIgnore': 'speculative'
+      'document-title': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'Page contains no title element'
       },
       'duplicate-id': {
         'issueID': 'duplicateID',
@@ -3485,120 +3613,31 @@ const rulesData = {
         'quality': 1,
         'what': 'id attribute used in ARIA or in a label has a value that is not unique'
       },
-      'aria-progressbar-name': {
-        'issueID': 'progressNoText',
+      'empty-heading': {
+        'issueID': 'headingEmpty',
         'quality': 1,
-        'what': 'Progress bar has no accessible name'
+        'what': 'Heading is empty'
       },
-      'aria-input-field-name': {
-        'issueID': 'inputNoText',
+      'empty-table-header': {
+        'issueID': 'tableHeaderEmpty',
         'quality': 1,
-        'what': 'ARIA input field has no accessible name'
+        'what': 'Element is a table header but has no text'
       },
-      'aria-toggle-field-name': {
-        'issueID': 'inputNoText',
+      'focus-order-semantics': {
+        'issueID': 'focusableRole',
         'quality': 1,
-        'what': 'Toggle field has no accessible name'
+        'what': 'Focusable element has no active role'
       },
-      'input-image-alt': {
-        'issueID': 'imageButtonNoText',
+      'form-field-multiple-labels': {
+        'issueID': 'labelNot1',
         'quality': 1,
-        'what': 'Image button has no text alternative'
+        'what': 'Form field has multiple label elements'
       },
-      'image-alt': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'Image has no text alternative'
-      },
-      'role-img-alt': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'Element with role img has no text alternative'
-      },
-      'html-has-lang': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'html element has no lang attribute'
-      },
-      'html-lang-valid': {
-        'issueID': 'pageLanguageBad',
-        'quality': 1,
-        'what': 'html element has no valid value for the lang attribute'
-      },
-      'valid-lang': {
-        'issueID': 'languageChange',
-        'quality': 1,
-        'what': 'lang attribute has no valid value'
-      },
-      'aria-dialog-name': {
-        'issueID': 'dialogNoText',
-        'quality': 1,
-        'what': 'ARIA dialog or alertdialog node has no accessible name'
-      },
-      'object-alt': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'object element has no text alternative'
-      },
-      'area-alt': {
-        'issueID': 'imageMapAreaNoText',
-        'quality': 1,
-        'what': 'Element is an active area element but has no text alternative'
-      },
-      'link-name': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has no discernible text'
-      },
-      'identical-links-same-purpose': {
-        'issueID': 'linkConfusionRisk',
-        'quality': 1,
-        'what': 'Links with the same accessible name serve dissimilar purposes?'
-      },
-      'aria-command-name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'ARIA command has no accessible name'
-      },
-      'button-name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'button element has no discernible text'
-      },
-      'input-button-name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'Input button has no discernible text'
-      },
-      'aria-required-parent': {
-        'issueID': 'parentMissing',
-        'quality': 1,
-        'what': 'ARIA role is not contained by a required parent'
-      },
-      'aria-required-children': {
-        'issueID': 'descendantMissing',
-        'quality': 1,
-        'what': 'ARIA role contains no required child'
-      },
-      'svg-img-alt': {
-        'issueID': 'svgImageNoText',
-        'quality': 1,
-        'what': 'Element is svg and has an img role but has no text alternative'
-      },
-      'meta-viewport': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'Zooming and scaling are disabled'
-      },
-      'meta-viewport-large': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'User cannot zoom and scale the text up to 500%'
-      },
-      'avoid-inline-spacing': {
-        'issueID': 'horizontalSpacingFrozen',
-        'quality': 1,
-        'what': 'Inline text spacing is not adjustable with a custom stylesheet'
+      'frame-tested': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Some content is in an iframe and so may not be testable for accessibility',
+        'whyIgnore': 'speculative'
       },
       'frame-title': {
         'issueID': 'iframeTitleBad',
@@ -3610,115 +3649,211 @@ const rulesData = {
         'quality': 1,
         'what': 'Frame title attribute is not unique'
       },
-      'aria-roles': {
-        'issueID': 'roleBad',
+      'heading-order': {
+        'issueID': 'headingLevelSkip',
         'quality': 1,
-        'what': 'ARIA role has an invalid value'
+        'what': 'Heading levels do not increase by only one or their order is ambiguous'
       },
-      'aria-allowed-role': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'ARIA role is not appropriate for the element'
+      'hidden-content': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Some content is hidden and so may not be testable for accessibility',
+        'whyIgnore': 'speculative'
       },
-      'aria-prohibited-attr': {
-        'issueID': 'attributeBad',
+      'html-has-lang': {
+        'issueID': 'pageLanguage',
         'quality': 1,
-        'what': 'Element has an attribute that is not valid for the role of the element'
+        'what': 'html element has no lang attribute'
       },
-      'aria-required-attr': {
-        'issueID': 'ariaMissing',
+      'html-lang-valid': {
+        'issueID': 'pageLanguageBad',
         'quality': 1,
-        'what': 'Required ARIA attribute is not provided'
+        'what': 'html element has no valid value for the lang attribute'
       },
-      'aria-valid-attr': {
-        'issueID': 'ariaAttributeBad',
+      'identical-links-same-purpose': {
+        'issueID': 'linkConfusionRisk',
         'quality': 1,
-        'what': 'ARIA attribute has an invalid name'
+        'what': 'Links with the same accessible name serve dissimilar purposes?'
       },
-      'aria-valid-attr-value': {
-        'issueID': 'ariaAttributeBad',
+      'image-alt': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'ARIA attribute has an invalid value'
-      },
-      'aria-allowed-attr': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute is invalid for the role of its element'
-      },
-      'aria-roledescription': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'aria-roledescription is on an element with no semantic role'
-      },
-      'autocomplete-valid': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute is used incorrectly'
-      },
-      'color-contrast': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Element has insufficient color contrast'
-      },
-      'color-contrast-enhanced': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Element has insufficient color contrast (Level AAA)'
-      },
-      'empty-heading': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Heading is empty'
+        'what': 'Image has no text alternative'
       },
       'image-redundant-alt': {
         'issueID': 'imageTextRedundant',
         'quality': 1,
         'what': 'Text of a button or link is repeated in the image alternative'
       },
-      'document-title': {
-        'issueID': 'pageTitle',
+      'input-button-name': {
+        'issueID': 'buttonNoText',
         'quality': 1,
-        'what': 'Page contains no title element'
+        'what': 'Input button has no discernible text'
       },
-      'heading-order': {
-        'issueID': 'headingLevelSkip',
+      'input-image-alt': {
+        'issueID': 'imageButtonNoText',
         'quality': 1,
-        'what': 'Heading levels do not increase by only one or their order is ambiguous'
+        'what': 'Image button has no text alternative'
       },
-      'page-has-heading-one': {
-        'issueID': 'h1Not1',
+      'label': {
+        'issueID': 'controlNoText',
         'quality': 1,
-        'what': 'Page contains no level-one heading'
+        'what': 'Form element has no label'
       },
-      'p-as-heading': {
-        'issueID': 'pseudoHeadingRisk',
+      'label-content-name-mismatch': {
+        'issueID': 'visibleLabelNotInName',
         'quality': 1,
-        'what': 'Styled p element is misused as a heading?'
+        'what': 'Element visible text is not part of its accessible name'
+      },
+      'label-title-only': {
+        'issueID': 'controlLabelInvisible',
+        'quality': 1,
+        'what': 'Form control has no visible label'
+      },
+      'landmark-banner-is-top-level': {
+        'issueID': 'bannerNotTop',
+        'quality': 1,
+        'what': 'banner landmark is contained in another landmark'
+      },
+      'landmark-complementary-is-top-level': {
+        'issueID': 'asideNotTop',
+        'quality': 1,
+        'what': 'complementary landmark (aside) is contained in another landmark'
+      },
+      'landmark-contentinfo-is-top-level': {
+        'issueID': 'footerNotTop',
+        'quality': 1,
+        'what': 'contentinfo landmark (footer) is contained in another landmark'
+      },
+      'landmark-main-is-top-level': {
+        'issueID': 'mainNotTop',
+        'quality': 1,
+        'what': 'main landmark is contained in another landmark'
+      },
+      'landmark-no-duplicate-banner': {
+        'issueID': 'bannerNot1',
+        'quality': 1,
+        'what': 'Page has more than 1 banner landmark'
+      },
+      'landmark-no-duplicate-contentinfo': {
+        'issueID': 'footerNot1',
+        'quality': 1,
+        'what': 'Page has more than 1 contentinfo landmark (footer)'
+      },
+      'landmark-no-duplicate-main': {
+        'issueID': 'mainNot1',
+        'quality': 1,
+        'what': 'Page has more than 1 main landmark'
+      },
+      'landmark-one-main': {
+        'issueID': 'mainNone',
+        'quality': 1,
+        'what': 'page has no main landmark'
+      },
+      'landmark-unique': {
+        'issueID': 'landmarkConfusion',
+        'quality': 1,
+        'what': 'Landmark has a role and an accessible name that are identical to another'
+      },
+      'link-in-text-block': {
+        'issueID': 'linkIndication',
+        'quality': 1,
+        'what': 'Element is not distinct from surrounding text without reliance on color'
+      },
+      'link-name': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has no discernible text'
       },
       'list': {
         'issueID': 'listChild',
         'quality': 1,
         'what': 'List element ul or ol has a child element other than li, script, or template'
       },
-      'definition-list': {
-        'issueID': 'listChild',
-        'quality': 1,
-        'what': 'List element dl has a child element other than properly ordered dt or dt group, script, template, or div'
-      },
       'listitem': {
         'issueID': 'listItemOrphan',
         'quality': 1,
         'what': 'Element is not contained by a ul or ol element'
+      },
+      'meta-refresh': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Delayed refresh under 20 hours is used'
+      },
+      'meta-viewport': {
+        'issueID': 'metaBansZoom',
+        'quality': 1,
+        'what': 'Zooming and scaling are disabled'
+      },
+      'meta-viewport-large': {
+        'issueID': 'metaBansZoom',
+        'quality': 1,
+        'what': 'User cannot zoom and scale the text up to 500%'
+      },
+      'nested-interactive': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'Interactive controls are nested'
+      },
+      'no-autoplay-audio': {
+        'issueID': 'autoplay',
+        'quality': 1,
+        'what': 'Element plays automatically'
+      },
+      'object-alt': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'object element has no text alternative'
+      },
+      'p-as-heading': {
+        'issueID': 'pseudoHeadingRisk',
+        'quality': 1,
+        'what': 'Styled p element is misused as a heading?'
+      },
+      'page-has-heading-one': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains no level-one heading'
+      },
+      'presentation-role-conflict': {
+        'issueID': 'presentationGlobal',
+        'quality': 1,
+        'what': 'Element has a none/presentation role but is focusable or has a global ARIA state or property'
+      },
+      'region': {
+        'issueID': 'contentBeyondLandmarks',
+        'quality': 1,
+        'what': 'Some page content is not contained by landmarks'
+      },
+      'role-img-alt': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'Element with role img has no text alternative'
+      },
+      'scrollable-region-focusable': {
+        'issueID': 'keyboardScroll',
+        'quality': 1,
+        'what': 'Element is scrollable but has no keyboard access'
       },
       'select-name': {
         'issueID': 'selectNoText',
         'quality': 1,
         'what': 'Element is select but has no accessible name'
       },
-      'accesskeys': {
-        'issueID': 'accessKeyDuplicate',
+      'skip-link': {
+        'issueID': 'skipRepeatedContent',
         'quality': 1,
-        'what': 'accesskey attribute value is not unique'
+        'what': 'Skip-link target is not focusable or does not exist'
+      },
+      'svg-img-alt': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'Element is svg and has an img role but has no text alternative'
+      },
+      'tabindex': {
+        'issueID': 'tabIndexPositive',
+        'quality': 1,
+        'what': 'Positive tabIndex risks creating a confusing focus order'
       },
       'table-fake-caption': {
         'issueID': 'tableCaption',
@@ -3735,156 +3870,66 @@ const rulesData = {
         'quality': 1,
         'what': 'Table header refers to no cell'
       },
-      'empty-table-header': {
-        'issueID': 'tableHeaderEmpty',
+      'valid-lang': {
+        'issueID': 'languageChange',
         'quality': 1,
-        'what': 'Element is a table header but has no text'
-      },
-      'label': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'Form element has no label'
-      },
-      'label-title-only': {
-        'issueID': 'controlLabelInvisible',
-        'quality': 1,
-        'what': 'Form control has no visible label'
-      },
-      'label-content-name-mismatch': {
-        'issueID': 'visibleLabelNotInName',
-        'quality': 1,
-        'what': 'Element visible text is not part of its accessible name'
-      },
-      'nested-interactive': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'Interactive controls are nested'
-      },
-      'region': {
-        'issueID': 'contentBeyondLandmarks',
-        'quality': 1,
-        'what': 'Some page content is not contained by landmarks'
-      },
-      'landmark-contentinfo-is-top-level': {
-        'issueID': 'footerNotTop',
-        'quality': 1,
-        'what': 'contentinfo landmark (footer) is contained in another landmark'
-      },
-      'landmark-complementary-is-top-level': {
-        'issueID': 'asideNotTop',
-        'quality': 1,
-        'what': 'complementary landmark (aside) is contained in another landmark'
-      },
-      'landmark-main-is-top-level': {
-        'issueID': 'mainNotTop',
-        'quality': 1,
-        'what': 'main landmark is contained in another landmark'
-      },
-      'landmark-one-main': {
-        'issueID': 'mainNone',
-        'quality': 1,
-        'what': 'page has no main landmark'
-      },
-      'landmark-no-duplicate-main': {
-        'issueID': 'mainNot1',
-        'quality': 1,
-        'what': 'Page has more than 1 main landmark'
-      },
-      'landmark-no-duplicate-banner': {
-        'issueID': 'bannerNot1',
-        'quality': 1,
-        'what': 'Page has more than 1 banner landmark'
-      },
-      'landmark-banner-is-top-level': {
-        'issueID': 'bannerNotTop',
-        'quality': 1,
-        'what': 'banner landmark is contained in another landmark'
-      },
-      'landmark-no-duplicate-contentinfo': {
-        'issueID': 'footerNot1',
-        'quality': 1,
-        'what': 'Page has more than 1 contentinfo landmark (footer)'
-      },
-      'landmark-unique': {
-        'issueID': 'landmarkConfusion',
-        'quality': 1,
-        'what': 'Landmark has a role and an accessible name that are identical to another'
-      },
-      'focus-order-semantics': {
-        'issueID': 'focusableRole',
-        'quality': 1,
-        'what': 'Focusable element has no active role'
-      },
-      'aria-hidden-focus': {
-        'issueID': 'focusableHidden',
-        'quality': 1,
-        'what': 'ARIA hidden element is focusable or contains a focusable element'
-      },
-      'form-field-multiple-labels': {
-        'issueID': 'labelNot1',
-        'quality': 1,
-        'what': 'Form field has multiple label elements'
-      },
-      'link-in-text-block': {
-        'issueID': 'linkIndication',
-        'quality': 1,
-        'what': 'Element is not distinct from surrounding text without reliance on color'
-      },
-      'blink': {
-        'issueID': 'blink',
-        'quality': 1,
-        'what': 'Element, blink, is deprecated'
-      },
-      'no-autoplay-audio': {
-        'issueID': 'autoplay',
-        'quality': 1,
-        'what': 'Element plays automatically'
-      },
-      'meta-refresh': {
-        'issueID': 'refresh',
-        'quality': 1,
-        'what': 'Delayed refresh under 20 hours is used'
-      },
-      'tabindex': {
-        'issueID': 'tabIndexPositive',
-        'quality': 1,
-        'what': 'Positive tabIndex risks creating a confusing focus order'
-      },
-      'presentation-role-conflict': {
-        'issueID': 'presentationGlobal',
-        'quality': 1,
-        'what': 'Element has a none/presentation role but is focusable or has a global ARIA state or property'
-      },
-      'audio-caption': {
-        'issueID': 'audioNoText',
-        'quality': 1,
-        'what': 'Element has no captions track'
+        'what': 'lang attribute has no valid value'
       },
       'video-caption': {
         'issueID': 'videoNoText',
         'quality': 1,
         'what': 'Element has no captions'
-      },
-      'scrollable-region-focusable': {
-        'issueID': 'keyboardScroll',
-        'quality': 1,
-        'what': 'Element is scrollable but has no keyboard access'
-      },
-      'bypass': {
-        'issueID': 'skipRepeatedContent',
-        'quality': 1,
-        'what': 'Page has no means to bypass repeated blocks'
-      },
-      'skip-link': {
-        'issueID': 'skipRepeatedContent',
-        'quality': 1,
-        'what': 'Skip-link target is not focusable or does not exist'
       }
     },
     'variable': {}
   },
   'ed11y': {
     'invariant': {
+      'altDeadspace': {
+        'issueID': 'imageTextSpaces',
+        'quality': 1,
+        'what': 'alt attribute of the element contains only spacing characters'
+      },
+      'altEmptyLinked': {
+        'issueID': 'imageLinkNoText',
+        'quality': 1,
+        'what': 'Link name is only an image with no text alternative'
+      },
+      'altImageOf': {
+        'issueID': 'imageTextImage',
+        'quality': 1,
+        'what': 'alt attribute of the element states the image is an image'
+      },
+      'altImageOfLinked': {
+        'issueID': 'imageTextImage',
+        'quality': 1,
+        'what': 'alt attribute of the intra-link element states the image is an image instead of describing the link purpose'
+      },
+      'altLong': {
+        'issueID': 'imageTextLong',
+        'quality': 1,
+        'what': 'img alt value longer than 160 characters'
+      },
+      'altLongLinked': {
+        'issueID': 'imageTextLong',
+        'quality': 1,
+        'what': 'Linked img alt value longer than 160 characters'
+      },
+      'altMeaningless': {
+        'issueID': 'imageTextBad',
+        'quality': 1,
+        'what': 'Image text alternative is a common placeholder'
+      },
+      'altMeaninglessLinked': {
+        'issueID': 'imageTextBad',
+        'quality': 1,
+        'what': 'Image text alternative may describe the image but not the destination of its containing link'
+      },
+      'altMissing': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'img element has no alt attribute'
+      },
       'altNull': {
         'issueID': 'ignorable',
         'quality': 0,
@@ -3896,6 +3941,21 @@ const rulesData = {
         'quality': 0,
         'what': 'Name of the link enclosing the img element includes its alt attribute, so may be unclear',
         'whyIgnore': 'speculative'
+      },
+      'altURL': {
+        'issueID': 'imageTextBad',
+        'quality': 1,
+        'what': 'Image text alternative is a URL instead'
+      },
+      'altURLLinked': {
+        'issueID': 'linkImageTextURL',
+        'quality': 1,
+        'what': 'Text alternative of the link image is a URL'
+      },
+      'blockquoteIsShort': {
+        'issueID': 'blockQuoteShort',
+        'quality': 1,
+        'what': 'Block quote is shorter than 25 characters'
       },
       'embedAudio': {
         'issueID': 'ignorable',
@@ -3927,125 +3987,35 @@ const rulesData = {
         'what': 'Element is a visualization, so may lack a nonvisual equivalent',
         'whyIgnore': 'speculative'
       },
-      'altMissing': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'img element has no alt attribute'
-      },
-      'altDeadspace': {
-        'issueID': 'imageTextSpaces',
-        'quality': 1,
-        'what': 'alt attribute of the element contains only spacing characters'
-      },
-      'altImageOf': {
-        'issueID': 'imageTextImage',
-        'quality': 1,
-        'what': 'alt attribute of the element states the image is an image'
-      },
-      'altImageOfLinked': {
-        'issueID': 'imageTextImage',
-        'quality': 1,
-        'what': 'alt attribute of the intra-link element states the image is an image instead of describing the link purpose'
-      },
-      'altURL': {
-        'issueID': 'imageTextBad',
-        'quality': 1,
-        'what': 'Image text alternative is a URL instead'
-      },
-      'altMeaningless': {
-        'issueID': 'imageTextBad',
-        'quality': 1,
-        'what': 'Image text alternative is a common placeholder'
-      },
-      'altMeaninglessLinked': {
-        'issueID': 'imageTextBad',
-        'quality': 1,
-        'what': 'Image text alternative may describe the image but not the destination of its containing link'
-      },
-      'altLong': {
-        'issueID': 'imageTextLong',
-        'quality': 1,
-        'what': 'img alt value longer than 160 characters'
-      },
-      'altLongLinked': {
-        'issueID': 'imageTextLong',
-        'quality': 1,
-        'what': 'Linked img alt value longer than 160 characters'
-      },
-      'linkNoText': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has no text'
-      },
-      'altEmptyLinked': {
-        'issueID': 'imageLinkNoText',
-        'quality': 1,
-        'what': 'Link name is only an image with no text alternative'
-      },
-      'altURLLinked': {
-        'issueID': 'linkImageTextURL',
-        'quality': 1,
-        'what': 'Text alternative of the link image is a URL'
-      },
-      'safeLinks': {
-        'issueID': 'emailLinkBad',
-        'quality': 1,
-        'what': 'Email link addresses messages that Microsoft will bounce'
-      },
-      'linkNewWindow': {
-        'issueID': 'newTabSurprise',
-        'quality': 0.5,
-        'what': 'Link opens a new window or tab without prior notice'
-      },
       'headingEmpty': {
         'issueID': 'headingEmpty',
         'quality': 1,
         'what': 'Heading is empty'
-      },
-      'headingLevelSkipped': {
-        'issueID': 'headingLevelSkip',
-        'quality': 1,
-        'what': 'Heading level is more than 1 greater than that of the previous heading'
       },
       'headingIsLong': {
         'issueID': 'headingLength',
         'quality': 1,
         'what': 'Heading is longer than 160 characters'
       },
-      'blockquoteIsShort': {
-        'issueID': 'blockQuoteShort',
+      'headingLevelSkipped': {
+        'issueID': 'headingLevelSkip',
         'quality': 1,
-        'what': 'Block quote is shorter than 25 characters'
+        'what': 'Heading level is more than 1 greater than that of the previous heading'
       },
-      'textPossibleHeading': {
-        'issueID': 'pseudoHeadingRisk',
+      'linkDocument': {
+        'issueID': 'nonWebLink',
         'quality': 1,
-        'what': 'Styled p element is misused as a heading?'
+        'what': 'Element links to a PDF, Word, PowerPoint, or Google Docs document'
       },
-      'textPossibleList': {
-        'issueID': 'pseudoListRisk',
-        'quality': 1,
-        'what': 'List is miscoded as a paragraph sequence?'
+      'linkNewWindow': {
+        'issueID': 'newTabSurprise',
+        'quality': 0.5,
+        'what': 'Link opens a new window or tab without prior notice'
       },
-      'tableNoHeaderCells': {
-        'issueID': 'tableHeaderless',
+      'linkNoText': {
+        'issueID': 'linkNoText',
         'quality': 1,
-        'what': 'None of the cells in the table is a th element'
-      },
-      'tableEmptyHeaderCell': {
-        'issueID': 'tableHeaderEmpty',
-        'quality': 1,
-        'what': 'Element is a table header but has no text'
-      },
-      'tableContainsContentHeading': {
-        'issueID': 'tableHeading',
-        'quality': 1,
-        'what': 'element is a heading within a cell of a table'
-      },
-      'textUppercase': {
-        'issueID': 'allCaps',
-        'quality': 1,
-        'what': 'Element contains more than 4 consecutive upper-case words'
+        'what': 'Link has no text'
       },
       'linkTextIsGeneric': {
         'issueID': 'linkVaguenessRisk',
@@ -4057,21 +4027,303 @@ const rulesData = {
         'quality': 1,
         'what': 'Name of the element is a file reference instead of a link purpose'
       },
-      'linkDocument': {
-        'issueID': 'nonWebLink',
+      'safeLinks': {
+        'issueID': 'emailLinkBad',
         'quality': 1,
-        'what': 'Element links to a PDF, Word, PowerPoint, or Google Docs document'
+        'what': 'Email link addresses messages that Microsoft will bounce'
+      },
+      'tableContainsContentHeading': {
+        'issueID': 'tableHeading',
+        'quality': 1,
+        'what': 'element is a heading within a cell of a table'
+      },
+      'tableEmptyHeaderCell': {
+        'issueID': 'tableHeaderEmpty',
+        'quality': 1,
+        'what': 'Element is a table header but has no text'
+      },
+      'tableNoHeaderCells': {
+        'issueID': 'tableHeaderless',
+        'quality': 1,
+        'what': 'None of the cells in the table is a th element'
+      },
+      'textPossibleHeading': {
+        'issueID': 'pseudoHeadingRisk',
+        'quality': 1,
+        'what': 'Styled p element is misused as a heading?'
+      },
+      'textPossibleList': {
+        'issueID': 'pseudoListRisk',
+        'quality': 1,
+        'what': 'List is miscoded as a paragraph sequence?'
+      },
+      'textUppercase': {
+        'issueID': 'allCaps',
+        'quality': 1,
+        'what': 'Element contains more than 4 consecutive upper-case words'
       }
     },
     'variable': {}
   },
   'htmlcs': {
     'invariant': {
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48': {
-        'issueID': 'ignorable',
+      'E-A link element with an as attribute must have a rel attribute that contains the value preload or the value modulepreload or the value prefetch.': {
+        'issueID': 'linkElementBad',
         'quality': 1,
-        'what': 'If element contains a navigation section, it is recommended that it be marked up as a list',
-        'whyIgnore': 'speculative'
+        'what': 'Element with an as attribute has no rel attribute with preload, modulepreload, or prefetch as its value'
+      },
+      'E-AAA.1_1_1.H2.EG3': {
+        'issueID': 'linkAltSame',
+        'quality': 1,
+        'what': 'alt value of the link img element duplicates the text of a link beside it',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG3'
+      },
+      'E-AAA.1_1_1.H24': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'Element is an area in an image map but has no alt attribute'
+      },
+      'E-AAA.1_1_1.H30.2': {
+        'issueID': 'imageLinkNoText',
+        'quality': 1,
+        'what': 'img element is the only link content but has no text alternative',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H30.2'
+      },
+      'E-AAA.1_1_1.H36': {
+        'issueID': 'imageButtonNoText',
+        'quality': 1,
+        'what': 'Image submit button has no alt attribute'
+      },
+      'E-AAA.1_1_1.H37': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'img element has no alt attribute',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H37'
+      },
+      'E-AAA.1_1_1.H53,ARIA6': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'object element contains no text alternative after all other alternatives are exhausted'
+      },
+      'E-AAA.1_1_1.H67.1': {
+        'issueID': 'decorativeTitle',
+        'quality': 1,
+        'what': 'Element has an empty alt attribute but has a nonempty title attribute',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.1'
+      },
+      'E-AAA.1_3_1.ARIA16,ARIA9': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references a nonexistent element',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.ARIA16,ARIA9'
+      },
+      'E-AAA.1_3_1.ARIA6': {
+        'issueID': 'labelEmpty',
+        'quality': 1,
+        'what': 'Value of the aria-label attribute of the form control is empty or only whitespace',
+        'supersededBy': 'E-AAA.4_1_2.ARIA6'
+      },
+      'E-AAA.1_3_1.F68': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Form control has no label',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68'
+      },
+      'E-AAA.1_3_1.F92,ARIA4': {
+        'issueID': 'presentationChild',
+        'quality': 1,
+        'what': 'Element has presentation role but semantic child',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F92,ARIA4'
+      },
+      'E-AAA.1_3_1.H42.2': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Heading is empty',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42.2'
+      },
+      'E-AAA.1_3_1.H43,H63': {
+        'issueID': 'cellHeadersNotInferrable',
+        'quality': 1,
+        'what': 'Relationship among td and th elements of the table is not defined'
+      },
+      'E-AAA.1_3_1.H43.HeadersRequired': {
+        'issueID': 'cellHeadersNotInferrable',
+        'quality': 1,
+        'what': 'Complex table is missing headers attributes of cells',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired'
+      },
+      'E-AAA.1_3_1.H43.ScopeAmbiguous': {
+        'issueID': 'cellHeadersAmbiguityRisk',
+        'quality': 1,
+        'what': 'Complex table requires headers attributes of cells instead of header scopes'
+      },
+      'E-AAA.1_3_1.H44.NonExistentFragment': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'Label for attribute references a nonexistent element',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NonExistentFragment'
+      },
+      'E-AAA.1_3_1.H44.NotFormControl': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'Referent of the for attribute of the label is not a form control, so is wrong?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NotFormControl'
+      },
+      'E-AAA.1_3_1.H48': {
+        'issueID': 'pseudoNavList',
+        'quality': 1,
+        'what': 'Navigation links are not coded as a list',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48'
+      },
+      'E-AAA.1_3_1.H49.AlignAttr': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'align attribute is obsolete',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr'
+      },
+      'E-AAA.1_3_1.H49.B': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Special text is bolded nonsemantically'
+      },
+      'E-AAA.1_3_1.H49.Big': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Special text is enlarged nonsemantically'
+      },
+      'E-AAA.1_3_1.H49.Center': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'center element is obsolete'
+      },
+      'E-AAA.1_3_1.H49.Font': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'font element is obsolete',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Font'
+      },
+      'E-AAA.1_3_1.H49.I': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Special text is italicized nonsemantically',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.I'
+      },
+      'E-AAA.1_3_1.H49.Small': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Special text is made small nonsemantically',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Small'
+      },
+      'E-AAA.1_3_1.H49.U': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Special text is underlined nonsemantically'
+      },
+      'E-AAA.1_3_1.H63.2': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'scope attribute on a td element, instead of a th element, is obsolete'
+      },
+      'E-AAA.1_3_1.H71.NoLegend': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'Element has no legend element',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.NoLegend'
+      },
+      'E-AAA.1_3_1_AAA.G141': {
+        'issueID': 'headingStructure',
+        'quality': 1,
+        'what': 'Heading level is incorrect'
+      },
+      'E-AAA.1_3_5.H98': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute and the input type are mismatched',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_5.H98'
+      },
+      'E-AAA.1_4_3.G145.Fail': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Contrast between the text and its background is less than 3:1'
+      },
+      'E-AAA.1_4_3.G18.Fail': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Contrast between the text and its background is less than 4.5:1'
+      },
+      'E-AAA.1_4_6.G18.Fail': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Contrast between the text and its background is less than 4.5:1',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail'
+      },
+      'E-AAA.2_4_1.G1,G123,G124.NoSuchID': {
+        'issueID': 'internalLinkBroken',
+        'quality': 1,
+        'what': 'Internal link references a nonexistent destination',
+        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID'
+      },
+      'E-AAA.2_4_1.H64.1': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'iframe element has no non-empty title attribute',
+        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1'
+      },
+      'E-AAA.2_4_2.H25.1.EmptyTitle': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'Page head element contains an empty title element'
+      },
+      'E-AAA.2_4_2.H25.1.NoTitleEl': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'Page head element contains no title element'
+      },
+      'E-AAA.2_4_8.H59.1': {
+        'issueID': 'linkElementMisplaced',
+        'quality': 1,
+        'what': 'Element is not in the document head',
+        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.1'
+      },
+      'E-AAA.2_4_8.H59.2a': {
+        'issueID': 'linkElementBad',
+        'quality': 1,
+        'what': 'Element has no nonempty rel attribute for the type',
+        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2a'
+      },
+      'E-AAA.2_4_8.H59.2b': {
+        'issueID': 'linkElNoHref',
+        'quality': 1,
+        'what': 'link element is missing a non-empty href for the linked resource',
+        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2b'
+      },
+      'E-AAA.2_5_3.F96': {
+        'issueID': 'visibleLabelNotInName',
+        'quality': 1,
+        'what': 'Visible label is not in the accessible name',
+        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_5.2_5_3.F96'
+      },
+      'E-AAA.3_1_1.H57.2': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'html element has no lang or xml:lang attribute',
+        'supersededBy': 'E-WCAG2AAA.Principle3.Guideline3_1.3_1_1.H57.2'
+      },
+      'E-AAA.3_1_1.H57.3.Lang': {
+        'issueID': 'pageLanguageBad',
+        'quality': 1,
+        'what': 'Language specified in the lang attribute of the document does not appear to be well-formed'
+      },
+      'E-AAA.3_1_2.H58.1.Lang': {
+        'issueID': 'elementLanguageBad',
+        'quality': 1,
+        'what': 'Language specified in the lang attribute of the element does not appear to be well-formed'
+      },
+      'E-AAA.3_2_2.H32.2': {
+        'issueID': 'submitButton',
+        'quality': 1,
+        'what': 'Form has no submit button',
+        'supersededBy': 'E-WCAG2AAA.Principle3.Guideline3_2.3_2_2.H32.2'
       },
       'E-AAA.4_1_1.F77': {
         'issueID': 'duplicateID',
@@ -4079,10 +4331,301 @@ const rulesData = {
         'what': 'Duplicate id attribute value',
         'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77'
       },
+      'E-AAA.4_1_2.ARIA16,ARIA9': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references a nonexistent element',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.ARIA16,ARIA9'
+      },
+      'E-AAA.4_1_2.ARIA6': {
+        'issueID': 'labelEmpty',
+        'quality': 1,
+        'what': 'Value of the aria-label attribute of the form control is empty or only whitespace'
+      },
+      'E-AAA.4_1_2.H91.A.Empty': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'a element has an id attribute but no href attribute or text',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Empty'
+      },
+      'E-AAA.4_1_2.H91.A.EmptyNoId': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has no name or id attribute or value',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId'
+      },
+      'E-AAA.4_1_2.H91.A.EmptyWithName': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has a name attribute but no href attribute or text'
+      },
+      'E-AAA.4_1_2.H91.A.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Link with button role has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Name'
+      },
+      'E-AAA.4_1_2.H91.A.NoContent': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has an href attribute but not named',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent'
+      },
+      'E-AAA.4_1_2.H91.A.NoHref': {
+        'issueID': 'destinationLink',
+        'quality': 1,
+        'what': 'Link is misused as a link destination',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoHref'
+      },
+      'E-AAA.4_1_2.H91.A.Placeholder': {
+        'issueID': 'linkBrokenRisk',
+        'quality': 1,
+        'what': 'Link has text but no href, id, or name attribute',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Placeholder'
+      },
+      'E-AAA.4_1_2.H91.Button.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'button element has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name'
+      },
+      'E-AAA.4_1_2.H91.Div.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'div element with button role has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Div.Name'
+      },
+      'E-AAA.4_1_2.H91.Fieldset.Name': {
+        'issueID': 'groupName',
+        'quality': 1,
+        'what': 'fieldset element has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Fieldset.Name'
+      },
+      'E-AAA.4_1_2.H91.Img.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'img element with button role has no accessible name'
+      },
+      'E-AAA.4_1_2.H91.Input.Name': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'Text input has no accessible name'
+      },
+      'E-AAA.4_1_2.H91.InputButton.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Button input element has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputButton.Name'
+      },
+      'E-AAA.4_1_2.H91.InputImage.Name': {
+        'issueID': 'imageInputNoText',
+        'quality': 1,
+        'what': 'Element is an image input but has no accessible name'
+      },
+      'E-AAA.4_1_2.H91.Select.Name': {
+        'issueID': 'selectNoText',
+        'quality': 1,
+        'what': 'Element is select but has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Name'
+      },
+      'E-AAA.4_1_2.H91.Select.Value': {
+        'issueID': 'selectNoText',
+        'quality': 1,
+        'what': 'Element is select but its value has no accessible name',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Value'
+      },
+      'E-AAA.4_1_2.H91.Span.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Element with button role has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Span.Name'
+      },
+      'E-AAA.4_1_2.H91.Svg.Name': {
+        'issueID': 'svgNoText',
+        'quality': 1,
+        'what': 'Element is svg but has no accessible name'
+      },
+      'E-AAA.4_1_2.H91.Textarea.Name': {
+        'issueID': 'textAreaNoText',
+        'quality': 1,
+        'what': 'textarea element has no accessible name',
+        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name'
+      },
+      'E-ARIA6+H53': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'object element contains no text alternative'
+      },
+      'E-H36': {
+        'issueID': 'imageButtonNoText',
+        'quality': 1,
+        'what': 'Image submit button has no alt attribute',
+        'supersededBy': 'E-AAA.1_1_1.H36'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG3': {
+        'issueID': 'linkAltSame',
+        'quality': 1,
+        'what': 'alt value of the link img element duplicates the text of a link beside it'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG4': {
+        'issueID': 'linkPairRisk',
+        'quality': 1,
+        'what': 'Adjacent links, one with text and the other with a textless image, merit combination?'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H30.2': {
+        'issueID': 'imageLinkNoText',
+        'quality': 1,
+        'what': 'img element is the only link content but has no text alternative'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H37': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'img element has no alt attribute'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.1': {
+        'issueID': 'decorativeTitle',
+        'quality': 1,
+        'what': 'img element with empty alt attribute must have absent or empty title attribute'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Form field is not labeled'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F92,ARIA4': {
+        'issueID': 'presentationChild',
+        'quality': 1,
+        'what': 'Element has presentation role but semantic child'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42.2': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Heading is empty'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired': {
+        'issueID': 'cellHeadersNotInferrable',
+        'quality': 1,
+        'what': 'Complex table is missing headers attributes of cells'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'align attribute is obsolete'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Font': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'font element is obsolete'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.NoLegend': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'Element has no legend element'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1_AAA.G141': {
+        'issueID': 'headingStructure',
+        'quality': 1,
+        'what': 'Heading structure is not logically nested'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_5.H98': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute and the input type are mismatched'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Element has insufficient contrast at conformance level AAA; expected a contrast ratio of at least 7:1'
+      },
+      'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Element has insufficient contrast at conformance level AA; expected a contrast ratio of at least 4.5:1'
+      },
+      'E-WCAG2AAA.Principle2.Guideline2_2.2_2_2.F47': {
+        'issueID': 'blink',
+        'quality': 1,
+        'what': 'Element is blink, so cannot be stopped within five seconds'
+      },
+      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID': {
+        'issueID': 'internalLinkBroken',
+        'quality': 1,
+        'what': 'Internal link references a nonexistent destination'
+      },
+      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'iframe element is missing a non-empty title attribute that identifies the frame'
+      },
+      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.1': {
+        'issueID': 'linkElementMisplaced',
+        'quality': 1,
+        'what': 'Element is a link element but is not located in the head of the document'
+      },
+      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2a': {
+        'issueID': 'linkElementBad',
+        'quality': 1,
+        'what': 'Element has no nonempty rel attribute for the type'
+      },
+      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2b': {
+        'issueID': 'linkElNoHref',
+        'quality': 1,
+        'what': 'link element is missing a non-empty href for the linked resource'
+      },
+      'E-WCAG2AAA.Principle3.Guideline3_1.3_1_1.H57.2': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'html element has no lang or xml:lang attribute'
+      },
+      'E-WCAG2AAA.Principle3.Guideline3_1.3_1_2.H58': {
+        'issueID': 'languageChange',
+        'quality': 1,
+        'what': 'Change in language is not marked'
+      },
+      'E-WCAG2AAA.Principle3.Guideline3_2.3_2_2.H32.2': {
+        'issueID': 'submitButton',
+        'quality': 1,
+        'what': 'Form has no submit button'
+      },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77': {
         'issueID': 'duplicateID',
         'quality': 1,
         'what': 'Duplicate id attribute value'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has no name or id attribute or value'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Link with button role has no accessible name'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Anchor element has a valid href attribute, but no link content'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'button element has no title attribute, element content, aria-label attribute, or aria-labelledby attribute'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Div.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'div element with button role has no accessible name'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Fieldset.Name': {
+        'issueID': 'groupName',
+        'quality': 1,
+        'what': 'fieldset element has no accessible name'
+      },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputButton.Name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Button input element has no accessible name'
       },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputCheckbox.Name': {
         'issueID': 'inputNoText',
@@ -4124,307 +4667,20 @@ const rulesData = {
         'quality': 1,
         'what': 'text input has no label element or title, aria-label, or aria-labelledby attribute'
       },
-      'E-AAA.4_1_2.H91.Input.Name': {
-        'issueID': 'inputNoText',
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Name': {
+        'issueID': 'selectNoText',
         'quality': 1,
-        'what': 'Text input has no accessible name'
+        'what': 'select element has no accessible name'
       },
-      'E-H36': {
-        'issueID': 'imageButtonNoText',
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Span.Name': {
+        'issueID': 'buttonNoText',
         'quality': 1,
-        'what': 'Image submit button has no alt attribute',
-        'supersededBy': 'E-AAA.1_1_1.H36'
-      },
-      'E-AAA.1_1_1.H36': {
-        'issueID': 'imageButtonNoText',
-        'quality': 1,
-        'what': 'Image submit button has no alt attribute'
-      },
-      'E-AAA.4_1_2.H91.InputImage.Name': {
-        'issueID': 'imageInputNoText',
-        'quality': 1,
-        'what': 'Element is an image input but has no accessible name'
-      },
-      'E-AAA.1_1_1.H37': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'img element has no alt attribute',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H37'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H37': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'img element has no alt attribute'
-      },
-      'E-AAA.4_1_2.H91.Svg.Name': {
-        'issueID': 'svgNoText',
-        'quality': 1,
-        'what': 'Element is svg but has no accessible name'
-      },
-      'W-AAA.1_1_1.H67.2': {
-        'issueID': 'decorativeImageRisk',
-        'quality': 1,
-        'what': 'Image marked as decorative is informative?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.2'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.2': {
-        'issueID': 'decorativeImageRisk',
-        'quality': 1,
-        'what': 'img element is mismarked so that it is ignored by assistive technology?'
-      },
-      'E-AAA.3_1_1.H57.2': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'html element has no lang or xml:lang attribute',
-        'supersededBy': 'E-WCAG2AAA.Principle3.Guideline3_1.3_1_1.H57.2'
-      },
-      'E-WCAG2AAA.Principle3.Guideline3_1.3_1_1.H57.2': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'html element has no lang or xml:lang attribute'
-      },
-      'E-AAA.3_1_1.H57.3.Lang': {
-        'issueID': 'pageLanguageBad',
-        'quality': 1,
-        'what': 'Language specified in the lang attribute of the document does not appear to be well-formed'
-      },
-      'E-AAA.3_1_2.H58.1.Lang': {
-        'issueID': 'elementLanguageBad',
-        'quality': 1,
-        'what': 'Language specified in the lang attribute of the element does not appear to be well-formed'
-      },
-      'E-WCAG2AAA.Principle3.Guideline3_1.3_1_2.H58': {
-        'issueID': 'languageChange',
-        'quality': 1,
-        'what': 'Change in language is not marked'
-      },
-      'E-ARIA6+H53': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'object element contains no text alternative'
-      },
-      'E-AAA.1_1_1.H53,ARIA6': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'object element contains no text alternative after all other alternatives are exhausted'
-      },
-      'E-AAA.1_1_1.H24': {
-        'issueID': 'imageMapAreaNoText',
-        'quality': 1,
-        'what': 'Element is an area in an image map but has no alt attribute'
-      },
-      'W-AAA.2_1_2.F10': {
-        'issueID': 'objectBlurKeyboardRisk',
-        'quality': 1,
-        'what': 'Applet or plugin fails to enable moving the focus away with the keyboard?'
-      },
-      'W-AAA.2_1_1.G90': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Event handler functionality is not available by keyboard?',
-        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.G90'
-      },
-      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.G90': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Event handler functionality is not available by keyboard?'
-      },
-      'W-AAA.2_1_1.SCR20.MouseOut': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Mousing-out functionality is not available by keyboard?',
-        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOut'
-      },
-      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOut': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Mousing-out functionality is not available by keyboard?'
-      },
-      'W-AAA.2_1_1.SCR20.MouseOver': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Mousing-over functionality is not available by keyboard?',
-        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOver'
-      },
-      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOver': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Mousing-over functionality is not available by keyboard?'
-      },
-      'W-AAA.2_1_1.SCR20.MouseDown': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Mousing-down functionality is not available by keyboard?',
-        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseDown'
-      },
-      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseDown': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Mousing-down functionality is not available by keyboard?'
-      },
-      'W-AAA.2_1_1.SCR20.MouseUp': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Mousing-up functionality is not available by keyboard?'
-      },
-      'E-AAA.2_4_1.G1,G123,G124.NoSuchID': {
-        'issueID': 'internalLinkBroken',
-        'quality': 1,
-        'what': 'Internal link references a nonexistent destination',
-        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID'
-      },
-      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID': {
-        'issueID': 'internalLinkBroken',
-        'quality': 1,
-        'what': 'Internal link references a nonexistent destination'
-      },
-      'E-AAA.1_3_1.H44.NotFormControl': {
-        'issueID': 'labelForBad',
-        'quality': 1,
-        'what': 'Referent of the for attribute of the label is not a form control, so is wrong?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NotFormControl'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NotFormControl': {
-        'issueID': 'labelForBad',
-        'quality': 1,
-        'what': 'Referent of the for attribute of the label is not a form control, so is wrong?'
-      },
-      'E-AAA.1_3_1.H44.NonExistentFragment': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'Label for attribute references a nonexistent element',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NonExistentFragment'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NonExistentFragment': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'Label for attribute references an element missing from the document fragment'
-      },
-      'E-AAA.1_3_1.ARIA16,ARIA9': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references a nonexistent element',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.ARIA16,ARIA9'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.ARIA16,ARIA9': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references a nonexistent element'
-      },
-      'E-AAA.4_1_2.ARIA16,ARIA9': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references a nonexistent element',
-        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.ARIA16,ARIA9'
-      },
-      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.ARIA16,ARIA9': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references a nonexistent element'
-      },
-      'E-AAA.4_1_2.H91.A.Empty': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'a element has an id attribute but no href attribute or text',
-        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Empty'
-      },
-      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Empty': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'a element has an id attribute but no href attribute or text'
-      },
-      'E-AAA.4_1_2.H91.A.EmptyNoId': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has no name or id attribute or value',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId'
-      },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has no name or id attribute or value'
-      },
-      'E-AAA.4_1_2.H91.A.EmptyWithName': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has a name attribute but no href attribute or text'
-      },
-      'E-AAA.4_1_2.H91.A.NoContent': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has an href attribute but not named',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent'
-      },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Anchor element has a valid href attribute, but no link content'
-      },
-      'E-AAA.1_1_1.H30.2': {
-        'issueID': 'imageLinkNoText',
-        'quality': 1,
-        'what': 'img element is the only link content but has no text alternative',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H30.2'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H30.2': {
-        'issueID': 'imageLinkNoText',
-        'quality': 1,
-        'what': 'img element is the only link content but has no text alternative'
-      },
-      'E-AAA.4_1_2.H91.A.Placeholder': {
-        'issueID': 'linkBrokenRisk',
-        'quality': 1,
-        'what': 'Link has text but no href, id, or name attribute',
-        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Placeholder'
-      },
-      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Placeholder': {
-        'issueID': 'linkBrokenRisk',
-        'quality': 1,
-        'what': 'Link has text but no href, id, or name attribute'
-      },
-      'E-AAA.2_4_8.H59.2b': {
-        'issueID': 'linkElNoHref',
-        'quality': 1,
-        'what': 'link element is missing a non-empty href for the linked resource',
-        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2b'
-      },
-      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2b': {
-        'issueID': 'linkElNoHref',
-        'quality': 1,
-        'what': 'link element is missing a non-empty href for the linked resource'
-      },
-      'E-AAA.4_1_2.H91.A.NoHref': {
-        'issueID': 'destinationLink',
-        'quality': 1,
-        'what': 'Link is misused as a link destination',
-        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoHref'
-      },
-      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoHref': {
-        'issueID': 'destinationLink',
-        'quality': 1,
-        'what': 'Link is misused as an in-page link destination'
-      },
-      'E-AAA.4_1_2.H91.Textarea.Name': {
-        'issueID': 'textAreaNoText',
-        'quality': 1,
-        'what': 'textarea element has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name'
+        'what': 'Element with button role has no accessible name'
       },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name': {
         'issueID': 'textAreaNoText',
         'quality': 1,
         'what': 'textarea element has no accessible name'
-      },
-      'E-AAA.1_1_1.H2.EG3': {
-        'issueID': 'linkAltSame',
-        'quality': 1,
-        'what': 'alt value of the link img element duplicates the text of a link beside it',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG3'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG3': {
-        'issueID': 'linkAltSame',
-        'quality': 1,
-        'what': 'alt value of the link img element duplicates the text of a link beside it'
       },
       'W-AAA.1_1_1.H2.EG4': {
         'issueID': 'linkPairRisk',
@@ -4432,141 +4688,69 @@ const rulesData = {
         'what': 'Adjacent links, one with text and the other with a textless image, merit combination?',
         'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG4'
       },
-      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H2.EG4': {
-        'issueID': 'linkPairRisk',
+      'W-AAA.1_1_1.H67.2': {
+        'issueID': 'decorativeImageRisk',
         'quality': 1,
-        'what': 'Adjacent links, one with text and the other with a textless image, merit combination?'
+        'what': 'Image marked as decorative is informative?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.2'
       },
-      'W-WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3': {
-        'issueID': 'newTabSurpriseRisk',
+      'W-AAA.1_3_1.F68.Hidden': {
+        'issueID': 'labeledHidden',
         'quality': 1,
-        'what': 'Link opens in a new window without notice?'
+        'what': 'Hidden form field is needlessly labeled',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68.Hidden'
       },
-      'W-AAA.3_2_5.H83.3': {
-        'issueID': 'newTabSurpriseRisk',
+      'W-AAA.1_3_1.F68.HiddenAttr': {
+        'issueID': 'labeledHidden',
         'quality': 1,
-        'what': 'Link text fails to indicate that the link will open in a new window?',
-        'supersededBy': 'W-WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3'
+        'what': 'Form field with a hidden attribute is needlessly labeled'
       },
-      'E-AAA.4_1_2.H91.A.Name': {
-        'issueID': 'buttonNoText',
+      'W-AAA.1_3_1.H39.3.NoCaption': {
+        'issueID': 'tableCaption',
         'quality': 1,
-        'what': 'Link with button role has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Name'
+        'what': 'Element contains no caption element',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H39.3.NoCaption'
       },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Name': {
-        'issueID': 'buttonNoText',
+      'W-AAA.1_3_1.H42': {
+        'issueID': 'pseudoHeadingRisk',
         'quality': 1,
-        'what': 'Link with button role has no accessible name'
+        'what': 'Heading coding is not used but the element is intended as a heading?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42'
       },
-      'E-AAA.4_1_2.H91.Div.Name': {
-        'issueID': 'buttonNoText',
+      'W-AAA.1_3_1.H48.1': {
+        'issueID': 'pseudoListRisk',
         'quality': 1,
-        'what': 'div element with button role has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Div.Name'
+        'what': 'Content simulates an unordered list without a ul?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.1'
       },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Div.Name': {
-        'issueID': 'buttonNoText',
+      'W-AAA.1_3_1.H48.2': {
+        'issueID': 'pseudoOrderedListRisk',
         'quality': 1,
-        'what': 'div element with button role has no accessible name'
+        'what': 'Ordered list fails to be coded as such?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.2'
       },
-      'E-AAA.4_1_2.H91.Button.Name': {
-        'issueID': 'buttonNoText',
+      'W-AAA.1_3_1.H63.1': {
+        'issueID': 'TableHeaderScopeRisk',
         'quality': 1,
-        'what': 'button element has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name'
+        'what': 'Not all th elements in the table have a scope attribute, so an inferred scope may be incorrect'
       },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'button element has no title attribute, element content, aria-label attribute, or aria-labelledby attribute'
+      'W-AAA.1_3_1.H65': {
+        'issueID': 'titleEmpty',
+        'quality': 0.5,
+        'what': 'title attribute of the form control is empty or only whitespace',
+        'supersededBy': 'W-AAA.4_1_2.H65'
       },
-      'E-AAA.4_1_2.H91.Img.Name': {
-        'issueID': 'buttonNoText',
+      'W-AAA.1_3_1.H71.SameName': {
+        'issueID': 'fieldSetRisk',
         'quality': 1,
-        'what': 'img element with button role has no accessible name'
+        'what': 'Radio buttons or check boxes require a fieldset element?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.SameName'
       },
-      'E-AAA.4_1_2.H91.InputButton.Name': {
-        'issueID': 'buttonNoText',
+      'W-AAA.1_3_1.H85.2': {
+        'issueID': 'selectFlatRisk',
         'quality': 1,
-        'what': 'Button input element has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputButton.Name'
-      },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputButton.Name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'Button input element has no accessible name'
-      },
-      'E-AAA.4_1_2.H91.Span.Name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'Element with button role has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Span.Name'
-      },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Span.Name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'Element with button role has no accessible name'
-      },
-      'E-AAA.1_3_1.F92,ARIA4': {
-        'issueID': 'presentationChild',
-        'quality': 1,
-        'what': 'Element has presentation role but semantic child',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F92,ARIA4'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F92,ARIA4': {
-        'issueID': 'presentationChild',
-        'quality': 1,
-        'what': 'Element has presentation role but semantic child'
-      },
-      'E-AAA.2_4_8.H59.1': {
-        'issueID': 'linkElementMisplaced',
-        'quality': 1,
-        'what': 'Element is not in the document head',
-        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.1'
-      },
-      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.1': {
-        'issueID': 'linkElementMisplaced',
-        'quality': 1,
-        'what': 'Element is a link element but is not located in the head of the document'
-      },
-      'E-AAA.2_4_8.H59.2a': {
-        'issueID': 'linkElementBad',
-        'quality': 1,
-        'what': 'Element has no nonempty rel attribute for the type',
-        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2a'
-      },
-      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_8.H59.2a': {
-        'issueID': 'linkElementBad',
-        'quality': 1,
-        'what': 'Element has no nonempty rel attribute for the type'
-      },
-      'E-A link element with an as attribute must have a rel attribute that contains the value preload or the value modulepreload or the value prefetch.': {
-        'issueID': 'linkElementBad',
-        'quality': 1,
-        'what': 'Element with an as attribute has no rel attribute with preload, modulepreload, or prefetch as its value'
-      },
-      'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1': {
-        'issueID': 'iframeTitleBad',
-        'quality': 1,
-        'what': 'iframe element is missing a non-empty title attribute that identifies the frame'
-      },
-      'E-AAA.2_4_1.H64.1': {
-        'issueID': 'iframeTitleBad',
-        'quality': 1,
-        'what': 'iframe element has no non-empty title attribute',
-        'supersededBy': 'E-WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1'
-      },
-      'E-AAA.1_3_5.H98': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute and the input type are mismatched',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_5.H98'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_5.H98': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute and the input type are mismatched'
+        'what': 'Selection list contains groups of related options not grouped with optgroup?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H85.2'
       },
       'W-AAA.1_3_5.H98': {
         'issueID': 'autocompleteRisk',
@@ -4574,89 +4758,10 @@ const rulesData = {
         'what': 'Element contains a potentially faulty value in its autocomplete attribute',
         'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_5.H98'
       },
-      'E-AAA.1_4_3.G145.Fail': {
-        'issueID': 'contrastAA',
+      'W-AAA.1_4_10.C32,C31,C33,C38,SCR34,G206': {
+        'issueID': 'positionSticky',
         'quality': 1,
-        'what': 'Contrast between the text and its background is less than 3:1'
-      },
-      'E-AAA.1_4_3.G18.Fail': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Contrast between the text and its background is less than 4.5:1'
-      },
-      'E-AAA.1_4_6.G18.Fail': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Contrast between the text and its background is less than 4.5:1',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Element has insufficient contrast at conformance level AA; expected a contrast ratio of at least 4.5:1'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_3.G18': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Insufficient contrast'
-      },
-      'W-AAA.1_4_6.G17.Fail': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Text has insufficient contrast',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Element has insufficient contrast at conformance level AAA; expected a contrast ratio of at least 7:1'
-      },
-      'W-AAA.1_4_3_F24.F24.BGColour': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Inline background color lacks a complementary foreground color?'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.BGColour': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Element has no inherited foreground color?'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.BgImage': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Contrast between the text and the background image is less than 4.5:1?'
-      },
-      'W-AAA.1_4_6.G18.BgImage': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Contrast between the text and some part of its background image is less than 4.5:1?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.BgImage'
-      },
-      'W-AAA.1_4_3_F24.F24.FGColour': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Inline foreground color lacks a complementary background color?'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.FGColour': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Inline foreground color lacks a complementary inherited background color or image?'
-      },
-      'W-AAA.1_4_3.G18.Abs': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Contrast between the absolutely positioned text and its background is inadequate?'
-      },
-      'W-AAA.1_4_6.G18.Abs': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Contrast between the absolutely positioned text and its background is less than 4.5:1?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Abs'
-      },
-      'W-AAA.1_4_3.G18.Alpha': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Contrast between the text and its background is less than 4.5:1, given the transparency?'
+        'what': 'Fixed-position element forces bidirectional scrolling?'
       },
       'W-AAA.1_4_3.G145.Abs': {
         'issueID': 'contrastRisk',
@@ -4673,21 +4778,207 @@ const rulesData = {
         'quality': 1,
         'what': 'Contrast between the text and its background image is less than 3:1?'
       },
+      'W-AAA.1_4_3.G18.Abs': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Contrast between the absolutely positioned text and its background is inadequate?'
+      },
+      'W-AAA.1_4_3.G18.Alpha': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Contrast between the text and its background is less than 4.5:1, given the transparency?'
+      },
       'W-AAA.1_4_3.G18.BgImage': {
         'issueID': 'contrastRisk',
         'quality': 1,
         'what': 'Contrast between the text and its background image is less than 4.5:1?'
       },
-      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Abs': {
+      'W-AAA.1_4_3_F24.F24.BGColour': {
         'issueID': 'contrastRisk',
         'quality': 1,
-        'what': 'Background color of the absolutely positioned element can not be determined; the contrast ratio between the text and all covered parts of the background is not at least 4.5:1?'
+        'what': 'Inline background color lacks a complementary foreground color?'
+      },
+      'W-AAA.1_4_3_F24.F24.FGColour': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Inline foreground color lacks a complementary background color?'
       },
       'W-AAA.1_4_6.G17.Abs': {
         'issueID': 'contrastRisk',
         'quality': 1,
         'what': 'Contrast between the absolutely positioned text and its background is less than 7:1?',
         'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Abs'
+      },
+      'W-AAA.1_4_6.G17.BgImage': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Contrast between the text and its background image is less than 7:1?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.BgImage'
+      },
+      'W-AAA.1_4_6.G17.Fail': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text has insufficient contrast',
+        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail'
+      },
+      'W-AAA.1_4_6.G18.Abs': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Contrast between the absolutely positioned text and its background is less than 4.5:1?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Abs'
+      },
+      'W-AAA.1_4_6.G18.BgImage': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Contrast between the text and some part of its background image is less than 4.5:1?',
+        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.BgImage'
+      },
+      'W-AAA.2_1_1.G90': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
+        'what': 'Event handler functionality is not available by keyboard?',
+        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.G90'
+      },
+      'W-AAA.2_1_1.SCR20.MouseDown': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
+        'what': 'Mousing-down functionality is not available by keyboard?',
+        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseDown'
+      },
+      'W-AAA.2_1_1.SCR20.MouseOut': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
+        'what': 'Mousing-out functionality is not available by keyboard?',
+        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOut'
+      },
+      'W-AAA.2_1_1.SCR20.MouseOver': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
+        'what': 'Mousing-over functionality is not available by keyboard?',
+        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOver'
+      },
+      'W-AAA.2_1_1.SCR20.MouseUp': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
+        'what': 'Mousing-up functionality is not available by keyboard?'
+      },
+      'W-AAA.2_1_2.F10': {
+        'issueID': 'objectBlurKeyboardRisk',
+        'quality': 1,
+        'what': 'Applet or plugin fails to enable moving the focus away with the keyboard?'
+      },
+      'W-AAA.3_2_5.H83.3': {
+        'issueID': 'newTabSurpriseRisk',
+        'quality': 1,
+        'what': 'Link text fails to indicate that the link will open in a new window?',
+        'supersededBy': 'W-WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3'
+      },
+      'W-AAA.4_1_2.H65': {
+        'issueID': 'titleEmpty',
+        'quality': 0.5,
+        'what': 'title attribute of the form control is empty or only whitespace',
+        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H65'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.2': {
+        'issueID': 'decorativeImageRisk',
+        'quality': 1,
+        'what': 'img element is mismarked so that it is ignored by assistive technology?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.ARIA16,ARIA9': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references a nonexistent element'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68.Hidden': {
+        'issueID': 'labeledHidden',
+        'quality': 1,
+        'what': 'Hidden form field is needlessly labeled'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H39.3.NoCaption': {
+        'issueID': 'tableCaption',
+        'quality': 1,
+        'what': 'Element contains no caption element'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42': {
+        'issueID': 'pseudoHeadingRisk',
+        'quality': 1,
+        'what': 'Heading coding is not used but the element is intended as a heading?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NonExistentFragment': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'Label for attribute references an element missing from the document fragment'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NotFormControl': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'Referent of the for attribute of the label is not a form control, so is wrong?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'If element contains a navigation section, it is recommended that it be marked up as a list',
+        'whyIgnore': 'speculative'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.1': {
+        'issueID': 'pseudoListRisk',
+        'quality': 1,
+        'what': 'Content simulates an unordered list without a ul?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.2': {
+        'issueID': 'pseudoOrderedListRisk',
+        'quality': 1,
+        'what': 'Ordered list fails to be coded as such?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'align attribute is obsolete'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.I': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Special text is italicized nonsemantically'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Small': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Special text is made small nonsemantically'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H65': {
+        'issueID': 'titleEmpty',
+        'quality': 0.5,
+        'what': 'title attribute of the form control is empty or only whitespace'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.SameName': {
+        'issueID': 'fieldSetRisk',
+        'quality': 1,
+        'what': 'If radio buttons or check boxes require a further group-level description, they should be contained within a fieldset element'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H85.2': {
+        'issueID': 'selectFlatRisk',
+        'quality': 1,
+        'what': 'Selection list contains groups of related options not grouped with optgroup?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_10.C32,C31,C33,C38,SCR34,G206': {
+        'issueID': 'positionSticky',
+        'quality': 1,
+        'what': 'Fixed-position element requires scrolling in two dimensions?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_3.G18': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Insufficient contrast'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.BGColour': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Element has no inherited foreground color?'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.FGColour': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Inline foreground color lacks a complementary inherited background color or image?'
       },
       'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Abs': {
         'issueID': 'contrastRisk',
@@ -4699,366 +4990,75 @@ const rulesData = {
         'quality': 1,
         'what': 'Contrast between the text and some part of its background image is less than 7:1?'
       },
-      'W-AAA.1_4_6.G17.BgImage': {
+      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Abs': {
         'issueID': 'contrastRisk',
         'quality': 1,
-        'what': 'Contrast between the text and its background image is less than 7:1?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.BgImage'
+        'what': 'Background color of the absolutely positioned element can not be determined; the contrast ratio between the text and all covered parts of the background is not at least 4.5:1?'
       },
-      'E-AAA.1_3_1.H42.2': {
-        'issueID': 'headingEmpty',
+      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.BgImage': {
+        'issueID': 'contrastRisk',
         'quality': 1,
-        'what': 'Heading is empty',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42.2'
+        'what': 'Contrast between the text and the background image is less than 4.5:1?'
       },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42.2': {
-        'issueID': 'headingEmpty',
+      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.G90': {
+        'issueID': 'eventKeyboardRisk',
         'quality': 1,
-        'what': 'Heading is empty'
+        'what': 'Event handler functionality is not available by keyboard?'
       },
-      'E-AAA.1_1_1.H67.1': {
-        'issueID': 'decorativeTitle',
+      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseDown': {
+        'issueID': 'eventKeyboardRisk',
         'quality': 1,
-        'what': 'Element has an empty alt attribute but has a nonempty title attribute',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.1'
+        'what': 'Mousing-down functionality is not available by keyboard?'
       },
-      'E-WCAG2AAA.Principle1.Guideline1_1.1_1_1.H67.1': {
-        'issueID': 'decorativeTitle',
+      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOut': {
+        'issueID': 'eventKeyboardRisk',
         'quality': 1,
-        'what': 'img element with empty alt attribute must have absent or empty title attribute'
+        'what': 'Mousing-out functionality is not available by keyboard?'
       },
-      'W-AAA.1_3_1.H65': {
-        'issueID': 'titleEmpty',
-        'quality': 0.5,
-        'what': 'title attribute of the form control is empty or only whitespace',
-        'supersededBy': 'W-AAA.4_1_2.H65'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H65': {
-        'issueID': 'titleEmpty',
-        'quality': 0.5,
-        'what': 'title attribute of the form control is empty or only whitespace'
-      },
-      'W-AAA.4_1_2.H65': {
-        'issueID': 'titleEmpty',
-        'quality': 0.5,
-        'what': 'title attribute of the form control is empty or only whitespace',
-        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H65'
-      },
-      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H65': {
-        'issueID': 'titleEmpty',
-        'quality': 0.5,
-        'what': 'title attribute of the form control is empty or only whitespace'
-      },
-      'E-AAA.2_4_2.H25.1.NoTitleEl': {
-        'issueID': 'pageTitle',
+      'W-WCAG2AAA.Principle2.Guideline2_1.2_1_1.SCR20.MouseOver': {
+        'issueID': 'eventKeyboardRisk',
         'quality': 1,
-        'what': 'Page head element contains no title element'
-      },
-      'E-AAA.2_4_2.H25.1.EmptyTitle': {
-        'issueID': 'pageTitle',
-        'quality': 1,
-        'what': 'Page head element contains an empty title element'
-      },
-      'E-AAA.1_3_1_AAA.G141': {
-        'issueID': 'headingStructure',
-        'quality': 1,
-        'what': 'Heading level is incorrect'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1_AAA.G141': {
-        'issueID': 'headingStructure',
-        'quality': 1,
-        'what': 'Heading structure is not logically nested'
-      },
-      'E-AAA.1_3_1.H49.B': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Special text is bolded nonsemantically'
-      },
-      'E-AAA.1_3_1.H49.I': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Special text is italicized nonsemantically',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.I'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.I': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Special text is italicized nonsemantically'
-      },
-      'E-AAA.1_3_1.H49.Big': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Special text is enlarged nonsemantically'
-      },
-      'E-AAA.1_3_1.H49.Small': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Special text is made small nonsemantically',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Small'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Small': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Special text is made small nonsemantically'
-      },
-      'E-AAA.1_3_1.H49.U': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Special text is underlined nonsemantically'
-      },
-      'W-AAA.1_3_1.H42': {
-        'issueID': 'pseudoHeadingRisk',
-        'quality': 1,
-        'what': 'Heading coding is not used but the element is intended as a heading?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H42': {
-        'issueID': 'pseudoHeadingRisk',
-        'quality': 1,
-        'what': 'Heading coding is not used but the element is intended as a heading?'
-      },
-      'W-AAA.1_3_1.H48.1': {
-        'issueID': 'pseudoListRisk',
-        'quality': 1,
-        'what': 'Content simulates an unordered list without a ul?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.1'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.1': {
-        'issueID': 'pseudoListRisk',
-        'quality': 1,
-        'what': 'Content simulates an unordered list without a ul?'
-      },
-      'W-AAA.1_3_1.H48.2': {
-        'issueID': 'pseudoOrderedListRisk',
-        'quality': 1,
-        'what': 'Ordered list fails to be coded as such?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.2'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48.2': {
-        'issueID': 'pseudoOrderedListRisk',
-        'quality': 1,
-        'what': 'Ordered list fails to be coded as such?'
-      },
-      'E-AAA.1_3_1.H48': {
-        'issueID': 'pseudoNavList',
-        'quality': 1,
-        'what': 'Navigation links are not coded as a list',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48'
-      },
-      'E-AAA.4_1_2.H91.Select.Name': {
-        'issueID': 'selectNoText',
-        'quality': 1,
-        'what': 'Element is select but has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Name'
-      },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Name': {
-        'issueID': 'selectNoText',
-        'quality': 1,
-        'what': 'select element has no accessible name'
-      },
-      'E-AAA.4_1_2.H91.Select.Value': {
-        'issueID': 'selectNoText',
-        'quality': 1,
-        'what': 'Element is select but its value has no accessible name',
-        'supersededBy': 'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Value'
-      },
-      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Value': {
-        'issueID': 'selectNoText',
-        'quality': 1,
-        'what': 'Element is select but its value has no accessible name'
-      },
-      'W-AAA.1_3_1.H85.2': {
-        'issueID': 'selectFlatRisk',
-        'quality': 1,
-        'what': 'Selection list contains groups of related options not grouped with optgroup?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H85.2'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H85.2': {
-        'issueID': 'selectFlatRisk',
-        'quality': 1,
-        'what': 'Selection list contains groups of related options not grouped with optgroup?'
-      },
-      'W-AAA.1_3_1.H71.SameName': {
-        'issueID': 'fieldSetRisk',
-        'quality': 1,
-        'what': 'Radio buttons or check boxes require a fieldset element?',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.SameName'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.SameName': {
-        'issueID': 'fieldSetRisk',
-        'quality': 1,
-        'what': 'If radio buttons or check boxes require a further group-level description, they should be contained within a fieldset element'
-      },
-      'E-AAA.1_3_1.H71.NoLegend': {
-        'issueID': 'legendMissing',
-        'quality': 1,
-        'what': 'Element has no legend element',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.NoLegend'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.NoLegend': {
-        'issueID': 'legendMissing',
-        'quality': 1,
-        'what': 'Element has no legend element'
-      },
-      'E-AAA.4_1_2.H91.Fieldset.Name': {
-        'issueID': 'groupName',
-        'quality': 1,
-        'what': 'fieldset element has no accessible name',
-        'supersededBy': 'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Fieldset.Name'
-      },
-      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Fieldset.Name': {
-        'issueID': 'groupName',
-        'quality': 1,
-        'what': 'fieldset element has no accessible name'
-      },
-      'W-AAA.1_3_1.H39.3.NoCaption': {
-        'issueID': 'tableCaption',
-        'quality': 1,
-        'what': 'Element contains no caption element',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H39.3.NoCaption'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H39.3.NoCaption': {
-        'issueID': 'tableCaption',
-        'quality': 1,
-        'what': 'Element contains no caption element'
-      },
-      'E-AAA.1_3_1.H43.HeadersRequired': {
-        'issueID': 'cellHeadersNotInferrable',
-        'quality': 1,
-        'what': 'Complex table is missing headers attributes of cells',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired': {
-        'issueID': 'cellHeadersNotInferrable',
-        'quality': 1,
-        'what': 'Complex table is missing headers attributes of cells'
-      },
-      'E-AAA.1_3_1.H43,H63': {
-        'issueID': 'cellHeadersNotInferrable',
-        'quality': 1,
-        'what': 'Relationship among td and th elements of the table is not defined'
-      },
-      'E-AAA.1_3_1.H43.ScopeAmbiguous': {
-        'issueID': 'cellHeadersAmbiguityRisk',
-        'quality': 1,
-        'what': 'Complex table requires headers attributes of cells instead of header scopes'
-      },
-      'W-AAA.1_3_1.H63.1': {
-        'issueID': 'TableHeaderScopeRisk',
-        'quality': 1,
-        'what': 'Not all th elements in the table have a scope attribute, so an inferred scope may be incorrect'
-      },
-      'E-AAA.1_3_1.F68': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'Form control has no label',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'Form field is not labeled'
-      },
-      'E-AAA.2_5_3.F96': {
-        'issueID': 'visibleLabelNotInName',
-        'quality': 1,
-        'what': 'Visible label is not in the accessible name',
-        'supersededBy': 'W-WCAG2AAA.Principle2.Guideline2_5.2_5_3.F96'
+        'what': 'Mousing-over functionality is not available by keyboard?'
       },
       'W-WCAG2AAA.Principle2.Guideline2_5.2_5_3.F96': {
         'issueID': 'visibleLabelNotInName',
         'quality': 1,
         'what': 'Accessible name of the element does not contain the visible label text'
       },
-      'W-AAA.1_3_1.F68.Hidden': {
-        'issueID': 'labeledHidden',
+      'W-WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3': {
+        'issueID': 'newTabSurpriseRisk',
         'quality': 1,
-        'what': 'Hidden form field is needlessly labeled',
-        'supersededBy': 'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68.Hidden'
+        'what': 'Link opens in a new window without notice?'
       },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.F68.Hidden': {
-        'issueID': 'labeledHidden',
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.ARIA16,ARIA9': {
+        'issueID': 'labelBadID',
         'quality': 1,
-        'what': 'Hidden form field is needlessly labeled'
+        'what': 'aria-labelledby attribute references a nonexistent element'
       },
-      'W-AAA.1_3_1.F68.HiddenAttr': {
-        'issueID': 'labeledHidden',
-        'quality': 1,
-        'what': 'Form field with a hidden attribute is needlessly labeled'
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H65': {
+        'issueID': 'titleEmpty',
+        'quality': 0.5,
+        'what': 'title attribute of the form control is empty or only whitespace'
       },
-      'E-AAA.1_3_1.ARIA6': {
-        'issueID': 'labelEmpty',
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Empty': {
+        'issueID': 'linkNoText',
         'quality': 1,
-        'what': 'Value of the aria-label attribute of the form control is empty or only whitespace',
-        'supersededBy': 'E-AAA.4_1_2.ARIA6'
+        'what': 'a element has an id attribute but no href attribute or text'
       },
-      'E-AAA.4_1_2.ARIA6': {
-        'issueID': 'labelEmpty',
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoHref': {
+        'issueID': 'destinationLink',
         'quality': 1,
-        'what': 'Value of the aria-label attribute of the form control is empty or only whitespace'
+        'what': 'Link is misused as an in-page link destination'
       },
-      'E-WCAG2AAA.Principle2.Guideline2_2.2_2_2.F47': {
-        'issueID': 'blink',
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.Placeholder': {
+        'issueID': 'linkBrokenRisk',
         'quality': 1,
-        'what': 'Element is blink, so cannot be stopped within five seconds'
+        'what': 'Link has text but no href, id, or name attribute'
       },
-      'W-AAA.1_4_10.C32,C31,C33,C38,SCR34,G206': {
-        'issueID': 'positionSticky',
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Select.Value': {
+        'issueID': 'selectNoText',
         'quality': 1,
-        'what': 'Fixed-position element forces bidirectional scrolling?'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_4.1_4_10.C32,C31,C33,C38,SCR34,G206': {
-        'issueID': 'positionSticky',
-        'quality': 1,
-        'what': 'Fixed-position element requires scrolling in two dimensions?'
-      },
-      'E-AAA.3_2_2.H32.2': {
-        'issueID': 'submitButton',
-        'quality': 1,
-        'what': 'Form has no submit button',
-        'supersededBy': 'E-WCAG2AAA.Principle3.Guideline3_2.3_2_2.H32.2'
-      },
-      'E-WCAG2AAA.Principle3.Guideline3_2.3_2_2.H32.2': {
-        'issueID': 'submitButton',
-        'quality': 1,
-        'what': 'Form has no submit button'
-      },
-      'E-AAA.1_3_1.H49.AlignAttr': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'align attribute is obsolete',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'align attribute is obsolete'
-      },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'align attribute is obsolete'
-      },
-      'E-AAA.1_3_1.H63.2': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'scope attribute on a td element, instead of a th element, is obsolete'
-      },
-      'E-AAA.1_3_1.H49.Center': {
-        'issueID': 'elementObsolete',
-        'quality': 1,
-        'what': 'center element is obsolete'
-      },
-      'E-AAA.1_3_1.H49.Font': {
-        'issueID': 'elementObsolete',
-        'quality': 1,
-        'what': 'font element is obsolete',
-        'supersededBy': 'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Font'
-      },
-      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Font': {
-        'issueID': 'elementObsolete',
-        'quality': 1,
-        'what': 'font element is obsolete'
+        'what': 'Element is select but its value has no accessible name'
       }
     },
     'variable': {
@@ -5071,206 +5071,11 @@ const rulesData = {
   },
   'ibm': {
     'invariant': {
-      'aria_child_valid': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'Child element has a role not allowed for the role of the parent',
-        'whyIgnore': 'invalid'
-      },
-      'aria_landmark_name_unique': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'Multiple landmarks with the same parent region are not distinguished from one another (invalid on invisible elements)',
-        'whyIgnore': 'invalid'
-      },
-      'html_lang_exists': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'Page detected as HTML, but has no lang attribute',
-        'whyIgnore': 'invalid'
-      },
-      'style_background_decorative': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'CSS background image may be informative',
-        'whyIgnore': 'speculative'
-      },
-      'element_id_unique': {
-        'issueID': 'duplicateID',
-        'quality': 1,
-        'what': 'Element has an id attribute value that is already in use'
-      },
-      'aria_accessiblename_exists': {
-        'issueID': 'roleNoText',
-        'quality': 1,
-        'what': 'Element has no accessible name, although its role requires one'
-      },
-      'aria_widget_labelled': {
-        'issueID': 'componentNoText',
-        'quality': 1,
-        'what': 'Interactive component has no programmatically associated name'
-      },
-      'aria_region_labelled': {
-        'issueID': 'regionNoText',
-        'quality': 1,
-        'what': 'Element with a region role has no label'
-      },
-      'imagebutton_alt_exists': {
-        'issueID': 'imageInputNoText',
-        'quality': 1,
-        'what': 'Element is an input of type image but has no text alternative'
-      },
-      'figure_label_exists': {
-        'issueID': 'figureNoText',
-        'quality': 1,
-        'what': 'figure element has no associated label'
-      },
-      'aria_img_labelled': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'Element with an img role has no label or an empty label'
-      },
-      'img_alt_valid': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'Image has neither an alt attribute nor an ARIA label or title'
-      },
-      'img_alt_null': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'Image has a title attribute but an empty alt attribute'
-      },
-      'img_alt_decorative': {
-        'issueID': 'decorativeAlt',
-        'quality': 1,
-        'what': 'element is marked as an uninformative image but has an alt attribute'
-      },
-      'html_lang_valid': {
-        'issueID': 'pageLanguageBad',
-        'quality': 1,
-        'what': 'lang attribute of the html element includes no valid primary language'
-      },
-      'element_lang_valid': {
-        'issueID': 'elementLanguageBad',
-        'quality': 1,
-        'what': 'Element lang attribute includes no valid primary language'
-      },
-      'object_text_exists': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'object element has no text alternative'
-      },
-      'aria_keyboard_handler_exists': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Interactive WAI_ARIA UI components must provide keyboard access'
-      },
-      'label_ref_valid': {
-        'issueID': 'labelForBad',
-        'quality': 1,
-        'what': 'Value of the for attribute of the label element is not the id of a valid input element'
-      },
-      'aria_activedescendant_valid': {
-        'issueID': 'activeDescendantBadID',
-        'quality': 1,
-        'what': 'aria-activedescendant property does not reference the id of a non-empty, non-hidden active child element'
-      },
-      'combobox_popup_reference': {
-        'issueID': 'governedBadID',
-        'quality': 1,
-        'what': 'aria-controls or aria-owns attribute of an expanded combobox does not reference a popup'
-      },
-      'input_label_before': {
-        'issueID': 'labelConfusionRisk',
-        'quality': 1,
-        'what': 'Label text is after its text input or select element'
-      },
-      'input_label_after': {
-        'issueID': 'labelConfusionRisk',
-        'quality': 1,
-        'what': 'Label text is located before its associated checkbox or radio button element'
-      },
-      'combobox_haspopup': {
-        'issueID': 'haspopupBad',
-        'quality': 1,
-        'what': 'aria-haspopup value is invalid for the role of the controlled or owned element'
-      },
-      'a_text_purpose': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Hyperlink has no link text, label, or image with a text alternative'
-      },
-      'svg_graphics_labelled': {
-        'issueID': 'svgImageNoText',
-        'quality': 1,
-        'what': 'Element is svg but has no accessible name'
-      },
-      'element_orientation_unlocked': {
-        'issueID': 'cssBansElementRotate',
-        'quality': 1,
-        'what': 'Element orientation is restricted by a CSS transform'
-      },
-      'style_viewport_resizable': {
-        'issueID': 'fontSizeAbsolute',
-        'quality': 1,
-        'what': 'Font size is specified in viewport units, preventing text resizing'
-      },
-      'text_spacing_valid': {
-        'issueID': 'horizontalSpacingFrozen',
-        'quality': 1,
-        'what': 'CSS !important is used in an inline letter-spacing style'
-      },
-      'frame_title_exists': {
-        'issueID': 'iframeTitleBad',
-        'quality': 1,
-        'what': 'Inline frame has no title attribute'
-      },
-      'aria_role_valid': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'ARIA role is not valid for its element'
-      },
-      'aria_semantics_role': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'ARIA role is not valid for the element to which it is assigned'
-      },
-      'element_tabbable_role_valid': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Tabbable element has a non-widget role'
-      },
-      'widget_tabbable_exists': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Components with a widget role must have at least one tabbable element'
-      },
-      'widget_tabbable_single': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Components with a widget role must have no more than one tabbable element'
-      },
       'Rpt_Aria_ContentinfoWithNoMain_Implicit': {
         'issueID': 'roleBad',
         'quality': 1,
         'what': 'Element has a contentinfo role when no element has a main role',
         'supersededBy': 'aria_contentinfo_misuse'
-      },
-      'aria_contentinfo_misuse': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element with a contentinfo role is present without an element with a main role'
-      },
-      'Rpt_Aria_ValidRole': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element has an invalid role',
-        'supersededBy': 'aria_role_allowed'
-      },
-      'aria_role_allowed': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element has an invalid role'
       },
       'Rpt_Aria_EventHandlerMissingRole_Native_Host_Sematics': {
         'issueID': 'roleBad',
@@ -5278,61 +5083,11 @@ const rulesData = {
         'what': 'Element has an event handler but no valid ARIA role',
         'supersededBy': 'aria_eventhandler_role_valid'
       },
-      'aria_eventhandler_role_valid': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element with an onclick, onmouseout, or onmouseover attribute has no valid ARIA role'
-      },
-      'combobox_haspopup_valid': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element has a combobox role but controls an element that has no listbox, grid, tree, or dialog role'
-      },
-      'aria_descendant_valid': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'Element and descendant roles make browsers ignore a descendant'
-      },
-      'table_aria_descendants': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'Table structure element specifies an explicit role within the table container'
-      },
-      'aria_role_redundant': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'Explicitly assigned ARIA role is redundant with the implicit role of the element'
-      },
-      'aria_attribute_valid': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute is invalid for the role of its element'
-      },
-      'aria_attribute_required': {
-        'issueID': 'ariaMissing',
-        'quality': 1,
-        'what': 'Element does not have all ARIA attributes required by its role'
-      },
-      'aria_semantics_attribute': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute is invalid for the element or ARIA role to which it is assigned'
-      },
       'Rpt_Aria_ValidProperty': {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
         'what': 'ARIA attribute is invalid for the role',
         'supersededBy': 'aria_attribute_allowed'
-      },
-      'aria_attribute_allowed': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute is invalid for the role'
-      },
-      'aria_attribute_exists': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute has an empty value'
       },
       'Rpt_Aria_ValidPropertyValue': {
         'issueID': 'attributeValueBad',
@@ -5340,150 +5095,11 @@ const rulesData = {
         'what': 'ARIA property value is invalid',
         'supersededBy': 'aria_attribute_value_valid'
       },
-      'aria_attribute_value_valid': {
-        'issueID': 'attributeValueBad',
+      'Rpt_Aria_ValidRole': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Value of an ARIA attribute on the element is invalid'
-      },
-      'aria_attribute_redundant': {
-        'issueID': 'ariaRedundant',
-        'quality': 1,
-        'what': 'ARIA attribute is used when there is a corresponding HTML attribute'
-      },
-      'aria_attribute_conflict': {
-        'issueID': 'ariaVersusHTML',
-        'quality': 1,
-        'what': 'ARIA and HTML attributes on the same element have conflicting values'
-      },
-      'aria_id_unique': {
-        'issueID': 'ariaReferenceBad',
-        'quality': 1,
-        'what': 'ARIA attribute has an invalid or duplicated id as its value'
-      },
-      'input_autocomplete_valid': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute has an incorrect value'
-      },
-      'text_contrast_sufficient': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Text has a contrast with its background less than the WCAG AA minimum for its size and weight'
-      },
-      'style_color_misuse': {
-        'issueID': 'infoNeedsColor',
-        'quality': 1,
-        'what': 'Color is the only classifier?'
-      },
-      'text_sensory_misuse': {
-        'issueID': 'sensoryDependenceRisk',
-        'quality': 1,
-        'what': 'Instructions should be meaningful without relying solely on shape, size, or location words'
-      },
-      'heading_content_exists': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Heading element has no descriptive content'
-      },
-      'img_alt_redundant': {
-        'issueID': 'imageTextRedundant',
-        'quality': 1,
-        'what': 'Text alternative of the link image duplicates text in the same or an adjacent link'
-      },
-      'page_title_exists': {
-        'issueID': 'pageTitle',
-        'quality': 1,
-        'what': 'Page has no title'
-      },
-      'heading_markup_misuse': {
-        'issueID': 'headingMisuseRisk',
-        'quality': 1,
-        'what': 'Heading elements must not be used for presentation'
-      },
-      'text_block_heading': {
-        'issueID': 'pseudoHeadingRisk',
-        'quality': 1,
-        'what': 'Heading text should use a heading element or role'
-      },
-      'script_onclick_misuse': {
-        'issueID': 'pseudoLinkScriptRisk',
-        'quality': 1,
-        'what': 'Script is used to emulate a link'
-      },
-      'list_children_valid': {
-        'issueID': 'listChild',
-        'quality': 1,
-        'what': 'Element has a group role but has a child whose role is not listitem'
-      },
-      'list_markup_review': {
-        'issueID': 'pseudoListRisk',
-        'quality': 1,
-        'what': 'List not using proper HTML elements?'
-      },
-      'text_quoted_correctly': {
-        'issueID': 'pseudoQuoteRisk',
-        'quality': 1,
-        'what': 'Text not marked with a q or blockquote element is a quotation?'
-      },
-      'blockquote_cite_exists': {
-        'issueID': 'nonQuoteRisk',
-        'quality': 1,
-        'what': 'blockquote element is a nonquotation?'
-      },
-      'aria_child_tabbable': {
-        'issueID': 'noOptionFocusable',
-        'quality': 1,
-        'what': 'No descendent element with an option role is tabbable'
-      },
-      'element_accesskey_unique': {
-        'issueID': 'accessKeyDuplicate',
-        'quality': 1,
-        'what': 'accesskey attribute value is not unique'
-      },
-      'input_checkboxes_grouped': {
-        'issueID': 'fieldSetMissing',
-        'quality': 1,
-        'what': 'checkbox input is not grouped with others with the same name'
-      },
-      'fieldset_legend_valid': {
-        'issueID': 'legendMissing',
-        'quality': 1,
-        'what': 'Element has no legend element'
-      },
-      'group_withInputs_hasName': {
-        'issueID': 'groupName',
-        'quality': 1,
-        'what': 'Group with nested inputs has no unique accessible name'
-      },
-      'fieldset_label_valid': {
-        'issueID': 'groupName',
-        'quality': 1,
-        'what': 'Group or fieldset has no accessible name'
-      },
-      'table_structure_misuse': {
-        'issueID': 'layoutTable',
-        'quality': 1,
-        'what': 'table has a presentation or none role but has a summary attribute or structural elements'
-      },
-      'table_headers_related': {
-        'issueID': 'cellHeadersNotInferrable',
-        'quality': 1,
-        'what': 'Element is a cell in a complex table but has no headers associated with headers or scope attributes'
-      },
-      'table_headers_exists': {
-        'issueID': 'tableHeaderless',
-        'quality': 1,
-        'what': 'No cell in the table is a th element or has a scope or headers attribute'
-      },
-      'input_label_exists': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'Element with the role of a form control has no associated label'
-      },
-      'input_label_visible': {
-        'issueID': 'inputLabelInvisibleRisk',
-        'quality': 1,
-        'what': 'input element label invisible?'
+        'what': 'Element has an invalid role',
+        'supersededBy': 'aria_role_allowed'
       },
       'WCAG21_Label_Accessible': {
         'issueID': 'visibleLabelNotInName',
@@ -5491,130 +5107,151 @@ const rulesData = {
         'what': 'Accessible name does not match or contain the visible label text',
         'supersededBy': 'label_name_visible'
       },
-      'label_name_visible': {
-        'issueID': 'visibleLabelNotInName',
+      'a_text_purpose': {
+        'issueID': 'linkNoText',
         'quality': 1,
-        'what': 'Accessible name does not match or contain the visible label text'
+        'what': 'Hyperlink has no link text, label, or image with a text alternative'
       },
-      'target_spacing_sufficient': {
-        'issueID': 'targetsNear',
+      'aria_accessiblename_exists': {
+        'issueID': 'roleNoText',
         'quality': 1,
-        'what': 'Small targets are not far enough apart'
+        'what': 'Element has no accessible name, although its role requires one'
       },
-      'element_tabbable_unobscured': {
-        'issueID': 'focusIndicationRisk',
+      'aria_activedescendant_valid': {
+        'issueID': 'activeDescendantBadID',
         'quality': 1,
-        'what': 'Tabbable element obscured by another element when focused?'
-      },
-      'element_tabbable_visible': {
-        'issueID': 'focusIndicationRisk',
-        'quality': 1,
-        'what': 'Tabbable element invisible when focused?'
-      },
-      'style_focus_visible': {
-        'issueID': 'boxInvisibleRisk',
-        'quality': 1,
-        'what': 'CSS-specified border or outline invisible?'
-      },
-      'aria_content_in_landmark': {
-        'issueID': 'contentBeyondLandmarks',
-        'quality': 1,
-        'what': 'Content is not within a landmark element'
-      },
-      'aria_main_label_visible': {
-        'issueID': 'mainConfusion',
-        'quality': 1,
-        'what': 'Element with a main role has no unique visible label among the main-role elements'
-      },
-      'aria_main_label_unique': {
-        'issueID': 'mainConfusion',
-        'quality': 1,
-        'what': 'Element with a main role has no unique label among the main-role elements'
-      },
-      'aria_article_label_unique': {
-        'issueID': 'articleConfusion',
-        'quality': 1,
-        'what': 'Element with an article role has no unique label among the article-role elements'
-      },
-      'aria_banner_single': {
-        'issueID': 'bannerNot1',
-        'quality': 1,
-        'what': 'More than one element with a banner role is on the page'
-      },
-      'aria_contentinfo_label_unique': {
-        'issueID': 'footerConfusion',
-        'quality': 1,
-        'what': 'Multiple elements with a contentinfo role have no unique labels'
-      },
-      'aria_contentinfo_single': {
-        'issueID': 'footerNot1',
-        'quality': 1,
-        'what': 'Multiple elements with a contentinfo role are on the page'
-      },
-      'landmark_name_unique': {
-        'issueID': 'landmarkConfusion',
-        'quality': 1,
-        'what': 'Landmark has no unique aria-labelledby or aria-label among landmarks in the same parent region'
-      },
-      'aria_document_label_unique': {
-        'issueID': 'documentConfusion',
-        'quality': 1,
-        'what': 'Multiple elements with a document role have no unique labels'
-      },
-      'aria_form_label_unique': {
-        'issueID': 'formConfusion',
-        'quality': 1,
-        'what': 'Multiple elements with a form role do not have unique labels'
-      },
-      'aria_application_labelled': {
-        'issueID': 'applicationNoText',
-        'quality': 1,
-        'what': 'Element with an application role has no purpose label'
+        'what': 'aria-activedescendant property does not reference the id of a non-empty, non-hidden active child element'
       },
       'aria_application_label_unique': {
         'issueID': 'applicationConfusion',
         'quality': 1,
         'what': 'Element with an application role has no unique purpose label among the application-role elements'
       },
-      'aria_complementary_label_unique': {
-        'issueID': 'asideConfusion',
+      'aria_application_labelled': {
+        'issueID': 'applicationNoText',
         'quality': 1,
-        'what': 'Multiple elements with a complementary role have no unique labels'
+        'what': 'Element with an application role has no purpose label'
+      },
+      'aria_article_label_unique': {
+        'issueID': 'articleConfusion',
+        'quality': 1,
+        'what': 'Element with an article role has no unique label among the article-role elements'
+      },
+      'aria_attribute_allowed': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute is invalid for the role'
+      },
+      'aria_attribute_conflict': {
+        'issueID': 'ariaVersusHTML',
+        'quality': 1,
+        'what': 'ARIA and HTML attributes on the same element have conflicting values'
+      },
+      'aria_attribute_deprecated': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'ARIA role or attribute is deprecated'
+      },
+      'aria_attribute_exists': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute has an empty value'
+      },
+      'aria_attribute_redundant': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'ARIA attribute is used when there is a corresponding HTML attribute'
+      },
+      'aria_attribute_required': {
+        'issueID': 'ariaMissing',
+        'quality': 1,
+        'what': 'Element does not have all ARIA attributes required by its role'
+      },
+      'aria_attribute_valid': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute is invalid for the role of its element'
+      },
+      'aria_attribute_value_valid': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Value of an ARIA attribute on the element is invalid'
       },
       'aria_banner_label_unique': {
         'issueID': 'bannerConfusion',
         'quality': 1,
         'what': 'Multiple elements with a banner role have no unique labels'
       },
-      'aria_navigation_label_unique': {
-        'issueID': 'navConfusion',
+      'aria_banner_single': {
+        'issueID': 'bannerNot1',
         'quality': 1,
-        'what': 'Multiple elements with the navigation role do not have unique labels'
+        'what': 'More than one element with a banner role is on the page'
       },
-      'aria_region_label_unique': {
-        'issueID': 'regionConfusion',
+      'aria_child_tabbable': {
+        'issueID': 'noOptionFocusable',
         'quality': 1,
-        'what': 'Multiple elements with a region role do not have unique labels'
+        'what': 'No descendent element with an option role is tabbable'
       },
-      'aria_search_label_unique': {
-        'issueID': 'searchConfusion',
+      'aria_child_valid': {
+        'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Multiple elements with the search role do not have unique labels'
+        'what': 'Child element has a role not allowed for the role of the parent',
+        'whyIgnore': 'invalid'
       },
-      'aria_complementary_labelled': {
-        'issueID': 'complementaryNoText',
+      'aria_complementary_label_unique': {
+        'issueID': 'asideConfusion',
         'quality': 1,
-        'what': 'Element with a complementary role has no label'
+        'what': 'Multiple elements with a complementary role have no unique labels'
       },
       'aria_complementary_label_visible': {
         'issueID': 'complementaryNoText',
         'quality': 1,
         'what': 'Element with a complementary role has no visible label'
       },
-      'label_content_exists': {
-        'issueID': 'labelNoText',
+      'aria_complementary_labelled': {
+        'issueID': 'complementaryNoText',
         'quality': 1,
-        'what': 'label element has no descriptive text identifying the expected input'
+        'what': 'Element with a complementary role has no label'
+      },
+      'aria_content_in_landmark': {
+        'issueID': 'contentBeyondLandmarks',
+        'quality': 1,
+        'what': 'Content is not within a landmark element'
+      },
+      'aria_contentinfo_label_unique': {
+        'issueID': 'footerConfusion',
+        'quality': 1,
+        'what': 'Multiple elements with a contentinfo role have no unique labels'
+      },
+      'aria_contentinfo_misuse': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element with a contentinfo role is present without an element with a main role'
+      },
+      'aria_contentinfo_single': {
+        'issueID': 'footerNot1',
+        'quality': 1,
+        'what': 'Multiple elements with a contentinfo role are on the page'
+      },
+      'aria_descendant_valid': {
+        'issueID': 'roleHierarchyBad',
+        'quality': 1,
+        'what': 'Element and descendant roles make browsers ignore a descendant'
+      },
+      'aria_document_label_unique': {
+        'issueID': 'documentConfusion',
+        'quality': 1,
+        'what': 'Multiple elements with a document role have no unique labels'
+      },
+      'aria_eventhandler_role_valid': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element with an onclick, onmouseout, or onmouseover attribute has no valid ARIA role'
+      },
+      'aria_form_label_unique': {
+        'issueID': 'formConfusion',
+        'quality': 1,
+        'what': 'Multiple elements with a form role do not have unique labels'
       },
       'aria_hidden_focus_misuse': {
         'issueID': 'focusableHidden',
@@ -5626,6 +5263,197 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has an ancestor with a true aria-hidden attribute but is focusable'
       },
+      'aria_id_unique': {
+        'issueID': 'ariaReferenceBad',
+        'quality': 1,
+        'what': 'ARIA attribute has an invalid or duplicated id as its value'
+      },
+      'aria_img_labelled': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'Element with an img role has no label or an empty label'
+      },
+      'aria_keyboard_handler_exists': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
+        'what': 'Interactive WAI_ARIA UI components must provide keyboard access'
+      },
+      'aria_landmark_name_unique': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Multiple landmarks with the same parent region are not distinguished from one another (invalid on invisible elements)',
+        'whyIgnore': 'invalid'
+      },
+      'aria_main_label_unique': {
+        'issueID': 'mainConfusion',
+        'quality': 1,
+        'what': 'Element with a main role has no unique label among the main-role elements'
+      },
+      'aria_main_label_visible': {
+        'issueID': 'mainConfusion',
+        'quality': 1,
+        'what': 'Element with a main role has no unique visible label among the main-role elements'
+      },
+      'aria_navigation_label_unique': {
+        'issueID': 'navConfusion',
+        'quality': 1,
+        'what': 'Multiple elements with the navigation role do not have unique labels'
+      },
+      'aria_parent_required': {
+        'issueID': 'parentBad',
+        'quality': 1,
+        'what': 'Element is not contained in or owned by an element with a required role'
+      },
+      'aria_region_label_unique': {
+        'issueID': 'regionConfusion',
+        'quality': 1,
+        'what': 'Multiple elements with a region role do not have unique labels'
+      },
+      'aria_region_labelled': {
+        'issueID': 'regionNoText',
+        'quality': 1,
+        'what': 'Element with a region role has no label'
+      },
+      'aria_role_allowed': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element has an invalid role'
+      },
+      'aria_role_redundant': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'Explicitly assigned ARIA role is redundant with the implicit role of the element'
+      },
+      'aria_role_valid': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'ARIA role is not valid for its element'
+      },
+      'aria_search_label_unique': {
+        'issueID': 'searchConfusion',
+        'quality': 1,
+        'what': 'Multiple elements with the search role do not have unique labels'
+      },
+      'aria_semantics_attribute': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute is invalid for the element or ARIA role to which it is assigned'
+      },
+      'aria_semantics_role': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'ARIA role is not valid for the element to which it is assigned'
+      },
+      'aria_widget_labelled': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Interactive component has no programmatically associated name'
+      },
+      'blink_elem_deprecated': {
+        'issueID': 'blink',
+        'quality': 1,
+        'what': 'Element, blink, is deprecated'
+      },
+      'blockquote_cite_exists': {
+        'issueID': 'nonQuoteRisk',
+        'quality': 1,
+        'what': 'blockquote element is a nonquotation?'
+      },
+      'caption_track_exists': {
+        'issueID': 'videoCaptionRisk',
+        'quality': 1,
+        'what': 'video element has no text alternative for any meaningful audio content?'
+      },
+      'combobox_design_valid': {
+        'issueID': 'obsolete',
+        'quality': 1,
+        'what': 'combobox design pattern is ARIA 1.1, not allowed by ARIA 1.2'
+      },
+      'combobox_haspopup': {
+        'issueID': 'haspopupBad',
+        'quality': 1,
+        'what': 'aria-haspopup value is invalid for the role of the controlled or owned element'
+      },
+      'combobox_haspopup_valid': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element has a combobox role but controls an element that has no listbox, grid, tree, or dialog role'
+      },
+      'combobox_popup_reference': {
+        'issueID': 'governedBadID',
+        'quality': 1,
+        'what': 'aria-controls or aria-owns attribute of an expanded combobox does not reference a popup'
+      },
+      'combobox_version': {
+        'issueID': 'obsolete',
+        'quality': 1,
+        'what': 'combobox design pattern is invalid for ARIA 1.2'
+      },
+      'element_accesskey_unique': {
+        'issueID': 'accessKeyDuplicate',
+        'quality': 1,
+        'what': 'accesskey attribute value is not unique'
+      },
+      'element_attribute_deprecated': {
+        'issueID': 'obsolete',
+        'quality': 1,
+        'what': 'Element or attribute is obsolete'
+      },
+      'element_id_unique': {
+        'issueID': 'duplicateID',
+        'quality': 1,
+        'what': 'Element has an id attribute value that is already in use'
+      },
+      'element_lang_valid': {
+        'issueID': 'elementLanguageBad',
+        'quality': 1,
+        'what': 'Element lang attribute includes no valid primary language'
+      },
+      'element_orientation_unlocked': {
+        'issueID': 'cssBansElementRotate',
+        'quality': 1,
+        'what': 'Element orientation is restricted by a CSS transform'
+      },
+      'element_scrollable_tabbable': {
+        'issueID': 'scrollFocus',
+        'quality': 1,
+        'what': 'Element and its children are not focusable, but the element is scrollable'
+      },
+      'element_tabbable_role_valid': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Tabbable element has a non-widget role'
+      },
+      'element_tabbable_unobscured': {
+        'issueID': 'focusIndicationRisk',
+        'quality': 1,
+        'what': 'Tabbable element obscured by another element when focused?'
+      },
+      'element_tabbable_visible': {
+        'issueID': 'focusIndicationRisk',
+        'quality': 1,
+        'what': 'Tabbable element invisible when focused?'
+      },
+      'error_message_exists': {
+        'issueID': 'errorReferenceBad',
+        'quality': 1,
+        'what': 'Element has an aria-errormessage attribute whose value is an invalid id'
+      },
+      'fieldset_label_valid': {
+        'issueID': 'groupName',
+        'quality': 1,
+        'what': 'Group or fieldset has no accessible name'
+      },
+      'fieldset_legend_valid': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'Element has no legend element'
+      },
+      'figure_label_exists': {
+        'issueID': 'figureNoText',
+        'quality': 1,
+        'what': 'figure element has no associated label'
+      },
       'form_interaction_review': {
         'issueID': 'formSurpriseRisk',
         'quality': 1,
@@ -5636,234 +5464,312 @@ const rulesData = {
         'quality': 1,
         'what': 'Form control has more than one label'
       },
-      'blink_elem_deprecated': {
-        'issueID': 'blink',
+      'frame_src_valid': {
+        'issueID': 'elementObsolete',
         'quality': 1,
-        'what': 'Element, blink, is deprecated'
+        'what': 'frame element is obsolete, and a frame with non-HTML content must be made accessible'
       },
-      'aria_parent_required': {
-        'issueID': 'parentBad',
+      'frame_title_exists': {
+        'issueID': 'iframeTitleBad',
         'quality': 1,
-        'what': 'Element is not contained in or owned by an element with a required role'
+        'what': 'Inline frame has no title attribute'
       },
-      'caption_track_exists': {
-        'issueID': 'videoCaptionRisk',
+      'group_withInputs_hasName': {
+        'issueID': 'groupName',
         'quality': 1,
-        'what': 'video element has no text alternative for any meaningful audio content?'
+        'what': 'Group with nested inputs has no unique accessible name'
       },
-      'element_scrollable_tabbable': {
-        'issueID': 'scrollFocus',
+      'heading_content_exists': {
+        'issueID': 'headingEmpty',
         'quality': 1,
-        'what': 'Element and its children are not focusable, but the element is scrollable'
+        'what': 'Heading element has no descriptive content'
       },
-      'skip_main_exists': {
-        'issueID': 'skipRepeatedContent',
-        'quality': 0.5,
-        'what': 'Page provides no way to quickly navigate to the main content'
+      'heading_markup_misuse': {
+        'issueID': 'headingMisuseRisk',
+        'quality': 1,
+        'what': 'Heading elements must not be used for presentation'
+      },
+      'html_lang_exists': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Page detected as HTML, but has no lang attribute',
+        'whyIgnore': 'invalid'
+      },
+      'html_lang_valid': {
+        'issueID': 'pageLanguageBad',
+        'quality': 1,
+        'what': 'lang attribute of the html element includes no valid primary language'
       },
       'html_skipnav_exists': {
         'issueID': 'repeatedContentRisk',
         'quality': 1,
         'what': 'Provide a way to bypass blocks of content repeated on multiple pages'
       },
-      'error_message_exists': {
-        'issueID': 'errorReferenceBad',
+      'imagebutton_alt_exists': {
+        'issueID': 'imageInputNoText',
         'quality': 1,
-        'what': 'Element has an aria-errormessage attribute whose value is an invalid id'
+        'what': 'Element is an input of type image but has no text alternative'
       },
-      'aria_attribute_deprecated': {
-        'issueID': 'attributeObsolete',
+      'img_alt_decorative': {
+        'issueID': 'decorativeAlt',
         'quality': 1,
-        'what': 'ARIA role or attribute is deprecated'
+        'what': 'element is marked as an uninformative image but has an alt attribute'
       },
-      'frame_src_valid': {
-        'issueID': 'elementObsolete',
+      'img_alt_null': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'frame element is obsolete, and a frame with non-HTML content must be made accessible'
+        'what': 'Image has a title attribute but an empty alt attribute'
       },
-      'combobox_design_valid': {
-        'issueID': 'obsolete',
+      'img_alt_redundant': {
+        'issueID': 'imageTextRedundant',
         'quality': 1,
-        'what': 'combobox design pattern is ARIA 1.1, not allowed by ARIA 1.2'
+        'what': 'Text alternative of the link image duplicates text in the same or an adjacent link'
       },
-      'combobox_version': {
-        'issueID': 'obsolete',
+      'img_alt_valid': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'combobox design pattern is invalid for ARIA 1.2'
+        'what': 'Image has neither an alt attribute nor an ARIA label or title'
       },
-      'element_attribute_deprecated': {
-        'issueID': 'obsolete',
+      'input_autocomplete_valid': {
+        'issueID': 'autocompleteBad',
         'quality': 1,
-        'what': 'Element or attribute is obsolete'
+        'what': 'autocomplete attribute has an incorrect value'
+      },
+      'input_checkboxes_grouped': {
+        'issueID': 'fieldSetMissing',
+        'quality': 1,
+        'what': 'checkbox input is not grouped with others with the same name'
+      },
+      'input_label_after': {
+        'issueID': 'labelConfusionRisk',
+        'quality': 1,
+        'what': 'Label text is located before its associated checkbox or radio button element'
+      },
+      'input_label_before': {
+        'issueID': 'labelConfusionRisk',
+        'quality': 1,
+        'what': 'Label text is after its text input or select element'
+      },
+      'input_label_exists': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Element with the role of a form control has no associated label'
+      },
+      'input_label_visible': {
+        'issueID': 'inputLabelInvisibleRisk',
+        'quality': 1,
+        'what': 'input element label invisible?'
+      },
+      'label_content_exists': {
+        'issueID': 'labelNoText',
+        'quality': 1,
+        'what': 'label element has no descriptive text identifying the expected input'
+      },
+      'label_name_visible': {
+        'issueID': 'visibleLabelNotInName',
+        'quality': 1,
+        'what': 'Accessible name does not match or contain the visible label text'
+      },
+      'label_ref_valid': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'Value of the for attribute of the label element is not the id of a valid input element'
+      },
+      'landmark_name_unique': {
+        'issueID': 'landmarkConfusion',
+        'quality': 1,
+        'what': 'Landmark has no unique aria-labelledby or aria-label among landmarks in the same parent region'
+      },
+      'list_children_valid': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'Element has a group role but has a child whose role is not listitem'
+      },
+      'list_markup_review': {
+        'issueID': 'pseudoListRisk',
+        'quality': 1,
+        'what': 'List not using proper HTML elements?'
+      },
+      'object_text_exists': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'object element has no text alternative'
+      },
+      'page_title_exists': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'Page has no title'
+      },
+      'script_onclick_misuse': {
+        'issueID': 'pseudoLinkScriptRisk',
+        'quality': 1,
+        'what': 'Script is used to emulate a link'
+      },
+      'skip_main_exists': {
+        'issueID': 'skipRepeatedContent',
+        'quality': 0.5,
+        'what': 'Page provides no way to quickly navigate to the main content'
+      },
+      'style_background_decorative': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'CSS background image may be informative',
+        'whyIgnore': 'speculative'
+      },
+      'style_color_misuse': {
+        'issueID': 'infoNeedsColor',
+        'quality': 1,
+        'what': 'Color is the only classifier?'
+      },
+      'style_focus_visible': {
+        'issueID': 'boxInvisibleRisk',
+        'quality': 1,
+        'what': 'CSS-specified border or outline invisible?'
+      },
+      'style_viewport_resizable': {
+        'issueID': 'fontSizeAbsolute',
+        'quality': 1,
+        'what': 'Font size is specified in viewport units, preventing text resizing'
+      },
+      'svg_graphics_labelled': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'Element is svg but has no accessible name'
+      },
+      'table_aria_descendants': {
+        'issueID': 'roleHierarchyBad',
+        'quality': 1,
+        'what': 'Table structure element specifies an explicit role within the table container'
+      },
+      'table_headers_exists': {
+        'issueID': 'tableHeaderless',
+        'quality': 1,
+        'what': 'No cell in the table is a th element or has a scope or headers attribute'
+      },
+      'table_headers_related': {
+        'issueID': 'cellHeadersNotInferrable',
+        'quality': 1,
+        'what': 'Element is a cell in a complex table but has no headers associated with headers or scope attributes'
+      },
+      'table_structure_misuse': {
+        'issueID': 'layoutTable',
+        'quality': 1,
+        'what': 'table has a presentation or none role but has a summary attribute or structural elements'
+      },
+      'target_spacing_sufficient': {
+        'issueID': 'targetsNear',
+        'quality': 1,
+        'what': 'Small targets are not far enough apart'
+      },
+      'text_block_heading': {
+        'issueID': 'pseudoHeadingRisk',
+        'quality': 1,
+        'what': 'Heading text should use a heading element or role'
+      },
+      'text_contrast_sufficient': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text has a contrast with its background less than the WCAG AA minimum for its size and weight'
+      },
+      'text_quoted_correctly': {
+        'issueID': 'pseudoQuoteRisk',
+        'quality': 1,
+        'what': 'Text not marked with a q or blockquote element is a quotation?'
+      },
+      'text_sensory_misuse': {
+        'issueID': 'sensoryDependenceRisk',
+        'quality': 1,
+        'what': 'Instructions should be meaningful without relying solely on shape, size, or location words'
+      },
+      'text_spacing_valid': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'CSS !important is used in an inline letter-spacing style'
+      },
+      'widget_tabbable_exists': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Components with a widget role must have at least one tabbable element'
+      },
+      'widget_tabbable_single': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Components with a widget role must have no more than one tabbable element'
       }
     },
     'variable': {}
   },
   'nuVal': {
     'invariant': {
-      'Element head is missing a required instance of child element title.': {
-        'issueID': 'ignorable',
+      'A charset attribute on a meta element found after the first 1024 bytes.': {
+        'issueID': 'metaCharsetLate',
         'quality': 1,
-        'what': 'head element has no child title element',
-        'whyIgnore': 'invalid'
+        'what': 'charset attribute on a meta element appears after 1024 bytes'
       },
-      'Element img is missing required attribute src.': {
-        'issueID': 'ignorable',
+      'A document must not include both a meta element with an http-equiv attribute whose value is content-type, and a meta element with a charset attribute.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'img element has no src attribute',
-        'whyIgnore': 'invalid'
+        'what': 'Element with http-equiv="content-type" is incompatible with the meta element with a charset attribute'
       },
-      'Element mediaelementwrapper not allowed as child of element div in this context. (Suppressing further errors from this subtree.)': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Element contains a prohibited mediaelementwrapper element',
-        'whyIgnore': 'invalid'
-      },
-      'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.': {
-        'issueID': 'ignorable',
+      'A document must not include more than one autofocus attribute.': {
+        'issueID': 'attributeBad',
         'quality': 1,
-        'what': 'Void element has a useless trailing slash.',
-        'whyIgnore': 'invalid'
+        'what': 'Page includes more than one autofocus attribute'
       },
-      'The aria-placeholder attribute must not be specified on elements that have a placeholder attribute.': {
-        'issueID': 'placeholderPlusAria',
+      'A document must not include more than one meta element with a charset attribute.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'Element has both placeholder and aria-placeholder attributes'
+        'what': 'More than 1 meta element has a charset attribute'
       },
-      'An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.': {
-        'issueID': 'imageNoText',
+      'A document must not include more than one meta element with a http-equiv attribute whose value is content-type.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'img element has no alt attribute'
+        'what': 'Page has more than 1 meta element with http-equiv="content-type"'
       },
-      'An img element with a role attribute must also have an accessible name (e.g., an alt attribute).': {
-        'issueID': 'imageNoText',
+      'A document must not include more than one meta element with its name attribute set to the value description.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'img element with a role attribute has no alt attribute'
+        'what': 'Element with name="description" is not the only meta element with that name'
       },
-      'An img element which has an alt attribute whose value is the empty string must not have a role attribute.': {
-        'issueID': 'decorativeElementExposed',
+      'A document must not include more than one visible main element.': {
+        'issueID': 'mainNot1',
         'quality': 1,
-        'what': 'img element with alt="" has a role attribute'
+        'what': 'Page includes more than 1 visible main element'
       },
-      'An img element with a role attribute must not have an alt attribute whose value is the empty string.': {
-        'issueID': 'decorativeElementExposed',
+      'A document should not include more than one visible element with role=main.': {
+        'issueID': 'mainNot1',
         'quality': 1,
-        'what': 'img element with a role attribute has alt=""'
+        'what': 'Page includes more than 1 visible element with a main role'
       },
-      'Consider adding a lang attribute to the html start tag to declare the language of this document.': {
-        'issueID': 'pageLanguage',
+      'A figure element with a figcaption descendant must not have a role attribute.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'html start tag has no lang attribute to declare the language of the page'
-      },
-      'When the attribute xml:lang in no namespace is specified, the element must also have the attribute lang present with the same value.': {
-        'issueID': 'elementLanguageBad',
-        'quality': 1,
-        'what': 'Element has no lang attrbute matching its xml:lang attribute'
-      },
-      'The value of the for attribute of the label element must be the ID of a non-hidden form control.': {
-        'issueID': 'labelForBad',
-        'quality': 1,
-        'what': 'for attribute of the label element does not reference a non-hidden form control'
-      },
-      'Possible misuse of aria-label. (If you disagree with this warning, file an issue report or send e-mail to www-validator@w3.org.)': {
-        'issueID': 'ariaLabelWrongRisk',
-        'quality': 1,
-        'what': 'aria-label attribute is misused?'
-      },
-      'Attribute aria-activedescendant value should either refer to a descendant element, or should be accompanied by attribute aria-owns.': {
-        'issueID': 'activeDescendantBadID',
-        'quality': 1,
-        'what': 'Element has no aria-owns attribute but its aria-activedescendant attribute references a non-descendant'
-      },
-      'The aria-controls attribute must point to an element in the same document.': {
-        'issueID': 'governedBadID',
-        'quality': 1,
-        'what': 'aria-controls attribute references an element not in the document'
-      },
-      'The aria-owns attribute must point to an element in the same document.': {
-        'issueID': 'governedBadID',
-        'quality': 1,
-        'what': 'aria-owns attribute references an element not in the document'
-      },
-      'The aria-describedby attribute must point to an element in the same document.': {
-        'issueID': 'descriptionBadID',
-        'quality': 1,
-        'what': 'aria-describedby attribute references an element not in the document'
-      },
-      'Any input descendant of a label element with a for attribute must have an ID value that matches that for attribute.': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'input id differs from the value of the for attribute of the enclosing label element'
-      },
-      'The aria-labelledby attribute must point to an element in the same document.': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references an element not in the document'
-      },
-      'Bad value  for attribute href on element link: Must be non-empty.': {
-        'issueID': 'linkElNoHref',
-        'quality': 1,
-        'what': 'link element has an empty href attribute'
-      },
-      'Attribute href without an explicit value seen. The attribute may be dropped by IE7.': {
-        'issueID': 'linkElNoHref',
-        'quality': 1,
-        'what': 'Element has an empty href attribute'
+        'what': 'figure element has a figcaption descendant but has a role attribute'
       },
       'A link element must have an href or imagesrcset attribute, or both.': {
         'issueID': 'linkElNoSource',
         'quality': 1,
         'what': 'link element has neither an href nor an imagesrcset attribute'
       },
-      'Element a is missing required attribute href.': {
-        'issueID': 'destinationLink',
-        'quality': 1,
-        'what': 'a element has no href attribute'
-      },
-      'The document role is not allowed for element select without a multiple attribute and without a size attribute whose value is greater than 1.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'select element is not multiple or has no size greater than 1 but has a document role'
-      },
-      'The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'option element has a nonempty value'
-      },
-      'The select element cannot have more than one selected option descendant unless the multiple attribute is specified.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'Element is select and has no multiple attribute, but has more than 1 selected option'
-      },
-      'A select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have a child option element.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'Element is select and has no child option element, but its attributes require one'
-      },
-      'Attribute alt not allowed on element button at this point.': {
-        'issueID': 'buttonAlt',
-        'quality': 1,
-        'what': 'button element has an alt attribute'
-      },
-      'Element input with attribute type whose value is button must have non-empty attribute value.': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'input element with type=button has no nonempty value attribute'
-      },
-      'Consider avoiding viewport values that prevent users from resizing documents.': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'viewport value prevents users from resizing the document'
-      },
-      'The base element must come before any link or script elements in the document.': {
-        'issueID': 'baseElementMissing',
-        'quality': 1,
-        'what': 'Element is a link or script element requiring a preceding base element but has none'
-      },
       'A link element must not appear as a descendant of a body element unless the link element has an itemprop attribute or has a rel attribute whose value contains dns-prefetch, modulepreload, pingback, preconnect, prefetch, preload, prerender, or stylesheet.': {
         'issueID': 'linkElementMisplaced',
         'quality': 1,
         'what': 'Element has a body ancestor but no itemprop or valid rel attribute'
+      },
+      'A link element with a color attribute must have a rel attribute that contains the value mask-icon.': {
+        'issueID': 'linkElementBad',
+        'quality': 1,
+        'what': 'Element has a color attribute but no rel attribute with mask-icon as its value'
+      },
+      'A link element with a rel attribute that contains the value preload must have an as attribute.': {
+        'issueID': 'attributeMissing',
+        'quality': 1,
+        'what': 'link element with rel="preload" is missing an as attribute'
+      },
+      'A link element with a sizes attribute must have a rel attribute that contains the value icon or the value apple-touch-icon or the value apple-touch-icon-precomposed.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'link element has a sizes attribute but no icon-type rel attribute'
       },
       'A link element with an as attribute must have a rel attribute that contains the value preload or the value modulepreload or the value prefetch.': {
         'issueID': 'linkElementBad',
@@ -5875,465 +5781,105 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has an as attribute but no rel attribute with preload or modulepreload as its value'
       },
-      'A link element with a color attribute must have a rel attribute that contains the value mask-icon.': {
-        'issueID': 'linkElementBad',
-        'quality': 1,
-        'what': 'Element has a color attribute but no rel attribute with mask-icon as its value'
-      },
-      'A document must not include more than one meta element with its name attribute set to the value description.': {
-        'issueID': 'metaDuplicated',
-        'quality': 1,
-        'what': 'Element with name="description" is not the only meta element with that name'
-      },
-      'A document must not include both a meta element with an http-equiv attribute whose value is content-type, and a meta element with a charset attribute.': {
-        'issueID': 'metaDuplicated',
-        'quality': 1,
-        'what': 'Element with http-equiv="content-type" is incompatible with the meta element with a charset attribute'
-      },
-      'A document must not include more than one meta element with a http-equiv attribute whose value is content-type.': {
-        'issueID': 'metaDuplicated',
-        'quality': 1,
-        'what': 'Page has more than 1 meta element with http-equiv="content-type"'
-      },
       'A meta element with an http-equiv attribute whose value is X-UA-Compatible must have a content attribute with the value IE=edge.': {
         'issueID': 'metaXUACompatible',
         'quality': 1,
         'what': 'Element with http-equiv="X-UA-Compatible" has no content="IE=edge"'
       },
-      'A document must not include more than one meta element with a charset attribute.': {
-        'issueID': 'metaDuplicated',
+      'A numeric character reference expanded to carriage return.': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'More than 1 meta element has a charset attribute'
-      },
-      'A charset attribute on a meta element found after the first 1024 bytes.': {
-        'issueID': 'metaCharsetLate',
-        'quality': 1,
-        'what': 'charset attribute on a meta element appears after 1024 bytes'
-      },
-      'meta element between head and body.': {
-        'issueID': 'metaMisplaced',
-        'quality': 1,
-        'what': 'meta element is between the head and body elements'
-      },
-      'Element script must not have attribute defer unless attribute src is also specified.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element is script and has a defer attribute but no src attribute'
-      },
-      'An inline script element (i.e., a script element without a src attribute and with a type attribute that is either unspecified, empty, or a JavaScript MIME type) must not have a defer attribute.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element is not eligible for a defer attribute but has one'
-      },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a defer attribute.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element is not eligible for a defer attribute but has one'
-      },
-      'A script element with type=module must not have a defer attribute.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element has a module type but has a defer attribute'
-      },
-      'Element script should not have attribute fetchpriority unless attribute src is also specified.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is script and has a fetchpriority attribute but no src attribute'
-      },
-      'A script element with a src attribute must not have a type attribute whose value is anything other than the empty string, a JavaScript MIME type, or module.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is script and has a src attribute but its type is not empty, a JS MIME type, or module'
-      },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have an async attribute.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is not eligible for an async attribute but has one'
-      },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a src attribute.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is not eligible for a src attribute but has one'
-      },
-      'The href_matches property in a document rule must be a string.': {
-        'issueID': 'specRulesScriptBad',
-        'quality': 1,
-        'what': 'Element is script with type=speculationrules but its href_matches value is not a string'
-      },
-      'Each rule in the prefetch array must only contain the properties source, urls, where, and eagerness.': {
-        'issueID': 'specRulesScriptBad',
-        'quality': 1,
-        'what': 'Element is script with type=speculationrules but its prefetch array has invalid property names'
-      },
-      'A script element with a type attribute whose value is speculationrules must contain a JSON object with at least one of the properties prefetch or prerender.': {
-        'issueID': 'specRulesScriptBad',
-        'quality': 1,
-        'what': 'Element is script with type=speculationrules but has no JSON object with a prefetch or prerender property'
-      },
-      'The itemid attribute must not be specified on elements that do not have both an itemscope attribute and an itemtype attribute specified.': {
-        'issueID': 'itemIDBad',
-        'quality': 1,
-        'what': 'Element has an itemid attribute without both an itemscope and an itemtype attribute'
-      },
-      'The itemtype attribute must not be specified on elements that do not have an itemscope attribute specified.': {
-        'issueID': 'itemTypeBad',
-        'quality': 1,
-        'what': 'Element has an itemtype attribute without an itemscope attribute'
-      },
-      'Bad value dialog for attribute role on element li.': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'dialog role is not valid for an li element'
-      },
-      'An img element with no alt attribute must not have a role attribute.': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'img element has a role attribute but no alt attribute'
-      },
-      'A figure element with a figcaption descendant must not have a role attribute.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'figure element has a figcaption descendant but has a role attribute'
-      },
-      'An li element that is a descendant of a ul, ol, or menu element with no explicit role value, or a descendant of a role=list element, must not have any role value other than listitem.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'element is li in a list but has no listitem role'
-      },
-      'An li element that is a descendant of a role=listbox element or role=list element must not have any role value other than group or option.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'element is li in a listbox or list but has no group or option role'
-      },
-      'An element with role=group must not be a descendant of an element with role=list.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'element has a group role but has an ancestor with a list role'
-      },
-      'The searchbox role is unnecessary for an input element that has no list attribute and whose type is search.': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'explicit role is redundant for a search-type input element without a list attribute'
-      },
-      'The textbox role is unnecessary for an input element that has no list attribute and whose type is text.': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'explicit role is redundant for a text-type input element without a list attribute'
-      },
-      'The itemprop attribute was specified, but the element is not a property of any item.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'itemprop attribute is on an element that is not a property of an item'
-      },
-      'An aria-disabled attribute whose value is true should not be specified on an a element that has an href attribute.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'a element has aria-disabled=true but has an href attribute'
-      },
-      'A document must not include more than one autofocus attribute.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Page includes more than one autofocus attribute'
-      },
-      'An input element with a type attribute whose value is hidden must not have any aria-* attributes.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'hidden-type input element has an ARIA attribute'
-      },
-      'The name attribute is never allowed on the a element.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'element is a but has a name attribute'
-      },
-      'A link element with a sizes attribute must have a rel attribute that contains the value icon or the value apple-touch-icon or the value apple-touch-icon-precomposed.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'link element has a sizes attribute but no icon-type rel attribute'
-      },
-      'The sizes attribute may be specified only if the srcset attribute is also present.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element has a sizes attribute but no srcset attribute'
-      },
-      'The sizes attribute must only be specified if the srcset attribute is also specified.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element has a sizes attribute but no srcset attribute'
-      },
-      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be present.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element with a srcset attribute with a width has no sizes attribute'
-      },
-      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be specified.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element with a srcset attribute with a width has no valid sizes attribute'
-      },
-      'The sizes attribute value starting with auto is only valid for lazy-loaded images. Add loading=lazy to this element.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element with a sizes=auto… attribute has no loading=lazy attribute'
+        'what': 'Numeric character entity represents a carriage return'
       },
       'A script element with a defer attribute must not have a type attribute with the value module.': {
         'issueID': 'attributeValueBad',
         'quality': 1,
         'what': 'script element with a defer attribute has type="module"'
       },
-      'A link element with a rel attribute that contains the value preload must have an as attribute.': {
-        'issueID': 'attributeMissing',
+      'A script element with a src attribute must not have a type attribute whose value is anything other than the empty string, a JavaScript MIME type, or module.': {
+        'issueID': 'scriptElementBad',
         'quality': 1,
-        'what': 'link element with rel="preload" is missing an as attribute'
+        'what': 'Element is script and has a src attribute but its type is not empty, a JS MIME type, or module'
+      },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a defer attribute.': {
+        'issueID': 'scriptNotDeferrable',
+        'quality': 1,
+        'what': 'Element is not eligible for a defer attribute but has one'
+      },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a src attribute.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'Element is not eligible for a src attribute but has one'
+      },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have an async attribute.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'Element is not eligible for an async attribute but has one'
+      },
+      'A script element with a type attribute whose value is speculationrules must contain a JSON object with at least one of the properties prefetch or prerender.': {
+        'issueID': 'specRulesScriptBad',
+        'quality': 1,
+        'what': 'Element is script with type=speculationrules but has no JSON object with a prefetch or prerender property'
+      },
+      'A script element with type=module must not have a defer attribute.': {
+        'issueID': 'scriptNotDeferrable',
+        'quality': 1,
+        'what': 'Element has a module type but has a defer attribute'
+      },
+      'A select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have a child option element.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'Element is select and has no child option element, but its attributes require one'
+      },
+      'A slash was not immediately followed by >.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element start tag contains a nonfinal slash'
       },
       'A source element that has a following sibling source element or img element with a srcset attribute must have a media attribute and/or type attribute.': {
         'issueID': 'attributeMissing',
         'quality': 1,
         'what': 'source or img element is missing a media or type attribute'
       },
-      'The aria-hidden attribute must not be specified on the noscript element.': {
-        'issueID': 'ariaAttributeBad',
+      'A style element in body must be the first child of its parent.': {
+        'issueID': 'parseError',
         'quality': 1,
-        'what': 'noscript element has an aria-hidden attribute'
-      },
-      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is radio.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type="radio" has an aria-checked attribute'
-      },
-      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is radio.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type="radio" has an aria-checked attribute'
-      },
-      'The form attribute must refer to a form element.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'form attribute does not reference a form element'
-      },
-      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is checkbox.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type checkbox has an aria-checked attribute'
-      },
-      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is checkbox.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type checkbox has an aria-checked attribute'
-      },
-      'An img element with no alt attribute must not have any aria-* attributes other than aria-hidden.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'img element has no alt attribute but has an ARIA attribute other than aria-hidden'
-      },
-      'An input element with a type attribute whose value is checkbox and with a role attribute whose value is button must have an aria-pressed attribute whose value is true.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with a button role and type="checkbox" has no aria-pressed="true"'
-      },
-      'The aria-valuemax attribute must not be used on an element which has a max attribute.': {
-        'issueID': 'ariaRedundant',
-        'quality': 1,
-        'what': 'Element has the max attribute but also the aria-valuemax attribute'
-      },
-      'The aria-valuemin attribute must not be used on an element which has a min attribute.': {
-        'issueID': 'ariaRedundant',
-        'quality': 1,
-        'what': 'Element has the min attribute but also the aria-valuemin attribute'
-      },
-      'Bad value  for attribute autocomplete on element input: Must not be empty.': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute has an empty value'
-      },
-      'An input element with a type attribute whose value is hidden must not have an autocomplete attribute whose value is on or off.': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute belongs to a hidden element but has an on or off value'
-      },
-      'Bad value  for attribute target on element a: Browsing context name must be at least one character long.': {
-        'issueID': 'targetEmpty',
-        'quality': 1,
-        'what': 'target attribute on an a element is empty'
-      },
-      'Heading cannot be a child of another heading.': {
-        'issueID': 'headingsEmbedded',
-        'quality': 1,
-        'what': 'Heading is within a heading'
-      },
-      'Empty heading.': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Empty heading'
-      },
-      'The only allowed value for the type attribute for the style element is text/css (with no parameters). (But the attribute is not needed and should be omitted altogether.)': {
-        'issueID': 'typeBad',
-        'quality': 1,
-        'what': 'type attribute is invalid'
-      },
-      'The type attribute is unnecessary for JavaScript resources.': {
-        'issueID': 'typeRedundant',
-        'quality': 1,
-        'what': 'type attribute is unnecessary for a JavaScript resource'
-      },
-      'The type attribute for the style element is not needed and should be omitted.': {
-        'issueID': 'typeRedundant',
-        'quality': 1,
-        'what': 'type attribute is unnecessary for a style element'
-      },
-      'Element title must not be empty.': {
-        'issueID': 'titleEmpty',
-        'quality': 1,
-        'what': 'Element has an empty title attribute'
-      },
-      'Start tag seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
-        'issueID': 'docTypeMissing',
-        'quality': 1,
-        'what': 'Page does not start with <!DOCTYPE html>'
-      },
-      'End of file seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
-        'issueID': 'docTypeMissing',
-        'quality': 1,
-        'what': 'Page does not include <!DOCTYPE html>'
-      },
-      'Stray doctype.': {
-        'issueID': 'docTypeMisplaced',
-        'quality': 1,
-        'what': 'DOCTYPE is in an invalid location'
+        'what': 'style element in the body is not the first child of its parent element'
       },
       'Almost standards mode doctype. Expected <!DOCTYPE html>.': {
         'issueID': 'docTypeBad',
         'quality': 1,
         'what': 'document type declaration differs from <!DOCTYPE html>'
       },
-      'This document has heading elements but none of them has a computed heading level of 1.': {
-        'issueID': 'h1Not1',
+      'An aria-disabled attribute whose value is true should not be specified on an a element that has an href attribute.': {
+        'issueID': 'attributeBad',
         'quality': 1,
-        'what': 'Page contains no h1 element'
+        'what': 'a element has aria-disabled=true but has an href attribute'
       },
-      'Consider using the h1 element as a top-level heading only (all h1 elements are treated as top-level headings by many screen readers and other tools).': {
-        'issueID': 'h1Not1',
+      'An element with role=group must not be a descendant of an element with role=list.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'Page contains more than 1 h1 element'
-      },
-      'Consider using the h1 element as a top-level heading only — or else use the headingoffset attribute (otherwise, all h1 elements are treated as top-level headings by many screen readers and other tools).': {
-        'issueID': 'h1Not1',
-        'quality': 1,
-        'what': 'Page contains more than 1 h1 element'
-      },
-      'Article lacks heading. Consider using h2-h6 elements to add identifying headings to all articles.': {
-        'issueID': 'articleHeadingless',
-        'quality': 1,
-        'what': 'article has no heading'
-      },
-      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.': {
-        'issueID': 'sectionHeadingless',
-        'quality': 1,
-        'what': 'section has no heading'
-      },
-      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.': {
-        'issueID': 'sectionHeadingless',
-        'quality': 1,
-        'what': 'section has no heading'
-      },
-      'Element dl is missing a required child element.': {
-        'issueID': 'listChild',
-        'quality': 1,
-        'what': 'dl element has no child element'
-      },
-      'Element option without attribute label must not be empty.': {
-        'issueID': 'optionNoText',
-        'quality': 1,
-        'what': 'Element is option with no label attribute but is empty'
-      },
-      'Start tag div seen in table.': {
-        'issueID': 'divInTable',
-        'quality': 1,
-        'what': 'div element is inside a table element'
-      },
-      'Start tag form seen in table.': {
-        'issueID': 'formInTable',
-        'quality': 1,
-        'what': 'form element is inside a table element'
-      },
-      'Start tag input seen in table.': {
-        'issueID': 'inputInTable',
-        'quality': 1,
-        'what': 'input element is inside a table element'
-      },
-      'The element a must not appear as a descendant of an element with the attribute role=link.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element is a descendant of an element with a link role'
-      },
-      'The element a must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element is a descendant of an element with a button role'
-      },
-      'The element a with the attribute href must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element with a destination is a descendant of an element with a button role'
-      },
-      'The element button must not appear as a descendant of the a element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'button element is a descendant of an a element'
-      },
-      'An element with the attribute role=button must not appear as a descendant of the a element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'Element with a button role is a descendant of an a element'
-      },
-      'The element button must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'button element is a descendant of an element with a button role'
+        'what': 'element has a group role but has an ancestor with a list role'
       },
       'An element with the attribute role=button must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'Element with a button role is a descendant of an element with a button role'
       },
+      'An element with the attribute role=button must not appear as a descendant of the a element.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'Element with a button role is a descendant of an a element'
+      },
       'An element with the attribute role=button must not appear as a descendant of the button element.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'Element with a button role is a descendant of a button element'
       },
-      'The element label must not appear as a descendant of an element with the attribute role=button.': {
+      'An element with the attribute role=menu must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'label element is a descendant of an element with a button role'
-      },
-      'The element select must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'select element is a descendant of an element with a button role'
-      },
-      'The element input must not appear as a descendant of an element with the attribute role=progressbar.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'input element is a descendant of an element with a progressbar role'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of the a element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of an a element has a tabindex attribute'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=link.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of an element with a link role has a tabindex attribute'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of the button element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of a button element has a tabindex attribute'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of an element with a button role has a tabindex attribute'
+        'what': 'Element with a menu role is a descendant of an element with a button role'
       },
       'An element with the attribute role=menu must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
@@ -6350,230 +5896,258 @@ const rulesData = {
         'quality': 1,
         'what': 'Element with an option role is a descendant of an a element'
       },
-      'An element with the attribute role=menu must not appear as a descendant of an element with the attribute role=button.': {
+      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'Element with a menu role is a descendant of an element with a button role'
+        'what': 'descendant of an element with a button role has a tabindex attribute'
       },
-      'The element a should not appear as a descendant of an element with the attribute role=menuitem.': {
+      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=link.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'a element is a descendant of an element with a menuitem role'
+        'what': 'descendant of an element with a link role has a tabindex attribute'
       },
-      'The element a with the attribute href should not appear as a descendant of an element with the attribute role=menuitem.': {
+      'An element with the attribute tabindex must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
+        'what': 'descendant of an a element has a tabindex attribute'
       },
-      'A document must not include more than one visible main element.': {
-        'issueID': 'mainNot1',
+      'An element with the attribute tabindex must not appear as a descendant of the button element.': {
+        'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'Page includes more than 1 visible main element'
+        'what': 'descendant of a button element has a tabindex attribute'
       },
-      'A document should not include more than one visible element with role=main.': {
-        'issueID': 'mainNot1',
+      'An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'Page includes more than 1 visible element with a main role'
+        'what': 'img element has no alt attribute'
       },
-      'Saw a form start tag, but there was already an active form element. Nested forms are not allowed. Ignoring the tag.': {
-        'issueID': 'formsNested',
+      'An img element which has an alt attribute whose value is the empty string must not have a role attribute.': {
+        'issueID': 'decorativeElementExposed',
         'quality': 1,
-        'what': 'form element nested within another form element'
+        'what': 'img element with alt="" has a role attribute'
       },
-      'The label element may contain at most one button, input, meter, output, progress, select, or textarea descendant.': {
-        'issueID': 'multipleLabelees',
+      'An img element with a role attribute must also have an accessible name (e.g., an alt attribute).': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'Element has more than 1 labelable descendant.'
+        'what': 'img element with a role attribute has no alt attribute'
       },
-      'label element with multiple labelable descendants.': {
-        'issueID': 'multipleLabelees',
+      'An img element with a role attribute must not have an alt attribute whose value is the empty string.': {
+        'issueID': 'decorativeElementExposed',
         'quality': 1,
-        'what': 'Element has multiple labelable descendants.'
+        'what': 'img element with a role attribute has alt=""'
       },
-      'The aria-label attribute must not be used on any label element that is associated with a labelable element.': {
-        'issueID': 'labelClash',
+      'An img element with no alt attribute must not have a role attribute.': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Element is a label but has a label'
+        'what': 'img element has a role attribute but no alt attribute'
       },
-      'The aria-labelledby attribute must not be used on any label element that is an ancestor of a labelable element.': {
-        'issueID': 'labelClash',
+      'An img element with no alt attribute must not have any aria-* attributes other than aria-hidden.': {
+        'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'Element is a label with a labelable descendant but has is an aria-labelledby attribute'
+        'what': 'img element has no alt attribute but has an ARIA attribute other than aria-hidden'
       },
-      'The blink element is obsolete. Use CSS instead.': {
-        'issueID': 'blink',
+      'An inline script element (i.e., a script element without a src attribute and with a type attribute that is either unspecified, empty, or a JavaScript MIME type) must not have a defer attribute.': {
+        'issueID': 'scriptNotDeferrable',
         'quality': 1,
-        'what': 'Element, blink, is obsolete'
+        'what': 'Element is not eligible for a defer attribute but has one'
       },
-      'The presentation role does not affect elements that have global ARIA attributes.': {
-        'issueID': 'presentationGlobal',
+      'An input element with a type attribute whose value is checkbox and with a role attribute whose value is button must have an aria-pressed attribute whose value is true.': {
+        'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'Element has a presentation role but also a global ARIA attribute that nullifies the role'
+        'what': 'input element with a button role and type="checkbox" has no aria-pressed="true"'
       },
-      'The presentation role does not affect elements that have a tabindex attribute.': {
-        'issueID': 'presentationTabIndexed',
+      'An input element with a type attribute whose value is hidden must not have an autocomplete attribute whose value is on or off.': {
+        'issueID': 'autocompleteBad',
         'quality': 1,
-        'what': 'Element has a presentation role but also a tabindex attribute that nullifies the role'
+        'what': 'autocomplete attribute belongs to a hidden element but has an on or off value'
       },
-      'The inputmode attribute is not supported in all browsers. Please be sure to test, and consider using a polyfill.': {
-        'issueID': 'browserSupportRisk',
+      'An input element with a type attribute whose value is hidden must not have any aria-* attributes.': {
+        'issueID': 'attributeBad',
         'quality': 1,
-        'what': 'inputmode attribute is unsupported by some browsers'
+        'what': 'hidden-type input element has an ARIA attribute'
       },
-      'The border attribute is obsolete. Consider specifying img { border: 0; } in CSS instead.': {
-        'issueID': 'attributeObsolete',
+      'An li element that is a descendant of a role=listbox element or role=list element must not have any role value other than group or option.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'border element is obsolete'
+        'what': 'element is li in a listbox or list but has no group or option role'
       },
-      'The only allowed value for the charset attribute for the script element is utf-8. (But the attribute is not needed and should be omitted altogether.)': {
-        'issueID': 'attributeObsolete',
+      'An li element that is a descendant of a ul, ol, or menu element with no explicit role value, or a descendant of a role=list element, must not have any role value other than listitem.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+        'what': 'element is li in a list but has no listitem role'
       },
-      'The only allowed value for the charset attribute for the meta element is utf-8.': {
-        'issueID': 'attributeObsolete',
+      'Any input descendant of a label element with a for attribute must have an ID value that matches that for attribute.': {
+        'issueID': 'labelBadID',
         'quality': 1,
-        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+        'what': 'input id differs from the value of the for attribute of the enclosing label element'
       },
-      'The name attribute is obsolete. Consider putting an id attribute on the nearest container instead.': {
-        'issueID': 'attributeObsolete',
+      'Article lacks heading. Consider using h2-h6 elements to add identifying headings to all articles.': {
+        'issueID': 'articleHeadingless',
         'quality': 1,
-        'what': 'name attribute is obsolete'
+        'what': 'article has no heading'
       },
-      'The center element is obsolete. Use CSS instead.': {
-        'issueID': 'elementObsolete',
+      'Attribute alt not allowed on element button at this point.': {
+        'issueID': 'buttonAlt',
         'quality': 1,
-        'what': 'center element is obsolete'
+        'what': 'button element has an alt attribute'
       },
-      'The font element is obsolete. Use CSS instead.': {
-        'issueID': 'elementObsolete',
+      'Attribute aria-activedescendant value should either refer to a descendant element, or should be accompanied by attribute aria-owns.': {
+        'issueID': 'activeDescendantBadID',
         'quality': 1,
-        'what': 'font element is obsolete'
+        'what': 'Element has no aria-owns attribute but its aria-activedescendant attribute references a non-descendant'
       },
-      'Using the meta element to specify the document-wide default language is obsolete. Consider specifying the language on the root element instead.': {
-        'issueID': 'elementObsolete',
+      'Attribute href without an explicit value seen. The attribute may be dropped by IE7.': {
+        'issueID': 'linkElNoHref',
         'quality': 1,
-        'what': 'Language declaration in a meta element is obsolete'
+        'what': 'Element has an empty href attribute'
       },
-      'Legacy doctype. Expected <!DOCTYPE html>.': {
-        'issueID': 'obsolete',
+      'Bad value  for attribute autocomplete on element input: Must not be empty.': {
+        'issueID': 'autocompleteBad',
         'quality': 1,
-        'what': 'doctype is obsolete'
+        'what': 'autocomplete attribute has an empty value'
       },
-      'Obsolete doctype. Expected <!DOCTYPE html>.': {
-        'issueID': 'obsolete',
+      'Bad value  for attribute href on element link: Must be non-empty.': {
+        'issueID': 'linkElNoHref',
         'quality': 1,
-        'what': 'DOCTYPE is obsolete instead of html'
+        'what': 'link element has an empty href attribute'
       },
-      'CSS: This profile has a very specific syntax for @charset: @charset followed by exactly one space, followed by the name of the encoding in quotes, followed immediately by a semicolon.': {
-        'issueID': 'atRuleInvalid',
+      'Bad value  for attribute target on element a: Browsing context name must be at least one character long.': {
+        'issueID': 'targetEmpty',
         'quality': 1,
-        'what': 'CSS @charset at-rule has an invalid format'
+        'what': 'target attribute on an a element is empty'
       },
-      'CSS: The @charset rule may only occur at the start of the style sheet. Please check that there are no spaces before it.': {
-        'issueID': 'atRuleInvalid',
+      'Bad value dialog for attribute role on element li.': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'CSS @charset at-rule is not at the start of its style sheet'
+        'what': 'dialog role is not valid for an li element'
       },
-      'CSS: @import are not allowed after any valid statement other than @charset and @import.': {
-        'issueID': 'atRuleInvalid',
+      'Bogus comment.': {
+        'issueID': 'parseError',
         'quality': 1,
-        'what': 'CSS @import at-rule is after an at-rule other than @charset or @import'
-      },
-      'CSS: z-index: This number should be an integer.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'z-index style property has a non-integer value'
-      },
-      'CSS: Parse Error. Style sheets should not include HTML syntax.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS style sheet includes HTML syntax'
-      },
-      'CSS: font-size: One operand must be a number.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS font-size property has no numeric operand'
-      },
-      'CSS: Parse Error.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid CSS'
-      },
-      'CSS: -webkit-mask: too few values for the property linear-gradient.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS webkit-mask linear-gradient property has too few values'
-      },
-      'CSS: --solidHeaderNavigationColor: Cannot invoke "org.w3c.css.values.CssValue.getType()" because "val" is null.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS solidHeaderNavigationColor property is null'
+        'what': 'Comment is missing a valid termination'
       },
       'CSS: --gradientHeaderBackgroundColor: Cannot invoke "org.w3c.css.values.CssValue.getType()" because "val" is null.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS gradientHeaderBackgroundColor property is null'
       },
-      'End tag had attributes.': {
-        'issueID': 'elementClosure',
+      'CSS: --solidHeaderNavigationColor: Cannot invoke "org.w3c.css.values.CssValue.getType()" because "val" is null.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'End tag has an attribute'
+        'what': 'CSS solidHeaderNavigationColor property is null'
       },
-      'Non-space character inside noscript inside head.': {
-        'issueID': 'characterBad',
+      'CSS: -webkit-mask: too few values for the property linear-gradient.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'noscript element inside the head element has a nonspace text-node child'
+        'what': 'CSS webkit-mask linear-gradient property has too few values'
       },
-      'A numeric character reference expanded to carriage return.': {
-        'issueID': 'characterBad',
+      'CSS: @import are not allowed after any valid statement other than @charset and @import.': {
+        'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'Numeric character entity represents a carriage return'
+        'what': 'CSS @import at-rule is after an at-rule other than @charset or @import'
       },
-      'Named character reference was not terminated by a semicolon. (Or & should have been escaped as &amp;.)': {
-        'issueID': 'entityBad',
+      'CSS: Parse Error.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': '& not escaped or used in an unterminated character reference'
+        'what': 'Invalid CSS'
       },
-      'The text content of element time was not in the required format: The literal did not satisfy the time-datetime format.': {
-        'issueID': 'textContentBad',
+      'CSS: Parse Error. Style sheets should not include HTML syntax.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'time element has text content that is not in the time-datetime format'
+        'what': 'CSS style sheet includes HTML syntax'
       },
-      'No space between attributes.': {
-        'issueID': 'parseError',
+      'CSS: The @charset rule may only occur at the start of the style sheet. Please check that there are no spaces before it.': {
+        'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'No space between attributes'
+        'what': 'CSS @charset at-rule is not at the start of its style sheet'
       },
-      'Saw <?. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)': {
-        'issueID': 'parseError',
+      'CSS: This profile has a very specific syntax for @charset: @charset followed by exactly one space, followed by the name of the encoding in quotes, followed immediately by a semicolon.': {
+        'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'Left angle bracket is followed by a question mark'
+        'what': 'CSS @charset at-rule has an invalid format'
       },
-      'The aria-hidden attribute must not be specified on an input element whose type attribute has the value hidden.': {
-        'issueID': 'parseError',
+      'CSS: font-size: One operand must be a number.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'aria-hidden attribute is invalid for an input element with type="hidden"'
+        'what': 'CSS font-size property has no numeric operand'
       },
-      'Saw <!-- within a comment. Probable cause: Nested comment (not allowed).': {
-        'issueID': 'parseError',
+      'CSS: z-index: This number should be an integer.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'Comment is nested within a comment'
+        'what': 'z-index style property has a non-integer value'
       },
-      'The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment.': {
-        'issueID': 'parseError',
+      'Cannot recover after last error. Any further errors will be ignored.': {
+        'issueID': 'fatalError',
         'quality': 1,
-        'what': 'Comment contains --'
+        'what': 'Testing was interrupted by a fatal error'
       },
-      'The document is not mappable to XML 1.0 due to a trailing hyphen in a comment.': {
-        'issueID': 'parseError',
+      'Consider adding a lang attribute to the html start tag to declare the language of this document.': {
+        'issueID': 'pageLanguage',
         'quality': 1,
-        'what': 'Comment ends with -'
+        'what': 'html start tag has no lang attribute to declare the language of the page'
       },
-      'Bogus comment.': {
-        'issueID': 'parseError',
+      'Consider avoiding viewport values that prevent users from resizing documents.': {
+        'issueID': 'metaBansZoom',
         'quality': 1,
-        'what': 'Comment is missing a valid termination'
+        'what': 'viewport value prevents users from resizing the document'
+      },
+      'Consider using the h1 element as a top-level heading only (all h1 elements are treated as top-level headings by many screen readers and other tools).': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains more than 1 h1 element'
+      },
+      'Consider using the h1 element as a top-level heading only — or else use the headingoffset attribute (otherwise, all h1 elements are treated as top-level headings by many screen readers and other tools).': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains more than 1 h1 element'
+      },
+      'Document uses the Unicode Private Use Area(s), which should not be used in publicly exchanged documents. (Charmod C073)': {
+        'issueID': 'encodingPrivate',
+        'quality': 1,
+        'what': 'Page includes a Unicode PUA character'
+      },
+      'Each rule in the prefetch array must only contain the properties source, urls, where, and eagerness.': {
+        'issueID': 'specRulesScriptBad',
+        'quality': 1,
+        'what': 'Element is script with type=speculationrules but its prefetch array has invalid property names'
+      },
+      'Element a is missing required attribute href.': {
+        'issueID': 'destinationLink',
+        'quality': 1,
+        'what': 'a element has no href attribute'
+      },
+      'Element dl is missing a required child element.': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'dl element has no child element'
+      },
+      'Element head is missing a required instance of child element title.': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'head element has no child title element',
+        'whyIgnore': 'invalid'
+      },
+      'Element img is missing required attribute src.': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'img element has no src attribute',
+        'whyIgnore': 'invalid'
+      },
+      'Element input with attribute type whose value is button must have non-empty attribute value.': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'input element with type=button has no nonempty value attribute'
+      },
+      'Element mediaelementwrapper not allowed as child of element div in this context. (Suppressing further errors from this subtree.)': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Element contains a prohibited mediaelementwrapper element',
+        'whyIgnore': 'invalid'
+      },
+      'Element option without attribute label must not be empty.': {
+        'issueID': 'optionNoText',
+        'quality': 1,
+        'what': 'Element is option with no label attribute but is empty'
       },
       'Element script must not have attribute async unless attribute src is also specified or unless attribute type is specified with value module.': {
         'issueID': 'parseError',
@@ -6585,92 +6159,728 @@ const rulesData = {
         'quality': 1,
         'what': 'script element has a charset attribute but no src attribute'
       },
-      'style element between head and body.': {
+      'Element script must not have attribute defer unless attribute src is also specified.': {
+        'issueID': 'scriptNotDeferrable',
+        'quality': 1,
+        'what': 'Element is script and has a defer attribute but no src attribute'
+      },
+      'Element script should not have attribute fetchpriority unless attribute src is also specified.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'Element is script and has a fetchpriority attribute but no src attribute'
+      },
+      'Element title must not be empty.': {
+        'issueID': 'titleEmpty',
+        'quality': 1,
+        'what': 'Element has an empty title attribute'
+      },
+      'Empty heading.': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Empty heading'
+      },
+      'End of file seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
+        'issueID': 'docTypeMissing',
+        'quality': 1,
+        'what': 'Page does not include <!DOCTYPE html>'
+      },
+      'End tag had attributes.': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'End tag has an attribute'
+      },
+      'Heading cannot be a child of another heading.': {
+        'issueID': 'headingsEmbedded',
+        'quality': 1,
+        'what': 'Heading is within a heading'
+      },
+      'Legacy doctype. Expected <!DOCTYPE html>.': {
+        'issueID': 'obsolete',
+        'quality': 1,
+        'what': 'doctype is obsolete'
+      },
+      'Named character reference was not terminated by a semicolon. (Or & should have been escaped as &amp;.)': {
+        'issueID': 'entityBad',
+        'quality': 1,
+        'what': '& not escaped or used in an unterminated character reference'
+      },
+      'No space between attributes.': {
         'issueID': 'parseError',
         'quality': 1,
-        'what': 'style element exists between the head and the body elements'
+        'what': 'No space between attributes'
       },
-      'A style element in body must be the first child of its parent.': {
-        'issueID': 'parseError',
+      'Non-space character inside noscript inside head.': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'style element in the body is not the first child of its parent element'
+        'what': 'noscript element inside the head element has a nonspace text-node child'
       },
-      'A slash was not immediately followed by >.': {
-        'issueID': 'parseError',
+      'Obsolete doctype. Expected <!DOCTYPE html>.': {
+        'issueID': 'obsolete',
         'quality': 1,
-        'what': 'Element start tag contains a nonfinal slash'
-      },
-      'Document uses the Unicode Private Use Area(s), which should not be used in publicly exchanged documents. (Charmod C073)': {
-        'issueID': 'encodingPrivate',
-        'quality': 1,
-        'what': 'Page includes a Unicode PUA character'
-      },
-      'Cannot recover after last error. Any further errors will be ignored.': {
-        'issueID': 'fatalError',
-        'quality': 1,
-        'what': 'Testing was interrupted by a fatal error'
+        'what': 'DOCTYPE is obsolete instead of html'
       },
       'Oops. That was not supposed to happen. A bug manifested itself in the application internals. Unable to continue. Sorry. The admin was notified.': {
         'issueID': 'fatalError',
         'quality': 1,
         'what': 'Testing was interrupted by a fatal application-internal error'
       },
+      'Possible misuse of aria-label. (If you disagree with this warning, file an issue report or send e-mail to www-validator@w3.org.)': {
+        'issueID': 'ariaLabelWrongRisk',
+        'quality': 1,
+        'what': 'aria-label attribute is misused?'
+      },
+      'Saw <!-- within a comment. Probable cause: Nested comment (not allowed).': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Comment is nested within a comment'
+      },
+      'Saw <?. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Left angle bracket is followed by a question mark'
+      },
+      'Saw a form start tag, but there was already an active form element. Nested forms are not allowed. Ignoring the tag.': {
+        'issueID': 'formsNested',
+        'quality': 1,
+        'what': 'form element nested within another form element'
+      },
+      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.': {
+        'issueID': 'sectionHeadingless',
+        'quality': 1,
+        'what': 'section has no heading'
+      },
+      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.': {
+        'issueID': 'sectionHeadingless',
+        'quality': 1,
+        'what': 'section has no heading'
+      },
+      'Start tag div seen in table.': {
+        'issueID': 'divInTable',
+        'quality': 1,
+        'what': 'div element is inside a table element'
+      },
+      'Start tag form seen in table.': {
+        'issueID': 'formInTable',
+        'quality': 1,
+        'what': 'form element is inside a table element'
+      },
+      'Start tag input seen in table.': {
+        'issueID': 'inputInTable',
+        'quality': 1,
+        'what': 'input element is inside a table element'
+      },
+      'Start tag seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
+        'issueID': 'docTypeMissing',
+        'quality': 1,
+        'what': 'Page does not start with <!DOCTYPE html>'
+      },
+      'Stray doctype.': {
+        'issueID': 'docTypeMisplaced',
+        'quality': 1,
+        'what': 'DOCTYPE is in an invalid location'
+      },
+      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is checkbox.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type checkbox has an aria-checked attribute'
+      },
+      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is radio.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type="radio" has an aria-checked attribute'
+      },
+      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is checkbox.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type checkbox has an aria-checked attribute'
+      },
+      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is radio.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type="radio" has an aria-checked attribute'
+      },
+      'The aria-controls attribute must point to an element in the same document.': {
+        'issueID': 'governedBadID',
+        'quality': 1,
+        'what': 'aria-controls attribute references an element not in the document'
+      },
+      'The aria-describedby attribute must point to an element in the same document.': {
+        'issueID': 'descriptionBadID',
+        'quality': 1,
+        'what': 'aria-describedby attribute references an element not in the document'
+      },
+      'The aria-hidden attribute must not be specified on an input element whose type attribute has the value hidden.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'aria-hidden attribute is invalid for an input element with type="hidden"'
+      },
+      'The aria-hidden attribute must not be specified on the noscript element.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'noscript element has an aria-hidden attribute'
+      },
+      'The aria-label attribute must not be used on any label element that is associated with a labelable element.': {
+        'issueID': 'labelClash',
+        'quality': 1,
+        'what': 'Element is a label but has a label'
+      },
+      'The aria-labelledby attribute must not be used on any label element that is an ancestor of a labelable element.': {
+        'issueID': 'labelClash',
+        'quality': 1,
+        'what': 'Element is a label with a labelable descendant but has is an aria-labelledby attribute'
+      },
+      'The aria-labelledby attribute must point to an element in the same document.': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references an element not in the document'
+      },
+      'The aria-owns attribute must point to an element in the same document.': {
+        'issueID': 'governedBadID',
+        'quality': 1,
+        'what': 'aria-owns attribute references an element not in the document'
+      },
+      'The aria-placeholder attribute must not be specified on elements that have a placeholder attribute.': {
+        'issueID': 'placeholderPlusAria',
+        'quality': 1,
+        'what': 'Element has both placeholder and aria-placeholder attributes'
+      },
+      'The aria-valuemax attribute must not be used on an element which has a max attribute.': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'Element has the max attribute but also the aria-valuemax attribute'
+      },
+      'The aria-valuemin attribute must not be used on an element which has a min attribute.': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'Element has the min attribute but also the aria-valuemin attribute'
+      },
+      'The base element must come before any link or script elements in the document.': {
+        'issueID': 'baseElementMissing',
+        'quality': 1,
+        'what': 'Element is a link or script element requiring a preceding base element but has none'
+      },
+      'The blink element is obsolete. Use CSS instead.': {
+        'issueID': 'blink',
+        'quality': 1,
+        'what': 'Element, blink, is obsolete'
+      },
+      'The border attribute is obsolete. Consider specifying img { border: 0; } in CSS instead.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'border element is obsolete'
+      },
+      'The center element is obsolete. Use CSS instead.': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'center element is obsolete'
+      },
+      'The document is not mappable to XML 1.0 due to a trailing hyphen in a comment.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Comment ends with -'
+      },
+      'The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Comment contains --'
+      },
+      'The document role is not allowed for element select without a multiple attribute and without a size attribute whose value is greater than 1.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'select element is not multiple or has no size greater than 1 but has a document role'
+      },
+      'The element a must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element is a descendant of an element with a button role'
+      },
+      'The element a must not appear as a descendant of an element with the attribute role=link.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element is a descendant of an element with a link role'
+      },
+      'The element a should not appear as a descendant of an element with the attribute role=menuitem.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element is a descendant of an element with a menuitem role'
+      },
+      'The element a with the attribute href must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element with a destination is a descendant of an element with a button role'
+      },
+      'The element a with the attribute href should not appear as a descendant of an element with the attribute role=menuitem.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
+      },
+      'The element button must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'button element is a descendant of an element with a button role'
+      },
+      'The element button must not appear as a descendant of the a element.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'button element is a descendant of an a element'
+      },
+      'The element input must not appear as a descendant of an element with the attribute role=progressbar.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'input element is a descendant of an element with a progressbar role'
+      },
+      'The element label must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'label element is a descendant of an element with a button role'
+      },
+      'The element select must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'select element is a descendant of an element with a button role'
+      },
+      'The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'option element has a nonempty value'
+      },
+      'The font element is obsolete. Use CSS instead.': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'font element is obsolete'
+      },
+      'The form attribute must refer to a form element.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'form attribute does not reference a form element'
+      },
+      'The href_matches property in a document rule must be a string.': {
+        'issueID': 'specRulesScriptBad',
+        'quality': 1,
+        'what': 'Element is script with type=speculationrules but its href_matches value is not a string'
+      },
+      'The inputmode attribute is not supported in all browsers. Please be sure to test, and consider using a polyfill.': {
+        'issueID': 'browserSupportRisk',
+        'quality': 1,
+        'what': 'inputmode attribute is unsupported by some browsers'
+      },
+      'The itemid attribute must not be specified on elements that do not have both an itemscope attribute and an itemtype attribute specified.': {
+        'issueID': 'itemIDBad',
+        'quality': 1,
+        'what': 'Element has an itemid attribute without both an itemscope and an itemtype attribute'
+      },
+      'The itemprop attribute was specified, but the element is not a property of any item.': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'itemprop attribute is on an element that is not a property of an item'
+      },
+      'The itemtype attribute must not be specified on elements that do not have an itemscope attribute specified.': {
+        'issueID': 'itemTypeBad',
+        'quality': 1,
+        'what': 'Element has an itemtype attribute without an itemscope attribute'
+      },
+      'The label element may contain at most one button, input, meter, output, progress, select, or textarea descendant.': {
+        'issueID': 'multipleLabelees',
+        'quality': 1,
+        'what': 'Element has more than 1 labelable descendant.'
+      },
+      'The name attribute is never allowed on the a element.': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'element is a but has a name attribute'
+      },
+      'The name attribute is obsolete. Consider putting an id attribute on the nearest container instead.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'name attribute is obsolete'
+      },
+      'The only allowed value for the charset attribute for the meta element is utf-8.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+      },
+      'The only allowed value for the charset attribute for the script element is utf-8. (But the attribute is not needed and should be omitted altogether.)': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+      },
+      'The only allowed value for the type attribute for the style element is text/css (with no parameters). (But the attribute is not needed and should be omitted altogether.)': {
+        'issueID': 'typeBad',
+        'quality': 1,
+        'what': 'type attribute is invalid'
+      },
+      'The presentation role does not affect elements that have a tabindex attribute.': {
+        'issueID': 'presentationTabIndexed',
+        'quality': 1,
+        'what': 'Element has a presentation role but also a tabindex attribute that nullifies the role'
+      },
+      'The presentation role does not affect elements that have global ARIA attributes.': {
+        'issueID': 'presentationGlobal',
+        'quality': 1,
+        'what': 'Element has a presentation role but also a global ARIA attribute that nullifies the role'
+      },
+      'The searchbox role is unnecessary for an input element that has no list attribute and whose type is search.': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'explicit role is redundant for a search-type input element without a list attribute'
+      },
+      'The select element cannot have more than one selected option descendant unless the multiple attribute is specified.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'Element is select and has no multiple attribute, but has more than 1 selected option'
+      },
+      'The sizes attribute may be specified only if the srcset attribute is also present.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element has a sizes attribute but no srcset attribute'
+      },
+      'The sizes attribute must only be specified if the srcset attribute is also specified.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element has a sizes attribute but no srcset attribute'
+      },
+      'The sizes attribute value starting with auto is only valid for lazy-loaded images. Add loading=lazy to this element.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element with a sizes=auto… attribute has no loading=lazy attribute'
+      },
+      'The text content of element time was not in the required format: The literal did not satisfy the time-datetime format.': {
+        'issueID': 'textContentBad',
+        'quality': 1,
+        'what': 'time element has text content that is not in the time-datetime format'
+      },
+      'The textbox role is unnecessary for an input element that has no list attribute and whose type is text.': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'explicit role is redundant for a text-type input element without a list attribute'
+      },
+      'The type attribute for the style element is not needed and should be omitted.': {
+        'issueID': 'typeRedundant',
+        'quality': 1,
+        'what': 'type attribute is unnecessary for a style element'
+      },
+      'The type attribute is unnecessary for JavaScript resources.': {
+        'issueID': 'typeRedundant',
+        'quality': 1,
+        'what': 'type attribute is unnecessary for a JavaScript resource'
+      },
+      'The value of the for attribute of the label element must be the ID of a non-hidden form control.': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'for attribute of the label element does not reference a non-hidden form control'
+      },
+      'This document has heading elements but none of them has a computed heading level of 1.': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains no h1 element'
+      },
       'Too many messages.': {
         'issueID': 'fatalError',
         'quality': 1,
         'what': 'Testing was interrupted by a fatal excess of the message count'
       },
+      'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Void element has a useless trailing slash.',
+        'whyIgnore': 'invalid'
+      },
       'Unsupported SVG version specified. This validator only supports SVG 1.1. The recommended way to suppress this warning is to remove the version attribute altogether.': {
         'issueID': 'svgNotValidatable',
         'quality': 1,
         'what': 'SVG version specified is not 1.1 and so nuVal cannot validate it'
+      },
+      'Using the meta element to specify the document-wide default language is obsolete. Consider specifying the language on the root element instead.': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'Language declaration in a meta element is obsolete'
+      },
+      'When the attribute xml:lang in no namespace is specified, the element must also have the attribute lang present with the same value.': {
+        'issueID': 'elementLanguageBad',
+        'quality': 1,
+        'what': 'Element has no lang attrbute matching its xml:lang attribute'
+      },
+      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be present.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element with a srcset attribute with a width has no sizes attribute'
+      },
+      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be specified.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element with a srcset attribute with a width has no valid sizes attribute'
+      },
+      'label element with multiple labelable descendants.': {
+        'issueID': 'multipleLabelees',
+        'quality': 1,
+        'what': 'Element has multiple labelable descendants.'
+      },
+      'meta element between head and body.': {
+        'issueID': 'metaMisplaced',
+        'quality': 1,
+        'what': 'meta element is between the head and body elements'
+      },
+      'style element between head and body.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'style element exists between the head and the body elements'
       }
     },
     'variable': {
-      'Duplicate attribute.*': {
-        'issueID': 'duplicateAttribute',
+      '.+ in an unquoted attribute value. Probable causes: Attributes running together or a URL query string in an unquoted attribute value.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'Source code of the element contains 2 or more of the same attribute'
+        'what': 'Attribute has a value containing invalid punctuation'
       },
-      'Duplicate ID .+$|^The first occurrence of ID .* was here.*': {
-        'issueID': 'duplicateID',
+      'A table row was .+ columns wide and exceeded the column count established by the first row.*': {
+        'issueID': 'tableColumnsVary',
         'quality': 1,
-        'what': 'Duplicate id'
+        'what': 'Table row has a column count larger than that of the first row'
+      },
+      'A table row was .+ columns wide, which is less than the column count established by the first row.*': {
+        'issueID': 'tableColumnsVary',
+        'quality': 1,
+        'what': 'Table row has a column count smaller than that of the first row'
+      },
+      'An element with role=.+ must be contained in, or owned by, an element with .*role.+': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'Element has no required container or owner'
+      },
+      'Any .+ descendant of a label element with a for attribute must have an ID value that matches that for attribute.*': {
+        'issueID': 'controlIDInLabelBad',
+        'quality': 1,
+        'what': 'label element has a labelable descendant whose ID differs from the for attribute of the label'
+      },
+      'Attribute .+ is not serializable as XML 1[.]0.*': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute is invalidly nonserializable'
+      },
+      'Attribute .+ is only allowed when .+': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute is invalid here'
+      },
+      'Attribute .+ not allowed here.*': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute not allowed here'
+      },
+      'Attribute .+ not allowed on element .+ at this point.*': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute not allowed on this element'
+      },
+      'Attribute .+ not allowed on element meta at this point.*': {
+        'issueID': 'metaAttributesWrong',
+        'quality': 1,
+        'what': 'Attribute is not allowed on a meta element here'
+      },
+      'Attribute aria-.+ is unnecessary for elements that have attribute .+': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'ARIA attribute is redundant with the synonymous native attribute'
+      },
+      'Bad character . after <. Probable cause: Unescaped <. Try escaping it as &lt;.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Left angle bracket is followed by an invalid character'
+      },
+      'Bad element name .*: Code point .* is not allowed*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Element name contains an invalid character'
+      },
+      'Bad start tag in .+': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Invalid start tag'
+      },
+      'Bad value  for attribute (?:width|height) on element img: The empty string is not a valid non-negative integer.*': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Attribute has an empty value'
+      },
+      'Bad value  for attribute .+ on element .+: An ID must not be the empty string.*': {
+        'issueID': 'idEmpty',
+        'quality': 1,
+        'what': 'id attribute has an empty value'
+      },
+      'Bad value  for attribute .+ on element .+: Must be non-empty.*': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'Attribute value is empty'
+      },
+      'Bad value  for attribute .+ on element .+: Must not be empty.*': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Attribute has an invalidly empty value'
+      },
+      'Bad value  for attribute aria-hidden on element .+': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'aria-hidden attribute has an empty value'
+      },
+      'Bad value  for attribute aria-owns on element .+: An IDREFS value must contain at least one non-whitespace character.*': {
+        'issueID': 'idEmpty',
+        'quality': 1,
+        'what': 'aria-owns attribute has an empty value'
       },
       'Bad value  for attribute src on element .+: Must be non-empty.*': {
         'issueID': 'sourceEmpty',
         'quality': 1,
         'what': 'src attribute is empty'
       },
-      'CSS: border-.+ negative values are not allowed.*': {
-        'issueID': 'borderBad',
+      'Bad value  for attribute tabindex on element .+: The empty string is not a valid integer.*': {
+        'issueID': 'tabIndexEmpty',
         'quality': 1,
-        'what': 'CSS border includes a negative-valued property'
+        'what': 'tabindex attribute has an empty value instead of an integer'
       },
-      'CSS: flex: .+ negative values are not allowed.*': {
-        'issueID': 'flexBad',
+      'Bad value .* for attribute .+ on element .+': {
+        'issueID': 'attributeValueBad',
         'quality': 1,
-        'what': 'CSS flex value is negative'
+        'what': 'Attribute on this element has an invalid value'
       },
-      'CSS: padding[-a-z]*: .+ negative values are not allowed.*': {
-        'issueID': 'paddingBad',
+      'Bad value .* for attribute href on element .+: Illegal character in path segment: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'One of the CSS padding values is negative'
+        'what': 'href attribute path value contains an invalid character in a segment'
       },
-      'CSS: gap: .+ negative values are not allowed.*': {
-        'issueID': 'gapBad',
+      'Bad value .* for attribute href on element .+: Illegal character in query: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'CSS gap value is negative'
+        'what': 'href attribute query value contains an invalid character'
       },
-      'CSS: background: .+ is not a color value.*': {
-        'issueID': 'backgroundBad',
+      'Bad value .* for attribute src on element .+: Illegal character in path segment: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'CSS background color is misdefined'
+        'what': 'src attribute path value contains an invalid character in a segment'
       },
-      'CSS: background: The .+ argument to the .+ function should be .+, not .+': {
-        'issueID': 'backgroundBad',
+      'Bad value .* for attribute src on element .+: Illegal character in query: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'CSS background function has an invalid argument'
+        'what': 'src attribute query value contains an invalid character'
+      },
+      'Bad value .+ for attribute .+ on element meta.*': {
+        'issueID': 'metaAttributeBad',
+        'quality': 1,
+        'what': 'Attribute of a meta element has an invalid value'
+      },
+      'Bad value .+ for attribute src on element .+: Tab, new line or carriage return found.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'src attribute value contains a tab, newline, or return character'
+      },
+      'Bad value .+ for the attribute .+': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Attribute has an invalid value'
+      },
+      'Bad value [^`]+ Tab, new line or carriage return found.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Attribute value contains an illegal spacing character'
+      },
+      'CSS: .*Lexical error at line .+, column .+ Encountered: .+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'CSS property has a value with a lexical error'
+      },
+      'CSS: .*only 0 can be a unit. You must put a unit after your number.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Number in CSS is nonzero but has no unit'
+      },
+      'CSS: .+ is not a :lang.+ value.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'CSS pseudo-class :lang() has an invalid value'
+      },
+      'CSS: .+:   is an incorrect operator.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Space is misused as a CSS operator'
+      },
+      'CSS: .+: , is an incorrect operator.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Comma is misused as a CSS operator'
+      },
+      'CSS: .+: .+ is not a .+ value.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid value in CSS'
+      },
+      'CSS: .+: .+ is not a valid color 3 or 6 hexadecimals numbers.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid hexadecimal color in CSS'
+      },
+      'CSS: .+: Character .+ is neither a decimal digit number.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Nonnumeric character in a numeric style property'
+      },
+      'CSS: .+: Character array is missing "e" notation exponential mark.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Character array has no exponent mark e'
+      },
+      'CSS: .+: Invalid type: .+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid type of CSS value'
+      },
+      'CSS: .+: Missing a semicolon before the .+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'semicolon missing in CSS'
+      },
+      'CSS: .+: Parse Error.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid CSS'
+      },
+      'CSS: .+: The types are incompatible.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Incompatible types of CSS values'
+      },
+      'CSS: .+: Too many values or values are not recognized.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid CSS value or too many values'
+      },
+      'CSS: .+: Unknown dimension.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Unknown CSS dimension'
+      },
+      'CSS: .+: only 0 can be a length. You must put a unit after your number.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Length in CSS is nonzero but has no unit'
+      },
+      'CSS: Deprecated media feature .+': {
+        'issueID': 'obsolete',
+        'quality': 1,
+        'what': 'Media feature is deprecated'
+      },
+      'CSS: In CSS1, a class name could start with a digit .+, unless it was a dimension .+ In CSS2, such classes are parsed as unknown dimensions .+ To make .+ a valid class, CSS2 requires the first digit to be escaped: .+': {
+        'issueID': 'cssInvalid',
+        'quality': 0.5,
+        'what': 'CSS class name starts with an unescaped digit'
+      },
+      'CSS: Unknown pseudo-element or pseudo-class :.+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Unknown pseudo-element or pseudo-class'
+      },
+      'CSS: Unrecognized at-rule @.+': {
+        'issueID': 'atRuleInvalid',
+        'quality': 1,
+        'what': 'At-rule is not recognized by CSS'
       },
       'CSS: _background: url.+ is an incorrect URL.*': {
         'issueID': 'backgroundBad',
@@ -6687,275 +6897,30 @@ const rulesData = {
         'quality': 1,
         'what': 'CSS background image is misdefined'
       },
-      'Resource violates Content Security Policy \\(meta tag\\): image .+ blocked by img-src directive.*': {
-        'issueID': 'imageBanned',
+      'CSS: background: .+ is not a color value.*': {
+        'issueID': 'backgroundBad',
         'quality': 1,
-        'what': 'img-src content attribute blocks an image'
+        'what': 'CSS background color is misdefined'
       },
-      'This document appears to be written in .+ Consider .+ing lang=.+': {
-        'issueID': 'pageLanguage',
+      'CSS: background: The .+ argument to the .+ function should be .+, not .+': {
+        'issueID': 'backgroundBad',
         'quality': 1,
-        'what': 'html start tag has no lang attribute to declare the language of the page'
+        'what': 'CSS background function has an invalid argument'
       },
-      'Any .+ descendant of a label element with a for attribute must have an ID value that matches that for attribute.*': {
-        'issueID': 'controlIDInLabelBad',
+      'CSS: border-.+ negative values are not allowed.*': {
+        'issueID': 'borderBad',
         'quality': 1,
-        'what': 'label element has a labelable descendant whose ID differs from the for attribute of the label'
-      },
-      'The aria-label.* attribute must not be specified on any .* element unless the element has a role value other than caption, code, deletion, emphasis, generic, insertion, paragraph, presentation, strong, subscript, or superscript.*': {
-        'issueID': 'nonLabelableRole',
-        'quality': 1,
-        'what': 'Element with a non-labelable role has an aria-label attribute'
-      },
-      'The aria-describedby attribute references .+, which is not the ID of any element in this document.+': {
-        'issueID': 'descriptionBadID',
-        'quality': 1,
-        'what': 'aria-describedby attribute references an element not in the document'
-      },
-      'The aria-labelledby attribute references .+, which is not the ID of any element in this document.+': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references an element not in the document'
-      },
-      'An element with role=.+ must be contained in, or owned by, an element with .*role.+': {
-        'issueID': 'parentMissing',
-        'quality': 1,
-        'what': 'Element has no required container or owner'
-      },
-      'Element .+ is missing a required instance of child element .+': {
-        'issueID': 'descendantMissing',
-        'quality': 1,
-        'what': 'Element is missing a required child'
-      },
-      'CSS: line-height: .* negative values are not allowed.*': {
-        'issueID': 'lineHeightBad',
-        'quality': 1,
-        'what': 'Text line height is negative'
-      },
-      'Saw a start tag [a-z]+.*': {
-        'issueID': 'elementBad',
-        'quality': 1,
-        'what': 'Element does not exist in HTML'
-      },
-      'Attribute .+ not allowed on element meta at this point.*': {
-        'issueID': 'metaAttributesWrong',
-        'quality': 1,
-        'what': 'Attribute is not allowed on a meta element here'
-      },
-      'Element meta is missing one or more of the following attributes: .+': {
-        'issueID': 'metaAttributesWrong',
-        'quality': 1,
-        'what': 'Element is missing a required attribute'
-      },
-      'Bad value .+ for attribute .+ on element meta.*': {
-        'issueID': 'metaAttributeBad',
-        'quality': 1,
-        'what': 'Attribute of a meta element has an invalid value'
-      },
-      'Resource violates Content Security Policy \\(meta tag\\): external stylesheet .+ blocked by style-src directive.*': {
-        'issueID': 'stylesheetBanned',
-        'quality': 1,
-        'what': 'style-src content attribute blocks an external stylesheet'
-      },
-      'Resource violates Content Security Policy \\(meta tag\\): external script .+ blocked by script-src directive.*': {
-        'issueID': 'scriptBanned',
-        'quality': 1,
-        'what': 'script-src content attribute blocks a script'
-      },
-      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Invalid role'
-      },
-      'The role attribute must not be used on a .+ element which has a table ancestor with no role attribute, or with a role attribute whose value is table, grid, or treegrid.*': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'Table cell has a role attribute'
-      },
-      'The .+ role is unnecessary for element .+': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'explicit role is redundant for its element'
-      },
-      'Element .+ does not need a role attribute.*': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'Element needs no role attribute'
-      },
-      'Attribute .+ not allowed on element .+ at this point.*': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute not allowed on this element'
-      },
-      'Attribute .+ not allowed here.*': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute not allowed here'
-      },
-      'Attribute .+ is not serializable as XML 1[.]0.*': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute is invalidly nonserializable'
-      },
-      'Attribute .+ is only allowed when .+': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute is invalid here'
-      },
-      'Bad value .* for attribute .+ on element .+': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute on this element has an invalid value'
-      },
-      'Bad value .+ for the attribute .+': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute has an invalid value'
-      },
-      'Bad value  for attribute .+ on element .+: Must not be empty.*': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute has an invalidly empty value'
-      },
-      'Bad value  for attribute (?:width|height) on element img: The empty string is not a valid non-negative integer.*': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute has an empty value'
-      },
-      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?.*': {
-        'issueID': 'attributeValueRisk',
-        'quality': 1,
-        'what': 'Attribute value may be a typographical error'
-      },
-      'Element image is missing required attribute (?:height|width).*': {
-        'issueID': 'attributeMissing',
-        'quality': 1,
-        'what': 'image element has no height attribute or has no width attribute'
-      },
-      'Element .+ is missing one or more of the following attributes: .+': {
-        'issueID': 'attributeMissing',
-        'quality': 1,
-        'what': 'Element is missing a required attribute'
-      },
-      'Element .+ is missing required attribute .+': {
-        'issueID': 'attributeMissing',
-        'quality': 1,
-        'what': 'Element is missing a required attribute'
-      },
-      'Element .+ is missing required attribute role.*': {
-        'issueID': 'roleMissing',
-        'quality': 1,
-        'what': 'Element has no role attribute'
-      },
-      'Element .+ is missing one or more of the following attributes: role.*': {
-        'issueID': 'roleMissingRisk',
-        'quality': 1,
-        'what': 'Element has no role attribute but needs one?'
-      },
-      'Element .+ is missing required attribute aria-.+': {
-        'issueID': 'ariaMissing',
-        'quality': 1,
-        'what': 'Element is missing a required ARIA attribute'
-      },
-      'Bad value  for attribute .+ on element .+: Must be non-empty.*': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'Attribute value is empty'
-      },
-      'Bad value  for attribute aria-hidden on element .+': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'aria-hidden attribute has an empty value'
-      },
-      'Attribute aria-.+ is unnecessary for elements that have attribute .+': {
-        'issueID': 'ariaRedundant',
-        'quality': 1,
-        'what': 'ARIA attribute is redundant with the synonymous native attribute'
-      },
-      'Bad value  for attribute .+ on element .+: An ID must not be the empty string.*': {
-        'issueID': 'idEmpty',
-        'quality': 1,
-        'what': 'id attribute has an empty value'
-      },
-      'Bad value  for attribute aria-owns on element .+: An IDREFS value must contain at least one non-whitespace character.*': {
-        'issueID': 'idEmpty',
-        'quality': 1,
-        'what': 'aria-owns attribute has an empty value'
-      },
-      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading level.+': {
-        'issueID': 'headingLevelSkip',
-        'quality': 1,
-        'what': 'Heading level is more than 1 level inferior to the previous heading'
-      },
-      'A table row was .+ columns wide, which is less than the column count established by the first row.*': {
-        'issueID': 'tableColumnsVary',
-        'quality': 1,
-        'what': 'Table row has a column count smaller than that of the first row'
-      },
-      'A table row was .+ columns wide and exceeded the column count established by the first row.*': {
-        'issueID': 'tableColumnsVary',
-        'quality': 1,
-        'what': 'Table row has a column count larger than that of the first row'
-      },
-      'Table column [0-9]+ established by element td has no cells beginning in it.*': {
-        'issueID': 'tableColumnsVary',
-        'quality': 1,
-        'what': 'Element is td but the prior cells in its table column do not exist'
-      },
-      'Potentially bad value .+ for attribute sandbox on element iframe: Setting both allow-scripts and allow-same-origin is not recommended, because it effectively enables an embedded page to break out of all sandboxing.*': {
-        'issueID': 'frameSandboxRisk',
-        'quality': 1,
-        'what': 'iframe element has a vulnerable sandbox value containing both allow-scripts and allow-same-origin'
-      },
-      'Element .+ not allowed as child of element .+ in this context.*': {
-        'issueID': 'parentBad',
-        'quality': 1,
-        'what': 'Element has an invalid parent'
-      },
-      'Bad value  for attribute tabindex on element .+: The empty string is not a valid integer.*': {
-        'issueID': 'tabIndexEmpty',
-        'quality': 1,
-        'what': 'tabindex attribute has an empty value instead of an integer'
-      },
-      'The .+ attribute on the .+ element is obsolete.*': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'Attribute is obsolete on its element'
-      },
-      'Potentially bad value .+ for attribute .+ on element .+: The language subtag .+ is deprecated.*': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'Attribute value is a deprecated language subtag'
-      },
-      'The .+ element is a completely-unknown element that is not allowed anywhere in any HTML content.+': {
-        'issueID': 'nonElement',
-        'quality': 1,
-        'what': 'Element is unknown'
-      },
-      'CSS: Deprecated media feature .+': {
-        'issueID': 'obsolete',
-        'quality': 1,
-        'what': 'Media feature is deprecated'
-      },
-      'CSS: Unrecognized at-rule @.+': {
-        'issueID': 'atRuleInvalid',
-        'quality': 1,
-        'what': 'At-rule is not recognized by CSS'
-      },
-      'Style rule .* not allowed outside an @scope rule in a style element in body\.': {
-        'issueID': 'atRuleInvalid',
-        'quality': 1,
-        'what': 'At-rule in CSS is not within an @scope rule'
-      },
-      'CSS: .+: Character .+ is neither a decimal digit number.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Nonnumeric character in a numeric style property'
+        'what': 'CSS border includes a negative-valued property'
       },
       'CSS: column-count: .+ is not valid, only values greater than 0 allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS column-count property has a nonpositive value'
+      },
+      'CSS: flex: .+ negative values are not allowed.*': {
+        'issueID': 'flexBad',
+        'quality': 1,
+        'what': 'CSS flex value is negative'
       },
       'CSS: font-weight: .+ is not valid, only values greater than or equal to 1.0 are allowed.*': {
         'issueID': 'cssInvalid',
@@ -6967,265 +6932,140 @@ const rulesData = {
         'quality': 1,
         'what': 'CSS font-weight property has a value greater than 1000'
       },
-      'CSS: .+: Parse Error.*': {
-        'issueID': 'cssInvalid',
+      'CSS: gap: .+ negative values are not allowed.*': {
+        'issueID': 'gapBad',
         'quality': 1,
-        'what': 'Invalid CSS'
+        'what': 'CSS gap value is negative'
       },
-      'CSS: .+: .+ is not a valid color 3 or 6 hexadecimals numbers.*': {
-        'issueID': 'cssInvalid',
+      'CSS: line-height: .* negative values are not allowed.*': {
+        'issueID': 'lineHeightBad',
         'quality': 1,
-        'what': 'Invalid hexadecimal color in CSS'
+        'what': 'Text line height is negative'
       },
-      'CSS: .+: .+ is not a .+ value.*': {
-        'issueID': 'cssInvalid',
+      'CSS: padding[-a-z]*: .+ negative values are not allowed.*': {
+        'issueID': 'paddingBad',
         'quality': 1,
-        'what': 'Invalid value in CSS'
-      },
-      'CSS: .+: Property .+ doesn\'t exist.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid property in CSS'
-      },
-      'CSS: .+: only 0 can be a length. You must put a unit after your number.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Length in CSS is nonzero but has no unit'
-      },
-      'CSS: .*only 0 can be a unit. You must put a unit after your number.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Number in CSS is nonzero but has no unit'
-      },
-      'CSS: .+: Too many values or values are not recognized.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid CSS value or too many values'
-      },
-      'CSS: .+: Invalid type: .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid type of CSS value'
-      },
-      'CSS: .+: The types are incompatible.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Incompatible types of CSS values'
-      },
-      'CSS: .+: Unknown dimension.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Unknown CSS dimension'
-      },
-      'CSS: .+: Character array is missing "e" notation exponential mark.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Character array has no exponent mark e'
-      },
-      'CSS: .+:   is an incorrect operator.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Space is misused as a CSS operator'
-      },
-      'CSS: .+: , is an incorrect operator.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Comma is misused as a CSS operator'
-      },
-      'CSS: Unknown pseudo-element or pseudo-class :.+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Unknown pseudo-element or pseudo-class'
-      },
-      'CSS: unrecognized media .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Unrecognized media value'
-      },
-      'CSS: .+ is not a :lang.+ value.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS pseudo-class :lang() has an invalid value'
-      },
-      'CSS: .+: Missing a semicolon before the .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'semicolon missing in CSS'
+        'what': 'One of the CSS padding values is negative'
       },
       'CSS: perspective: .+ is not valid, only values greater than 0 allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 0.5,
         'what': 'CSS perspective property has a nonpositive value'
       },
-      'CSS: .*Lexical error at line .+, column .+ Encountered: .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS property has a value with a lexical error'
-      },
       'CSS: transition: .+ is not valid, only values lower than or equal to 1.0 are allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 0.5,
         'what': 'CSS transition property has a value greater than 1'
       },
-      'CSS: In CSS1, a class name could start with a digit .+, unless it was a dimension .+ In CSS2, such classes are parsed as unknown dimensions .+ To make .+ a valid class, CSS2 requires the first digit to be escaped: .+': {
+      'CSS: unrecognized media .+': {
         'issueID': 'cssInvalid',
-        'quality': 0.5,
-        'what': 'CSS class name starts with an unescaped digit'
-      },
-      'Stray start tag .+': {
-        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Invalid start tag'
+        'what': 'Unrecognized media value'
       },
-      'Stray end tag .+': {
-        'issueID': 'elementClosure',
+      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Invalid closing tag'
+        'what': 'Invalid role'
       },
-      'End tag [a-z]+\\.': {
-        'issueID': 'elementClosure',
+      'Duplicate ID .+$|^The first occurrence of ID .* was here.*': {
+        'issueID': 'duplicateID',
         'quality': 1,
-        'what': 'Closing tag of an ineligible element'
+        'what': 'Duplicate id'
       },
-      'Start tag .+ seen but an element of the same type was already open.*': {
-        'issueID': 'elementClosure',
+      'Duplicate attribute.*': {
+        'issueID': 'duplicateAttribute',
         'quality': 1,
-        'what': 'Element is invalidly a descendant of another such element'
+        'what': 'Source code of the element contains 2 or more of the same attribute'
       },
-      'End tag for .+ seen, but there were unclosed elements.*': {
-        'issueID': 'elementClosure',
+      'Element .+ does not need a role attribute.*': {
+        'issueID': 'roleRedundant',
         'quality': 1,
-        'what': 'Element is closed while an element within it is unclosed'
+        'what': 'Element needs no role attribute'
       },
-      'End tag .+ seen, but there were open elements.*': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing a required instance of child element .+': {
+        'issueID': 'descendantMissing',
         'quality': 1,
-        'what': 'Element is closed while an element within it is unclosed'
+        'what': 'Element is missing a required child'
       },
-      'End tag .+ implied, but there were open elements.*': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing one or more of the following attributes: .+': {
+        'issueID': 'attributeMissing',
         'quality': 1,
-        'what': 'Element is implicitly closed while an element within it is unclosed'
+        'what': 'Element is missing a required attribute'
       },
-      'Unclosed element .+': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing one or more of the following attributes: role.*': {
+        'issueID': 'roleMissingRisk',
         'quality': 1,
-        'what': 'Element is unclosed'
+        'what': 'Element has no role attribute but needs one?'
       },
-      'No .+ element in scope but a .+ end tag seen.*': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing required attribute .+': {
+        'issueID': 'attributeMissing',
         'quality': 1,
-        'what': 'End tag for an element that is not in scope'
+        'what': 'Element is missing a required attribute'
       },
-      'End tag .+ violates nesting rules.*': {
-        'issueID': 'nestingBad',
+      'Element .+ is missing required attribute aria-.+': {
+        'issueID': 'ariaMissing',
         'quality': 1,
-        'what': 'End tag violates nesting rules'
+        'what': 'Element is missing a required ARIA attribute'
       },
-      'Bad value [^`]+ Tab, new line or carriage return found.*': {
-        'issueID': 'characterBad',
+      'Element .+ is missing required attribute role.*': {
+        'issueID': 'roleMissing',
         'quality': 1,
-        'what': 'Attribute value contains an illegal spacing character'
+        'what': 'Element has no role attribute'
       },
-      'Bad character . after <. Probable cause: Unescaped <. Try escaping it as &lt;.*': {
-        'issueID': 'characterBad',
+      'Element .+ not allowed as child of element .+ in this context.*': {
+        'issueID': 'parentBad',
         'quality': 1,
-        'what': 'Left angle bracket is followed by an invalid character'
+        'what': 'Element has an invalid parent'
       },
-      'Saw .+ when expecting an attribute name. Probable cause: (?:.+ missing|Missing .+) immediately before.*': {
-        'issueID': 'characterBad',
+      'Element image is missing required attribute (?:height|width).*': {
+        'issueID': 'attributeMissing',
         'quality': 1,
-        'what': 'Invalid character appears where an attribute name must appear'
+        'what': 'image element has no height attribute or has no width attribute'
       },
-      'Bad element name .*: Code point .* is not allowed*': {
-        'issueID': 'characterBad',
+      'Element meta is missing one or more of the following attributes: .+': {
+        'issueID': 'metaAttributesWrong',
         'quality': 1,
-        'what': 'Element name contains an invalid character'
-      },
-      'Bad value .* for attribute href on element .+: Illegal character in path segment: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'href attribute path value contains an invalid character in a segment'
-      },
-      'Bad value .* for attribute src on element .+: Illegal character in path segment: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'src attribute path value contains an invalid character in a segment'
-      },
-      'Bad value .* for attribute href on element .+: Illegal character in query: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'href attribute query value contains an invalid character'
-      },
-      'Bad value .* for attribute src on element .+: Illegal character in query: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'src attribute query value contains an invalid character'
-      },
-      'Bad value .+ for attribute src on element .+: Tab, new line or carriage return found.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'src attribute value contains a tab, newline, or return character'
-      },
-      '.+ in an unquoted attribute value. Probable causes: Attributes running together or a URL query string in an unquoted attribute value.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'Attribute has a value containing invalid punctuation'
-      },
-      'The text content of element .+ was not in the required format: Expected .+ but found .+ instead.*': {
-        'issueID': 'textContentBad',
-        'quality': 1,
-        'what': 'Element has text content with invalid format'
-      },
-      'End tag .+ did not match the name of the current open element .*': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'End tag conflicts with the current open element.'
-      },
-      'Self-closing syntax .+ used on a non-void HTML element.*': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'Self-closing syntax used on a non-void element'
-      },
-      'The aria-hidden attribute must not be specified on the .+ element.*': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'aria-hidden attribute is invalid for its element'
-      },
-      'Bad start tag in .+': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'Invalid start tag'
+        'what': 'Element is missing a required attribute'
       },
       'Element name .+ cannot be represented as XML 1[.]0.*': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Invalid element name'
       },
-      'Quote . in attribute name[.] Probable cause: Matching quote missing somewhere earlier.*': {
+      'End tag .+ did not match the name of the current open element .*': {
         'issueID': 'parseError',
         'quality': 1,
-        'what': 'Attribute name includes an apostrophe or double quotation mark'
+        'what': 'End tag conflicts with the current open element.'
       },
-      'Text not allowed in element .+ in this context.*': {
-        'issueID': 'parseError',
+      'End tag .+ implied, but there were open elements.*': {
+        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Element contains text, which is not allowed here'
+        'what': 'Element is implicitly closed while an element within it is unclosed'
       },
-      'The .+ element must not appear as a descendant of the .+ element.*': {
-        'issueID': 'parseError',
+      'End tag .+ seen, but there were open elements.*': {
+        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Element has an invalid ancestor'
+        'what': 'Element is closed while an element within it is unclosed'
       },
-      'The element .+ must not appear as a descendant of the .+ element.*': {
-        'issueID': 'parseError',
+      'End tag .+ violates nesting rules.*': {
+        'issueID': 'nestingBad',
         'quality': 1,
-        'what': 'Element has an invalid ancestor'
+        'what': 'End tag violates nesting rules'
       },
-      'java.util.concurrent.TimeoutException: Idle timeout expired: .+ ms.*': {
-        'issueID': 'parseError',
+      'End tag [a-z]+\\.': {
+        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Idle timeout expired'
+        'what': 'Closing tag of an ineligible element'
+      },
+      'End tag for .+ seen, but there were unclosed elements.*': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Element is closed while an element within it is unclosed'
+      },
+      'Forbidden code point U+.*': {
+        'issueID': 'encodingBad',
+        'quality': 1,
+        'what': 'Invalid Unicode code point'
       },
       'HTML start tag .+ in a foreign namespace context.*': {
         'issueID': 'parseError',
@@ -7242,188 +7082,249 @@ const rulesData = {
         'quality': 1,
         'what': 'Encoding declaration names an unsupported character encoding'
       },
+      'No .+ element in scope but a .+ end tag seen.*': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'End tag for an element that is not in scope'
+      },
+      'Potentially bad value .+ for attribute .+ on element .+: The language subtag .+ is deprecated.*': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Attribute value is a deprecated language subtag'
+      },
+      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?.*': {
+        'issueID': 'attributeValueRisk',
+        'quality': 1,
+        'what': 'Attribute value may be a typographical error'
+      },
+      'Potentially bad value .+ for attribute sandbox on element iframe: Setting both allow-scripts and allow-same-origin is not recommended, because it effectively enables an embedded page to break out of all sandboxing.*': {
+        'issueID': 'frameSandboxRisk',
+        'quality': 1,
+        'what': 'iframe element has a vulnerable sandbox value containing both allow-scripts and allow-same-origin'
+      },
+      'Quote . in attribute name[.] Probable cause: Matching quote missing somewhere earlier.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Attribute name includes an apostrophe or double quotation mark'
+      },
+      'Resource violates Content Security Policy \\(meta tag\\): external script .+ blocked by script-src directive.*': {
+        'issueID': 'scriptBanned',
+        'quality': 1,
+        'what': 'script-src content attribute blocks a script'
+      },
+      'Resource violates Content Security Policy \\(meta tag\\): external stylesheet .+ blocked by style-src directive.*': {
+        'issueID': 'stylesheetBanned',
+        'quality': 1,
+        'what': 'style-src content attribute blocks an external stylesheet'
+      },
+      'Resource violates Content Security Policy \\(meta tag\\): image .+ blocked by img-src directive.*': {
+        'issueID': 'imageBanned',
+        'quality': 1,
+        'what': 'img-src content attribute blocks an image'
+      },
+      'Saw .+ when expecting an attribute name. Probable cause: (?:.+ missing|Missing .+) immediately before.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Invalid character appears where an attribute name must appear'
+      },
+      'Saw a start tag [a-z]+.*': {
+        'issueID': 'elementBad',
+        'quality': 1,
+        'what': 'Element does not exist in HTML'
+      },
+      'Self-closing syntax .+ used on a non-void HTML element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Self-closing syntax used on a non-void element'
+      },
+      'Start tag .+ seen but an element of the same type was already open.*': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Element is invalidly a descendant of another such element'
+      },
+      'Stray end tag .+': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Invalid closing tag'
+      },
+      'Stray start tag .+': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Invalid start tag'
+      },
+      'Style rule .* not allowed outside an @scope rule in a style element in body\.': {
+        'issueID': 'atRuleInvalid',
+        'quality': 1,
+        'what': 'At-rule in CSS is not within an @scope rule'
+      },
+      'Table column [0-9]+ established by element td has no cells beginning in it.*': {
+        'issueID': 'tableColumnsVary',
+        'quality': 1,
+        'what': 'Element is td but the prior cells in its table column do not exist'
+      },
+      'Text not allowed in element .+ in this context.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element contains text, which is not allowed here'
+      },
       'Text run is not in Unicode Normalization Form C.+': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Text run is not in Unicode Normalization Form C'
+      },
+      'The .+ attribute on the .+ element is obsolete.*': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Attribute is obsolete on its element'
+      },
+      'The .+ element is a completely-unknown element that is not allowed anywhere in any HTML content.+': {
+        'issueID': 'nonElement',
+        'quality': 1,
+        'what': 'Element is unknown'
+      },
+      'The .+ element must not appear as a descendant of the .+ element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element has an invalid ancestor'
+      },
+      'The .+ role is unnecessary for element .+': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'explicit role is redundant for its element'
+      },
+      'The aria-describedby attribute references .+, which is not the ID of any element in this document.+': {
+        'issueID': 'descriptionBadID',
+        'quality': 1,
+        'what': 'aria-describedby attribute references an element not in the document'
+      },
+      'The aria-hidden attribute must not be specified on the .+ element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'aria-hidden attribute is invalid for its element'
+      },
+      'The aria-label.* attribute must not be specified on any .* element unless the element has a role value other than caption, code, deletion, emphasis, generic, insertion, paragraph, presentation, strong, subscript, or superscript.*': {
+        'issueID': 'nonLabelableRole',
+        'quality': 1,
+        'what': 'Element with a non-labelable role has an aria-label attribute'
+      },
+      'The aria-labelledby attribute references .+, which is not the ID of any element in this document.+': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references an element not in the document'
+      },
+      'The element .+ must not appear as a descendant of the .+ element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element has an invalid ancestor'
+      },
+      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading level.+': {
+        'issueID': 'headingLevelSkip',
+        'quality': 1,
+        'what': 'Heading level is more than 1 level inferior to the previous heading'
+      },
+      'The role attribute must not be used on a .+ element which has a table ancestor with no role attribute, or with a role attribute whose value is table, grid, or treegrid.*': {
+        'issueID': 'roleHierarchyBad',
+        'quality': 1,
+        'what': 'Table cell has a role attribute'
+      },
+      'The text content of element .+ was not in the required format: Expected .+ but found .+ instead.*': {
+        'issueID': 'textContentBad',
+        'quality': 1,
+        'what': 'Element has text content with invalid format'
       },
       'The value of attribute .+ on element .+ from namespace .+ is not in Unicode Normalization Form C.*': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Value of attribute is not in Unicode Normalization Form C'
       },
-      'Forbidden code point U+.*': {
-        'issueID': 'encodingBad',
+      'This document appears to be written in .+ Consider .+ing lang=.+': {
+        'issueID': 'pageLanguage',
         'quality': 1,
-        'what': 'Invalid Unicode code point'
+        'what': 'html start tag has no lang attribute to declare the language of the page'
+      },
+      'Unclosed element .+': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Element is unclosed'
+      },
+      'java.util.concurrent.TimeoutException: Idle timeout expired: .+ ms.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Idle timeout expired'
       }
     }
   },
   'nuVnu': {
     'invariant': {
-      'Element head is missing a required instance of child element title.': {
-        'issueID': 'ignorable',
+      'A charset attribute on a meta element found after the first 1024 bytes.': {
+        'issueID': 'metaCharsetLate',
         'quality': 1,
-        'what': 'head element has no child title element',
-        'whyIgnore': 'invalid'
+        'what': 'charset attribute on a meta element appears after 1024 bytes'
       },
-      'Element img is missing required attribute src.': {
-        'issueID': 'ignorable',
+      'A document must not include both a meta element with an http-equiv attribute whose value is content-type, and a meta element with a charset attribute.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'img element has no src attribute',
-        'whyIgnore': 'invalid'
+        'what': 'Element with http-equiv="content-type" is incompatible with the meta element with a charset attribute'
       },
-      'Element mediaelementwrapper not allowed as child of element div in this context. (Suppressing further errors from this subtree.)': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Element contains a prohibited mediaelementwrapper element',
-        'whyIgnore': 'invalid'
-      },
-      'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.': {
-        'issueID': 'ignorable',
+      'A document must not include more than one autofocus attribute.': {
+        'issueID': 'attributeBad',
         'quality': 1,
-        'what': 'Void element has a useless trailing slash.',
-        'whyIgnore': 'invalid'
+        'what': 'Page includes more than one autofocus attribute'
       },
-      'The aria-placeholder attribute must not be specified on elements that have a placeholder attribute.': {
-        'issueID': 'placeholderPlusAria',
+      'A document must not include more than one meta element with a charset attribute.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'Element has both placeholder and aria-placeholder attributes'
+        'what': 'More than 1 meta element has a charset attribute'
       },
-      'An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.': {
-        'issueID': 'imageNoText',
+      'A document must not include more than one meta element with a http-equiv attribute whose value is content-type.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'img element has no alt attribute'
+        'what': 'Page has more than 1 meta element with http-equiv="content-type"'
       },
-      'An img element with a role attribute must also have an accessible name (e.g., an alt attribute).': {
-        'issueID': 'imageNoText',
+      'A document must not include more than one meta element with its name attribute set to the value description.': {
+        'issueID': 'metaDuplicated',
         'quality': 1,
-        'what': 'img element with a role attribute has no alt attribute'
+        'what': 'Element with name="description" is not the only meta element with that name'
       },
-      'An img element which has an alt attribute whose value is the empty string must not have a role attribute.': {
-        'issueID': 'decorativeElementExposed',
+      'A document must not include more than one visible main element.': {
+        'issueID': 'mainNot1',
         'quality': 1,
-        'what': 'img element with alt="" has a role attribute'
+        'what': 'Page includes more than 1 visible main element'
       },
-      'An img element with a role attribute must not have an alt attribute whose value is the empty string.': {
-        'issueID': 'decorativeElementExposed',
+      'A document should not include more than one visible element with role=main.': {
+        'issueID': 'mainNot1',
         'quality': 1,
-        'what': 'img element with a role attribute has alt=""'
+        'what': 'Page includes more than 1 visible element with a main role'
       },
-      'Consider adding a lang attribute to the html start tag to declare the language of this document.': {
-        'issueID': 'pageLanguage',
+      'A figure element with a figcaption descendant must not have a role attribute.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'html start tag has no lang attribute to declare the language of the page'
-      },
-      'When the attribute xml:lang in no namespace is specified, the element must also have the attribute lang present with the same value.': {
-        'issueID': 'elementLanguageBad',
-        'quality': 1,
-        'what': 'Element has no lang attrbute matching its xml:lang attribute'
-      },
-      'The value of the for attribute of the label element must be the ID of a non-hidden form control.': {
-        'issueID': 'labelForBad',
-        'quality': 1,
-        'what': 'for attribute of the label element does not reference a non-hidden form control'
-      },
-      'Possible misuse of aria-label. (If you disagree with this warning, file an issue report or send e-mail to www-validator@w3.org.)': {
-        'issueID': 'ariaLabelWrongRisk',
-        'quality': 1,
-        'what': 'aria-label attribute is misused?'
-      },
-      'Attribute aria-activedescendant value should either refer to a descendant element, or should be accompanied by attribute aria-owns.': {
-        'issueID': 'activeDescendantBadID',
-        'quality': 1,
-        'what': 'Element has no aria-owns attribute but its aria-activedescendant attribute references a non-descendant'
-      },
-      'The aria-controls attribute must point to an element in the same document.': {
-        'issueID': 'governedBadID',
-        'quality': 1,
-        'what': 'aria-controls attribute references an element not in the document'
-      },
-      'The aria-owns attribute must point to an element in the same document.': {
-        'issueID': 'governedBadID',
-        'quality': 1,
-        'what': 'aria-owns attribute references an element not in the document'
-      },
-      'The aria-describedby attribute must point to an element in the same document.': {
-        'issueID': 'descriptionBadID',
-        'quality': 1,
-        'what': 'aria-describedby attribute references an element not in the document'
-      },
-      'Any input descendant of a label element with a for attribute must have an ID value that matches that for attribute.': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'input id differs from the value of the for attribute of the enclosing label element'
-      },
-      'The aria-labelledby attribute must point to an element in the same document.': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references an element not in the document'
-      },
-      'Bad value  for attribute href on element link: Must be non-empty.': {
-        'issueID': 'linkElNoHref',
-        'quality': 1,
-        'what': 'link element has an empty href attribute'
-      },
-      'Attribute href without an explicit value seen. The attribute may be dropped by IE7.': {
-        'issueID': 'linkElNoHref',
-        'quality': 1,
-        'what': 'Element has an empty href attribute'
+        'what': 'figure element has a figcaption descendant but has a role attribute'
       },
       'A link element must have an href or imagesrcset attribute, or both.': {
         'issueID': 'linkElNoSource',
         'quality': 1,
         'what': 'link element has neither an href nor an imagesrcset attribute'
       },
-      'Element a is missing required attribute href.': {
-        'issueID': 'destinationLink',
-        'quality': 1,
-        'what': 'a element has no href attribute'
-      },
-      'The document role is not allowed for element select without a multiple attribute and without a size attribute whose value is greater than 1.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'select element is not multiple or has no size greater than 1 but has a document role'
-      },
-      'The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'option element has a nonempty value'
-      },
-      'The select element cannot have more than one selected option descendant unless the multiple attribute is specified.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'Element is select and has no multiple attribute, but has more than 1 selected option'
-      },
-      'A select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have a child option element.': {
-        'issueID': 'selectBad',
-        'quality': 1,
-        'what': 'Element is select and has no child option element, but its attributes require one'
-      },
-      'Attribute alt not allowed on element button at this point.': {
-        'issueID': 'buttonAlt',
-        'quality': 1,
-        'what': 'button element has an alt attribute'
-      },
-      'Element input with attribute type whose value is button must have non-empty attribute value.': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'input element with type=button has no nonempty value attribute'
-      },
-      'Consider avoiding viewport values that prevent users from resizing documents.': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'viewport value prevents users from resizing the document'
-      },
-      'The base element must come before any link or script elements in the document.': {
-        'issueID': 'baseElementMissing',
-        'quality': 1,
-        'what': 'Element is a link or script element requiring a preceding base element but has none'
-      },
       'A link element must not appear as a descendant of a body element unless the link element has an itemprop attribute or has a rel attribute whose value contains dns-prefetch, modulepreload, pingback, preconnect, prefetch, preload, prerender, or stylesheet.': {
         'issueID': 'linkElementMisplaced',
         'quality': 1,
         'what': 'Element has a body ancestor but no itemprop or valid rel attribute'
+      },
+      'A link element with a color attribute must have a rel attribute that contains the value mask-icon.': {
+        'issueID': 'linkElementBad',
+        'quality': 1,
+        'what': 'Element has a color attribute but no rel attribute with mask-icon as its value'
+      },
+      'A link element with a rel attribute that contains the value preload must have an as attribute.': {
+        'issueID': 'attributeMissing',
+        'quality': 1,
+        'what': 'link element with rel="preload" is missing an as attribute'
+      },
+      'A link element with a sizes attribute must have a rel attribute that contains the value icon or the value apple-touch-icon or the value apple-touch-icon-precomposed.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'link element has a sizes attribute but no icon-type rel attribute'
       },
       'A link element with an as attribute must have a rel attribute that contains the value preload or the value modulepreload or the value prefetch.': {
         'issueID': 'linkElementBad',
@@ -7435,465 +7336,105 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has an as attribute but no rel attribute with preload or modulepreload as its value'
       },
-      'A link element with a color attribute must have a rel attribute that contains the value mask-icon.': {
-        'issueID': 'linkElementBad',
-        'quality': 1,
-        'what': 'Element has a color attribute but no rel attribute with mask-icon as its value'
-      },
-      'A document must not include more than one meta element with its name attribute set to the value description.': {
-        'issueID': 'metaDuplicated',
-        'quality': 1,
-        'what': 'Element with name="description" is not the only meta element with that name'
-      },
-      'A document must not include both a meta element with an http-equiv attribute whose value is content-type, and a meta element with a charset attribute.': {
-        'issueID': 'metaDuplicated',
-        'quality': 1,
-        'what': 'Element with http-equiv="content-type" is incompatible with the meta element with a charset attribute'
-      },
-      'A document must not include more than one meta element with a http-equiv attribute whose value is content-type.': {
-        'issueID': 'metaDuplicated',
-        'quality': 1,
-        'what': 'Page has more than 1 meta element with http-equiv="content-type"'
-      },
       'A meta element with an http-equiv attribute whose value is X-UA-Compatible must have a content attribute with the value IE=edge.': {
         'issueID': 'metaXUACompatible',
         'quality': 1,
         'what': 'Element with http-equiv="X-UA-Compatible" has no content="IE=edge"'
       },
-      'A document must not include more than one meta element with a charset attribute.': {
-        'issueID': 'metaDuplicated',
+      'A numeric character reference expanded to carriage return.': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'More than 1 meta element has a charset attribute'
-      },
-      'A charset attribute on a meta element found after the first 1024 bytes.': {
-        'issueID': 'metaCharsetLate',
-        'quality': 1,
-        'what': 'charset attribute on a meta element appears after 1024 bytes'
-      },
-      'meta element between head and body.': {
-        'issueID': 'metaMisplaced',
-        'quality': 1,
-        'what': 'meta element is between the head and body elements'
-      },
-      'Element script must not have attribute defer unless attribute src is also specified.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element is script and has a defer attribute but no src attribute'
-      },
-      'An inline script element (i.e., a script element without a src attribute and with a type attribute that is either unspecified, empty, or a JavaScript MIME type) must not have a defer attribute.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element is not eligible for a defer attribute but has one'
-      },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a defer attribute.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element is not eligible for a defer attribute but has one'
-      },
-      'A script element with type=module must not have a defer attribute.': {
-        'issueID': 'scriptNotDeferrable',
-        'quality': 1,
-        'what': 'Element has a module type but has a defer attribute'
-      },
-      'Element script should not have attribute fetchpriority unless attribute src is also specified.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is script and has a fetchpriority attribute but no src attribute'
-      },
-      'A script element with a src attribute must not have a type attribute whose value is anything other than the empty string, a JavaScript MIME type, or module.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is script and has a src attribute but its type is not empty, a JS MIME type, or module'
-      },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have an async attribute.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is not eligible for an async attribute but has one'
-      },
-      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a src attribute.': {
-        'issueID': 'scriptElementBad',
-        'quality': 1,
-        'what': 'Element is not eligible for a src attribute but has one'
-      },
-      'The href_matches property in a document rule must be a string.': {
-        'issueID': 'specRulesScriptBad',
-        'quality': 1,
-        'what': 'Element is script with type=speculationrules but its href_matches value is not a string'
-      },
-      'Each rule in the prefetch array must only contain the properties source, urls, where, and eagerness.': {
-        'issueID': 'specRulesScriptBad',
-        'quality': 1,
-        'what': 'Element is script with type=speculationrules but its prefetch array has invalid property names'
-      },
-      'A script element with a type attribute whose value is speculationrules must contain a JSON object with at least one of the properties prefetch or prerender.': {
-        'issueID': 'specRulesScriptBad',
-        'quality': 1,
-        'what': 'Element is script with type=speculationrules but has no JSON object with a prefetch or prerender property'
-      },
-      'The itemid attribute must not be specified on elements that do not have both an itemscope attribute and an itemtype attribute specified.': {
-        'issueID': 'itemIDBad',
-        'quality': 1,
-        'what': 'Element has an itemid attribute without both an itemscope and an itemtype attribute'
-      },
-      'The itemtype attribute must not be specified on elements that do not have an itemscope attribute specified.': {
-        'issueID': 'itemTypeBad',
-        'quality': 1,
-        'what': 'Element has an itemtype attribute without an itemscope attribute'
-      },
-      'Bad value dialog for attribute role on element li.': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'dialog role is not valid for an li element'
-      },
-      'An img element with no alt attribute must not have a role attribute.': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'img element has a role attribute but no alt attribute'
-      },
-      'A figure element with a figcaption descendant must not have a role attribute.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'figure element has a figcaption descendant but has a role attribute'
-      },
-      'An li element that is a descendant of a ul, ol, or menu element with no explicit role value, or a descendant of a role=list element, must not have any role value other than listitem.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'element is li in a list but has no listitem role'
-      },
-      'An li element that is a descendant of a role=listbox element or role=list element must not have any role value other than group or option.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'element is li in a listbox or list but has no group or option role'
-      },
-      'An element with role=group must not be a descendant of an element with role=list.': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'element has a group role but has an ancestor with a list role'
-      },
-      'The searchbox role is unnecessary for an input element that has no list attribute and whose type is search.': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'explicit role is redundant for a search-type input element without a list attribute'
-      },
-      'The textbox role is unnecessary for an input element that has no list attribute and whose type is text.': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'explicit role is redundant for a text-type input element without a list attribute'
-      },
-      'The itemprop attribute was specified, but the element is not a property of any item.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'itemprop attribute is on an element that is not a property of an item'
-      },
-      'An aria-disabled attribute whose value is true should not be specified on an a element that has an href attribute.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'a element has aria-disabled=true but has an href attribute'
-      },
-      'A document must not include more than one autofocus attribute.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Page includes more than one autofocus attribute'
-      },
-      'An input element with a type attribute whose value is hidden must not have any aria-* attributes.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'hidden-type input element has an ARIA attribute'
-      },
-      'The name attribute is never allowed on the a element.': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'element is a but has a name attribute'
-      },
-      'A link element with a sizes attribute must have a rel attribute that contains the value icon or the value apple-touch-icon or the value apple-touch-icon-precomposed.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'link element has a sizes attribute but no icon-type rel attribute'
-      },
-      'The sizes attribute may be specified only if the srcset attribute is also present.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element has a sizes attribute but no srcset attribute'
-      },
-      'The sizes attribute must only be specified if the srcset attribute is also specified.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element has a sizes attribute but no srcset attribute'
-      },
-      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be present.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element with a srcset attribute with a width has no sizes attribute'
-      },
-      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be specified.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element with a srcset attribute with a width has no valid sizes attribute'
-      },
-      'The sizes attribute value starting with auto is only valid for lazy-loaded images. Add loading=lazy to this element.': {
-        'issueID': 'sizesAttributeBad',
-        'quality': 1,
-        'what': 'Element with a sizes=auto… attribute has no loading=lazy attribute'
+        'what': 'Numeric character entity represents a carriage return'
       },
       'A script element with a defer attribute must not have a type attribute with the value module.': {
         'issueID': 'attributeValueBad',
         'quality': 1,
         'what': 'script element with a defer attribute has type="module"'
       },
-      'A link element with a rel attribute that contains the value preload must have an as attribute.': {
-        'issueID': 'attributeMissing',
+      'A script element with a src attribute must not have a type attribute whose value is anything other than the empty string, a JavaScript MIME type, or module.': {
+        'issueID': 'scriptElementBad',
         'quality': 1,
-        'what': 'link element with rel="preload" is missing an as attribute'
+        'what': 'Element is script and has a src attribute but its type is not empty, a JS MIME type, or module'
+      },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a defer attribute.': {
+        'issueID': 'scriptNotDeferrable',
+        'quality': 1,
+        'what': 'Element is not eligible for a defer attribute but has one'
+      },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have a src attribute.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'Element is not eligible for a src attribute but has one'
+      },
+      'A script element with a type attribute whose value is neither a JavaScript MIME type, module, importmap, nor speculationrules (i.e., a data block) must not have an async attribute.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'Element is not eligible for an async attribute but has one'
+      },
+      'A script element with a type attribute whose value is speculationrules must contain a JSON object with at least one of the properties prefetch or prerender.': {
+        'issueID': 'specRulesScriptBad',
+        'quality': 1,
+        'what': 'Element is script with type=speculationrules but has no JSON object with a prefetch or prerender property'
+      },
+      'A script element with type=module must not have a defer attribute.': {
+        'issueID': 'scriptNotDeferrable',
+        'quality': 1,
+        'what': 'Element has a module type but has a defer attribute'
+      },
+      'A select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have a child option element.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'Element is select and has no child option element, but its attributes require one'
+      },
+      'A slash was not immediately followed by >.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element start tag contains a nonfinal slash'
       },
       'A source element that has a following sibling source element or img element with a srcset attribute must have a media attribute and/or type attribute.': {
         'issueID': 'attributeMissing',
         'quality': 1,
         'what': 'source or img element is missing a media or type attribute'
       },
-      'The aria-hidden attribute must not be specified on the noscript element.': {
-        'issueID': 'ariaAttributeBad',
+      'A style element in body must be the first child of its parent.': {
+        'issueID': 'parseError',
         'quality': 1,
-        'what': 'noscript element has an aria-hidden attribute'
-      },
-      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is radio.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type="radio" has an aria-checked attribute'
-      },
-      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is radio.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type="radio" has an aria-checked attribute'
-      },
-      'The form attribute must refer to a form element.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'form attribute does not reference a form element'
-      },
-      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is checkbox.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type checkbox has an aria-checked attribute'
-      },
-      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is checkbox.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with type checkbox has an aria-checked attribute'
-      },
-      'An img element with no alt attribute must not have any aria-* attributes other than aria-hidden.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'img element has no alt attribute but has an ARIA attribute other than aria-hidden'
-      },
-      'An input element with a type attribute whose value is checkbox and with a role attribute whose value is button must have an aria-pressed attribute whose value is true.': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'input element with a button role and type="checkbox" has no aria-pressed="true"'
-      },
-      'The aria-valuemax attribute must not be used on an element which has a max attribute.': {
-        'issueID': 'ariaRedundant',
-        'quality': 1,
-        'what': 'Element has the max attribute but also the aria-valuemax attribute'
-      },
-      'The aria-valuemin attribute must not be used on an element which has a min attribute.': {
-        'issueID': 'ariaRedundant',
-        'quality': 1,
-        'what': 'Element has the min attribute but also the aria-valuemin attribute'
-      },
-      'Bad value  for attribute autocomplete on element input: Must not be empty.': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute has an empty value'
-      },
-      'An input element with a type attribute whose value is hidden must not have an autocomplete attribute whose value is on or off.': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute belongs to a hidden element but has an on or off value'
-      },
-      'Bad value  for attribute target on element a: Browsing context name must be at least one character long.': {
-        'issueID': 'targetEmpty',
-        'quality': 1,
-        'what': 'target attribute on an a element is empty'
-      },
-      'Heading cannot be a child of another heading.': {
-        'issueID': 'headingsEmbedded',
-        'quality': 1,
-        'what': 'Heading is within a heading'
-      },
-      'Empty heading.': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Empty heading'
-      },
-      'The only allowed value for the type attribute for the style element is text/css (with no parameters). (But the attribute is not needed and should be omitted altogether.)': {
-        'issueID': 'typeBad',
-        'quality': 1,
-        'what': 'type attribute is invalid'
-      },
-      'The type attribute is unnecessary for JavaScript resources.': {
-        'issueID': 'typeRedundant',
-        'quality': 1,
-        'what': 'type attribute is unnecessary for a JavaScript resource'
-      },
-      'The type attribute for the style element is not needed and should be omitted.': {
-        'issueID': 'typeRedundant',
-        'quality': 1,
-        'what': 'type attribute is unnecessary for a style element'
-      },
-      'Element title must not be empty.': {
-        'issueID': 'titleEmpty',
-        'quality': 1,
-        'what': 'Element has an empty title attribute'
-      },
-      'Start tag seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
-        'issueID': 'docTypeMissing',
-        'quality': 1,
-        'what': 'Page does not start with <!DOCTYPE html>'
-      },
-      'End of file seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
-        'issueID': 'docTypeMissing',
-        'quality': 1,
-        'what': 'Page does not include <!DOCTYPE html>'
-      },
-      'Stray doctype.': {
-        'issueID': 'docTypeMisplaced',
-        'quality': 1,
-        'what': 'DOCTYPE is in an invalid location'
+        'what': 'style element in the body is not the first child of its parent element'
       },
       'Almost standards mode doctype. Expected <!DOCTYPE html>.': {
         'issueID': 'docTypeBad',
         'quality': 1,
         'what': 'document type declaration differs from <!DOCTYPE html>'
       },
-      'This document has heading elements but none of them has a computed heading level of 1.': {
-        'issueID': 'h1Not1',
+      'An aria-disabled attribute whose value is true should not be specified on an a element that has an href attribute.': {
+        'issueID': 'attributeBad',
         'quality': 1,
-        'what': 'Page contains no h1 element'
+        'what': 'a element has aria-disabled=true but has an href attribute'
       },
-      'Consider using the h1 element as a top-level heading only (all h1 elements are treated as top-level headings by many screen readers and other tools).': {
-        'issueID': 'h1Not1',
+      'An element with role=group must not be a descendant of an element with role=list.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'Page contains more than 1 h1 element'
-      },
-      'Consider using the h1 element as a top-level heading only — or else use the headingoffset attribute (otherwise, all h1 elements are treated as top-level headings by many screen readers and other tools).': {
-        'issueID': 'h1Not1',
-        'quality': 1,
-        'what': 'Page contains more than 1 h1 element'
-      },
-      'Article lacks heading. Consider using h2-h6 elements to add identifying headings to all articles.': {
-        'issueID': 'articleHeadingless',
-        'quality': 1,
-        'what': 'article has no heading'
-      },
-      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.': {
-        'issueID': 'sectionHeadingless',
-        'quality': 1,
-        'what': 'section has no heading'
-      },
-      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.': {
-        'issueID': 'sectionHeadingless',
-        'quality': 1,
-        'what': 'section has no heading'
-      },
-      'Element dl is missing a required child element.': {
-        'issueID': 'listChild',
-        'quality': 1,
-        'what': 'dl element has no child element'
-      },
-      'Element option without attribute label must not be empty.': {
-        'issueID': 'optionNoText',
-        'quality': 1,
-        'what': 'Element is option with no label attribute but is empty'
-      },
-      'Start tag div seen in table.': {
-        'issueID': 'divInTable',
-        'quality': 1,
-        'what': 'div element is inside a table element'
-      },
-      'Start tag form seen in table.': {
-        'issueID': 'formInTable',
-        'quality': 1,
-        'what': 'form element is inside a table element'
-      },
-      'Start tag input seen in table.': {
-        'issueID': 'inputInTable',
-        'quality': 1,
-        'what': 'input element is inside a table element'
-      },
-      'The element a must not appear as a descendant of an element with the attribute role=link.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element is a descendant of an element with a link role'
-      },
-      'The element a must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element is a descendant of an element with a button role'
-      },
-      'The element a with the attribute href must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'a element with a destination is a descendant of an element with a button role'
-      },
-      'The element button must not appear as a descendant of the a element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'button element is a descendant of an a element'
-      },
-      'An element with the attribute role=button must not appear as a descendant of the a element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'Element with a button role is a descendant of an a element'
-      },
-      'The element button must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'button element is a descendant of an element with a button role'
+        'what': 'element has a group role but has an ancestor with a list role'
       },
       'An element with the attribute role=button must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'Element with a button role is a descendant of an element with a button role'
       },
+      'An element with the attribute role=button must not appear as a descendant of the a element.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'Element with a button role is a descendant of an a element'
+      },
       'An element with the attribute role=button must not appear as a descendant of the button element.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'Element with a button role is a descendant of a button element'
       },
-      'The element label must not appear as a descendant of an element with the attribute role=button.': {
+      'An element with the attribute role=menu must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'label element is a descendant of an element with a button role'
-      },
-      'The element select must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'select element is a descendant of an element with a button role'
-      },
-      'The element input must not appear as a descendant of an element with the attribute role=progressbar.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'input element is a descendant of an element with a progressbar role'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of the a element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of an a element has a tabindex attribute'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=link.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of an element with a link role has a tabindex attribute'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of the button element.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of a button element has a tabindex attribute'
-      },
-      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=button.': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'descendant of an element with a button role has a tabindex attribute'
+        'what': 'Element with a menu role is a descendant of an element with a button role'
       },
       'An element with the attribute role=menu must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
@@ -7910,230 +7451,258 @@ const rulesData = {
         'quality': 1,
         'what': 'Element with an option role is a descendant of an a element'
       },
-      'An element with the attribute role=menu must not appear as a descendant of an element with the attribute role=button.': {
+      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'Element with a menu role is a descendant of an element with a button role'
+        'what': 'descendant of an element with a button role has a tabindex attribute'
       },
-      'The element a should not appear as a descendant of an element with the attribute role=menuitem.': {
+      'An element with the attribute tabindex must not appear as a descendant of an element with the attribute role=link.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'a element is a descendant of an element with a menuitem role'
+        'what': 'descendant of an element with a link role has a tabindex attribute'
       },
-      'The element a with the attribute href should not appear as a descendant of an element with the attribute role=menuitem.': {
+      'An element with the attribute tabindex must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
+        'what': 'descendant of an a element has a tabindex attribute'
       },
-      'A document must not include more than one visible main element.': {
-        'issueID': 'mainNot1',
+      'An element with the attribute tabindex must not appear as a descendant of the button element.': {
+        'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'Page includes more than 1 visible main element'
+        'what': 'descendant of a button element has a tabindex attribute'
       },
-      'A document should not include more than one visible element with role=main.': {
-        'issueID': 'mainNot1',
+      'An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'Page includes more than 1 visible element with a main role'
+        'what': 'img element has no alt attribute'
       },
-      'Saw a form start tag, but there was already an active form element. Nested forms are not allowed. Ignoring the tag.': {
-        'issueID': 'formsNested',
+      'An img element which has an alt attribute whose value is the empty string must not have a role attribute.': {
+        'issueID': 'decorativeElementExposed',
         'quality': 1,
-        'what': 'form element nested within another form element'
+        'what': 'img element with alt="" has a role attribute'
       },
-      'The label element may contain at most one button, input, meter, output, progress, select, or textarea descendant.': {
-        'issueID': 'multipleLabelees',
+      'An img element with a role attribute must also have an accessible name (e.g., an alt attribute).': {
+        'issueID': 'imageNoText',
         'quality': 1,
-        'what': 'Element has more than 1 labelable descendant.'
+        'what': 'img element with a role attribute has no alt attribute'
       },
-      'label element with multiple labelable descendants.': {
-        'issueID': 'multipleLabelees',
+      'An img element with a role attribute must not have an alt attribute whose value is the empty string.': {
+        'issueID': 'decorativeElementExposed',
         'quality': 1,
-        'what': 'Element has multiple labelable descendants.'
+        'what': 'img element with a role attribute has alt=""'
       },
-      'The aria-label attribute must not be used on any label element that is associated with a labelable element.': {
-        'issueID': 'labelClash',
+      'An img element with no alt attribute must not have a role attribute.': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Element is a label but has a label'
+        'what': 'img element has a role attribute but no alt attribute'
       },
-      'The aria-labelledby attribute must not be used on any label element that is an ancestor of a labelable element.': {
-        'issueID': 'labelClash',
+      'An img element with no alt attribute must not have any aria-* attributes other than aria-hidden.': {
+        'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'Element is a label with a labelable descendant but has is an aria-labelledby attribute'
+        'what': 'img element has no alt attribute but has an ARIA attribute other than aria-hidden'
       },
-      'The blink element is obsolete. Use CSS instead.': {
-        'issueID': 'blink',
+      'An inline script element (i.e., a script element without a src attribute and with a type attribute that is either unspecified, empty, or a JavaScript MIME type) must not have a defer attribute.': {
+        'issueID': 'scriptNotDeferrable',
         'quality': 1,
-        'what': 'Element, blink, is obsolete'
+        'what': 'Element is not eligible for a defer attribute but has one'
       },
-      'The presentation role does not affect elements that have global ARIA attributes.': {
-        'issueID': 'presentationGlobal',
+      'An input element with a type attribute whose value is checkbox and with a role attribute whose value is button must have an aria-pressed attribute whose value is true.': {
+        'issueID': 'ariaAttributeBad',
         'quality': 1,
-        'what': 'Element has a presentation role but also a global ARIA attribute that nullifies the role'
+        'what': 'input element with a button role and type="checkbox" has no aria-pressed="true"'
       },
-      'The presentation role does not affect elements that have a tabindex attribute.': {
-        'issueID': 'presentationTabIndexed',
+      'An input element with a type attribute whose value is hidden must not have an autocomplete attribute whose value is on or off.': {
+        'issueID': 'autocompleteBad',
         'quality': 1,
-        'what': 'Element has a presentation role but also a tabindex attribute that nullifies the role'
+        'what': 'autocomplete attribute belongs to a hidden element but has an on or off value'
       },
-      'The inputmode attribute is not supported in all browsers. Please be sure to test, and consider using a polyfill.': {
-        'issueID': 'browserSupportRisk',
+      'An input element with a type attribute whose value is hidden must not have any aria-* attributes.': {
+        'issueID': 'attributeBad',
         'quality': 1,
-        'what': 'inputmode attribute is unsupported by some browsers'
+        'what': 'hidden-type input element has an ARIA attribute'
       },
-      'The border attribute is obsolete. Consider specifying img { border: 0; } in CSS instead.': {
-        'issueID': 'attributeObsolete',
+      'An li element that is a descendant of a role=listbox element or role=list element must not have any role value other than group or option.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'border element is obsolete'
+        'what': 'element is li in a listbox or list but has no group or option role'
       },
-      'The only allowed value for the charset attribute for the script element is utf-8. (But the attribute is not needed and should be omitted altogether.)': {
-        'issueID': 'attributeObsolete',
+      'An li element that is a descendant of a ul, ol, or menu element with no explicit role value, or a descendant of a role=list element, must not have any role value other than listitem.': {
+        'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+        'what': 'element is li in a list but has no listitem role'
       },
-      'The only allowed value for the charset attribute for the meta element is utf-8.': {
-        'issueID': 'attributeObsolete',
+      'Any input descendant of a label element with a for attribute must have an ID value that matches that for attribute.': {
+        'issueID': 'labelBadID',
         'quality': 1,
-        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+        'what': 'input id differs from the value of the for attribute of the enclosing label element'
       },
-      'The name attribute is obsolete. Consider putting an id attribute on the nearest container instead.': {
-        'issueID': 'attributeObsolete',
+      'Article lacks heading. Consider using h2-h6 elements to add identifying headings to all articles.': {
+        'issueID': 'articleHeadingless',
         'quality': 1,
-        'what': 'name attribute is obsolete'
+        'what': 'article has no heading'
       },
-      'The center element is obsolete. Use CSS instead.': {
-        'issueID': 'elementObsolete',
+      'Attribute alt not allowed on element button at this point.': {
+        'issueID': 'buttonAlt',
         'quality': 1,
-        'what': 'center element is obsolete'
+        'what': 'button element has an alt attribute'
       },
-      'The font element is obsolete. Use CSS instead.': {
-        'issueID': 'elementObsolete',
+      'Attribute aria-activedescendant value should either refer to a descendant element, or should be accompanied by attribute aria-owns.': {
+        'issueID': 'activeDescendantBadID',
         'quality': 1,
-        'what': 'font element is obsolete'
+        'what': 'Element has no aria-owns attribute but its aria-activedescendant attribute references a non-descendant'
       },
-      'Using the meta element to specify the document-wide default language is obsolete. Consider specifying the language on the root element instead.': {
-        'issueID': 'elementObsolete',
+      'Attribute href without an explicit value seen. The attribute may be dropped by IE7.': {
+        'issueID': 'linkElNoHref',
         'quality': 1,
-        'what': 'Language declaration in a meta element is obsolete'
+        'what': 'Element has an empty href attribute'
       },
-      'Legacy doctype. Expected <!DOCTYPE html>.': {
-        'issueID': 'obsolete',
+      'Bad value  for attribute autocomplete on element input: Must not be empty.': {
+        'issueID': 'autocompleteBad',
         'quality': 1,
-        'what': 'doctype is obsolete'
+        'what': 'autocomplete attribute has an empty value'
       },
-      'Obsolete doctype. Expected <!DOCTYPE html>.': {
-        'issueID': 'obsolete',
+      'Bad value  for attribute href on element link: Must be non-empty.': {
+        'issueID': 'linkElNoHref',
         'quality': 1,
-        'what': 'DOCTYPE is obsolete instead of html'
+        'what': 'link element has an empty href attribute'
       },
-      'CSS: This profile has a very specific syntax for @charset: @charset followed by exactly one space, followed by the name of the encoding in quotes, followed immediately by a semicolon.': {
-        'issueID': 'atRuleInvalid',
+      'Bad value  for attribute target on element a: Browsing context name must be at least one character long.': {
+        'issueID': 'targetEmpty',
         'quality': 1,
-        'what': 'CSS @charset at-rule has an invalid format'
+        'what': 'target attribute on an a element is empty'
       },
-      'CSS: The @charset rule may only occur at the start of the style sheet. Please check that there are no spaces before it.': {
-        'issueID': 'atRuleInvalid',
+      'Bad value dialog for attribute role on element li.': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'CSS @charset at-rule is not at the start of its style sheet'
+        'what': 'dialog role is not valid for an li element'
       },
-      'CSS: @import are not allowed after any valid statement other than @charset and @import.': {
-        'issueID': 'atRuleInvalid',
+      'Bogus comment.': {
+        'issueID': 'parseError',
         'quality': 1,
-        'what': 'CSS @import at-rule is after an at-rule other than @charset or @import'
-      },
-      'CSS: z-index: This number should be an integer.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'z-index style property has a non-integer value'
-      },
-      'CSS: Parse Error. Style sheets should not include HTML syntax.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS style sheet includes HTML syntax'
-      },
-      'CSS: font-size: One operand must be a number.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS font-size property has no numeric operand'
-      },
-      'CSS: Parse Error.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid CSS'
-      },
-      'CSS: -webkit-mask: too few values for the property linear-gradient.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS webkit-mask linear-gradient property has too few values'
-      },
-      'CSS: --solidHeaderNavigationColor: Cannot invoke "org.w3c.css.values.CssValue.getType()" because "val" is null.': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS solidHeaderNavigationColor property is null'
+        'what': 'Comment is missing a valid termination'
       },
       'CSS: --gradientHeaderBackgroundColor: Cannot invoke "org.w3c.css.values.CssValue.getType()" because "val" is null.': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS gradientHeaderBackgroundColor property is null'
       },
-      'End tag had attributes.': {
-        'issueID': 'elementClosure',
+      'CSS: --solidHeaderNavigationColor: Cannot invoke "org.w3c.css.values.CssValue.getType()" because "val" is null.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'End tag has an attribute'
+        'what': 'CSS solidHeaderNavigationColor property is null'
       },
-      'Non-space character inside noscript inside head.': {
-        'issueID': 'characterBad',
+      'CSS: -webkit-mask: too few values for the property linear-gradient.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'noscript element inside the head element has a nonspace text-node child'
+        'what': 'CSS webkit-mask linear-gradient property has too few values'
       },
-      'A numeric character reference expanded to carriage return.': {
-        'issueID': 'characterBad',
+      'CSS: @import are not allowed after any valid statement other than @charset and @import.': {
+        'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'Numeric character entity represents a carriage return'
+        'what': 'CSS @import at-rule is after an at-rule other than @charset or @import'
       },
-      'Named character reference was not terminated by a semicolon. (Or & should have been escaped as &amp;.)': {
-        'issueID': 'entityBad',
+      'CSS: Parse Error.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': '& not escaped or used in an unterminated character reference'
+        'what': 'Invalid CSS'
       },
-      'The text content of element time was not in the required format: The literal did not satisfy the time-datetime format.': {
-        'issueID': 'textContentBad',
+      'CSS: Parse Error. Style sheets should not include HTML syntax.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'time element has text content that is not in the time-datetime format'
+        'what': 'CSS style sheet includes HTML syntax'
       },
-      'No space between attributes.': {
-        'issueID': 'parseError',
+      'CSS: The @charset rule may only occur at the start of the style sheet. Please check that there are no spaces before it.': {
+        'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'No space between attributes'
+        'what': 'CSS @charset at-rule is not at the start of its style sheet'
       },
-      'Saw <?. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)': {
-        'issueID': 'parseError',
+      'CSS: This profile has a very specific syntax for @charset: @charset followed by exactly one space, followed by the name of the encoding in quotes, followed immediately by a semicolon.': {
+        'issueID': 'atRuleInvalid',
         'quality': 1,
-        'what': 'Left angle bracket is followed by a question mark'
+        'what': 'CSS @charset at-rule has an invalid format'
       },
-      'The aria-hidden attribute must not be specified on an input element whose type attribute has the value hidden.': {
-        'issueID': 'parseError',
+      'CSS: font-size: One operand must be a number.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'aria-hidden attribute is invalid for an input element with type="hidden"'
+        'what': 'CSS font-size property has no numeric operand'
       },
-      'Saw <!-- within a comment. Probable cause: Nested comment (not allowed).': {
-        'issueID': 'parseError',
+      'CSS: z-index: This number should be an integer.': {
+        'issueID': 'cssInvalid',
         'quality': 1,
-        'what': 'Comment is nested within a comment'
+        'what': 'z-index style property has a non-integer value'
       },
-      'The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment.': {
-        'issueID': 'parseError',
+      'Cannot recover after last error. Any further errors will be ignored.': {
+        'issueID': 'fatalError',
         'quality': 1,
-        'what': 'Comment contains --'
+        'what': 'Testing was interrupted by a fatal error'
       },
-      'The document is not mappable to XML 1.0 due to a trailing hyphen in a comment.': {
-        'issueID': 'parseError',
+      'Consider adding a lang attribute to the html start tag to declare the language of this document.': {
+        'issueID': 'pageLanguage',
         'quality': 1,
-        'what': 'Comment ends with -'
+        'what': 'html start tag has no lang attribute to declare the language of the page'
       },
-      'Bogus comment.': {
-        'issueID': 'parseError',
+      'Consider avoiding viewport values that prevent users from resizing documents.': {
+        'issueID': 'metaBansZoom',
         'quality': 1,
-        'what': 'Comment is missing a valid termination'
+        'what': 'viewport value prevents users from resizing the document'
+      },
+      'Consider using the h1 element as a top-level heading only (all h1 elements are treated as top-level headings by many screen readers and other tools).': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains more than 1 h1 element'
+      },
+      'Consider using the h1 element as a top-level heading only — or else use the headingoffset attribute (otherwise, all h1 elements are treated as top-level headings by many screen readers and other tools).': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains more than 1 h1 element'
+      },
+      'Document uses the Unicode Private Use Area(s), which should not be used in publicly exchanged documents. (Charmod C073)': {
+        'issueID': 'encodingPrivate',
+        'quality': 1,
+        'what': 'Page includes a Unicode PUA character'
+      },
+      'Each rule in the prefetch array must only contain the properties source, urls, where, and eagerness.': {
+        'issueID': 'specRulesScriptBad',
+        'quality': 1,
+        'what': 'Element is script with type=speculationrules but its prefetch array has invalid property names'
+      },
+      'Element a is missing required attribute href.': {
+        'issueID': 'destinationLink',
+        'quality': 1,
+        'what': 'a element has no href attribute'
+      },
+      'Element dl is missing a required child element.': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'dl element has no child element'
+      },
+      'Element head is missing a required instance of child element title.': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'head element has no child title element',
+        'whyIgnore': 'invalid'
+      },
+      'Element img is missing required attribute src.': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'img element has no src attribute',
+        'whyIgnore': 'invalid'
+      },
+      'Element input with attribute type whose value is button must have non-empty attribute value.': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'input element with type=button has no nonempty value attribute'
+      },
+      'Element mediaelementwrapper not allowed as child of element div in this context. (Suppressing further errors from this subtree.)': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Element contains a prohibited mediaelementwrapper element',
+        'whyIgnore': 'invalid'
+      },
+      'Element option without attribute label must not be empty.': {
+        'issueID': 'optionNoText',
+        'quality': 1,
+        'what': 'Element is option with no label attribute but is empty'
       },
       'Element script must not have attribute async unless attribute src is also specified or unless attribute type is specified with value module.': {
         'issueID': 'parseError',
@@ -8145,92 +7714,728 @@ const rulesData = {
         'quality': 1,
         'what': 'script element has a charset attribute but no src attribute'
       },
-      'style element between head and body.': {
+      'Element script must not have attribute defer unless attribute src is also specified.': {
+        'issueID': 'scriptNotDeferrable',
+        'quality': 1,
+        'what': 'Element is script and has a defer attribute but no src attribute'
+      },
+      'Element script should not have attribute fetchpriority unless attribute src is also specified.': {
+        'issueID': 'scriptElementBad',
+        'quality': 1,
+        'what': 'Element is script and has a fetchpriority attribute but no src attribute'
+      },
+      'Element title must not be empty.': {
+        'issueID': 'titleEmpty',
+        'quality': 1,
+        'what': 'Element has an empty title attribute'
+      },
+      'Empty heading.': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Empty heading'
+      },
+      'End of file seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
+        'issueID': 'docTypeMissing',
+        'quality': 1,
+        'what': 'Page does not include <!DOCTYPE html>'
+      },
+      'End tag had attributes.': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'End tag has an attribute'
+      },
+      'Heading cannot be a child of another heading.': {
+        'issueID': 'headingsEmbedded',
+        'quality': 1,
+        'what': 'Heading is within a heading'
+      },
+      'Legacy doctype. Expected <!DOCTYPE html>.': {
+        'issueID': 'obsolete',
+        'quality': 1,
+        'what': 'doctype is obsolete'
+      },
+      'Named character reference was not terminated by a semicolon. (Or & should have been escaped as &amp;.)': {
+        'issueID': 'entityBad',
+        'quality': 1,
+        'what': '& not escaped or used in an unterminated character reference'
+      },
+      'No space between attributes.': {
         'issueID': 'parseError',
         'quality': 1,
-        'what': 'style element exists between the head and the body elements'
+        'what': 'No space between attributes'
       },
-      'A style element in body must be the first child of its parent.': {
-        'issueID': 'parseError',
+      'Non-space character inside noscript inside head.': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'style element in the body is not the first child of its parent element'
+        'what': 'noscript element inside the head element has a nonspace text-node child'
       },
-      'A slash was not immediately followed by >.': {
-        'issueID': 'parseError',
+      'Obsolete doctype. Expected <!DOCTYPE html>.': {
+        'issueID': 'obsolete',
         'quality': 1,
-        'what': 'Element start tag contains a nonfinal slash'
-      },
-      'Document uses the Unicode Private Use Area(s), which should not be used in publicly exchanged documents. (Charmod C073)': {
-        'issueID': 'encodingPrivate',
-        'quality': 1,
-        'what': 'Page includes a Unicode PUA character'
-      },
-      'Cannot recover after last error. Any further errors will be ignored.': {
-        'issueID': 'fatalError',
-        'quality': 1,
-        'what': 'Testing was interrupted by a fatal error'
+        'what': 'DOCTYPE is obsolete instead of html'
       },
       'Oops. That was not supposed to happen. A bug manifested itself in the application internals. Unable to continue. Sorry. The admin was notified.': {
         'issueID': 'fatalError',
         'quality': 1,
         'what': 'Testing was interrupted by a fatal application-internal error'
       },
+      'Possible misuse of aria-label. (If you disagree with this warning, file an issue report or send e-mail to www-validator@w3.org.)': {
+        'issueID': 'ariaLabelWrongRisk',
+        'quality': 1,
+        'what': 'aria-label attribute is misused?'
+      },
+      'Saw <!-- within a comment. Probable cause: Nested comment (not allowed).': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Comment is nested within a comment'
+      },
+      'Saw <?. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Left angle bracket is followed by a question mark'
+      },
+      'Saw a form start tag, but there was already an active form element. Nested forms are not allowed. Ignoring the tag.': {
+        'issueID': 'formsNested',
+        'quality': 1,
+        'what': 'form element nested within another form element'
+      },
+      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.': {
+        'issueID': 'sectionHeadingless',
+        'quality': 1,
+        'what': 'section has no heading'
+      },
+      'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.': {
+        'issueID': 'sectionHeadingless',
+        'quality': 1,
+        'what': 'section has no heading'
+      },
+      'Start tag div seen in table.': {
+        'issueID': 'divInTable',
+        'quality': 1,
+        'what': 'div element is inside a table element'
+      },
+      'Start tag form seen in table.': {
+        'issueID': 'formInTable',
+        'quality': 1,
+        'what': 'form element is inside a table element'
+      },
+      'Start tag input seen in table.': {
+        'issueID': 'inputInTable',
+        'quality': 1,
+        'what': 'input element is inside a table element'
+      },
+      'Start tag seen without seeing a doctype first. Expected <!DOCTYPE html>.': {
+        'issueID': 'docTypeMissing',
+        'quality': 1,
+        'what': 'Page does not start with <!DOCTYPE html>'
+      },
+      'Stray doctype.': {
+        'issueID': 'docTypeMisplaced',
+        'quality': 1,
+        'what': 'DOCTYPE is in an invalid location'
+      },
+      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is checkbox.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type checkbox has an aria-checked attribute'
+      },
+      'The aria-checked attribute must not be used on an input element which has a type attribute whose value is radio.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type="radio" has an aria-checked attribute'
+      },
+      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is checkbox.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type checkbox has an aria-checked attribute'
+      },
+      'The aria-checked attribute should not be used on an input element which has a type attribute whose value is radio.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with type="radio" has an aria-checked attribute'
+      },
+      'The aria-controls attribute must point to an element in the same document.': {
+        'issueID': 'governedBadID',
+        'quality': 1,
+        'what': 'aria-controls attribute references an element not in the document'
+      },
+      'The aria-describedby attribute must point to an element in the same document.': {
+        'issueID': 'descriptionBadID',
+        'quality': 1,
+        'what': 'aria-describedby attribute references an element not in the document'
+      },
+      'The aria-hidden attribute must not be specified on an input element whose type attribute has the value hidden.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'aria-hidden attribute is invalid for an input element with type="hidden"'
+      },
+      'The aria-hidden attribute must not be specified on the noscript element.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'noscript element has an aria-hidden attribute'
+      },
+      'The aria-label attribute must not be used on any label element that is associated with a labelable element.': {
+        'issueID': 'labelClash',
+        'quality': 1,
+        'what': 'Element is a label but has a label'
+      },
+      'The aria-labelledby attribute must not be used on any label element that is an ancestor of a labelable element.': {
+        'issueID': 'labelClash',
+        'quality': 1,
+        'what': 'Element is a label with a labelable descendant but has is an aria-labelledby attribute'
+      },
+      'The aria-labelledby attribute must point to an element in the same document.': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references an element not in the document'
+      },
+      'The aria-owns attribute must point to an element in the same document.': {
+        'issueID': 'governedBadID',
+        'quality': 1,
+        'what': 'aria-owns attribute references an element not in the document'
+      },
+      'The aria-placeholder attribute must not be specified on elements that have a placeholder attribute.': {
+        'issueID': 'placeholderPlusAria',
+        'quality': 1,
+        'what': 'Element has both placeholder and aria-placeholder attributes'
+      },
+      'The aria-valuemax attribute must not be used on an element which has a max attribute.': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'Element has the max attribute but also the aria-valuemax attribute'
+      },
+      'The aria-valuemin attribute must not be used on an element which has a min attribute.': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'Element has the min attribute but also the aria-valuemin attribute'
+      },
+      'The base element must come before any link or script elements in the document.': {
+        'issueID': 'baseElementMissing',
+        'quality': 1,
+        'what': 'Element is a link or script element requiring a preceding base element but has none'
+      },
+      'The blink element is obsolete. Use CSS instead.': {
+        'issueID': 'blink',
+        'quality': 1,
+        'what': 'Element, blink, is obsolete'
+      },
+      'The border attribute is obsolete. Consider specifying img { border: 0; } in CSS instead.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'border element is obsolete'
+      },
+      'The center element is obsolete. Use CSS instead.': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'center element is obsolete'
+      },
+      'The document is not mappable to XML 1.0 due to a trailing hyphen in a comment.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Comment ends with -'
+      },
+      'The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Comment contains --'
+      },
+      'The document role is not allowed for element select without a multiple attribute and without a size attribute whose value is greater than 1.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'select element is not multiple or has no size greater than 1 but has a document role'
+      },
+      'The element a must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element is a descendant of an element with a button role'
+      },
+      'The element a must not appear as a descendant of an element with the attribute role=link.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element is a descendant of an element with a link role'
+      },
+      'The element a should not appear as a descendant of an element with the attribute role=menuitem.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element is a descendant of an element with a menuitem role'
+      },
+      'The element a with the attribute href must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element with a destination is a descendant of an element with a button role'
+      },
+      'The element a with the attribute href should not appear as a descendant of an element with the attribute role=menuitem.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
+      },
+      'The element button must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'button element is a descendant of an element with a button role'
+      },
+      'The element button must not appear as a descendant of the a element.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'button element is a descendant of an a element'
+      },
+      'The element input must not appear as a descendant of an element with the attribute role=progressbar.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'input element is a descendant of an element with a progressbar role'
+      },
+      'The element label must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'label element is a descendant of an element with a button role'
+      },
+      'The element select must not appear as a descendant of an element with the attribute role=button.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'select element is a descendant of an element with a button role'
+      },
+      'The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'option element has a nonempty value'
+      },
+      'The font element is obsolete. Use CSS instead.': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'font element is obsolete'
+      },
+      'The form attribute must refer to a form element.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'form attribute does not reference a form element'
+      },
+      'The href_matches property in a document rule must be a string.': {
+        'issueID': 'specRulesScriptBad',
+        'quality': 1,
+        'what': 'Element is script with type=speculationrules but its href_matches value is not a string'
+      },
+      'The inputmode attribute is not supported in all browsers. Please be sure to test, and consider using a polyfill.': {
+        'issueID': 'browserSupportRisk',
+        'quality': 1,
+        'what': 'inputmode attribute is unsupported by some browsers'
+      },
+      'The itemid attribute must not be specified on elements that do not have both an itemscope attribute and an itemtype attribute specified.': {
+        'issueID': 'itemIDBad',
+        'quality': 1,
+        'what': 'Element has an itemid attribute without both an itemscope and an itemtype attribute'
+      },
+      'The itemprop attribute was specified, but the element is not a property of any item.': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'itemprop attribute is on an element that is not a property of an item'
+      },
+      'The itemtype attribute must not be specified on elements that do not have an itemscope attribute specified.': {
+        'issueID': 'itemTypeBad',
+        'quality': 1,
+        'what': 'Element has an itemtype attribute without an itemscope attribute'
+      },
+      'The label element may contain at most one button, input, meter, output, progress, select, or textarea descendant.': {
+        'issueID': 'multipleLabelees',
+        'quality': 1,
+        'what': 'Element has more than 1 labelable descendant.'
+      },
+      'The name attribute is never allowed on the a element.': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'element is a but has a name attribute'
+      },
+      'The name attribute is obsolete. Consider putting an id attribute on the nearest container instead.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'name attribute is obsolete'
+      },
+      'The only allowed value for the charset attribute for the meta element is utf-8.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+      },
+      'The only allowed value for the charset attribute for the script element is utf-8. (But the attribute is not needed and should be omitted altogether.)': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'charset attribute has a value other than utf-8 and is unnecessary'
+      },
+      'The only allowed value for the type attribute for the style element is text/css (with no parameters). (But the attribute is not needed and should be omitted altogether.)': {
+        'issueID': 'typeBad',
+        'quality': 1,
+        'what': 'type attribute is invalid'
+      },
+      'The presentation role does not affect elements that have a tabindex attribute.': {
+        'issueID': 'presentationTabIndexed',
+        'quality': 1,
+        'what': 'Element has a presentation role but also a tabindex attribute that nullifies the role'
+      },
+      'The presentation role does not affect elements that have global ARIA attributes.': {
+        'issueID': 'presentationGlobal',
+        'quality': 1,
+        'what': 'Element has a presentation role but also a global ARIA attribute that nullifies the role'
+      },
+      'The searchbox role is unnecessary for an input element that has no list attribute and whose type is search.': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'explicit role is redundant for a search-type input element without a list attribute'
+      },
+      'The select element cannot have more than one selected option descendant unless the multiple attribute is specified.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'Element is select and has no multiple attribute, but has more than 1 selected option'
+      },
+      'The sizes attribute may be specified only if the srcset attribute is also present.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element has a sizes attribute but no srcset attribute'
+      },
+      'The sizes attribute must only be specified if the srcset attribute is also specified.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element has a sizes attribute but no srcset attribute'
+      },
+      'The sizes attribute value starting with auto is only valid for lazy-loaded images. Add loading=lazy to this element.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element with a sizes=auto… attribute has no loading=lazy attribute'
+      },
+      'The text content of element time was not in the required format: The literal did not satisfy the time-datetime format.': {
+        'issueID': 'textContentBad',
+        'quality': 1,
+        'what': 'time element has text content that is not in the time-datetime format'
+      },
+      'The textbox role is unnecessary for an input element that has no list attribute and whose type is text.': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'explicit role is redundant for a text-type input element without a list attribute'
+      },
+      'The type attribute for the style element is not needed and should be omitted.': {
+        'issueID': 'typeRedundant',
+        'quality': 1,
+        'what': 'type attribute is unnecessary for a style element'
+      },
+      'The type attribute is unnecessary for JavaScript resources.': {
+        'issueID': 'typeRedundant',
+        'quality': 1,
+        'what': 'type attribute is unnecessary for a JavaScript resource'
+      },
+      'The value of the for attribute of the label element must be the ID of a non-hidden form control.': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'for attribute of the label element does not reference a non-hidden form control'
+      },
+      'This document has heading elements but none of them has a computed heading level of 1.': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Page contains no h1 element'
+      },
       'Too many messages.': {
         'issueID': 'fatalError',
         'quality': 1,
         'what': 'Testing was interrupted by a fatal excess of the message count'
       },
+      'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Void element has a useless trailing slash.',
+        'whyIgnore': 'invalid'
+      },
       'Unsupported SVG version specified. This validator only supports SVG 1.1. The recommended way to suppress this warning is to remove the version attribute altogether.': {
         'issueID': 'svgNotValidatable',
         'quality': 1,
         'what': 'SVG version specified is not 1.1 and so nuVal cannot validate it'
+      },
+      'Using the meta element to specify the document-wide default language is obsolete. Consider specifying the language on the root element instead.': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'Language declaration in a meta element is obsolete'
+      },
+      'When the attribute xml:lang in no namespace is specified, the element must also have the attribute lang present with the same value.': {
+        'issueID': 'elementLanguageBad',
+        'quality': 1,
+        'what': 'Element has no lang attrbute matching its xml:lang attribute'
+      },
+      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be present.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element with a srcset attribute with a width has no sizes attribute'
+      },
+      'When the srcset attribute has any image candidate string with a width descriptor, the sizes attribute must also be specified.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element with a srcset attribute with a width has no valid sizes attribute'
+      },
+      'label element with multiple labelable descendants.': {
+        'issueID': 'multipleLabelees',
+        'quality': 1,
+        'what': 'Element has multiple labelable descendants.'
+      },
+      'meta element between head and body.': {
+        'issueID': 'metaMisplaced',
+        'quality': 1,
+        'what': 'meta element is between the head and body elements'
+      },
+      'style element between head and body.': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'style element exists between the head and the body elements'
       }
     },
     'variable': {
-      'Duplicate attribute.*': {
-        'issueID': 'duplicateAttribute',
+      '.+ in an unquoted attribute value. Probable causes: Attributes running together or a URL query string in an unquoted attribute value.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'Source code of the element contains 2 or more of the same attribute'
+        'what': 'Attribute has a value containing invalid punctuation'
       },
-      'Duplicate ID .+$|^The first occurrence of ID .* was here.*': {
-        'issueID': 'duplicateID',
+      'A table row was .+ columns wide and exceeded the column count established by the first row.*': {
+        'issueID': 'tableColumnsVary',
         'quality': 1,
-        'what': 'Duplicate id'
+        'what': 'Table row has a column count larger than that of the first row'
+      },
+      'A table row was .+ columns wide, which is less than the column count established by the first row.*': {
+        'issueID': 'tableColumnsVary',
+        'quality': 1,
+        'what': 'Table row has a column count smaller than that of the first row'
+      },
+      'An element with role=.+ must be contained in, or owned by, an element with .*role.+': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'Element has no required container or owner'
+      },
+      'Any .+ descendant of a label element with a for attribute must have an ID value that matches that for attribute.*': {
+        'issueID': 'controlIDInLabelBad',
+        'quality': 1,
+        'what': 'label element has a labelable descendant whose ID differs from the for attribute of the label'
+      },
+      'Attribute .+ is not serializable as XML 1[.]0.*': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute is invalidly nonserializable'
+      },
+      'Attribute .+ is only allowed when .+': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute is invalid here'
+      },
+      'Attribute .+ not allowed here.*': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute not allowed here'
+      },
+      'Attribute .+ not allowed on element .+ at this point.*': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'Attribute not allowed on this element'
+      },
+      'Attribute .+ not allowed on element meta at this point.*': {
+        'issueID': 'metaAttributesWrong',
+        'quality': 1,
+        'what': 'Attribute is not allowed on a meta element here'
+      },
+      'Attribute aria-.+ is unnecessary for elements that have attribute .+': {
+        'issueID': 'ariaRedundant',
+        'quality': 1,
+        'what': 'ARIA attribute is redundant with the synonymous native attribute'
+      },
+      'Bad character . after <. Probable cause: Unescaped <. Try escaping it as &lt;.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Left angle bracket is followed by an invalid character'
+      },
+      'Bad element name .*: Code point .* is not allowed*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Element name contains an invalid character'
+      },
+      'Bad start tag in .+': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Invalid start tag'
+      },
+      'Bad value  for attribute (?:width|height) on element img: The empty string is not a valid non-negative integer.*': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Attribute has an empty value'
+      },
+      'Bad value  for attribute .+ on element .+: An ID must not be the empty string.*': {
+        'issueID': 'idEmpty',
+        'quality': 1,
+        'what': 'id attribute has an empty value'
+      },
+      'Bad value  for attribute .+ on element .+: Must be non-empty.*': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'Attribute value is empty'
+      },
+      'Bad value  for attribute .+ on element .+: Must not be empty.*': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Attribute has an invalidly empty value'
+      },
+      'Bad value  for attribute aria-hidden on element .+': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'aria-hidden attribute has an empty value'
+      },
+      'Bad value  for attribute aria-owns on element .+: An IDREFS value must contain at least one non-whitespace character.*': {
+        'issueID': 'idEmpty',
+        'quality': 1,
+        'what': 'aria-owns attribute has an empty value'
       },
       'Bad value  for attribute src on element .+: Must be non-empty.*': {
         'issueID': 'sourceEmpty',
         'quality': 1,
         'what': 'src attribute is empty'
       },
-      'CSS: border-.+ negative values are not allowed.*': {
-        'issueID': 'borderBad',
+      'Bad value  for attribute tabindex on element .+: The empty string is not a valid integer.*': {
+        'issueID': 'tabIndexEmpty',
         'quality': 1,
-        'what': 'CSS border includes a negative-valued property'
+        'what': 'tabindex attribute has an empty value instead of an integer'
       },
-      'CSS: flex: .+ negative values are not allowed.*': {
-        'issueID': 'flexBad',
+      'Bad value .* for attribute .+ on element .+': {
+        'issueID': 'attributeValueBad',
         'quality': 1,
-        'what': 'CSS flex value is negative'
+        'what': 'Attribute on this element has an invalid value'
       },
-      'CSS: padding[-a-z]*: .+ negative values are not allowed.*': {
-        'issueID': 'paddingBad',
+      'Bad value .* for attribute href on element .+: Illegal character in path segment: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'One of the CSS padding values is negative'
+        'what': 'href attribute path value contains an invalid character in a segment'
       },
-      'CSS: gap: .+ negative values are not allowed.*': {
-        'issueID': 'gapBad',
+      'Bad value .* for attribute href on element .+: Illegal character in query: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'CSS gap value is negative'
+        'what': 'href attribute query value contains an invalid character'
       },
-      'CSS: background: .+ is not a color value.*': {
-        'issueID': 'backgroundBad',
+      'Bad value .* for attribute src on element .+: Illegal character in path segment: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'CSS background color is misdefined'
+        'what': 'src attribute path value contains an invalid character in a segment'
       },
-      'CSS: background: The .+ argument to the .+ function should be .+, not .+': {
-        'issueID': 'backgroundBad',
+      'Bad value .* for attribute src on element .+: Illegal character in query: .+ is not allowed.*': {
+        'issueID': 'characterBad',
         'quality': 1,
-        'what': 'CSS background function has an invalid argument'
+        'what': 'src attribute query value contains an invalid character'
+      },
+      'Bad value .+ for attribute .+ on element meta.*': {
+        'issueID': 'metaAttributeBad',
+        'quality': 1,
+        'what': 'Attribute of a meta element has an invalid value'
+      },
+      'Bad value .+ for attribute src on element .+: Tab, new line or carriage return found.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'src attribute value contains a tab, newline, or return character'
+      },
+      'Bad value .+ for the attribute .+': {
+        'issueID': 'attributeValueBad',
+        'quality': 1,
+        'what': 'Attribute has an invalid value'
+      },
+      'Bad value [^`]+ Tab, new line or carriage return found.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Attribute value contains an illegal spacing character'
+      },
+      'CSS: .*Lexical error at line .+, column .+ Encountered: .+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'CSS property has a value with a lexical error'
+      },
+      'CSS: .*only 0 can be a unit. You must put a unit after your number.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Number in CSS is nonzero but has no unit'
+      },
+      'CSS: .+ is not a :lang.+ value.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'CSS pseudo-class :lang() has an invalid value'
+      },
+      'CSS: .+:   is an incorrect operator.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Space is misused as a CSS operator'
+      },
+      'CSS: .+: , is an incorrect operator.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Comma is misused as a CSS operator'
+      },
+      'CSS: .+: .+ is not a .+ value.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid value in CSS'
+      },
+      'CSS: .+: .+ is not a valid color 3 or 6 hexadecimals numbers.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid hexadecimal color in CSS'
+      },
+      'CSS: .+: Character .+ is neither a decimal digit number.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Nonnumeric character in a numeric style property'
+      },
+      'CSS: .+: Character array is missing "e" notation exponential mark.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Character array has no exponent mark e'
+      },
+      'CSS: .+: Invalid type: .+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid type of CSS value'
+      },
+      'CSS: .+: Missing a semicolon before the .+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'semicolon missing in CSS'
+      },
+      'CSS: .+: Parse Error.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid CSS'
+      },
+      'CSS: .+: The types are incompatible.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Incompatible types of CSS values'
+      },
+      'CSS: .+: Too many values or values are not recognized.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Invalid CSS value or too many values'
+      },
+      'CSS: .+: Unknown dimension.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Unknown CSS dimension'
+      },
+      'CSS: .+: only 0 can be a length. You must put a unit after your number.*': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Length in CSS is nonzero but has no unit'
+      },
+      'CSS: Deprecated media feature .+': {
+        'issueID': 'obsolete',
+        'quality': 1,
+        'what': 'Media feature is deprecated'
+      },
+      'CSS: In CSS1, a class name could start with a digit .+, unless it was a dimension .+ In CSS2, such classes are parsed as unknown dimensions .+ To make .+ a valid class, CSS2 requires the first digit to be escaped: .+': {
+        'issueID': 'cssInvalid',
+        'quality': 0.5,
+        'what': 'CSS class name starts with an unescaped digit'
+      },
+      'CSS: Unknown pseudo-element or pseudo-class :.+': {
+        'issueID': 'cssInvalid',
+        'quality': 1,
+        'what': 'Unknown pseudo-element or pseudo-class'
+      },
+      'CSS: Unrecognized at-rule @.+': {
+        'issueID': 'atRuleInvalid',
+        'quality': 1,
+        'what': 'At-rule is not recognized by CSS'
       },
       'CSS: _background: url.+ is an incorrect URL.*': {
         'issueID': 'backgroundBad',
@@ -8247,275 +8452,30 @@ const rulesData = {
         'quality': 1,
         'what': 'CSS background image is misdefined'
       },
-      'Resource violates Content Security Policy \\(meta tag\\): image .+ blocked by img-src directive.*': {
-        'issueID': 'imageBanned',
+      'CSS: background: .+ is not a color value.*': {
+        'issueID': 'backgroundBad',
         'quality': 1,
-        'what': 'img-src content attribute blocks an image'
+        'what': 'CSS background color is misdefined'
       },
-      'This document appears to be written in .+ Consider .+ing lang=.+': {
-        'issueID': 'pageLanguage',
+      'CSS: background: The .+ argument to the .+ function should be .+, not .+': {
+        'issueID': 'backgroundBad',
         'quality': 1,
-        'what': 'html start tag has no lang attribute to declare the language of the page'
+        'what': 'CSS background function has an invalid argument'
       },
-      'Any .+ descendant of a label element with a for attribute must have an ID value that matches that for attribute.*': {
-        'issueID': 'controlIDInLabelBad',
+      'CSS: border-.+ negative values are not allowed.*': {
+        'issueID': 'borderBad',
         'quality': 1,
-        'what': 'label element has a labelable descendant whose ID differs from the for attribute of the label'
-      },
-      'The aria-label.* attribute must not be specified on any .* element unless the element has a role value other than caption, code, deletion, emphasis, generic, insertion, paragraph, presentation, strong, subscript, or superscript.*': {
-        'issueID': 'nonLabelableRole',
-        'quality': 1,
-        'what': 'Element with a non-labelable role has an aria-label attribute'
-      },
-      'The aria-describedby attribute references .+, which is not the ID of any element in this document.+': {
-        'issueID': 'descriptionBadID',
-        'quality': 1,
-        'what': 'aria-describedby attribute references an element not in the document'
-      },
-      'The aria-labelledby attribute references .+, which is not the ID of any element in this document.+': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'aria-labelledby attribute references an element not in the document'
-      },
-      'An element with role=.+ must be contained in, or owned by, an element with .*role.+': {
-        'issueID': 'parentMissing',
-        'quality': 1,
-        'what': 'Element has no required container or owner'
-      },
-      'Element .+ is missing a required instance of child element .+': {
-        'issueID': 'descendantMissing',
-        'quality': 1,
-        'what': 'Element is missing a required child'
-      },
-      'CSS: line-height: .* negative values are not allowed.*': {
-        'issueID': 'lineHeightBad',
-        'quality': 1,
-        'what': 'Text line height is negative'
-      },
-      'Saw a start tag [a-z]+.*': {
-        'issueID': 'elementBad',
-        'quality': 1,
-        'what': 'Element does not exist in HTML'
-      },
-      'Attribute .+ not allowed on element meta at this point.*': {
-        'issueID': 'metaAttributesWrong',
-        'quality': 1,
-        'what': 'Attribute is not allowed on a meta element here'
-      },
-      'Element meta is missing one or more of the following attributes: .+': {
-        'issueID': 'metaAttributesWrong',
-        'quality': 1,
-        'what': 'Element is missing a required attribute'
-      },
-      'Bad value .+ for attribute .+ on element meta.*': {
-        'issueID': 'metaAttributeBad',
-        'quality': 1,
-        'what': 'Attribute of a meta element has an invalid value'
-      },
-      'Resource violates Content Security Policy \\(meta tag\\): external stylesheet .+ blocked by style-src directive.*': {
-        'issueID': 'stylesheetBanned',
-        'quality': 1,
-        'what': 'style-src content attribute blocks an external stylesheet'
-      },
-      'Resource violates Content Security Policy \\(meta tag\\): external script .+ blocked by script-src directive.*': {
-        'issueID': 'scriptBanned',
-        'quality': 1,
-        'what': 'script-src content attribute blocks a script'
-      },
-      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Invalid role'
-      },
-      'The role attribute must not be used on a .+ element which has a table ancestor with no role attribute, or with a role attribute whose value is table, grid, or treegrid.*': {
-        'issueID': 'roleHierarchyBad',
-        'quality': 1,
-        'what': 'Table cell has a role attribute'
-      },
-      'The .+ role is unnecessary for element .+': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'explicit role is redundant for its element'
-      },
-      'Element .+ does not need a role attribute.*': {
-        'issueID': 'roleRedundant',
-        'quality': 1,
-        'what': 'Element needs no role attribute'
-      },
-      'Attribute .+ not allowed on element .+ at this point.*': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute not allowed on this element'
-      },
-      'Attribute .+ not allowed here.*': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute not allowed here'
-      },
-      'Attribute .+ is not serializable as XML 1[.]0.*': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute is invalidly nonserializable'
-      },
-      'Attribute .+ is only allowed when .+': {
-        'issueID': 'attributeBad',
-        'quality': 1,
-        'what': 'Attribute is invalid here'
-      },
-      'Bad value .* for attribute .+ on element .+': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute on this element has an invalid value'
-      },
-      'Bad value .+ for the attribute .+': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute has an invalid value'
-      },
-      'Bad value  for attribute .+ on element .+: Must not be empty.*': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute has an invalidly empty value'
-      },
-      'Bad value  for attribute (?:width|height) on element img: The empty string is not a valid non-negative integer.*': {
-        'issueID': 'attributeValueBad',
-        'quality': 1,
-        'what': 'Attribute has an empty value'
-      },
-      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?.*': {
-        'issueID': 'attributeValueRisk',
-        'quality': 1,
-        'what': 'Attribute value may be a typographical error'
-      },
-      'Element image is missing required attribute (?:height|width).*': {
-        'issueID': 'attributeMissing',
-        'quality': 1,
-        'what': 'image element has no height attribute or has no width attribute'
-      },
-      'Element .+ is missing one or more of the following attributes: .+': {
-        'issueID': 'attributeMissing',
-        'quality': 1,
-        'what': 'Element is missing a required attribute'
-      },
-      'Element .+ is missing required attribute .+': {
-        'issueID': 'attributeMissing',
-        'quality': 1,
-        'what': 'Element is missing a required attribute'
-      },
-      'Element .+ is missing required attribute role.*': {
-        'issueID': 'roleMissing',
-        'quality': 1,
-        'what': 'Element has no role attribute'
-      },
-      'Element .+ is missing one or more of the following attributes: role.*': {
-        'issueID': 'roleMissingRisk',
-        'quality': 1,
-        'what': 'Element has no role attribute but needs one?'
-      },
-      'Element .+ is missing required attribute aria-.+': {
-        'issueID': 'ariaMissing',
-        'quality': 1,
-        'what': 'Element is missing a required ARIA attribute'
-      },
-      'Bad value  for attribute .+ on element .+: Must be non-empty.*': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'Attribute value is empty'
-      },
-      'Bad value  for attribute aria-hidden on element .+': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'aria-hidden attribute has an empty value'
-      },
-      'Attribute aria-.+ is unnecessary for elements that have attribute .+': {
-        'issueID': 'ariaRedundant',
-        'quality': 1,
-        'what': 'ARIA attribute is redundant with the synonymous native attribute'
-      },
-      'Bad value  for attribute .+ on element .+: An ID must not be the empty string.*': {
-        'issueID': 'idEmpty',
-        'quality': 1,
-        'what': 'id attribute has an empty value'
-      },
-      'Bad value  for attribute aria-owns on element .+: An IDREFS value must contain at least one non-whitespace character.*': {
-        'issueID': 'idEmpty',
-        'quality': 1,
-        'what': 'aria-owns attribute has an empty value'
-      },
-      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading level.+': {
-        'issueID': 'headingLevelSkip',
-        'quality': 1,
-        'what': 'Heading level is more than 1 level inferior to the previous heading'
-      },
-      'A table row was .+ columns wide, which is less than the column count established by the first row.*': {
-        'issueID': 'tableColumnsVary',
-        'quality': 1,
-        'what': 'Table row has a column count smaller than that of the first row'
-      },
-      'A table row was .+ columns wide and exceeded the column count established by the first row.*': {
-        'issueID': 'tableColumnsVary',
-        'quality': 1,
-        'what': 'Table row has a column count larger than that of the first row'
-      },
-      'Table column [0-9]+ established by element td has no cells beginning in it.*': {
-        'issueID': 'tableColumnsVary',
-        'quality': 1,
-        'what': 'Element is td but the prior cells in its table column do not exist'
-      },
-      'Potentially bad value .+ for attribute sandbox on element iframe: Setting both allow-scripts and allow-same-origin is not recommended, because it effectively enables an embedded page to break out of all sandboxing.*': {
-        'issueID': 'frameSandboxRisk',
-        'quality': 1,
-        'what': 'iframe element has a vulnerable sandbox value containing both allow-scripts and allow-same-origin'
-      },
-      'Element .+ not allowed as child of element .+ in this context.*': {
-        'issueID': 'parentBad',
-        'quality': 1,
-        'what': 'Element has an invalid parent'
-      },
-      'Bad value  for attribute tabindex on element .+: The empty string is not a valid integer.*': {
-        'issueID': 'tabIndexEmpty',
-        'quality': 1,
-        'what': 'tabindex attribute has an empty value instead of an integer'
-      },
-      'The .+ attribute on the .+ element is obsolete.*': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'Attribute is obsolete on its element'
-      },
-      'Potentially bad value .+ for attribute .+ on element .+: The language subtag .+ is deprecated.*': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'Attribute value is a deprecated language subtag'
-      },
-      'The .+ element is a completely-unknown element that is not allowed anywhere in any HTML content.+': {
-        'issueID': 'nonElement',
-        'quality': 1,
-        'what': 'Element is unknown'
-      },
-      'CSS: Deprecated media feature .+': {
-        'issueID': 'obsolete',
-        'quality': 1,
-        'what': 'Media feature is deprecated'
-      },
-      'CSS: Unrecognized at-rule @.+': {
-        'issueID': 'atRuleInvalid',
-        'quality': 1,
-        'what': 'At-rule is not recognized by CSS'
-      },
-      'Style rule .* not allowed outside an @scope rule in a style element in body\.': {
-        'issueID': 'atRuleInvalid',
-        'quality': 1,
-        'what': 'At-rule in CSS is not within an @scope rule'
-      },
-      'CSS: .+: Character .+ is neither a decimal digit number.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Nonnumeric character in a numeric style property'
+        'what': 'CSS border includes a negative-valued property'
       },
       'CSS: column-count: .+ is not valid, only values greater than 0 allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'CSS column-count property has a nonpositive value'
+      },
+      'CSS: flex: .+ negative values are not allowed.*': {
+        'issueID': 'flexBad',
+        'quality': 1,
+        'what': 'CSS flex value is negative'
       },
       'CSS: font-weight: .+ is not valid, only values greater than or equal to 1.0 are allowed.*': {
         'issueID': 'cssInvalid',
@@ -8527,265 +8487,140 @@ const rulesData = {
         'quality': 1,
         'what': 'CSS font-weight property has a value greater than 1000'
       },
-      'CSS: .+: Parse Error.*': {
-        'issueID': 'cssInvalid',
+      'CSS: gap: .+ negative values are not allowed.*': {
+        'issueID': 'gapBad',
         'quality': 1,
-        'what': 'Invalid CSS'
+        'what': 'CSS gap value is negative'
       },
-      'CSS: .+: .+ is not a valid color 3 or 6 hexadecimals numbers.*': {
-        'issueID': 'cssInvalid',
+      'CSS: line-height: .* negative values are not allowed.*': {
+        'issueID': 'lineHeightBad',
         'quality': 1,
-        'what': 'Invalid hexadecimal color in CSS'
+        'what': 'Text line height is negative'
       },
-      'CSS: .+: .+ is not a .+ value.*': {
-        'issueID': 'cssInvalid',
+      'CSS: padding[-a-z]*: .+ negative values are not allowed.*': {
+        'issueID': 'paddingBad',
         'quality': 1,
-        'what': 'Invalid value in CSS'
-      },
-      'CSS: .+: Property .+ doesn\'t exist.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid property in CSS'
-      },
-      'CSS: .+: only 0 can be a length. You must put a unit after your number.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Length in CSS is nonzero but has no unit'
-      },
-      'CSS: .*only 0 can be a unit. You must put a unit after your number.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Number in CSS is nonzero but has no unit'
-      },
-      'CSS: .+: Too many values or values are not recognized.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid CSS value or too many values'
-      },
-      'CSS: .+: Invalid type: .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Invalid type of CSS value'
-      },
-      'CSS: .+: The types are incompatible.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Incompatible types of CSS values'
-      },
-      'CSS: .+: Unknown dimension.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Unknown CSS dimension'
-      },
-      'CSS: .+: Character array is missing "e" notation exponential mark.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Character array has no exponent mark e'
-      },
-      'CSS: .+:   is an incorrect operator.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Space is misused as a CSS operator'
-      },
-      'CSS: .+: , is an incorrect operator.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Comma is misused as a CSS operator'
-      },
-      'CSS: Unknown pseudo-element or pseudo-class :.+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Unknown pseudo-element or pseudo-class'
-      },
-      'CSS: unrecognized media .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'Unrecognized media value'
-      },
-      'CSS: .+ is not a :lang.+ value.*': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS pseudo-class :lang() has an invalid value'
-      },
-      'CSS: .+: Missing a semicolon before the .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'semicolon missing in CSS'
+        'what': 'One of the CSS padding values is negative'
       },
       'CSS: perspective: .+ is not valid, only values greater than 0 allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 0.5,
         'what': 'CSS perspective property has a nonpositive value'
       },
-      'CSS: .*Lexical error at line .+, column .+ Encountered: .+': {
-        'issueID': 'cssInvalid',
-        'quality': 1,
-        'what': 'CSS property has a value with a lexical error'
-      },
       'CSS: transition: .+ is not valid, only values lower than or equal to 1.0 are allowed.*': {
         'issueID': 'cssInvalid',
         'quality': 0.5,
         'what': 'CSS transition property has a value greater than 1'
       },
-      'CSS: In CSS1, a class name could start with a digit .+, unless it was a dimension .+ In CSS2, such classes are parsed as unknown dimensions .+ To make .+ a valid class, CSS2 requires the first digit to be escaped: .+': {
+      'CSS: unrecognized media .+': {
         'issueID': 'cssInvalid',
-        'quality': 0.5,
-        'what': 'CSS class name starts with an unescaped digit'
-      },
-      'Stray start tag .+': {
-        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Invalid start tag'
+        'what': 'Unrecognized media value'
       },
-      'Stray end tag .+': {
-        'issueID': 'elementClosure',
+      'Discarding unrecognized token .+ from value of attribute role\\. Browsers ignore any token that is not a defined ARIA non-abstract role.*': {
+        'issueID': 'roleBad',
         'quality': 1,
-        'what': 'Invalid closing tag'
+        'what': 'Invalid role'
       },
-      'End tag [a-z]+\\.': {
-        'issueID': 'elementClosure',
+      'Duplicate ID .+$|^The first occurrence of ID .* was here.*': {
+        'issueID': 'duplicateID',
         'quality': 1,
-        'what': 'Closing tag of an ineligible element'
+        'what': 'Duplicate id'
       },
-      'Start tag .+ seen but an element of the same type was already open.*': {
-        'issueID': 'elementClosure',
+      'Duplicate attribute.*': {
+        'issueID': 'duplicateAttribute',
         'quality': 1,
-        'what': 'Element is invalidly a descendant of another such element'
+        'what': 'Source code of the element contains 2 or more of the same attribute'
       },
-      'End tag for .+ seen, but there were unclosed elements.*': {
-        'issueID': 'elementClosure',
+      'Element .+ does not need a role attribute.*': {
+        'issueID': 'roleRedundant',
         'quality': 1,
-        'what': 'Element is closed while an element within it is unclosed'
+        'what': 'Element needs no role attribute'
       },
-      'End tag .+ seen, but there were open elements.*': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing a required instance of child element .+': {
+        'issueID': 'descendantMissing',
         'quality': 1,
-        'what': 'Element is closed while an element within it is unclosed'
+        'what': 'Element is missing a required child'
       },
-      'End tag .+ implied, but there were open elements.*': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing one or more of the following attributes: .+': {
+        'issueID': 'attributeMissing',
         'quality': 1,
-        'what': 'Element is implicitly closed while an element within it is unclosed'
+        'what': 'Element is missing a required attribute'
       },
-      'Unclosed element .+': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing one or more of the following attributes: role.*': {
+        'issueID': 'roleMissingRisk',
         'quality': 1,
-        'what': 'Element is unclosed'
+        'what': 'Element has no role attribute but needs one?'
       },
-      'No .+ element in scope but a .+ end tag seen.*': {
-        'issueID': 'elementClosure',
+      'Element .+ is missing required attribute .+': {
+        'issueID': 'attributeMissing',
         'quality': 1,
-        'what': 'End tag for an element that is not in scope'
+        'what': 'Element is missing a required attribute'
       },
-      'End tag .+ violates nesting rules.*': {
-        'issueID': 'nestingBad',
+      'Element .+ is missing required attribute aria-.+': {
+        'issueID': 'ariaMissing',
         'quality': 1,
-        'what': 'End tag violates nesting rules'
+        'what': 'Element is missing a required ARIA attribute'
       },
-      'Bad value [^`]+ Tab, new line or carriage return found.*': {
-        'issueID': 'characterBad',
+      'Element .+ is missing required attribute role.*': {
+        'issueID': 'roleMissing',
         'quality': 1,
-        'what': 'Attribute value contains an illegal spacing character'
+        'what': 'Element has no role attribute'
       },
-      'Bad character . after <. Probable cause: Unescaped <. Try escaping it as &lt;.*': {
-        'issueID': 'characterBad',
+      'Element .+ not allowed as child of element .+ in this context.*': {
+        'issueID': 'parentBad',
         'quality': 1,
-        'what': 'Left angle bracket is followed by an invalid character'
+        'what': 'Element has an invalid parent'
       },
-      'Saw .+ when expecting an attribute name. Probable cause: (?:.+ missing|Missing .+) immediately before.*': {
-        'issueID': 'characterBad',
+      'Element image is missing required attribute (?:height|width).*': {
+        'issueID': 'attributeMissing',
         'quality': 1,
-        'what': 'Invalid character appears where an attribute name must appear'
+        'what': 'image element has no height attribute or has no width attribute'
       },
-      'Bad element name .*: Code point .* is not allowed*': {
-        'issueID': 'characterBad',
+      'Element meta is missing one or more of the following attributes: .+': {
+        'issueID': 'metaAttributesWrong',
         'quality': 1,
-        'what': 'Element name contains an invalid character'
-      },
-      'Bad value .* for attribute href on element .+: Illegal character in path segment: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'href attribute path value contains an invalid character in a segment'
-      },
-      'Bad value .* for attribute src on element .+: Illegal character in path segment: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'src attribute path value contains an invalid character in a segment'
-      },
-      'Bad value .* for attribute href on element .+: Illegal character in query: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'href attribute query value contains an invalid character'
-      },
-      'Bad value .* for attribute src on element .+: Illegal character in query: .+ is not allowed.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'src attribute query value contains an invalid character'
-      },
-      'Bad value .+ for attribute src on element .+: Tab, new line or carriage return found.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'src attribute value contains a tab, newline, or return character'
-      },
-      '.+ in an unquoted attribute value. Probable causes: Attributes running together or a URL query string in an unquoted attribute value.*': {
-        'issueID': 'characterBad',
-        'quality': 1,
-        'what': 'Attribute has a value containing invalid punctuation'
-      },
-      'The text content of element .+ was not in the required format: Expected .+ but found .+ instead.*': {
-        'issueID': 'textContentBad',
-        'quality': 1,
-        'what': 'Element has text content with invalid format'
-      },
-      'End tag .+ did not match the name of the current open element .*': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'End tag conflicts with the current open element.'
-      },
-      'Self-closing syntax .+ used on a non-void HTML element.*': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'Self-closing syntax used on a non-void element'
-      },
-      'The aria-hidden attribute must not be specified on the .+ element.*': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'aria-hidden attribute is invalid for its element'
-      },
-      'Bad start tag in .+': {
-        'issueID': 'parseError',
-        'quality': 1,
-        'what': 'Invalid start tag'
+        'what': 'Element is missing a required attribute'
       },
       'Element name .+ cannot be represented as XML 1[.]0.*': {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'Invalid element name'
       },
-      'Quote . in attribute name[.] Probable cause: Matching quote missing somewhere earlier.*': {
+      'End tag .+ did not match the name of the current open element .*': {
         'issueID': 'parseError',
         'quality': 1,
-        'what': 'Attribute name includes an apostrophe or double quotation mark'
+        'what': 'End tag conflicts with the current open element.'
       },
-      'Text not allowed in element .+ in this context.*': {
-        'issueID': 'parseError',
+      'End tag .+ implied, but there were open elements.*': {
+        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Element contains text, which is not allowed here'
+        'what': 'Element is implicitly closed while an element within it is unclosed'
       },
-      'The .+ element must not appear as a descendant of the .+ element.*': {
-        'issueID': 'parseError',
+      'End tag .+ seen, but there were open elements.*': {
+        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Element has an invalid ancestor'
+        'what': 'Element is closed while an element within it is unclosed'
       },
-      'The element .+ must not appear as a descendant of the .+ element.*': {
-        'issueID': 'parseError',
+      'End tag .+ violates nesting rules.*': {
+        'issueID': 'nestingBad',
         'quality': 1,
-        'what': 'Element has an invalid ancestor'
+        'what': 'End tag violates nesting rules'
       },
-      'java.util.concurrent.TimeoutException: Idle timeout expired: .+ ms.*': {
-        'issueID': 'parseError',
+      'End tag [a-z]+\\.': {
+        'issueID': 'elementClosure',
         'quality': 1,
-        'what': 'Idle timeout expired'
+        'what': 'Closing tag of an ineligible element'
+      },
+      'End tag for .+ seen, but there were unclosed elements.*': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Element is closed while an element within it is unclosed'
+      },
+      'Forbidden code point U+.*': {
+        'issueID': 'encodingBad',
+        'quality': 1,
+        'what': 'Invalid Unicode code point'
       },
       'HTML start tag .+ in a foreign namespace context.*': {
         'issueID': 'parseError',
@@ -8802,54 +8637,404 @@ const rulesData = {
         'quality': 1,
         'what': 'Encoding declaration names an unsupported character encoding'
       },
+      'No .+ element in scope but a .+ end tag seen.*': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'End tag for an element that is not in scope'
+      },
+      'Potentially bad value .+ for attribute .+ on element .+: The language subtag .+ is deprecated.*': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Attribute value is a deprecated language subtag'
+      },
+      'Potentially bad value .+ for attribute .+ on element .+Typo for .+\\?.*': {
+        'issueID': 'attributeValueRisk',
+        'quality': 1,
+        'what': 'Attribute value may be a typographical error'
+      },
+      'Potentially bad value .+ for attribute sandbox on element iframe: Setting both allow-scripts and allow-same-origin is not recommended, because it effectively enables an embedded page to break out of all sandboxing.*': {
+        'issueID': 'frameSandboxRisk',
+        'quality': 1,
+        'what': 'iframe element has a vulnerable sandbox value containing both allow-scripts and allow-same-origin'
+      },
+      'Quote . in attribute name[.] Probable cause: Matching quote missing somewhere earlier.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Attribute name includes an apostrophe or double quotation mark'
+      },
+      'Resource violates Content Security Policy \\(meta tag\\): external script .+ blocked by script-src directive.*': {
+        'issueID': 'scriptBanned',
+        'quality': 1,
+        'what': 'script-src content attribute blocks a script'
+      },
+      'Resource violates Content Security Policy \\(meta tag\\): external stylesheet .+ blocked by style-src directive.*': {
+        'issueID': 'stylesheetBanned',
+        'quality': 1,
+        'what': 'style-src content attribute blocks an external stylesheet'
+      },
+      'Resource violates Content Security Policy \\(meta tag\\): image .+ blocked by img-src directive.*': {
+        'issueID': 'imageBanned',
+        'quality': 1,
+        'what': 'img-src content attribute blocks an image'
+      },
+      'Saw .+ when expecting an attribute name. Probable cause: (?:.+ missing|Missing .+) immediately before.*': {
+        'issueID': 'characterBad',
+        'quality': 1,
+        'what': 'Invalid character appears where an attribute name must appear'
+      },
+      'Saw a start tag [a-z]+.*': {
+        'issueID': 'elementBad',
+        'quality': 1,
+        'what': 'Element does not exist in HTML'
+      },
+      'Self-closing syntax .+ used on a non-void HTML element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Self-closing syntax used on a non-void element'
+      },
+      'Start tag .+ seen but an element of the same type was already open.*': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Element is invalidly a descendant of another such element'
+      },
+      'Stray end tag .+': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Invalid closing tag'
+      },
+      'Stray start tag .+': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Invalid start tag'
+      },
+      'Style rule .* not allowed outside an @scope rule in a style element in body\.': {
+        'issueID': 'atRuleInvalid',
+        'quality': 1,
+        'what': 'At-rule in CSS is not within an @scope rule'
+      },
+      'Table column [0-9]+ established by element td has no cells beginning in it.*': {
+        'issueID': 'tableColumnsVary',
+        'quality': 1,
+        'what': 'Element is td but the prior cells in its table column do not exist'
+      },
+      'Text not allowed in element .+ in this context.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element contains text, which is not allowed here'
+      },
       'Text run is not in Unicode Normalization Form C.+': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Text run is not in Unicode Normalization Form C'
+      },
+      'The .+ attribute on the .+ element is obsolete.*': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Attribute is obsolete on its element'
+      },
+      'The .+ element is a completely-unknown element that is not allowed anywhere in any HTML content.+': {
+        'issueID': 'nonElement',
+        'quality': 1,
+        'what': 'Element is unknown'
+      },
+      'The .+ element must not appear as a descendant of the .+ element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element has an invalid ancestor'
+      },
+      'The .+ role is unnecessary for element .+': {
+        'issueID': 'roleRedundant',
+        'quality': 1,
+        'what': 'explicit role is redundant for its element'
+      },
+      'The aria-describedby attribute references .+, which is not the ID of any element in this document.+': {
+        'issueID': 'descriptionBadID',
+        'quality': 1,
+        'what': 'aria-describedby attribute references an element not in the document'
+      },
+      'The aria-hidden attribute must not be specified on the .+ element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'aria-hidden attribute is invalid for its element'
+      },
+      'The aria-label.* attribute must not be specified on any .* element unless the element has a role value other than caption, code, deletion, emphasis, generic, insertion, paragraph, presentation, strong, subscript, or superscript.*': {
+        'issueID': 'nonLabelableRole',
+        'quality': 1,
+        'what': 'Element with a non-labelable role has an aria-label attribute'
+      },
+      'The aria-labelledby attribute references .+, which is not the ID of any element in this document.+': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'aria-labelledby attribute references an element not in the document'
+      },
+      'The element .+ must not appear as a descendant of the .+ element.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Element has an invalid ancestor'
+      },
+      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading level.+': {
+        'issueID': 'headingLevelSkip',
+        'quality': 1,
+        'what': 'Heading level is more than 1 level inferior to the previous heading'
+      },
+      'The role attribute must not be used on a .+ element which has a table ancestor with no role attribute, or with a role attribute whose value is table, grid, or treegrid.*': {
+        'issueID': 'roleHierarchyBad',
+        'quality': 1,
+        'what': 'Table cell has a role attribute'
+      },
+      'The text content of element .+ was not in the required format: Expected .+ but found .+ instead.*': {
+        'issueID': 'textContentBad',
+        'quality': 1,
+        'what': 'Element has text content with invalid format'
       },
       'The value of attribute .+ on element .+ from namespace .+ is not in Unicode Normalization Form C.*': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Value of attribute is not in Unicode Normalization Form C'
       },
-      'Forbidden code point U+.*': {
-        'issueID': 'encodingBad',
+      'This document appears to be written in .+ Consider .+ing lang=.+': {
+        'issueID': 'pageLanguage',
         'quality': 1,
-        'what': 'Invalid Unicode code point'
+        'what': 'html start tag has no lang attribute to declare the language of the page'
+      },
+      'Unclosed element .+': {
+        'issueID': 'elementClosure',
+        'quality': 1,
+        'what': 'Element is unclosed'
+      },
+      'java.util.concurrent.TimeoutException: Idle timeout expired: .+ ms.*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Idle timeout expired'
       }
     }
   },
   'pour': {
     'invariant': {
+      'accesskeys': {
+        'issueID': 'accessKeyDuplicate',
+        'quality': 1,
+        'what': 'Multiple element have the same accesskey attribute value'
+      },
+      'area-alt': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'Image map area has no text alternative'
+      },
+      'aria-allowed-attr': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute is not allowed for the role of its element'
+      },
+      'aria-attr-valid': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA attribute gives the element an invalid name or value'
+      },
+      'aria-field-name': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'ARIA field or value widget has no accessible name'
+      },
+      'aria-hidden-focus': {
+        'issueID': 'focusableHidden',
+        'quality': 1,
+        'what': 'Element has an aria-hidden attribute but is or has a focusable element'
+      },
+      'aria-label-misuse': {
+        'issueID': 'nonLabelableRole',
+        'quality': 1,
+        'what': 'Plain container has an aria-label or aria-labelledby attribute'
+      },
+      'aria-required-children': {
+        'issueID': 'descendantMissing',
+        'quality': 1,
+        'what': 'ARIA role is missing a required child'
+      },
+      'aria-required-parent': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'ARIA role is not inside its required parent'
+      },
+      'aria-valid-refs': {
+        'issueID': 'ariaReferenceBad',
+        'quality': 1,
+        'what': 'ARIA id refers to no element'
+      },
+      'audio-control': {
+        'issueID': 'autoplay',
+        'quality': 1,
+        'what': 'Auto-playing audio cannot be stopped or muted'
+      },
+      'audio-transcript': {
+        'issueID': 'videoNoTranscript',
+        'quality': 1,
+        'what': 'Prerecorded audio-only content has no transcript'
+      },
+      'auth-field-obstruction': {
+        'issueID': 'autoAuthBanned',
+        'quality': 1,
+        'what': 'Login input blocks paste or password managers'
+      },
+      'autocomplete-valid': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute has invalid tokens'
+      },
+      'button-name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'Button has no accessible name'
+      },
+      'button-type': {
+        'issueID': 'typeBad',
+        'quality': 1,
+        'what': 'Button inside a form has no type attribute declared'
+      },
+      'bypass-blocks': {
+        'issueID': 'skipRepeatedContent',
+        'quality': 1,
+        'what': 'Page has no way to bypass repeated blocks'
+      },
+      'canvas-alt': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'canvas element has no accessible name or fallback'
+      },
+      'color-contrast': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text has insufficient contrast against its background'
+      },
+      'color-contrast-enhanced': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text contrast can be improved'
+      },
+      'composite-widget-name': {
+        'issueID': 'componentNoText',
+        'quality': 1,
+        'what': 'Tab, menu item, option, or tree item has no accessible name'
+      },
+      'control-contrast': {
+        'issueID': 'contrastAA',
+        'quality': 1,
+        'what': 'Text inside a form control has insufficient contrast'
+      },
+      'definition-list': {
+        'issueID': 'listChild',
+        'quality': 1,
+        'what': 'dl element contains a child other than dt or dd'
+      },
+      'dialog-name': {
+        'issueID': 'dialogNoText',
+        'quality': 1,
+        'what': 'Dialog has no accessible name'
+      },
+      'dlitem-parent': {
+        'issueID': 'descriptionOrphan',
+        'quality': 1,
+        'what': 'dt or dd element is not inside a dl element'
+      },
       'document-title': {
         'issueID': 'pageTitle',
         'quality': 1,
         'what': 'Page has no title element'
+      },
+      'drag-alternative': {
+        'issueID': 'dragAlt',
+        'quality': 1,
+        'what': 'Dragging has no click alternative'
+      },
+      'embed-alt': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'embed element has no accessible name'
+      },
+      'empty-heading': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Heading contains no text'
+      },
+      'error-message-linkage': {
+        'issueID': 'errorReferenceBad',
+        'quality': 1,
+        'what': 'Field marked invalid has no text error description'
+      },
+      'fieldset-legend': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'Radio or checkbox group has no fieldset legend'
+      },
+      'focus-not-obscured': {
+        'issueID': 'focusCovered',
+        'quality': 1,
+        'what': 'Focused element is fully obscured by an overlay'
+      },
+      'focus-visible': {
+        'issueID': 'focusIndicationBad',
+        'quality': 1,
+        'what': 'Keyboard focus is not visible'
+      },
+      'form-label': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Form control has no label'
+      },
+      'frame-title': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'Frame has no accessible name'
+      },
+      'heading-order': {
+        'issueID': 'headingLevelSkip',
+        'quality': 1,
+        'what': 'Heading levels do not increase by only one'
       },
       'html-lang': {
         'issueID': 'pageLanguage',
         'quality': 1,
         'what': 'html element has no lang attribute or an invalid one'
       },
-      'valid-lang-parts': {
-        'issueID': 'languageChange',
-        'quality': 1,
-        'what': 'lang attribute on an element has an invalid value'
-      },
       'image-alt': {
         'issueID': 'imageNoText',
         'quality': 1,
         'what': 'Image has no text alternative'
       },
-      'svg-img-alt': {
-        'issueID': 'svgImageNoText',
+      'input-image-alt-present': {
+        'issueID': 'imageButtonNoText',
         'quality': 1,
-        'what': 'SVG element has no accessible name'
+        'what': 'Image input has no alt text'
       },
-      'button-name': {
-        'issueID': 'buttonNoText',
+      'invoker-target': {
+        'issueID': 'ariaReferenceBad',
         'quality': 1,
-        'what': 'Button has no accessible name'
+        'what': 'popovertarget or commandfor attribute refers to no valid element'
+      },
+      'label-for-valid': {
+        'issueID': 'labelForBad',
+        'quality': 1,
+        'what': 'for attribute of a label refers to no form control'
+      },
+      'landmark-one-main': {
+        'issueID': 'mainNone',
+        'quality': 1,
+        'what': 'Page has no main landmark'
+      },
+      'landmark-top-level': {
+        'issueID': 'mainNotTop',
+        'quality': 1,
+        'what': 'Landmark is nested inside another landmark instead of being top-level'
+      },
+      'landmark-unique': {
+        'issueID': 'landmarkConfusion',
+        'quality': 1,
+        'what': 'Landmarks of the same type are not distinguished by a label'
+      },
+      'link-in-text-block': {
+        'issueID': 'linkIndication',
+        'quality': 1,
+        'what': 'Link is not distinguishable from surrounding text without color'
       },
       'link-name': {
         'issueID': 'linkNoText',
@@ -8866,345 +9051,105 @@ const rulesData = {
         'quality': 1,
         'what': 'Link text alone does not identify its destination'
       },
-      'form-label': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'Form control has no label'
-      },
-      'autocomplete-valid': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute has invalid tokens'
-      },
-      'orientation-lock': {
-        'issueID': 'cssBansPageRotate',
-        'quality': 1,
-        'what': 'CSS locks content to one display orientation'
-      },
-      'meta-viewport': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'Viewport prevents user zoom'
-      },
-      'color-contrast': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Text has insufficient contrast against its background'
-      },
-      'frame-title': {
-        'issueID': 'iframeTitleBad',
-        'quality': 1,
-        'what': 'Frame has no accessible name'
-      },
-      'aria-valid-refs': {
-        'issueID': 'ariaReferenceBad',
-        'quality': 1,
-        'what': 'ARIA id refers to no element'
-      },
-      'valid-role': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'Element has an invalid role'
-      },
-      'aria-hidden-focus': {
-        'issueID': 'focusableHidden',
-        'quality': 1,
-        'what': 'Element has an aria-hidden attribute but is or has a focusable element'
-      },
       'list-structure': {
         'issueID': 'listChild',
         'quality': 1,
         'what': 'List contains a child other than a list item'
-      },
-      'nested-interactive': {
-        'issueID': 'activeEmbedding',
-        'quality': 1,
-        'what': 'Interactive control contains another interactive control'
-      },
-      'bypass-blocks': {
-        'issueID': 'skipRepeatedContent',
-        'quality': 1,
-        'what': 'Page has no way to bypass repeated blocks'
-      },
-      'target-size': {
-        'issueID': 'targetTiny',
-        'quality': 1,
-        'what': 'Interactive target is smaller than 24 CSS pixels'
-      },
-      'audio-control': {
-        'issueID': 'autoplay',
-        'quality': 1,
-        'what': 'Auto-playing audio cannot be stopped or muted'
-      },
-      'pause-stop-hide': {
-        'issueID': 'animationLong',
-        'quality': 1,
-        'what': 'Moving content cannot be paused'
-      },
-      'media-captions': {
-        'issueID': 'videoNoText',
-        'quality': 1,
-        'what': 'Video has no captions'
-      },
-      'aria-attr-valid': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute gives the element an invalid name or value'
-      },
-      'aria-allowed-attr': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA attribute is not allowed for the role of its element'
-      },
-      'aria-field-name': {
-        'issueID': 'inputNoText',
-        'quality': 1,
-        'what': 'ARIA field or value widget has no accessible name'
-      },
-      'aria-label-misuse': {
-        'issueID': 'nonLabelableRole',
-        'quality': 1,
-        'what': 'Plain container has an aria-label or aria-labelledby attribute'
-      },
-      'role-required-aria': {
-        'issueID': 'ariaMissing',
-        'quality': 1,
-        'what': 'Role is missing a required state or property attribute'
-      },
-      'label-for-valid': {
-        'issueID': 'labelForBad',
-        'quality': 1,
-        'what': 'for attribute of a label refers to no form control'
       },
       'listitem-parent': {
         'issueID': 'listItemOrphan',
         'quality': 1,
         'what': 'li element is not inside a ul or ol element'
       },
-      'definition-list': {
-        'issueID': 'listChild',
+      'media-captions': {
+        'issueID': 'videoNoText',
         'quality': 1,
-        'what': 'dl element contains a child other than dt or dd'
-      },
-      'dlitem-parent': {
-        'issueID': 'descriptionOrphan',
-        'quality': 1,
-        'what': 'dt or dd element is not inside a dl element'
-      },
-      'area-alt': {
-        'issueID': 'imageMapAreaNoText',
-        'quality': 1,
-        'what': 'Image map area has no text alternative'
-      },
-      'object-alt': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'object element has no text alternative'
-      },
-      'input-image-alt-present': {
-        'issueID': 'imageButtonNoText',
-        'quality': 1,
-        'what': 'Image input has no alt text'
-      },
-      'multiple-labels': {
-        'issueID': 'labelNot1',
-        'quality': 1,
-        'what': 'Form field has multiple label elements'
+        'what': 'Video has no captions'
       },
       'meta-refresh': {
         'issueID': 'refresh',
         'quality': 1,
         'what': 'Page uses a timed refresh'
       },
-      'link-in-text-block': {
-        'issueID': 'linkIndication',
+      'meta-viewport': {
+        'issueID': 'metaBansZoom',
         'quality': 1,
-        'what': 'Link is not distinguishable from surrounding text without color'
+        'what': 'Viewport prevents user zoom'
       },
-      'p-as-heading': {
-        'issueID': 'pseudoHeadingRisk',
+      'multiple-labels': {
+        'issueID': 'labelNot1',
         'quality': 1,
-        'what': 'Styled paragraph is used instead of a heading'
+        'what': 'Form field has multiple label elements'
       },
-      'aria-required-children': {
-        'issueID': 'descendantMissing',
+      'nested-interactive': {
+        'issueID': 'activeEmbedding',
         'quality': 1,
-        'what': 'ARIA role is missing a required child'
+        'what': 'Interactive control contains another interactive control'
       },
-      'aria-required-parent': {
-        'issueID': 'parentMissing',
+      'new-window-link': {
+        'issueID': 'newTabSurpriseRisk',
         'quality': 1,
-        'what': 'ARIA role is not inside its required parent'
+        'what': 'Link opens a new window without warning'
       },
-      'scrollable-region-focusable': {
-        'issueID': 'keyboardScroll',
+      'no-autofocus': {
+        'issueID': 'focusSurprise',
         'quality': 1,
-        'what': 'Scrollable region is not reachable by keyboard'
-      },
-      'table-headers': {
-        'issueID': 'tableHeaderless',
-        'quality': 1,
-        'what': 'Data table has no properly associated header cells'
-      },
-      'color-contrast-enhanced': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Text contrast can be improved'
-      },
-      'target-size-enhanced': {
-        'issueID': 'targetSmall',
-        'quality': 1,
-        'what': 'Interactive target is smaller than 44 CSS pixels'
-      },
-      'dialog-name': {
-        'issueID': 'dialogNoText',
-        'quality': 1,
-        'what': 'Dialog has no accessible name'
-      },
-      'control-contrast': {
-        'issueID': 'contrastAA',
-        'quality': 1,
-        'what': 'Text inside a form control has insufficient contrast'
+        'what': 'autofocus attribute disorients assistive-technology users'
       },
       'non-text-contrast': {
         'issueID': 'boxInvisibleRisk',
         'quality': 1,
         'what': 'Form field boundary has contrast less than 3:1'
       },
-      'text-spacing': {
-        'issueID': 'horizontalSpacingFrozen',
-        'quality': 1,
-        'what': 'User adjustment of text spacing is prevented'
-      },
-      'reflow': {
-        'issueID': 'reflow',
-        'quality': 1,
-        'what': 'Content does not reflow to permit one-dimensional scrolling'
-      },
-      'focus-visible': {
-        'issueID': 'focusIndicationBad',
-        'quality': 1,
-        'what': 'Keyboard focus is not visible'
-      },
-      'focus-not-obscured': {
-        'issueID': 'focusCovered',
-        'quality': 1,
-        'what': 'Focused element is fully obscured by an overlay'
-      },
-      'auth-field-obstruction': {
-        'issueID': 'autoAuthBanned',
-        'quality': 1,
-        'what': 'Login input blocks paste or password managers'
-      },
-      'embed-alt': {
+      'object-alt': {
         'issueID': 'objectNoText',
         'quality': 1,
-        'what': 'embed element has no accessible name'
-      },
-      'canvas-alt': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'canvas element has no accessible name or fallback'
-      },
-      'video-loop-motion': {
-        'issueID': 'animationLong',
-        'quality': 1,
-        'what': 'Looping autoplay video cannot be paused'
-      },
-      'visual-order-divergence': {
-        'issueID': 'tabOrderBad',
-        'quality': 1,
-        'what': 'CSS reordering makes the tab order diverge from the visual order'
-      },
-      'audio-transcript': {
-        'issueID': 'videoNoTranscript',
-        'quality': 1,
-        'what': 'Prerecorded audio-only content has no transcript'
-      },
-      'reading-order-divergence': {
-        'issueID': 'visualSequenceDeviant',
-        'quality': 1,
-        'what': 'CSS reordering makes the reading order diverge from the visual order'
-      },
-      'drag-alternative': {
-        'issueID': 'dragAlt',
-        'quality': 1,
-        'what': 'Dragging has no click alternative'
-      },
-      'redundant-entry': {
-        'issueID': 'inputRepeat',
-        'quality': 1,
-        'what': 'Form asks for the same information twice'
-      },
-      'invoker-target': {
-        'issueID': 'ariaReferenceBad',
-        'quality': 1,
-        'what': 'popovertarget or commandfor attribute refers to no valid element'
-      },
-      'reduced-motion': {
-        'issueID': 'animationTriggered',
-        'quality': 1,
-        'what': 'Interaction-triggered motion cannot be switched off'
+        'what': 'object element has no text alternative'
       },
       'on-input-navigation': {
         'issueID': 'inputSurprise',
         'quality': 1,
         'what': 'Changing a control unexpectedly changes the context'
       },
-      'error-message-linkage': {
-        'issueID': 'errorReferenceBad',
+      'orientation-lock': {
+        'issueID': 'cssBansPageRotate',
         'quality': 1,
-        'what': 'Field marked invalid has no text error description'
+        'what': 'CSS locks content to one display orientation'
       },
-      'composite-widget-name': {
-        'issueID': 'componentNoText',
+      'p-as-heading': {
+        'issueID': 'pseudoHeadingRisk',
         'quality': 1,
-        'what': 'Tab, menu item, option, or tree item has no accessible name'
-      },
-      'summary-name': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'summary element has no accessible name'
-      },
-      'heading-order': {
-        'issueID': 'headingLevelSkip',
-        'quality': 1,
-        'what': 'Heading levels do not increase by only one'
-      },
-      'empty-heading': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Heading contains no text'
-      },
-      'positive-tabindex': {
-        'issueID': 'tabIndexPositive',
-        'quality': 1,
-        'what': 'Positive tabindex disrupts the natural focus order'
-      },
-      'region': {
-        'issueID': 'contentBeyondLandmarks',
-        'quality': 1,
-        'what': 'Content is not inside a landmark region'
-      },
-      'landmark-one-main': {
-        'issueID': 'mainNone',
-        'quality': 1,
-        'what': 'Page has no main landmark'
+        'what': 'Styled paragraph is used instead of a heading'
       },
       'page-heading-one': {
         'issueID': 'h1Not1',
         'quality': 1,
         'what': 'Page has no h1 heading'
       },
-      'landmark-unique': {
-        'issueID': 'landmarkConfusion',
+      'pause-stop-hide': {
+        'issueID': 'animationLong',
         'quality': 1,
-        'what': 'Landmarks of the same type are not distinguished by a label'
+        'what': 'Moving content cannot be paused'
       },
-      'redundant-role': {
-        'issueID': 'roleRedundant',
+      'positive-tabindex': {
+        'issueID': 'tabIndexPositive',
         'quality': 1,
-        'what': 'role attribute repeats the built-in role of its element'
+        'what': 'Positive tabindex disrupts the natural focus order'
+      },
+      'reading-order-divergence': {
+        'issueID': 'visualSequenceDeviant',
+        'quality': 1,
+        'what': 'CSS reordering makes the reading order diverge from the visual order'
+      },
+      'reduced-motion': {
+        'issueID': 'animationTriggered',
+        'quality': 1,
+        'what': 'Interaction-triggered motion cannot be switched off'
+      },
+      'redundant-alt-phrase': {
+        'issueID': 'imageTextRedundant',
+        'quality': 1,
+        'what': 'alt attribute value starts with a redundant phrase'
       },
       'redundant-aria': {
         'issueID': 'ariaRedundant',
@@ -9216,61 +9161,121 @@ const rulesData = {
         'quality': 1,
         'what': 'aria-label repeats the visible text of its element'
       },
-      'redundant-alt-phrase': {
-        'issueID': 'imageTextRedundant',
+      'redundant-entry': {
+        'issueID': 'inputRepeat',
         'quality': 1,
-        'what': 'alt attribute value starts with a redundant phrase'
-      },
-      'redundant-tabindex': {
-        'issueID': 'tabIndexExtra',
-        'quality': 1,
-        'what': 'Element is natively focused, so tabindex=0 is unnecessary'
+        'what': 'Form asks for the same information twice'
       },
       'redundant-image-alt': {
         'issueID': 'imageTextRedundant',
         'quality': 1,
         'what': 'Image alt attribute value repeats adjacent link or button text'
       },
-      'landmark-top-level': {
-        'issueID': 'mainNotTop',
+      'redundant-role': {
+        'issueID': 'roleRedundant',
         'quality': 1,
-        'what': 'Landmark is nested inside another landmark instead of being top-level'
+        'what': 'role attribute repeats the built-in role of its element'
       },
-      'accesskeys': {
-        'issueID': 'accessKeyDuplicate',
+      'redundant-tabindex': {
+        'issueID': 'tabIndexExtra',
         'quality': 1,
-        'what': 'Multiple element have the same accesskey attribute value'
+        'what': 'Element is natively focused, so tabindex=0 is unnecessary'
       },
-      'button-type': {
-        'issueID': 'typeBad',
+      'reflow': {
+        'issueID': 'reflow',
         'quality': 1,
-        'what': 'Button inside a form has no type attribute declared'
+        'what': 'Content does not reflow to permit one-dimensional scrolling'
       },
-      'no-autofocus': {
-        'issueID': 'focusSurprise',
+      'region': {
+        'issueID': 'contentBeyondLandmarks',
         'quality': 1,
-        'what': 'autofocus attribute disorients assistive-technology users'
+        'what': 'Content is not inside a landmark region'
       },
-      'new-window-link': {
-        'issueID': 'newTabSurpriseRisk',
+      'role-required-aria': {
+        'issueID': 'ariaMissing',
         'quality': 1,
-        'what': 'Link opens a new window without warning'
+        'what': 'Role is missing a required state or property attribute'
       },
-      'fieldset-legend': {
-        'issueID': 'legendMissing',
+      'scrollable-region-focusable': {
+        'issueID': 'keyboardScroll',
         'quality': 1,
-        'what': 'Radio or checkbox group has no fieldset legend'
+        'what': 'Scrollable region is not reachable by keyboard'
+      },
+      'summary-name': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'summary element has no accessible name'
+      },
+      'svg-img-alt': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'SVG element has no accessible name'
+      },
+      'table-headers': {
+        'issueID': 'tableHeaderless',
+        'quality': 1,
+        'what': 'Data table has no properly associated header cells'
+      },
+      'target-size': {
+        'issueID': 'targetTiny',
+        'quality': 1,
+        'what': 'Interactive target is smaller than 24 CSS pixels'
+      },
+      'target-size-enhanced': {
+        'issueID': 'targetSmall',
+        'quality': 1,
+        'what': 'Interactive target is smaller than 44 CSS pixels'
+      },
+      'text-spacing': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'User adjustment of text spacing is prevented'
+      },
+      'valid-lang-parts': {
+        'issueID': 'languageChange',
+        'quality': 1,
+        'what': 'lang attribute on an element has an invalid value'
+      },
+      'valid-role': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'Element has an invalid role'
+      },
+      'video-loop-motion': {
+        'issueID': 'animationLong',
+        'quality': 1,
+        'what': 'Looping autoplay video cannot be paused'
+      },
+      'visual-order-divergence': {
+        'issueID': 'tabOrderBad',
+        'quality': 1,
+        'what': 'CSS reordering makes the tab order diverge from the visual order'
       }
     },
     'variable': {}
   },
   'qualWeb': {
     'invariant': {
+      'QW-ACT-R1': {
+        'issueID': 'pageTitle',
+        'quality': 1,
+        'what': 'HTML page has no title'
+      },
       'QW-ACT-R10': {
         'issueID': 'ignorable',
         'quality': 1,
         'what': 'iframe elements with identical accessible names have different purposes (on invisible elements)',
         'whyIgnore': 'invalid'
+      },
+      'QW-ACT-R11': {
+        'issueID': 'buttonNoText',
+        'quality': 1,
+        'what': 'button element has no accessible name'
+      },
+      'QW-ACT-R12': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has no accessible name'
       },
       'QW-ACT-R13': {
         'issueID': 'ignorable',
@@ -9278,11 +9283,201 @@ const rulesData = {
         'what': 'Element with aria-hidden has focusable content',
         'whyIgnore': 'invalid'
       },
+      'QW-ACT-R14': {
+        'issueID': 'metaBansZoom',
+        'quality': 1,
+        'what': 'meta viewport prevents zoom'
+      },
+      'QW-ACT-R15': {
+        'issueID': 'autoplay',
+        'quality': 1,
+        'what': 'Element has audio that plays automatically'
+      },
+      'QW-ACT-R16': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'Form control has no accessible name'
+      },
+      'QW-ACT-R17': {
+        'issueID': 'imageNoText',
+        'quality': 1,
+        'what': 'Image has no accessible name'
+      },
+      'QW-ACT-R18': {
+        'issueID': 'duplicateID',
+        'quality': 1,
+        'what': 'id attribute value is not unique'
+      },
+      'QW-ACT-R19': {
+        'issueID': 'iframeTitleBad',
+        'quality': 1,
+        'what': 'iframe element has no accessible name'
+      },
+      'QW-ACT-R2': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'HTML page has no lang attribute'
+      },
+      'QW-ACT-R20': {
+        'issueID': 'roleBad',
+        'quality': 1,
+        'what': 'role attribute has an invalid value'
+      },
+      'QW-ACT-R21': {
+        'issueID': 'svgImageNoText',
+        'quality': 1,
+        'what': 'Element with an explicit role has no accessible name'
+      },
+      'QW-ACT-R22': {
+        'issueID': 'elementLanguageBad',
+        'quality': 1,
+        'what': 'Element within the body has no valid lang attribute'
+      },
+      'QW-ACT-R23': {
+        'issueID': 'videoNoText',
+        'quality': 1,
+        'what': 'video element visual content has no accessible alternative'
+      },
+      'QW-ACT-R24': {
+        'issueID': 'autocompleteBad',
+        'quality': 1,
+        'what': 'autocomplete attribute has no valid value'
+      },
+      'QW-ACT-R25': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA state or property is not permitted'
+      },
+      'QW-ACT-R26': {
+        'issueID': 'audioNoText',
+        'quality': 1,
+        'what': 'Auditory content of the element has no accessible alternative'
+      },
+      'QW-ACT-R27': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'aria- attribute is not defined in ARIA 1.1'
+      },
+      'QW-ACT-R28': {
+        'issueID': 'ariaMissing',
+        'quality': 1,
+        'what': 'Element with a role attribute does not have the required states and properties'
+      },
+      'QW-ACT-R29': {
+        'issueID': 'audioNoText',
+        'quality': 1,
+        'what': 'Content of the element has no text alternative'
+      },
+      'QW-ACT-R3': {
+        'issueID': 'pageLanguageBad',
+        'quality': 1,
+        'what': 'HTML lang and xml:lang do not match'
+      },
+      'QW-ACT-R30': {
+        'issueID': 'visibleLabelNotInName',
+        'quality': 1,
+        'what': 'Visible label is not part of the accessible name'
+      },
+      'QW-ACT-R31': {
+        'issueID': 'videoNoText',
+        'quality': 1,
+        'what': 'video element visual-only content has no accessible alternative'
+      },
+      'QW-ACT-R32': {
+        'issueID': 'videoNoText',
+        'quality': 1,
+        'what': 'video element visual-only content has no strict accessible alternative'
+      },
+      'QW-ACT-R33': {
+        'issueID': 'parentMissing',
+        'quality': 1,
+        'what': 'Element has no ARIA required context role'
+      },
+      'QW-ACT-R34': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'ARIA state or property has an invalid value'
+      },
+      'QW-ACT-R35': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Heading has no accessible name'
+      },
+      'QW-ACT-R36': {
+        'issueID': 'cellHeadersOutsideTable',
+        'quality': 1,
+        'what': 'Headers attribute does not refer to a cell in the same table element'
+      },
+      'QW-ACT-R37': {
+        'issueID': 'contrastRisk',
+        'quality': 1,
+        'what': 'Text has less than the minimum contrast or has an image background'
+      },
+      'QW-ACT-R38': {
+        'issueID': 'descendantMissing',
+        'quality': 1,
+        'what': 'Element has no ARIA required owned element'
+      },
+      'QW-ACT-R39': {
+        'issueID': 'tableHeaderCellless',
+        'quality': 1,
+        'what': 'Table header cell has no assigned data cell'
+      },
+      'QW-ACT-R4': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Element refreshes or redirects with delay'
+      },
+      'QW-ACT-R40': {
+        'issueID': 'overflowHiddenRisk',
+        'quality': 1,
+        'what': 'Zoomed text node is clipped by a CSS overflow declaration?'
+      },
       'QW-ACT-R41': {
         'issueID': 'ignorable',
         'quality': 1,
         'what': 'Error message describes no invalid form field value',
         'whyIgnore': 'speculative'
+      },
+      'QW-ACT-R42': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'Object element has no non-empty accessible name'
+      },
+      'QW-ACT-R43': {
+        'issueID': 'keyboardScroll',
+        'quality': 1,
+        'what': 'Scrollable element is not keyboard accessible'
+      },
+      'QW-ACT-R44': {
+        'issueID': 'linkTextsSame',
+        'quality': 1,
+        'what': 'Links with identical accessible names and context serve different purposes'
+      },
+      'QW-ACT-R48': {
+        'issueID': 'decorativeElementExposed',
+        'quality': 1,
+        'what': 'Element marked as decorative is exposed'
+      },
+      'QW-ACT-R49': {
+        'issueID': 'autoplayLong',
+        'quality': 1,
+        'what': 'Element that plays automatically has audio lasting more than 3 seconds'
+      },
+      'QW-ACT-R5': {
+        'issueID': 'pageLanguageBad',
+        'quality': 1,
+        'what': 'HTML lang attribute is invalid'
+      },
+      'QW-ACT-R50': {
+        'issueID': 'autoplayControl',
+        'quality': 1,
+        'what': 'audio or video that plays automatically has no control mechanism'
+      },
+      'QW-ACT-R51': {
+        'issueID': 'videoNoText',
+        'quality': 1,
+        'what': 'video element visual-only content is not a media alternative for text'
       },
       'QW-ACT-R52': {
         'issueID': 'ignorable',
@@ -9290,11 +9485,56 @@ const rulesData = {
         'what': 'video element visual-only content has no description track (description tracks and this ACT rule have been deprecated)',
         'whyIgnore': 'irrelevant'
       },
+      'QW-ACT-R53': {
+        'issueID': 'videoNoTranscript',
+        'quality': 1,
+        'what': 'video element visual-only content has no transcript'
+      },
+      'QW-ACT-R54': {
+        'issueID': 'videoNoAudioTrack',
+        'quality': 1,
+        'what': 'Visual-only content of the element has no audio track alternative'
+      },
+      'QW-ACT-R55': {
+        'issueID': 'videoNoAudioDescription',
+        'quality': 1,
+        'what': 'video element visual content has no audio description'
+      },
+      'QW-ACT-R56': {
+        'issueID': 'videoNoText',
+        'quality': 1,
+        'what': 'video element content is not a media alternative for text'
+      },
       'QW-ACT-R57': {
         'issueID': 'ignorable',
         'quality': 0,
         'what': 'video element visual content has no description track (description tracks and this ACT rule have been deprecated)',
         'whyIgnore': 'irrelevant'
+      },
+      'QW-ACT-R58': {
+        'issueID': 'audioNoText',
+        'quality': 1,
+        'what': 'Content of the element has no transcript'
+      },
+      'QW-ACT-R59': {
+        'issueID': 'audioNoText',
+        'quality': 1,
+        'what': 'Element content is not a media alternative for text'
+      },
+      'QW-ACT-R6': {
+        'issueID': 'imageButtonNoText',
+        'quality': 1,
+        'what': 'Image button has no accessible name'
+      },
+      'QW-ACT-R60': {
+        'issueID': 'audioNoText',
+        'quality': 1,
+        'what': 'Auditory content of the element has no captions'
+      },
+      'QW-ACT-R61': {
+        'issueID': 'videoNoText',
+        'quality': 1,
+        'what': 'video element visual content has no transcript'
       },
       'QW-ACT-R62': {
         'issueID': 'ignorable',
@@ -9314,6 +9554,51 @@ const rulesData = {
         'what': 'Page has no heading for non-repeated content',
         'whyIgnore': 'invalid'
       },
+      'QW-ACT-R65': {
+        'issueID': 'focusableDescendants',
+        'quality': 1,
+        'what': 'Element with presentational children has focusable content'
+      },
+      'QW-ACT-R66': {
+        'issueID': 'menuItemNoText',
+        'quality': 1,
+        'what': 'menuitem element has no non-empty accessible name'
+      },
+      'QW-ACT-R67': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'Letter spacing in a style attribute is !important'
+      },
+      'QW-ACT-R68': {
+        'issueID': 'verticalSpacingFrozen',
+        'quality': 1,
+        'what': 'Line height in a style attribute is !important'
+      },
+      'QW-ACT-R69': {
+        'issueID': 'horizontalSpacingFrozen',
+        'quality': 1,
+        'what': 'Word spacing in a style attribute is !important'
+      },
+      'QW-ACT-R7': {
+        'issueID': 'cssBansPageRotate',
+        'quality': 1,
+        'what': 'Orientation of the page is restricted by a CSS transform property'
+      },
+      'QW-ACT-R70': {
+        'issueID': 'unfocusability',
+        'quality': 1,
+        'what': 'iframe with negative tabindex has interactive elements'
+      },
+      'QW-ACT-R71': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Element has a refresh delay (no exception)'
+      },
+      'QW-ACT-R72': {
+        'issueID': 'repeatedContentRisk',
+        'quality': 1,
+        'what': 'First focusable element is not a link to the non-repeated content'
+      },
       'QW-ACT-R73': {
         'issueID': 'ignorable',
         'quality': 0,
@@ -9332,17 +9617,51 @@ const rulesData = {
         'what': 'Blocks of repeated content cannot be bypassed',
         'whyIgnore': 'invalid'
       },
+      'QW-ACT-R76': {
+        'issueID': 'contrastAAA',
+        'quality': 1,
+        'what': 'Text has less than the enhanced minimum contrast'
+      },
+      'QW-ACT-R9': {
+        'issueID': 'linkTextsSame',
+        'quality': 1,
+        'what': 'Links with identical accessible names have different purposes'
+      },
       'QW-BP1': {
         'issueID': 'ignorable',
         'quality': 0,
         'what': 'h1-h6 may fail to be used to identify headings',
         'whyIgnore': 'speculative'
       },
-      'QW-BP2': {
-        'issueID': 'ignorable',
+      'QW-BP10': {
+        'issueID': 'elementObsolete',
         'quality': 1,
-        'what': 'Image text alternative is not concise',
-        'whyIgnore': 'invalid'
+        'what': 'HTML element is used to control the visual presentation of content'
+      },
+      'QW-BP11': {
+        'issueID': 'pseudoList',
+        'quality': 1,
+        'what': 'br is used to make a list'
+      },
+      'QW-BP12': {
+        'issueID': 'cellHeadersAmbiguityRisk',
+        'quality': 1,
+        'what': 'scope col and row are not used'
+      },
+      'QW-BP13': {
+        'issueID': 'linkPair',
+        'quality': 1,
+        'what': 'Consecutive links have the same href and one contains an image'
+      },
+      'QW-BP14': {
+        'issueID': 'boxSizeAbsolute',
+        'quality': 1,
+        'what': 'Container width is specified in px'
+      },
+      'QW-BP15': {
+        'issueID': 'boxSizeAbsolute',
+        'quality': 1,
+        'what': 'Element width is specified in an absolute value'
       },
       'QW-BP17': {
         'issueID': 'ignorable',
@@ -9350,11 +9669,32 @@ const rulesData = {
         'what': 'No link at the beginning of a block of repeated content goes to the end of the block',
         'whyIgnore': 'invalid'
       },
+      'QW-BP18': {
+        'issueID': 'scrollRisk',
+        'quality': 1,
+        'what': 'Percentage is not used in CSS for a container size'
+      },
+      'QW-BP19': {
+        'issueID': 'bannerNotTop',
+        'quality': 1,
+        'what': 'banner landmark is not at the top level'
+      },
+      'QW-BP2': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Image text alternative is not concise',
+        'whyIgnore': 'invalid'
+      },
       'QW-BP20': {
         'issueID': 'ignorable',
         'quality': 1,
         'what': 'Page has more than 1 banner landmark (counts hidden elements)',
         'whyIgnore': 'invalid'
+      },
+      'QW-BP21': {
+        'issueID': 'footerNot1',
+        'quality': 0.5,
+        'what': 'There are multiple contentinfo or banner landmarks'
       },
       'QW-BP22': {
         'issueID': 'ignorable',
@@ -9374,444 +9714,6 @@ const rulesData = {
         'what': 'ul or ol element has a child other than li, script, or template',
         'whyIgnore': 'invalid'
       },
-      'QW-BP28': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'h1 element missing or used more than once',
-        'whyIgnore': 'invalid'
-      },
-      'QW-BP29': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'lang and xml:lang attribute of html element differ',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T4': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'summary attribute is not used to give an overview of a data table',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T8': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'Text alternative is suspect',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T9': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Page may fail to be organized using headings',
-        'whyIgnore': 'speculative'
-      },
-      'QW-WCAG-T15': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'link element may be used for navigation but not in the head',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T20': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'Link title may fail to describe the link correctly',
-        'whyIgnore': 'speculative'
-      },
-      'QW-WCAG-T23': {
-        'issueID': 'ignorable',
-        'quality': 0,
-        'what': 'No link at the top of the page goes directly to the main content area',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T24': {
-        'issueID': 'ignorable',
-        'quality': 0.5,
-        'what': 'Script removes the focus when focus is received',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T28': {
-        'issueID': 'ignorable',
-        'quality': 0.8,
-        'what': 'Font size set to an absolute unit value',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T31': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'Foreground or background color is specified but not both (on invisible elements)',
-        'whyIgnore': 'invalid'
-      },
-      'QW-WCAG-T32': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'ol, ul or dl may fail to be used for a list or group of links',
-        'whyIgnore': 'speculative'
-      },
-      'QW-WCAG-T35': {
-        'issueID': 'ignorable',
-        'quality': 1,
-        'what': 'Several elements have this id attribute value',
-        'whyIgnore': 'invalid'
-      },
-      'QW-ACT-R18': {
-        'issueID': 'duplicateID',
-        'quality': 1,
-        'what': 'id attribute value is not unique'
-      },
-      'QW-BP30': {
-        'issueID': 'duplicateID',
-        'quality': 1,
-        'what': 'id attribute value is shared with another element'
-      },
-      'QW-BP8': {
-        'issueID': 'headingImageNoText',
-        'quality': 1,
-        'what': 'Heading with an image has no accessible name'
-      },
-      'QW-ACT-R6': {
-        'issueID': 'imageButtonNoText',
-        'quality': 1,
-        'what': 'Image button has no accessible name'
-      },
-      'QW-WCAG-T5': {
-        'issueID': 'imageButtonNoText',
-        'quality': 1,
-        'what': 'alt attribute not used on an image used as a submit button'
-      },
-      'QW-ACT-R17': {
-        'issueID': 'imageNoText',
-        'quality': 1,
-        'what': 'Image has no accessible name'
-      },
-      'QW-BP6': {
-        'issueID': 'titleLong',
-        'quality': 1,
-        'what': 'title element is too long (more than 64 characters)'
-      },
-      'QW-BP7': {
-        'issueID': 'titleNotText',
-        'quality': 1,
-        'what': 'Title element contains ASCII-art'
-      },
-      'QW-ACT-R48': {
-        'issueID': 'decorativeElementExposed',
-        'quality': 1,
-        'what': 'Element marked as decorative is exposed'
-      },
-      'QW-ACT-R2': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'HTML page has no lang attribute'
-      },
-      'QW-ACT-R5': {
-        'issueID': 'pageLanguageBad',
-        'quality': 1,
-        'what': 'HTML lang attribute is invalid'
-      },
-      'QW-ACT-R3': {
-        'issueID': 'pageLanguageBad',
-        'quality': 1,
-        'what': 'HTML lang and xml:lang do not match'
-      },
-      'QW-ACT-R22': {
-        'issueID': 'elementLanguageBad',
-        'quality': 1,
-        'what': 'Element within the body has no valid lang attribute'
-      },
-      'QW-ACT-R42': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'Object element has no non-empty accessible name'
-      },
-      'QW-WCAG-T11': {
-        'issueID': 'appletNoText',
-        'quality': 1,
-        'what': 'Text alternative not provided on an applet element'
-      },
-      'QW-WCAG-T1': {
-        'issueID': 'imageMapAreaNoText',
-        'quality': 1,
-        'what': 'Text alternative for an area element of an image map is not provided'
-      },
-      'QW-WCAG-T6': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 1,
-        'what': 'Both keyboard and other device-specific functions are not used'
-      },
-      'QW-WCAG-T17': {
-        'issueID': 'labelConfusionRisk',
-        'quality': 1,
-        'what': 'label not positioned to maximize the predictability of the relationship'
-      },
-      'QW-ACT-R12': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link has no accessible name'
-      },
-      'QW-WCAG-T21': {
-        'issueID': 'imageLinkNoText',
-        'quality': 1,
-        'what': 'Accessible name is not provided for an image which is the only content in a link'
-      },
-      'QW-WCAG-T7': {
-        'issueID': 'abbreviationNoTitle',
-        'quality': 1,
-        'what': 'Definition for an abbreviation not provided with an abbr element'
-      },
-      'QW-ACT-R9': {
-        'issueID': 'linkTextsSame',
-        'quality': 1,
-        'what': 'Links with identical accessible names have different purposes'
-      },
-      'QW-ACT-R44': {
-        'issueID': 'linkTextsSame',
-        'quality': 1,
-        'what': 'Links with identical accessible names and context serve different purposes'
-      },
-      'QW-BP4': {
-        'issueID': 'linksNoNav',
-        'quality': 1,
-        'what': 'Grouped links are not within a nav element'
-      },
-      'QW-BP13': {
-        'issueID': 'linkPair',
-        'quality': 1,
-        'what': 'Consecutive links have the same href and one contains an image'
-      },
-      'QW-WCAG-T10': {
-        'issueID': 'linkNameRisk',
-        'quality': 0.8,
-        'what': 'Link name repeats its image name and/or that name is suspect'
-      },
-      'QW-WCAG-T22': {
-        'issueID': 'pageNewWindow',
-        'quality': 1,
-        'what': 'New window opens as soon as a new page is loaded'
-      },
-      'QW-ACT-R11': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'button element has no accessible name'
-      },
-      'QW-ACT-R66': {
-        'issueID': 'menuItemNoText',
-        'quality': 1,
-        'what': 'menuitem element has no non-empty accessible name'
-      },
-      'QW-ACT-R33': {
-        'issueID': 'parentMissing',
-        'quality': 1,
-        'what': 'Element has no ARIA required context role'
-      },
-      'QW-ACT-R38': {
-        'issueID': 'descendantMissing',
-        'quality': 1,
-        'what': 'Element has no ARIA required owned element'
-      },
-      'QW-ACT-R21': {
-        'issueID': 'svgImageNoText',
-        'quality': 1,
-        'what': 'Element with an explicit role has no accessible name'
-      },
-      'QW-ACT-R7': {
-        'issueID': 'cssBansPageRotate',
-        'quality': 1,
-        'what': 'Orientation of the page is restricted by a CSS transform property'
-      },
-      'QW-ACT-R14': {
-        'issueID': 'metaBansZoom',
-        'quality': 1,
-        'what': 'meta viewport prevents zoom'
-      },
-      'QW-ACT-R67': {
-        'issueID': 'horizontalSpacingFrozen',
-        'quality': 1,
-        'what': 'Letter spacing in a style attribute is !important'
-      },
-      'QW-ACT-R69': {
-        'issueID': 'horizontalSpacingFrozen',
-        'quality': 1,
-        'what': 'Word spacing in a style attribute is !important'
-      },
-      'QW-ACT-R68': {
-        'issueID': 'verticalSpacingFrozen',
-        'quality': 1,
-        'what': 'Line height in a style attribute is !important'
-      },
-      'QW-ACT-R40': {
-        'issueID': 'overflowHiddenRisk',
-        'quality': 1,
-        'what': 'Zoomed text node is clipped by a CSS overflow declaration?'
-      },
-      'QW-BP14': {
-        'issueID': 'boxSizeAbsolute',
-        'quality': 1,
-        'what': 'Container width is specified in px'
-      },
-      'QW-BP15': {
-        'issueID': 'boxSizeAbsolute',
-        'quality': 1,
-        'what': 'Element width is specified in an absolute value'
-      },
-      'QW-ACT-R19': {
-        'issueID': 'iframeTitleBad',
-        'quality': 1,
-        'what': 'iframe element has no accessible name'
-      },
-      'QW-ACT-R20': {
-        'issueID': 'roleBad',
-        'quality': 1,
-        'what': 'role attribute has an invalid value'
-      },
-      'QW-ACT-R28': {
-        'issueID': 'ariaMissing',
-        'quality': 1,
-        'what': 'Element with a role attribute does not have the required states and properties'
-      },
-      'QW-ACT-R25': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA state or property is not permitted'
-      },
-      'QW-ACT-R27': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'aria- attribute is not defined in ARIA 1.1'
-      },
-      'QW-ACT-R34': {
-        'issueID': 'ariaAttributeBad',
-        'quality': 1,
-        'what': 'ARIA state or property has an invalid value'
-      },
-      'QW-ACT-R24': {
-        'issueID': 'autocompleteBad',
-        'quality': 1,
-        'what': 'autocomplete attribute has no valid value'
-      },
-      'QW-ACT-R76': {
-        'issueID': 'contrastAAA',
-        'quality': 1,
-        'what': 'Text has less than the enhanced minimum contrast'
-      },
-      'QW-ACT-R37': {
-        'issueID': 'contrastRisk',
-        'quality': 1,
-        'what': 'Text has less than the minimum contrast or has an image background'
-      },
-      'text-color-convey-information': {
-        'issueID': 'colorNamedRisk',
-        'quality': 1,
-        'what': 'Text naming a color requires the ability to distinguish colors?'
-      },
-      'QW-ACT-R35': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Heading has no accessible name'
-      },
-      'QW-BP3': {
-        'issueID': 'titleRedundant',
-        'quality': 1,
-        'what': 'Link text content is equal to the title attribute'
-      },
-      'QW-ACT-R1': {
-        'issueID': 'pageTitle',
-        'quality': 1,
-        'what': 'HTML page has no title'
-      },
-      'QW-WCAG-T27': {
-        'issueID': 'justification',
-        'quality': 1,
-        'what': 'Text is justified (aligned to both the left and the right margins)'
-      },
-      'QW-WCAG-T29': {
-        'issueID': 'justificationRisk',
-        'quality': 1,
-        'what': 'Alignment either to the left or right is not specified in CSS'
-      },
-      'QW-WCAG-T33': {
-        'issueID': 'descriptionOrphan',
-        'quality': 1,
-        'what': 'Element is not contained by a valid dl element'
-      },
-      'QW-WCAG-T34': {
-        'issueID': 'descriptionOrder',
-        'quality': 1,
-        'what': 'Description list element is not ordered correctly'
-      },
-      'QW-BP11': {
-        'issueID': 'pseudoList',
-        'quality': 1,
-        'what': 'br is used to make a list'
-      },
-      'QW-WCAG-T3': {
-        'issueID': 'legendMissing',
-        'quality': 1,
-        'what': 'Description for a group of form controls using fieldset and legend elements is not provided'
-      },
-      'QW-WCAG-T12': {
-        'issueID': 'layoutTable',
-        'quality': 1,
-        'what': 'th or caption element or non-empty summary attribute used in a layout table'
-      },
-      'QW-BP9': {
-        'issueID': 'layoutTable',
-        'quality': 1,
-        'what': 'Table element without header cells has a caption'
-      },
-      'QW-WCAG-T18': {
-        'issueID': 'tabularTableless',
-        'quality': 1,
-        'what': 'Table markup not used to present tabular information'
-      },
-      'QW-WCAG-T2': {
-        'issueID': 'tableCaption',
-        'quality': 1,
-        'what': 'caption element not used to associate a caption with a data table'
-      },
-      'QW-ACT-R36': {
-        'issueID': 'cellHeadersOutsideTable',
-        'quality': 1,
-        'what': 'Headers attribute does not refer to a cell in the same table element'
-      },
-      'QW-WCAG-T14': {
-        'issueID': 'cellHeadersAmbiguityRisk',
-        'quality': 1,
-        'what': 'id and headers attributes not used to associate data cells with header cells in a data table'
-      },
-      'QW-WCAG-T25': {
-        'issueID': 'cellHeadersAmbiguityRisk',
-        'quality': 1,
-        'what': 'scope attribute not used to associate header cells and data cells in a data table'
-      },
-      'QW-BP12': {
-        'issueID': 'cellHeadersAmbiguityRisk',
-        'quality': 1,
-        'what': 'scope col and row are not used'
-      },
-      'QW-ACT-R39': {
-        'issueID': 'tableHeaderCellless',
-        'quality': 1,
-        'what': 'Table header cell has no assigned data cell'
-      },
-      'QW-BP5': {
-        'issueID': 'tableEmbedded',
-        'quality': 1,
-        'what': 'table element is inside another table element'
-      },
-      'QW-ACT-R16': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'Form control has no accessible name'
-      },
-      'QW-ACT-R30': {
-        'issueID': 'visibleLabelNotInName',
-        'quality': 1,
-        'what': 'Visible label is not part of the accessible name'
-      },
-      'QW-ACT-R70': {
-        'issueID': 'unfocusability',
-        'quality': 1,
-        'what': 'iframe with negative tabindex has interactive elements'
-      },
       'QW-BP25': {
         'issueID': 'asideNotTop',
         'quality': 1,
@@ -9827,160 +9729,248 @@ const rulesData = {
         'quality': 1,
         'what': 'main landmark is not at the top level'
       },
-      'QW-BP19': {
-        'issueID': 'bannerNotTop',
+      'QW-BP28': {
+        'issueID': 'ignorable',
         'quality': 1,
-        'what': 'banner landmark is not at the top level'
+        'what': 'h1 element missing or used more than once',
+        'whyIgnore': 'invalid'
       },
-      'QW-BP21': {
-        'issueID': 'footerNot1',
-        'quality': 0.5,
-        'what': 'There are multiple contentinfo or banner landmarks'
+      'QW-BP29': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'lang and xml:lang attribute of html element differ',
+        'whyIgnore': 'invalid'
       },
-      'QW-WCAG-T26': {
-        'issueID': 'focusableRole',
+      'QW-BP3': {
+        'issueID': 'titleRedundant',
         'quality': 1,
-        'what': 'Script makes a div or span a user interface control without providing a role for the control'
+        'what': 'Link text content is equal to the title attribute'
       },
-      'QW-ACT-R65': {
-        'issueID': 'focusableDescendants',
+      'QW-BP30': {
+        'issueID': 'duplicateID',
         'quality': 1,
-        'what': 'Element with presentational children has focusable content'
+        'what': 'id attribute value is shared with another element'
+      },
+      'QW-BP4': {
+        'issueID': 'linksNoNav',
+        'quality': 1,
+        'what': 'Grouped links are not within a nav element'
+      },
+      'QW-BP5': {
+        'issueID': 'tableEmbedded',
+        'quality': 1,
+        'what': 'table element is inside another table element'
+      },
+      'QW-BP6': {
+        'issueID': 'titleLong',
+        'quality': 1,
+        'what': 'title element is too long (more than 64 characters)'
+      },
+      'QW-BP7': {
+        'issueID': 'titleNotText',
+        'quality': 1,
+        'what': 'Title element contains ASCII-art'
+      },
+      'QW-BP8': {
+        'issueID': 'headingImageNoText',
+        'quality': 1,
+        'what': 'Heading with an image has no accessible name'
+      },
+      'QW-BP9': {
+        'issueID': 'layoutTable',
+        'quality': 1,
+        'what': 'Table element without header cells has a caption'
+      },
+      'QW-WCAG-T1': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'Text alternative for an area element of an image map is not provided'
+      },
+      'QW-WCAG-T10': {
+        'issueID': 'linkNameRisk',
+        'quality': 0.8,
+        'what': 'Link name repeats its image name and/or that name is suspect'
+      },
+      'QW-WCAG-T11': {
+        'issueID': 'appletNoText',
+        'quality': 1,
+        'what': 'Text alternative not provided on an applet element'
+      },
+      'QW-WCAG-T12': {
+        'issueID': 'layoutTable',
+        'quality': 1,
+        'what': 'th or caption element or non-empty summary attribute used in a layout table'
       },
       'QW-WCAG-T13': {
         'issueID': 'blink',
         'quality': 1,
         'what': 'Element is blink'
       },
-      'QW-WCAG-T30': {
-        'issueID': 'blink',
+      'QW-WCAG-T14': {
+        'issueID': 'cellHeadersAmbiguityRisk',
         'quality': 1,
-        'what': 'text-decoration:blink is used without a mechanism to stop it in less than five seconds'
+        'what': 'id and headers attributes not used to associate data cells with header cells in a data table'
       },
-      'QW-ACT-R15': {
-        'issueID': 'autoplay',
-        'quality': 1,
-        'what': 'Element has audio that plays automatically'
+      'QW-WCAG-T15': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'link element may be used for navigation but not in the head',
+        'whyIgnore': 'invalid'
       },
-      'QW-ACT-R49': {
-        'issueID': 'autoplayLong',
+      'QW-WCAG-T16': {
+        'issueID': 'parseError',
         'quality': 1,
-        'what': 'Element that plays automatically has audio lasting more than 3 seconds'
+        'what': 'HTML is not used according to spec'
       },
-      'QW-ACT-R50': {
-        'issueID': 'autoplayControl',
+      'QW-WCAG-T17': {
+        'issueID': 'labelConfusionRisk',
         'quality': 1,
-        'what': 'audio or video that plays automatically has no control mechanism'
+        'what': 'label not positioned to maximize the predictability of the relationship'
       },
-      'QW-ACT-R4': {
-        'issueID': 'refresh',
+      'QW-WCAG-T18': {
+        'issueID': 'tabularTableless',
         'quality': 1,
-        'what': 'Element refreshes or redirects with delay'
-      },
-      'QW-ACT-R71': {
-        'issueID': 'refresh',
-        'quality': 1,
-        'what': 'Element has a refresh delay (no exception)'
-      },
-      'QW-ACT-R26': {
-        'issueID': 'audioNoText',
-        'quality': 1,
-        'what': 'Auditory content of the element has no accessible alternative'
-      },
-      'QW-ACT-R29': {
-        'issueID': 'audioNoText',
-        'quality': 1,
-        'what': 'Content of the element has no text alternative'
-      },
-      'QW-ACT-R58': {
-        'issueID': 'audioNoText',
-        'quality': 1,
-        'what': 'Content of the element has no transcript'
-      },
-      'QW-ACT-R59': {
-        'issueID': 'audioNoText',
-        'quality': 1,
-        'what': 'Element content is not a media alternative for text'
-      },
-      'QW-ACT-R60': {
-        'issueID': 'audioNoText',
-        'quality': 1,
-        'what': 'Auditory content of the element has no captions'
-      },
-      'QW-ACT-R23': {
-        'issueID': 'videoNoText',
-        'quality': 1,
-        'what': 'video element visual content has no accessible alternative'
-      },
-      'QW-ACT-R31': {
-        'issueID': 'videoNoText',
-        'quality': 1,
-        'what': 'video element visual-only content has no accessible alternative'
-      },
-      'QW-ACT-R32': {
-        'issueID': 'videoNoText',
-        'quality': 1,
-        'what': 'video element visual-only content has no strict accessible alternative'
-      },
-      'QW-ACT-R51': {
-        'issueID': 'videoNoText',
-        'quality': 1,
-        'what': 'video element visual-only content is not a media alternative for text'
-      },
-      'QW-ACT-R56': {
-        'issueID': 'videoNoText',
-        'quality': 1,
-        'what': 'video element content is not a media alternative for text'
-      },
-      'QW-ACT-R61': {
-        'issueID': 'videoNoText',
-        'quality': 1,
-        'what': 'video element visual content has no transcript'
-      },
-      'QW-ACT-R53': {
-        'issueID': 'videoNoTranscript',
-        'quality': 1,
-        'what': 'video element visual-only content has no transcript'
-      },
-      'QW-ACT-R55': {
-        'issueID': 'videoNoAudioDescription',
-        'quality': 1,
-        'what': 'video element visual content has no audio description'
-      },
-      'QW-ACT-R54': {
-        'issueID': 'videoNoAudioTrack',
-        'quality': 1,
-        'what': 'Visual-only content of the element has no audio track alternative'
-      },
-      'QW-ACT-R43': {
-        'issueID': 'keyboardScroll',
-        'quality': 1,
-        'what': 'Scrollable element is not keyboard accessible'
-      },
-      'QW-BP18': {
-        'issueID': 'scrollRisk',
-        'quality': 1,
-        'what': 'Percentage is not used in CSS for a container size'
-      },
-      'QW-ACT-R72': {
-        'issueID': 'repeatedContentRisk',
-        'quality': 1,
-        'what': 'First focusable element is not a link to the non-repeated content'
+        'what': 'Table markup not used to present tabular information'
       },
       'QW-WCAG-T19': {
         'issueID': 'submitButton',
         'quality': 1,
         'what': 'Submit button not provided'
       },
-      'QW-BP10': {
-        'issueID': 'elementObsolete',
+      'QW-WCAG-T2': {
+        'issueID': 'tableCaption',
         'quality': 1,
-        'what': 'HTML element is used to control the visual presentation of content'
+        'what': 'caption element not used to associate a caption with a data table'
       },
-      'QW-WCAG-T16': {
-        'issueID': 'parseError',
+      'QW-WCAG-T20': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Link title may fail to describe the link correctly',
+        'whyIgnore': 'speculative'
+      },
+      'QW-WCAG-T21': {
+        'issueID': 'imageLinkNoText',
         'quality': 1,
-        'what': 'HTML is not used according to spec'
+        'what': 'Accessible name is not provided for an image which is the only content in a link'
+      },
+      'QW-WCAG-T22': {
+        'issueID': 'pageNewWindow',
+        'quality': 1,
+        'what': 'New window opens as soon as a new page is loaded'
+      },
+      'QW-WCAG-T23': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'No link at the top of the page goes directly to the main content area',
+        'whyIgnore': 'invalid'
+      },
+      'QW-WCAG-T24': {
+        'issueID': 'ignorable',
+        'quality': 0.5,
+        'what': 'Script removes the focus when focus is received',
+        'whyIgnore': 'invalid'
+      },
+      'QW-WCAG-T25': {
+        'issueID': 'cellHeadersAmbiguityRisk',
+        'quality': 1,
+        'what': 'scope attribute not used to associate header cells and data cells in a data table'
+      },
+      'QW-WCAG-T26': {
+        'issueID': 'focusableRole',
+        'quality': 1,
+        'what': 'Script makes a div or span a user interface control without providing a role for the control'
+      },
+      'QW-WCAG-T27': {
+        'issueID': 'justification',
+        'quality': 1,
+        'what': 'Text is justified (aligned to both the left and the right margins)'
+      },
+      'QW-WCAG-T28': {
+        'issueID': 'ignorable',
+        'quality': 0.8,
+        'what': 'Font size set to an absolute unit value',
+        'whyIgnore': 'invalid'
+      },
+      'QW-WCAG-T29': {
+        'issueID': 'justificationRisk',
+        'quality': 1,
+        'what': 'Alignment either to the left or right is not specified in CSS'
+      },
+      'QW-WCAG-T3': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'Description for a group of form controls using fieldset and legend elements is not provided'
+      },
+      'QW-WCAG-T30': {
+        'issueID': 'blink',
+        'quality': 1,
+        'what': 'text-decoration:blink is used without a mechanism to stop it in less than five seconds'
+      },
+      'QW-WCAG-T31': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Foreground or background color is specified but not both (on invisible elements)',
+        'whyIgnore': 'invalid'
+      },
+      'QW-WCAG-T32': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'ol, ul or dl may fail to be used for a list or group of links',
+        'whyIgnore': 'speculative'
+      },
+      'QW-WCAG-T33': {
+        'issueID': 'descriptionOrphan',
+        'quality': 1,
+        'what': 'Element is not contained by a valid dl element'
+      },
+      'QW-WCAG-T34': {
+        'issueID': 'descriptionOrder',
+        'quality': 1,
+        'what': 'Description list element is not ordered correctly'
+      },
+      'QW-WCAG-T35': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Several elements have this id attribute value',
+        'whyIgnore': 'invalid'
+      },
+      'QW-WCAG-T4': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'summary attribute is not used to give an overview of a data table',
+        'whyIgnore': 'invalid'
+      },
+      'QW-WCAG-T5': {
+        'issueID': 'imageButtonNoText',
+        'quality': 1,
+        'what': 'alt attribute not used on an image used as a submit button'
+      },
+      'QW-WCAG-T6': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 1,
+        'what': 'Both keyboard and other device-specific functions are not used'
+      },
+      'QW-WCAG-T7': {
+        'issueID': 'abbreviationNoTitle',
+        'quality': 1,
+        'what': 'Definition for an abbreviation not provided with an abbr element'
+      },
+      'QW-WCAG-T8': {
+        'issueID': 'ignorable',
+        'quality': 1,
+        'what': 'Text alternative is suspect',
+        'whyIgnore': 'invalid'
+      },
+      'QW-WCAG-T9': {
+        'issueID': 'ignorable',
+        'quality': 0,
+        'what': 'Page may fail to be organized using headings',
+        'whyIgnore': 'speculative'
+      },
+      'text-color-convey-information': {
+        'issueID': 'colorNamedRisk',
+        'quality': 1,
+        'what': 'Text naming a color requires the ability to distinguish colors?'
       }
     },
     'variable': {}
@@ -10387,140 +10377,75 @@ const rulesData = {
   },
   'testaro': {
     'invariant': {
-      'dupAtt': {
-        'issueID': 'duplicateAttribute',
-        'quality': 0.7,
-        'what': 'Source code of the element contains 2 or more of the same attribute'
-      },
-      'phOnly': {
-        'issueID': 'inputOnlyPlaceholder',
+      'adbID': {
+        'issueID': 'descriptionBadID',
         'quality': 1,
-        'what': 'input element has a placeholder but no accessible name'
+        'what': 'aria-describedby attribute references an invalid or duplicate ID'
+      },
+      'allCapStyle': {
+        'issueID': 'allCaps',
+        'quality': 1,
+        'what': 'Element has text transformed to all-capital by a style property'
+      },
+      'allCaps': {
+        'issueID': 'allCaps',
+        'quality': 1,
+        'what': 'Element has an all-capital substring judged stylistic, not lexical'
+      },
+      'allHidden': {
+        'issueID': 'contentHidden',
+        'quality': 1,
+        'what': 'Content is entirely or mainly hidden'
+      },
+      'allSlanted': {
+        'issueID': 'allItalics',
+        'quality': 1,
+        'what': 'Element has a text substring of at least 40 italic or oblique characters'
       },
       'altScheme': {
         'issueID': 'imageTextBad',
         'quality': 1,
         'what': 'Image text alternative is a URL'
       },
-      'adbID': {
-        'issueID': 'descriptionBadID',
-        'quality': 1,
-        'what': 'aria-describedby attribute references an invalid or duplicate ID'
-      },
-      'linkTo': {
-        'issueID': 'destinationLink',
-        'quality': 1,
-        'what': 'Link has no href attribute'
-      },
-      'linkAmb': {
-        'issueID': 'linkTextsSame',
-        'quality': 1,
-        'what': 'Links with the same text content have different destinations'
-      },
-      'linkExt': {
-        'issueID': 'newTabSurpriseRisk',
-        'quality': 1,
-        'what': 'Link opens a new window or tab'
-      },
-      'miniText': {
-        'issueID': 'fontSmall',
-        'quality': 1,
-        'what': 'Text node has a font smaller than 11 pixels'
-      },
-      'lineHeight': {
-        'issueID': 'lineHeightLow',
-        'quality': 1,
-        'what': 'Text has a line height less than 1.5 times its font size'
-      },
-      'titledEl': {
-        'issueID': 'titleBad',
-        'quality': 1,
-        'what': 'title attribute is likely ineffective on its element type'
-      },
-      'role': {
-        'issueID': 'roleConfusion',
-        'quality': 1,
-        'what': 'Explicitly assigned ARIA role is also an implicit element role'
-      },
-      'optRoleSel': {
-        'issueID': 'ariaMissingRisk',
-        'quality': 1,
-        'what': 'Non-option element with an explicit option role has no aria-selected attribute'
-      },
       'autocomplete': {
         'issueID': 'autocompleteNone',
         'quality': 0.5,
         'what': 'Name or email input is missing its required autocomplete attribute'
       },
-      'docType': {
-        'issueID': 'docTypeMissing',
+      'bulk': {
+        'issueID': 'visibleBulk',
         'quality': 1,
-        'what': 'document has no valid doctype property'
+        'what': 'Page contains many visible elements'
       },
-      'headEl': {
-        'issueID': 'headElementsBad',
+      'buttonMenu': {
+        'issueID': 'menuNavigation',
         'quality': 1,
-        'what': 'Elements in the head are not allowed there'
-      },
-      'secHeading': {
-        'issueID': 'headingStructure',
-        'quality': 1,
-        'what': 'Sectioning container heading level is incorrect'
-      },
-      'headingAmb': {
-        'issueID': 'headingConfusion',
-        'quality': 1,
-        'what': 'Heading has the same text as a previous sibling heading at the same level'
-      },
-      'textSem': {
-        'issueID': 'nonSemanticText',
-        'quality': 1,
-        'what': 'Element is a nonsemantic i, b, or small element'
-      },
-      'hr': {
-        'issueID': 'hrConfusionRisk',
-        'quality': 1,
-        'what': 'hr instead of styles is used for vertical segmentation'
-      },
-      'pseudoP': {
-        'issueID': 'pseudoParagraphRisk',
-        'quality': 1,
-        'what': 'Element contains sequential br elements instead of p'
-      },
-      'radioSet': {
-        'issueID': 'fieldSetMissing',
-        'quality': 1,
-        'what': 'No or invalid grouping of radio buttons in fieldsets'
-      },
-      'legendLoc': {
-        'issueID': 'legendMisplaced',
-        'quality': 1,
-        'what': 'legend element is not the first child of its fieldset element'
-      },
-      'nonTable': {
-        'issueID': 'layoutTable',
-        'quality': 1,
-        'what': 'table element fails the structural requirements for tabular data'
+        'what': 'Menu buttons and menus behave nonstandardly'
       },
       'captionLoc': {
         'issueID': 'tableCaptionLoc',
         'quality': 1,
         'what': 'caption element is not the first child of a table element'
       },
-      'targetSmall': {
-        'issueID': 'targetSmall',
+      'datalistRef': {
+        'issueID': 'datalistRef',
         'quality': 1,
-        'what': 'Target is not inline but is smaller than 44px by 44px [retired 2026-04]'
+        'what': 'Datalist reference is ambiguous or missing'
       },
-      'targetsNear': {
-        'issueID': 'targetsNear',
+      'distortion': {
+        'issueID': 'textDistortion',
         'quality': 1,
-        'what': 'Label, button, input, or link has substandard distance from another'
+        'what': 'Element text is distorted by a transform style property'
       },
-      'bulk': {
-        'issueID': 'visibleBulk',
+      'docType': {
+        'issueID': 'docTypeMissing',
         'quality': 1,
-        'what': 'Page contains many visible elements'
+        'what': 'document has no valid doctype property'
+      },
+      'dupAtt': {
+        'issueID': 'duplicateAttribute',
+        'quality': 0.7,
+        'what': 'Source code of the element contains 2 or more of the same attribute'
       },
       'embAc': {
         'issueID': 'activeEmbedding',
@@ -10532,50 +10457,30 @@ const rulesData = {
         'quality': 0.5,
         'what': 'Discrepancy between elements that should be and that are Tab-focusable'
       },
-      'focInd': {
-        'issueID': 'focusIndicationImprovable',
-        'quality': 1,
-        'what': 'Outline identification of when the element is focused is improvable'
-      },
-      'allCaps': {
-        'issueID': 'allCaps',
-        'quality': 1,
-        'what': 'Element has an all-capital substring judged stylistic, not lexical'
-      },
-      'allCapStyle': {
-        'issueID': 'allCaps',
-        'quality': 1,
-        'what': 'Element has text transformed to all-capital by a style property'
-      },
-      'allSlanted': {
-        'issueID': 'allItalics',
-        'quality': 1,
-        'what': 'Element has a text substring of at least 40 italic or oblique characters'
-      },
-      'distortion': {
-        'issueID': 'textDistortion',
-        'quality': 1,
-        'what': 'Element text is distorted by a transform style property'
-      },
       'focAndOp': {
         'issueID': 'focusableOperable',
         'quality': 1,
         'what': 'Tab-focusable element is not operable or vice versa'
+      },
+      'focInd': {
+        'issueID': 'focusIndicationImprovable',
+        'quality': 1,
+        'what': 'Outline identification of when the element is focused is improvable'
       },
       'focVis': {
         'issueID': 'focusedAway',
         'quality': 1,
         'what': 'Element when focused is off the display'
       },
-      'datalistRef': {
-        'issueID': 'datalistRef',
+      'headEl': {
+        'issueID': 'headElementsBad',
         'quality': 1,
-        'what': 'Datalist reference is ambiguous or missing'
+        'what': 'Elements in the head are not allowed there'
       },
-      'allHidden': {
-        'issueID': 'contentHidden',
+      'headingAmb': {
+        'issueID': 'headingConfusion',
         'quality': 1,
-        'what': 'Content is entirely or mainly hidden'
+        'what': 'Heading has the same text as a previous sibling heading at the same level'
       },
       'hovInd': {
         'issueID': 'hoverIndication',
@@ -10587,65 +10492,185 @@ const rulesData = {
         'quality': 1,
         'what': 'Hovering changes the page content'
       },
-      'labClash': {
-        'issueID': 'labelClash',
+      'hr': {
+        'issueID': 'hrConfusionRisk',
         'quality': 1,
-        'what': 'Incompatible label types'
+        'what': 'hr instead of styles is used for vertical segmentation'
       },
       'imageLink': {
         'issueID': 'nonWebLink',
         'quality': 1,
         'what': 'Element has an href attribute set to an image file reference'
       },
+      'labClash': {
+        'issueID': 'labelClash',
+        'quality': 1,
+        'what': 'Incompatible label types'
+      },
+      'legendLoc': {
+        'issueID': 'legendMisplaced',
+        'quality': 1,
+        'what': 'legend element is not the first child of its fieldset element'
+      },
+      'lineHeight': {
+        'issueID': 'lineHeightLow',
+        'quality': 1,
+        'what': 'Text has a line height less than 1.5 times its font size'
+      },
+      'linkAmb': {
+        'issueID': 'linkTextsSame',
+        'quality': 1,
+        'what': 'Links with the same text content have different destinations'
+      },
+      'linkExt': {
+        'issueID': 'newTabSurpriseRisk',
+        'quality': 1,
+        'what': 'Link opens a new window or tab'
+      },
+      'linkOldAtt': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Element has a deprecated attribute'
+      },
+      'linkTo': {
+        'issueID': 'destinationLink',
+        'quality': 1,
+        'what': 'Link has no href attribute'
+      },
       'linkUl': {
         'issueID': 'linkIndication',
         'quality': 1,
         'what': 'Inline links are not underlined'
       },
-      'buttonMenu': {
-        'issueID': 'menuNavigation',
+      'miniText': {
+        'issueID': 'fontSmall',
         'quality': 1,
-        'what': 'Menu buttons and menus behave nonstandardly'
-      },
-      'tabNav': {
-        'issueID': 'tabNavigation',
-        'quality': 1,
-        'what': 'Nonstandard keyboard navigation among tabs'
+        'what': 'Text node has a font smaller than 11 pixels'
       },
       'motion': {
         'issueID': 'spontaneousMotion',
         'quality': 1,
         'what': 'Change of visible content not requested by user'
       },
+      'nonTable': {
+        'issueID': 'layoutTable',
+        'quality': 1,
+        'what': 'table element fails the structural requirements for tabular data'
+      },
+      'optRoleSel': {
+        'issueID': 'ariaMissingRisk',
+        'quality': 1,
+        'what': 'Non-option element with an explicit option role has no aria-selected attribute'
+      },
+      'phOnly': {
+        'issueID': 'inputOnlyPlaceholder',
+        'quality': 1,
+        'what': 'input element has a placeholder but no accessible name'
+      },
+      'pseudoP': {
+        'issueID': 'pseudoParagraphRisk',
+        'quality': 1,
+        'what': 'Element contains sequential br elements instead of p'
+      },
+      'radioSet': {
+        'issueID': 'fieldSetMissing',
+        'quality': 1,
+        'what': 'No or invalid grouping of radio buttons in fieldsets'
+      },
+      'role': {
+        'issueID': 'roleConfusion',
+        'quality': 1,
+        'what': 'Explicitly assigned ARIA role is also an implicit element role'
+      },
+      'secHeading': {
+        'issueID': 'headingStructure',
+        'quality': 1,
+        'what': 'Sectioning container heading level is incorrect'
+      },
       'styleDiff': {
         'issueID': 'inconsistentStyles',
         'quality': 1,
         'what': 'Heading, link, and button style inconsistencies'
       },
+      'tabNav': {
+        'issueID': 'tabNavigation',
+        'quality': 1,
+        'what': 'Nonstandard keyboard navigation among tabs'
+      },
+      'targetSmall': {
+        'issueID': 'targetSmall',
+        'quality': 1,
+        'what': 'Target is not inline but is smaller than 44px by 44px [retired 2026-04]'
+      },
+      'targetsNear': {
+        'issueID': 'targetsNear',
+        'quality': 1,
+        'what': 'Label, button, input, or link has substandard distance from another'
+      },
+      'textSem': {
+        'issueID': 'nonSemanticText',
+        'quality': 1,
+        'what': 'Element is a nonsemantic i, b, or small element'
+      },
+      'titledEl': {
+        'issueID': 'titleBad',
+        'quality': 1,
+        'what': 'title attribute is likely ineffective on its element type'
+      },
       'zIndex': {
         'issueID': 'zIndexNotZero',
         'quality': 1,
         'what': 'Element has a nondefault z-index value'
-      },
-      'linkOldAtt': {
-        'issueID': 'attributeObsolete',
-        'quality': 1,
-        'what': 'Element has a deprecated attribute'
       }
     },
     'variable': {}
   },
   'wave': {
     'invariant': {
+      'accesskey': {
+        'issueID': 'accessKeyDuplicate',
+        'quality': 1,
+        'what': 'accesskey invalid'
+      },
+      'alt_area_missing': {
+        'issueID': 'imageMapAreaNoText',
+        'quality': 1,
+        'what': 'Image map area has no alternative text'
+      },
+      'alt_duplicate': {
+        'issueID': 'imagesSameAlt',
+        'quality': 1,
+        'what': 'Two images near each other have the same text alternative'
+      },
       'alt_input_missing': {
         'issueID': 'imageButtonNoText',
         'quality': 1,
         'what': 'Image button has no alternative text'
       },
+      'alt_link_missing': {
+        'issueID': 'imageLinkNoText',
+        'quality': 1,
+        'what': 'Linked image has no text alternative'
+      },
+      'alt_long': {
+        'issueID': 'imageTextLong',
+        'quality': 1,
+        'what': 'Long text alternative'
+      },
+      'alt_map_missing': {
+        'issueID': 'imageMapNoText',
+        'quality': 1,
+        'what': 'Image that has hot spots has no alt attribute'
+      },
       'alt_missing': {
         'issueID': 'imageNoText',
         'quality': 1,
         'what': 'Text alternative is missing'
+      },
+      'alt_redundant': {
+        'issueID': 'imageTextRedundant',
+        'quality': 1,
+        'what': 'Redundant text alternative'
       },
       'alt_spacer_missing': {
         'issueID': 'imageNoText',
@@ -10657,280 +10682,170 @@ const rulesData = {
         'quality': 1,
         'what': 'Image text alternative is suspect'
       },
-      'alt_duplicate': {
-        'issueID': 'imagesSameAlt',
+      'aria_menu_broken': {
+        'issueID': 'menuItemless',
         'quality': 1,
-        'what': 'Two images near each other have the same text alternative'
-      },
-      'alt_long': {
-        'issueID': 'imageTextLong',
-        'quality': 1,
-        'what': 'Long text alternative'
-      },
-      'language_missing': {
-        'issueID': 'pageLanguage',
-        'quality': 1,
-        'what': 'Language missing or invalid'
-      },
-      'plugin': {
-        'issueID': 'objectNoText',
-        'quality': 1,
-        'what': 'An unidentified plugin is present'
-      },
-      'alt_map_missing': {
-        'issueID': 'imageMapNoText',
-        'quality': 1,
-        'what': 'Image that has hot spots has no alt attribute'
-      },
-      'alt_area_missing': {
-        'issueID': 'imageMapAreaNoText',
-        'quality': 1,
-        'what': 'Image map area has no alternative text'
-      },
-      'event_handler': {
-        'issueID': 'eventKeyboardRisk',
-        'quality': 0.5,
-        'what': 'Device-dependent event handler'
-      },
-      'link_internal_broken': {
-        'issueID': 'internalLinkBroken',
-        'quality': 1,
-        'what': 'Broken same-page link'
-      },
-      'label_orphaned': {
-        'issueID': 'labelBadID',
-        'quality': 1,
-        'what': 'Orphaned form label'
-      },
-      'link_empty': {
-        'issueID': 'linkNoText',
-        'quality': 1,
-        'what': 'Link contents not named'
-      },
-      'alt_link_missing': {
-        'issueID': 'imageLinkNoText',
-        'quality': 1,
-        'what': 'Linked image has no text alternative'
-      },
-      'link_redundant': {
-        'issueID': 'linkPair',
-        'quality': 1,
-        'what': 'Adjacent links go to the same URL'
-      },
-      'javascript_jumpmenu': {
-        'issueID': 'selectNavSurpriseRisk',
-        'quality': 1,
-        'what': 'Selection change navigates to another page without notice?'
-      },
-      'button_empty': {
-        'issueID': 'buttonNoText',
-        'quality': 1,
-        'what': 'button element is empty or has no value text'
-      },
-      'text_small': {
-        'issueID': 'fontSmall',
-        'quality': 1,
-        'what': 'Text is very small'
+        'what': 'ARIA menu does not contain required menu items'
       },
       'aria_reference_broken': {
         'issueID': 'ariaReferenceBad',
         'quality': 1,
         'what': 'Broken ARIA reference'
       },
-      'contrast': {
-        'issueID': 'contrastAA',
+      'audio_video': {
+        'issueID': 'videoCaptionRisk',
         'quality': 1,
-        'what': 'Very low contrast'
-      },
-      'heading_empty': {
-        'issueID': 'headingEmpty',
-        'quality': 1,
-        'what': 'Empty heading'
-      },
-      'alt_redundant': {
-        'issueID': 'imageTextRedundant',
-        'quality': 1,
-        'what': 'Redundant text alternative'
-      },
-      'image_title': {
-        'issueID': 'decorativeTitle',
-        'quality': 1,
-        'what': 'Image has a title attribute value but no alt value'
-      },
-      'title_redundant': {
-        'issueID': 'titleRedundant',
-        'quality': 1,
-        'what': 'Title attribute text is the same as the text or alternative text'
-      },
-      'title_invalid': {
-        'issueID': 'pageTitleBad',
-        'quality': 1,
-        'what': 'Missing or uninformative page title'
-      },
-      'heading_skipped': {
-        'issueID': 'headingLevelSkip',
-        'quality': 1,
-        'what': 'Skipped heading level'
-      },
-      'heading_missing': {
-        'issueID': 'headingNone',
-        'quality': 1,
-        'what': 'Page has no headings'
-      },
-      'h1_missing': {
-        'issueID': 'h1Not1',
-        'quality': 1,
-        'what': 'Missing first level heading'
-      },
-      'text_justified': {
-        'issueID': 'justification',
-        'quality': 1,
-        'what': 'Text is justified'
-      },
-      'heading_possible': {
-        'issueID': 'pseudoHeadingRisk',
-        'quality': 1,
-        'what': 'Possible heading'
-      },
-      'underline': {
-        'issueID': 'pseudoLinkUnderlineRisk',
-        'quality': 1,
-        'what': 'CSS underline on text that is not a link'
-      },
-      'list_possible': {
-        'issueID': 'pseudoListRisk',
-        'quality': 1,
-        'what': 'List fails to be coded as such?'
-      },
-      'select_missing_label': {
-        'issueID': 'selectNoText',
-        'quality': 1,
-        'what': 'Element is select but has no label'
-      },
-      'accesskey': {
-        'issueID': 'accessKeyDuplicate',
-        'quality': 1,
-        'what': 'accesskey invalid'
-      },
-      'fieldset_missing': {
-        'issueID': 'fieldSetMissing',
-        'quality': 1,
-        'what': 'fieldset element is missing'
-      },
-      'legend_missing': {
-        'issueID': 'legendMissing',
-        'quality': 1,
-        'what': 'fieldset element has no legend element'
-      },
-      'table_layout': {
-        'issueID': 'layoutTable',
-        'quality': 1,
-        'what': 'table element is misused to arrange content'
-      },
-      'table_caption_possible': {
-        'issueID': 'tableCaption',
-        'quality': 1,
-        'what': 'table cell apparently misused as the table caption'
-      },
-      'th_empty': {
-        'issueID': 'tableHeaderEmpty',
-        'quality': 1,
-        'what': 'Element not named'
-      },
-      'label_missing': {
-        'issueID': 'controlNoText',
-        'quality': 1,
-        'what': 'form element has no label'
-      },
-      'label_title': {
-        'issueID': 'titleAsLabel',
-        'quality': 1,
-        'what': 'Form control has a title but no label'
-      },
-      'region_missing': {
-        'issueID': 'noLandmarks',
-        'quality': 1,
-        'what': 'Page has no regions or ARIA landmarks'
-      },
-      'label_multiple': {
-        'issueID': 'labelNot1',
-        'quality': 1,
-        'what': 'Form control has more than one label associated with it'
-      },
-      'label_empty': {
-        'issueID': 'labelEmpty',
-        'quality': 1,
-        'what': 'Empty form label'
-      },
-      'link_suspicious': {
-        'issueID': 'linkVaguenessRisk',
-        'quality': 1,
-        'what': 'Suspicious link text'
-      },
-      'link_excel': {
-        'issueID': 'nonWebLink',
-        'quality': 1,
-        'what': 'Link to Microsoft Excel workbook'
-      },
-      'link_pdf': {
-        'issueID': 'nonWebLink',
-        'quality': 1,
-        'what': 'Link to PDF document'
-      },
-      'link_word': {
-        'issueID': 'nonWebLink',
-        'quality': 1,
-        'what': 'Link to Microsoft Word document'
-      },
-      'aria_menu_broken': {
-        'issueID': 'menuItemless',
-        'quality': 1,
-        'what': 'ARIA menu does not contain required menu items'
+        'what': 'audio or video file or link has no or incorrect captions, transcript, or audio description?'
       },
       'blink': {
         'issueID': 'blink',
         'quality': 1,
         'what': 'Element, blink, is deprecated'
       },
-      'meta_refresh': {
-        'issueID': 'refresh',
+      'button_empty': {
+        'issueID': 'buttonNoText',
         'quality': 1,
-        'what': 'Page refreshes or redirects'
+        'what': 'button element is empty or has no value text'
       },
-      'tabindex': {
-        'issueID': 'tabIndexPositive',
+      'contrast': {
+        'issueID': 'contrastAA',
         'quality': 1,
-        'what': 'tabIndex value positive'
+        'what': 'Very low contrast'
+      },
+      'event_handler': {
+        'issueID': 'eventKeyboardRisk',
+        'quality': 0.5,
+        'what': 'Device-dependent event handler'
+      },
+      'fieldset_missing': {
+        'issueID': 'fieldSetMissing',
+        'quality': 1,
+        'what': 'fieldset element is missing'
+      },
+      'flash': {
+        'issueID': 'flash',
+        'quality': 1,
+        'what': 'Flash content is present'
+      },
+      'h1_missing': {
+        'issueID': 'h1Not1',
+        'quality': 1,
+        'what': 'Missing first level heading'
+      },
+      'heading_empty': {
+        'issueID': 'headingEmpty',
+        'quality': 1,
+        'what': 'Empty heading'
+      },
+      'heading_missing': {
+        'issueID': 'headingNone',
+        'quality': 1,
+        'what': 'Page has no headings'
+      },
+      'heading_possible': {
+        'issueID': 'pseudoHeadingRisk',
+        'quality': 1,
+        'what': 'Possible heading'
+      },
+      'heading_skipped': {
+        'issueID': 'headingLevelSkip',
+        'quality': 1,
+        'what': 'Skipped heading level'
       },
       'html5_video_audio': {
         'issueID': 'videoCaptionRisk',
         'quality': 1,
         'what': 'video or audio element has no or incorrect captions, transcript, or audio description?'
       },
-      'audio_video': {
-        'issueID': 'videoCaptionRisk',
+      'image_title': {
+        'issueID': 'decorativeTitle',
         'quality': 1,
-        'what': 'audio or video file or link has no or incorrect captions, transcript, or audio description?'
+        'what': 'Image has a title attribute value but no alt value'
       },
-      'youtube_video': {
-        'issueID': 'videoCaptionRisk',
+      'javascript_jumpmenu': {
+        'issueID': 'selectNavSurpriseRisk',
         'quality': 1,
-        'what': 'YouTube video has no or incorrect captions?'
+        'what': 'Selection change navigates to another page without notice?'
+      },
+      'label_empty': {
+        'issueID': 'labelEmpty',
+        'quality': 1,
+        'what': 'Empty form label'
+      },
+      'label_missing': {
+        'issueID': 'controlNoText',
+        'quality': 1,
+        'what': 'form element has no label'
+      },
+      'label_multiple': {
+        'issueID': 'labelNot1',
+        'quality': 1,
+        'what': 'Form control has more than one label associated with it'
+      },
+      'label_orphaned': {
+        'issueID': 'labelBadID',
+        'quality': 1,
+        'what': 'Orphaned form label'
+      },
+      'label_title': {
+        'issueID': 'titleAsLabel',
+        'quality': 1,
+        'what': 'Form control has a title but no label'
+      },
+      'language_missing': {
+        'issueID': 'pageLanguage',
+        'quality': 1,
+        'what': 'Language missing or invalid'
+      },
+      'legend_missing': {
+        'issueID': 'legendMissing',
+        'quality': 1,
+        'what': 'fieldset element has no legend element'
+      },
+      'link_empty': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link contents not named'
+      },
+      'link_excel': {
+        'issueID': 'nonWebLink',
+        'quality': 1,
+        'what': 'Link to Microsoft Excel workbook'
+      },
+      'link_internal_broken': {
+        'issueID': 'internalLinkBroken',
+        'quality': 1,
+        'what': 'Broken same-page link'
+      },
+      'link_pdf': {
+        'issueID': 'nonWebLink',
+        'quality': 1,
+        'what': 'Link to PDF document'
+      },
+      'link_redundant': {
+        'issueID': 'linkPair',
+        'quality': 1,
+        'what': 'Adjacent links go to the same URL'
       },
       'link_skip_broken': {
         'issueID': 'skipRepeatedContent',
         'quality': 1,
         'what': 'Skip-navigation link has no target or is not keyboard accessible'
       },
-      'noscript': {
-        'issueID': 'noScriptRisk',
+      'link_suspicious': {
+        'issueID': 'linkVaguenessRisk',
         'quality': 1,
-        'what': 'noscript element fails to contain an accessible equivalent or alternative?'
+        'what': 'Suspicious link text'
       },
-      'flash': {
-        'issueID': 'flash',
+      'link_word': {
+        'issueID': 'nonWebLink',
         'quality': 1,
-        'what': 'Flash content is present'
+        'what': 'Link to Microsoft Word document'
+      },
+      'list_possible': {
+        'issueID': 'pseudoListRisk',
+        'quality': 1,
+        'what': 'List fails to be coded as such?'
       },
       'longdesc': {
         'issueID': 'attributeObsolete',
@@ -10941,6 +10856,81 @@ const rulesData = {
         'issueID': 'parseError',
         'quality': 1,
         'what': 'longdesc attribute has a value that is not a URL (and is obsolete)'
+      },
+      'meta_refresh': {
+        'issueID': 'refresh',
+        'quality': 1,
+        'what': 'Page refreshes or redirects'
+      },
+      'noscript': {
+        'issueID': 'noScriptRisk',
+        'quality': 1,
+        'what': 'noscript element fails to contain an accessible equivalent or alternative?'
+      },
+      'plugin': {
+        'issueID': 'objectNoText',
+        'quality': 1,
+        'what': 'An unidentified plugin is present'
+      },
+      'region_missing': {
+        'issueID': 'noLandmarks',
+        'quality': 1,
+        'what': 'Page has no regions or ARIA landmarks'
+      },
+      'select_missing_label': {
+        'issueID': 'selectNoText',
+        'quality': 1,
+        'what': 'Element is select but has no label'
+      },
+      'tabindex': {
+        'issueID': 'tabIndexPositive',
+        'quality': 1,
+        'what': 'tabIndex value positive'
+      },
+      'table_caption_possible': {
+        'issueID': 'tableCaption',
+        'quality': 1,
+        'what': 'table cell apparently misused as the table caption'
+      },
+      'table_layout': {
+        'issueID': 'layoutTable',
+        'quality': 1,
+        'what': 'table element is misused to arrange content'
+      },
+      'text_justified': {
+        'issueID': 'justification',
+        'quality': 1,
+        'what': 'Text is justified'
+      },
+      'text_small': {
+        'issueID': 'fontSmall',
+        'quality': 1,
+        'what': 'Text is very small'
+      },
+      'th_empty': {
+        'issueID': 'tableHeaderEmpty',
+        'quality': 1,
+        'what': 'Element not named'
+      },
+      'title_invalid': {
+        'issueID': 'pageTitleBad',
+        'quality': 1,
+        'what': 'Missing or uninformative page title'
+      },
+      'title_redundant': {
+        'issueID': 'titleRedundant',
+        'quality': 1,
+        'what': 'Title attribute text is the same as the text or alternative text'
+      },
+      'underline': {
+        'issueID': 'pseudoLinkUnderlineRisk',
+        'quality': 1,
+        'what': 'CSS underline on text that is not a link'
+      },
+      'youtube_video': {
+        'issueID': 'videoCaptionRisk',
+        'quality': 1,
+        'what': 'YouTube video has no or incorrect captions?'
       }
     },
     'variable': {}
