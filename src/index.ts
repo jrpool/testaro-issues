@@ -1299,6 +1299,12 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
+  'labelHidden': {
+    'summary': 'label hidden',
+    'why': 'User cannot get help understanding an item in a form',
+    'wcag': '1.3.1',
+    'weight': 4
+  },
   'labelNot1': {
     'summary': 'element referenced by multiple labels',
     'why': 'User cannot get reliable help on the topics of form items',
@@ -1987,6 +1993,12 @@ const issuesData = {
     'why': 'Browser processes the page improperly',
     'wcag': '1.3.1',
     'weight': 4
+  },
+  'scriptRisk': {
+    'summary': 'script element content erroneous?',
+    'why': 'Browser may process the page improperly',
+    'wcag': '1.3.1',
+    'weight': 1
   },
   'scrollFocus': {
     'summary': 'scrollable element and children nonfocusable',
@@ -6202,6 +6214,11 @@ const rulesData = {
         'quality': 1,
         'what': 'End tag has an attribute'
       },
+      'Found in script content. Typo for ?': {
+        'issueID': 'scriptRisk',
+        'quality': 1,
+        'what': 'Typographical error in script?'
+      },
       'Heading cannot be a child of another heading.': {
         'issueID': 'headingsEmbedded',
         'quality': 1,
@@ -6239,6 +6256,11 @@ const rulesData = {
       },
       'Possible misuse of aria-label. (If you disagree with this warning, file an issue report or send e-mail to www-validator@w3.org.)': {
         'issueID': 'ariaLabelWrongRisk',
+        'quality': 1,
+        'what': 'aria-label attribute is misused?'
+      },
+      'Rule @import not allowed in a style element in body.': {
+        'issueID': 'atRuleInvalid',
         'quality': 1,
         'what': 'aria-label attribute is misused?'
       },
@@ -6331,6 +6353,11 @@ const rulesData = {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
         'what': 'noscript element has an aria-hidden attribute'
+      },
+      'The aria-hidden attribute must not be used on any label element that is associated with a labelable element.': {
+        'issueID': 'labelHidden',
+        'quality': 1,
+        'what': 'label has an aria-hidden attribute'
       },
       'The aria-label attribute must not be used on any label element that is associated with a labelable element.': {
         'issueID': 'labelClash',
