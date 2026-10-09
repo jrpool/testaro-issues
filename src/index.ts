@@ -525,6 +525,12 @@ const issuesData = {
     'wcag': '4.1',
     'weight': 3
   },
+  'cssInvalidProperty': {
+    'summary': 'CSS property does not exist',
+    'why': 'Page cannot be properly displayed',
+    'wcag': '4.1',
+    'weight': 3
+  },
   'customKeyboardRisk': {
     'summary': 'custom button keyboard-inoperable?',
     'why': 'Custom item may prevent a keyboard-only user from operating it',
@@ -2078,6 +2084,12 @@ const issuesData = {
     'summary': 'form submission button missing',
     'why': 'User cannot easily submit a form',
     'wcag': '3.2.2',
+    'weight': 3
+  },
+  'summaryRole': {
+    'summary': 'summary has explicit role',
+    'why': 'User cannot detect details',
+    'wcag': '4.1',
     'weight': 3
   },
   'svgImageNoText': {
@@ -6413,7 +6425,12 @@ const rulesData = {
       'The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.': {
         'issueID': 'selectBad',
         'quality': 1,
-        'what': 'option element has a nonempty value'
+        'what': 'First option element has a nonempty value'
+      },
+      'The first option element in a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.': {
+        'issueID': 'selectBad',
+        'quality': 1,
+        'what': 'First option element has a nonempty value'
       },
       'The font element is obsolete. Use CSS instead.': {
         'issueID': 'elementObsolete',
@@ -6460,6 +6477,11 @@ const rulesData = {
         'quality': 1,
         'what': 'element is a but has a name attribute'
       },
+      'The name attribute is never allowed on the section element.': {
+        'issueID': 'attributeBad',
+        'quality': 1,
+        'what': 'element is section but has a name attribute'
+      },
       'The name attribute is obsolete. Consider putting an id attribute on the nearest container instead.': {
         'issueID': 'attributeObsolete',
         'quality': 1,
@@ -6489,6 +6511,11 @@ const rulesData = {
         'issueID': 'presentationGlobal',
         'quality': 1,
         'what': 'Element has a presentation role but also a global ARIA attribute that nullifies the role'
+      },
+      'The role attribute must not be used on any summary element that is a summary for its parent details element.': {
+        'issueID': 'summaryRole',
+        'quality': 1,
+        'what': 'Element is a details summary but has an explicit role'
       },
       'The searchbox role is unnecessary for an input element that has no list attribute and whose type is search.': {
         'issueID': 'roleRedundant',
@@ -6842,6 +6869,11 @@ const rulesData = {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Unknown CSS dimension'
+      },
+      'CSS: .+: .+: Property .+ doesn\'t exist\\.': {
+        'issueID': 'cssInvalidProperty',
+        'quality': 1,
+        'what': 'CSS property does not exist'
       },
       'CSS: .+: only 0 can be a length. You must put a unit after your number.*': {
         'issueID': 'cssInvalid',
