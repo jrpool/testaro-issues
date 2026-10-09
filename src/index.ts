@@ -6912,12 +6912,12 @@ const rulesData = {
         'quality': 0.5,
         'what': 'CSS class name starts with an unescaped digit'
       },
-      'CSS: Unknown pseudo-element or pseudo-class :.+\\..*': {
+      'CSS: Unknown pseudo-element or pseudo-class :.+': {
         'issueID': 'cssInvalid',
         'quality': 1,
         'what': 'Unknown pseudo-element or pseudo-class'
       },
-      'CSS: Unrecognized at-rule @.+\\..*': {
+      'CSS: Unrecognized at-rule @.+': {
         'issueID': 'atRuleInvalid',
         'quality': 1,
         'what': 'At-rule is not recognized by CSS'
@@ -7272,7 +7272,12 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has an invalid ancestor'
       },
-      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading level\\..*': {
+      'The element h. must not appear as a descendant of an element with the attribute role=button\\..*': {
+        'issueID': 'parseError',
+        'quality': 1,
+        'what': 'Heading element is not a permitted descendant of an element with a button role'
+      },
+      'The heading h. \\(with computed level .\\) follows the heading h. \\(with computed level .\\), skipping . heading levels\\..*': {
         'issueID': 'headingLevelSkip',
         'quality': 1,
         'what': 'Heading level is more than 1 level inferior to the previous heading'
