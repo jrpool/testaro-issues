@@ -6870,7 +6870,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Unknown CSS dimension'
       },
-      'CSS: .+: .+: Property .+ doesn\'t exist\\.': {
+      'CSS: .+: Property .+ doesn\'t exist\\.': {
         'issueID': 'cssInvalidProperty',
         'quality': 1,
         'what': 'CSS property does not exist'
