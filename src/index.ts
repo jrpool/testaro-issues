@@ -2230,6 +2230,12 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 3
   },
+  'TableHeaderScope': {
+    'summary': 'Table scope ambiguous',
+    'why': 'User cannot get help on relationships in a table',
+    'wcag': '1.3.1',
+    'weight': 3
+  },
   'TableHeaderScopeRisk': {
     'summary': 'Table scope ambiguous?',
     'why': 'User may be unable to get help on relationships in a table',
