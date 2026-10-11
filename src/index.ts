@@ -2687,10 +2687,9 @@ const rulesData = {
         'what': 'Paragraph text is uppercased'
       },
       'r73': {
-        'issueID': 'ignorable',
+        'issueID': 'lineHeightLow',
         'quality': 1,
         'what': 'Text line height is not at least 1.5',
-        'whyIgnore': 'invalid'
       },
       'r74': {
         'issueID': 'fontSizeAbsolute',
@@ -2748,10 +2747,9 @@ const rulesData = {
         'what': 'Element marked as decorative is in the accessibility tree or has no none/presentation role'
       },
       'r87': {
-        'issueID': 'ignorable',
+        'issueID': 'skipRepeatedContent',
         'quality': 0.5,
         'what': 'First focusable element is not a link to the main content',
-        'whyIgnore': 'invalid'
       },
       'r90': {
         'issueID': 'focusableDescendants',
