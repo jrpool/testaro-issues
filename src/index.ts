@@ -815,6 +815,12 @@ const issuesData = {
     'wcag': '4.1.2',
     'weight': 3
   },
+  'focusConflict': {
+    'summary': 'conflicting focus requirements',
+    'why': 'Browser may focus an unintended element',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
   'focusCovered': {
     'summary': 'focused element covered',
     'why': 'User cannot see which item will be operated on',
@@ -2253,6 +2259,12 @@ const issuesData = {
     'why': 'Tablist items behave improperly for a keyboard-only user',
     'wcag': '2.1.1',
     'weight': 2
+  },
+  'tabNoPanel': {
+    'summary': 'tab panel missing for tab',
+    'why': 'Tablist item does not display the expected content',
+    'wcag': '2.1.1',
+    'weight': 4
   },
   'tabOrderBad': {
     'summary': 'keyboard navigation sequence wrong',
@@ -4547,6 +4559,11 @@ const rulesData = {
         'quality': 1,
         'what': 'font element is obsolete'
       },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H63.1': {
+        'issueID': 'TableHeaderScope',
+        'quality': 1,
+        'what': 'Header in the table has ambiguous scope without an explicit scope attribute'
+      },
       'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H71.NoLegend': {
         'issueID': 'legendMissing',
         'quality': 1,
@@ -5419,6 +5436,11 @@ const rulesData = {
         'quality': 1,
         'what': 'combobox design pattern is invalid for ARIA 1.2'
       },
+      'dir_attribute_valid': {
+        'issueID': 'dirBad',
+        'quality': 1,
+        'what': 'dir attribute has an invalid value'
+      },
       'element_accesskey_unique': {
         'issueID': 'accessKeyDuplicate',
         'quality': 1,
@@ -5971,6 +5993,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Element is not eligible for a defer attribute but has one'
       },
+      'An input element with a type attribute whose value is checkbox and with a role attribute whose value is button must have an aria-pressed attribute.': {
+        'issueID': 'ariaAttributeBad',
+        'quality': 1,
+        'what': 'input element with a button role and type="checkbox" has no aria-pressed attribute'
+      },
       'An input element with a type attribute whose value is checkbox and with a role attribute whose value is button must have an aria-pressed attribute whose value is true.': {
         'issueID': 'ariaAttributeBad',
         'quality': 1,
@@ -6213,6 +6240,11 @@ const rulesData = {
         'issueID': 'elementClosure',
         'quality': 1,
         'what': 'End tag has an attribute'
+      },
+      'Every active role=tab element must have a corresponding role=tabpanel element.': {
+        'issueID': 'tabNoPanel',
+        'quality': 1,
+        'what': 'tab-role element has no tabpanel-role element'
       },
       'Heading cannot be a child of another heading.': {
         'issueID': 'headingsEmbedded',
@@ -6588,6 +6620,11 @@ const rulesData = {
         'issueID': 'labelForBad',
         'quality': 1,
         'what': 'for attribute of the label element does not reference a non-hidden form control'
+      },
+      'There must not be two elements with the same "nearest ancestor autofocus scoping root element" that both have the autofocus attribute specified.': {
+        'issueID': 'focusConflict',
+        'quality': 1,
+        'what': 'More than one element in the same autofocus scope has an autofocus attribute'
       },
       'This document has heading elements but none of them has a computed heading level of 1.': {
         'issueID': 'h1Not1',
