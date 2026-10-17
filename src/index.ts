@@ -4698,6 +4698,11 @@ const rulesData = {
         'quality': 1,
         'what': 'number input has no label element or title, aria-label, or aria-labelledby attribute'
       },
+      'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputPassword.Name': {
+        'issueID': 'inputNoText',
+        'quality': 1,
+        'what': 'password input has no label element or title, aria-label, or aria-labelledby attribute'
+      },
       'E-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.InputRange.Name': {
         'issueID': 'inputNoText',
         'quality': 1,
