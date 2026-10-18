@@ -3070,9 +3070,10 @@ const rulesData = {
         'what': 'Page contains no h1 element'
       },
       'headings_hierarchy': {
-        'issueID': 'headingStructure',
+        'issueID': 'ignorable',
         'quality': 1,
-        'what': 'Heading level is illogical in its context'
+        'what': 'Heading level is illogical in its context',
+        'whyIgnore': 'invalid'
       },
       'headings_sibling_unique': {
         'issueID': 'headingConfusion',
