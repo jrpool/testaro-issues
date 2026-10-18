@@ -2747,9 +2747,10 @@ const rulesData = {
         'what': 'Element marked as decorative is in the accessibility tree or has no none/presentation role'
       },
       'r87': {
-        'issueID': 'skipRepeatedContent',
+        'issueID': 'ignorable',
         'quality': 0.5,
         'what': 'First focusable element is not a link to the main content',
+        'whyIgnore': 'invalid'
       },
       'r90': {
         'issueID': 'focusableDescendants',
