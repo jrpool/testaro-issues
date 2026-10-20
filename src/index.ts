@@ -8175,6 +8175,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Text has less than the enhanced minimum contrast'
       },
+      'QW-ACT-R77': {
+        'issueID': 'governedBadID',
+        'quality': 1,
+        'what': 'Required aria-controls attribute references no element in the document'
+      },
       'QW-ACT-R9': {
         'issueID': 'linkTextsSame',
         'quality': 1,
