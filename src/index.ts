@@ -4560,6 +4560,11 @@ const rulesData = {
         'quality': 1,
         'what': 'align attribute is obsolete'
       },
+      'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Center': {
+        'issueID': 'elementObsolete',
+        'quality': 1,
+        'what': 'center element is obsolete'
+      },
       'E-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Font': {
         'issueID': 'elementObsolete',
         'quality': 1,
@@ -5102,6 +5107,11 @@ const rulesData = {
         'issueID': 'linkNoText',
         'quality': 1,
         'what': 'a element has an id attribute but no href attribute or text'
+      },
+      'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyWithName': {
+        'issueID': 'linkNoText',
+        'quality': 1,
+        'what': 'Link has a name attribute but no href attribute or text'
       },
       'W-WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoHref': {
         'issueID': 'destinationLink',
