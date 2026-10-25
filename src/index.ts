@@ -9607,7 +9607,11 @@ export const makeIssueRules = (
 };
 
 // Returns deep copies of the objects, none frozen.
-export const getEditableData = () => ({
+export const getEditableData = (): {
+  issues: Record<string, Issue>;
+  rules: Record<string, EngineRules>;
+  issueRules: Record<string, Record<string, ruleIDsByType>>;
+} => ({
   issues: structuredClone(issues),
   rules: structuredClone(rules),
   issueRules: structuredClone(issueRules)
@@ -9674,10 +9678,10 @@ const checkIssuesData = (issueTable: Record<string, Issue>): void => {
 // EXECUTION
 
 // Create an issueRules object.
-export const issueRules = makeIssueRules(rules);
+export const issueRules: Record<string, Record<string, ruleIDsByType>> = makeIssueRules(rules);
 
 // Create statistics on rule counts of issues.
-export const issueStats = makeIssueStats(issueRules);
+export const issueStats: Record<string, IssueEngineRuleCounts> = makeIssueStats(issueRules);
 
 // Check uniqueness of issue summaries.
 checkIssuesData(issues);
