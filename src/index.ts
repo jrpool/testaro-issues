@@ -2177,7 +2177,7 @@ const issuesData = {
     'weight': 2
   },
   'tableCaption': {
-    'summary': 'table caption missing',
+    'summary': 'table caption missing or empty',
     'why': 'User cannot get help on the topic of a table',
     'wcag': '1.3.1',
     'weight': 1
@@ -5720,6 +5720,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Table structure element specifies an explicit role within the table container'
       },
+      'table_caption_empty': {
+        'issueID': 'tableCaption',
+        'quality': 1,
+        'what': 'Element is table but its caption element is empty'
+      },
       'table_headers_exists': {
         'issueID': 'tableHeaderless',
         'quality': 1,
@@ -6741,12 +6746,12 @@ const rulesData = {
         'quality': 1,
         'what': 'script element has an attribute it is not eligible for'
       },
-      'A table row was .+ columns wide and exceeded the column count established by the first row \\(\d+\\)\\.': {
+      'A table row was .+ columns wide and exceeded the column count established by the first row \\(\\d+\\)\\.': {
         'issueID': 'tableColumnsVary',
         'quality': 1,
         'what': 'Table row has a column count larger than that of the first row'
       },
-      'A table row was .+ columns wide, which is less than the column count established by the first row \\(\d+\\)\\.': {
+      'A table row was .+ columns wide, which is less than the column count established by the first row \\(\\d+\\)\\.': {
         'issueID': 'tableColumnsVary',
         'quality': 1,
         'what': 'Table row has a column count smaller than that of the first row'
