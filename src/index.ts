@@ -6468,6 +6468,11 @@ const rulesData = {
         'quality': 1,
         'what': 'Element is link but has the obsolete charset attribute'
       },
+      'The charset attribute on the script element is obsolete.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Element is script but has the obsolete charset attribute'
+      },
       'The document is not mappable to XML 1.0 due to a trailing hyphen in a comment.': {
         'issueID': 'parseError',
         'quality': 1,
@@ -6850,6 +6855,11 @@ const rulesData = {
         'issueID': 'imagesNoWidth',
         'quality': 1,
         'what': 'img element has a sizes attribute but not all srcset items have widths'
+      },
+      'Bad value .* for attribute srcset on element source: No width specified for image .+\\. \\(When the sizes attribute is present, all image candidate strings must specify a width\\.\\)': {
+        'issueID': 'imagesNoWidth',
+        'quality': 1,
+        'what': 'source element has a sizes attribute but not all srcset items have widths'
       },
       'Bad value .* for attribute tabindex on element .+: The empty string is not a valid integer\\.': {
         'issueID': 'tabIndexEmpty',
