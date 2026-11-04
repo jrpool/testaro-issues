@@ -1143,6 +1143,12 @@ const issuesData = {
     'wcag': '1.1.1',
     'weight': 4
   },
+  'imagesNoWidth': {
+    'summary': 'image sources have sizes but no width',
+    'why': 'Images may be misdisplayed',
+    'wcag': '4.1',
+    'weight': 2
+  },
   'imagesSameAlt': {
     'summary': 'nearby images have same alt',
     'why': 'User cannot get help differentiating two adjacent images',
@@ -1420,7 +1426,7 @@ const issuesData = {
     'weight': 3
   },
   'linkElNoSource': {
-    'summary': 'link element href or imagesrcset missing',
+    'summary': 'link element href or image srcset missing',
     'why': 'User cannot reach a promised location',
     'wcag': '4.1',
     'weight': 3
@@ -6457,6 +6463,11 @@ const rulesData = {
         'quality': 1,
         'what': 'center element is obsolete'
       },
+      'The charset attribute on the link element is obsolete. Use an HTTP Content-Type header on the linked resource instead.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Element is link but has the obsolete charset attribute'
+      },
       'The document is not mappable to XML 1.0 due to a trailing hyphen in a comment.': {
         'issueID': 'parseError',
         'quality': 1,
@@ -6546,6 +6557,11 @@ const rulesData = {
         'issueID': 'multipleLabelees',
         'quality': 1,
         'what': 'Element has more than 1 labelable descendant.'
+      },
+      'The language attribute on the script element is obsolete. Use the type attribute instead.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Element is script but has the obsolete language attribute'
       },
       'The name attribute is never allowed on the a element.': {
         'issueID': 'attributeBad',
@@ -6652,7 +6668,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Page contains no h1 element'
       },
-      'To set the document\’s location as the action for a form, omit the action attribute.': {
+      'To set the document’s location as the action for a form, omit the action attribute.': {
         'issueID': 'formActionEmpty',
         'quality': 1,
         'what': 'form action is empty, instead of omitted, to submit the form to the same document'
@@ -6824,6 +6840,16 @@ const rulesData = {
         'issueID': 'sourceEmpty',
         'quality': 1,
         'what': 'src attribute is empty'
+      },
+      'Bad value .* for attribute srcset on element img: Expected width descriptor but found .+ at .+\\. \\(When the sizes attribute is present, all image candidate strings must specify a width\\.\\)': {
+        'issueID': 'imagesNoWidth',
+        'quality': 1,
+        'what': 'img element has a sizes attribute but not all srcset items have widths'
+      },
+      'Bad value .* for attribute srcset on element img: No width specified for image .+\\. \\(When the sizes attribute is present, all image candidate strings must specify a width\\.\\)': {
+        'issueID': 'imagesNoWidth',
+        'quality': 1,
+        'what': 'img element has a sizes attribute but not all srcset items have widths'
       },
       'Bad value .* for attribute tabindex on element .+: The empty string is not a valid integer\\.': {
         'issueID': 'tabIndexEmpty',
@@ -7110,7 +7136,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has no role attribute'
       },
-      'Element .+ not allowed as child of element .+ in this context\\.': {
+      'Element .+ not allowed as child of element .+ in this context\\. \\(Suppressing further errors from this subtree\\.\\).*': {
         'issueID': 'parentBad',
         'quality': 1,
         'what': 'Element has an invalid parent'
@@ -7270,7 +7296,7 @@ const rulesData = {
         'quality': 1,
         'what': 'Element contains text, which is not allowed here'
       },
-      'Text run is not in Unicode Normalization Form C\\.': {
+      'Text run is not in Unicode Normalization Form C\\. Should instead be .+\\..+': {
         'issueID': 'encodingBad',
         'quality': 1,
         'what': 'Text run is not in Unicode Normalization Form C'
@@ -7280,10 +7306,15 @@ const rulesData = {
         'quality': 1,
         'what': 'label element has an attribute incompatible with a labelable descendant'
       },
-      'The .+ attribute on the .+ element is obsolete\\.': {
+      'The .+ attribute on the .+ element is obsolete\\. Consider .+\\.': {
         'issueID': 'attributeObsolete',
         'quality': 1,
-        'what': 'Attribute is obsolete on its element'
+        'what': 'Attribute is obsolete on its element and has been replaced by CSS'
+      },
+      'The .+ attribute on the .+ element is obsolete\\. .+ CSS instead\\.': {
+        'issueID': 'attributeObsolete',
+        'quality': 1,
+        'what': 'Attribute is obsolete on its element and has been replaced by CSS'
       },
       'The .+ element is a completely-unknown element that is not allowed anywhere in any HTML content\\.': {
         'issueID': 'nonElement',
