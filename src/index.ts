@@ -1657,6 +1657,12 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 2
   },
+  'nonSemanticTextRisk': {
+    'summary': 'semantic properties represented with styles?',
+    'why': 'User may not get help to fully understand the text',
+    'wcag': '1.3.1',
+    'weight': 1
+  },
   'nonWebLink': {
     'summary': 'link to non-web resource',
     'why': 'Page points to harder-to-use resources',
@@ -5004,13 +5010,23 @@ const rulesData = {
         'quality': 1,
         'what': 'align attribute is obsolete'
       },
-      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.I': {
-        'issueID': 'nonSemanticText',
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.B': {
+        'issueID': 'nonSemanticTextRisk',
         'quality': 1,
-        'what': 'Special text is italicized nonsemantically'
+        'what': 'Special text may be bolded nonsemantically'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Font': {
+        'issueID': 'nonSemanticTextRisk',
+        'quality': 1,
+        'what': 'Emphasized or special text may be represented with font styles instead of semantically'
+      },
+      'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.I': {
+        'issueID': 'nonSemanticTextRisk',
+        'quality': 1,
+        'what': 'Special text may be italicized nonsemantically'
       },
       'W-WCAG2AAA.Principle1.Guideline1_3.1_3_1.H49.Small': {
-        'issueID': 'nonSemanticText',
+        'issueID': 'nonSemanticTextRisk',
         'quality': 1,
         'what': 'Special text is made small nonsemantically'
       },
