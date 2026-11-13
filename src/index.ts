@@ -240,6 +240,12 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 4
   },
+  'attributeValueObsolete': {
+    'summary': 'attribute value obsolete',
+    'why': 'Item behaves improperly',
+    'wcag': '4.1',
+    'weight': 3
+  },
   'attributeValueRisk': {
     'summary': 'attribute value bad?',
     'why': 'Item may behave improperly',
@@ -6851,6 +6857,11 @@ const rulesData = {
         'issueID': 'attributeValueBad',
         'quality': 1,
         'what': 'Attribute has an invalidly empty value'
+      },
+      'Bad value .* for attribute .+ on element .+: The .+ has been deprecated': {
+        'issueID': 'attributeValueObsolete',
+        'quality': 1,
+        'what': 'Attribute has a deprecated value'
       },
       'Bad value .* for attribute aria-hidden on element .+\\.': {
         'issueID': 'ariaAttributeBad',
