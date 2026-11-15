@@ -6660,10 +6660,15 @@ const rulesData = {
         'quality': 1,
         'what': 'Element has a sizes attribute but no srcset attribute'
       },
+      'The sizes attribute value starting with auto is only valid for lazy-loaded images. Add loading=\"lazy\" to this element.': {
+        'issueID': 'sizesAttributeBad',
+        'quality': 1,
+        'what': 'Element is img with a sizes=auto attribute but has no loading=lazy attribute'
+      },
       'The sizes attribute value starting with auto is only valid for lazy-loaded images. Add loading=lazy to this element.': {
         'issueID': 'sizesAttributeBad',
         'quality': 1,
-        'what': 'Element with a sizes=auto… attribute has no loading=lazy attribute'
+        'what': 'Element is img with a sizes=auto attribute but has no loading=lazy attribute'
       },
       'The text content of element time was not in the required format: The literal did not satisfy the time-datetime format.': {
         'issueID': 'textContentBad',
