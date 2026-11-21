@@ -1047,6 +1047,12 @@ const issuesData = {
     'wcag': '1.3.1',
     'weight': 2
   },
+  'hgroupNoH': {
+    'summary': 'hgroup element has no heading child',
+    'why': 'Helper cannot describe the page organization',
+    'wcag': '4.1.2',
+    'weight': 2
+  },
   'hideFailureRisk': {
     'summary': 'false aria-hidden value risky',
     'why': 'User may be misled by erroneously hidden or revealed page content',
@@ -6254,6 +6260,11 @@ const rulesData = {
         'quality': 1,
         'what': 'head element has no child title element',
         'whyIgnore': 'invalid'
+      },
+      'Element hgroup is missing a required instance of one or more of the following child elements: h1, h2, h3, h4, h5, h6.': {
+        'issueID': 'hgroupNoH',
+        'quality': 1,
+        'what': 'hgroup element has no child heading element',
       },
       'Element img is missing required attribute src.': {
         'issueID': 'ignorable',
