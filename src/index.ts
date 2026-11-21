@@ -1535,6 +1535,12 @@ const issuesData = {
     'wcag': '1.3.6',
     'weight': 2
   },
+  'menuItemRole': {
+    'summary': 'element with an invalid role used as a menu item',
+    'why': 'User cannot get help navigating a menu',
+    'wcag': '4.1.2',
+    'weight': 4
+  },
   'menuItemless': {
     'summary': 'menu items missing',
     'why': 'User cannot reach promised menu items',
@@ -2379,6 +2385,12 @@ const issuesData = {
     'why': 'Helper repeats the explanation of an item',
     'wcag': '1.3.1',
     'weight': 1
+  },
+  'treeItemRole': {
+    'summary': 'element with an invalid role used as a tree item',
+    'why': 'User cannot get help navigating a tree',
+    'wcag': '4.1.2',
+    'weight': 4
   },
   'typeBad': {
     'summary': 'type invalid',
@@ -5950,7 +5962,7 @@ const rulesData = {
       'Almost standards mode doctype. Expected <!DOCTYPE html>.': {
         'issueID': 'docTypeBad',
         'quality': 1,
-        'what': 'document type declaration differs from <!DOCTYPE html>'
+        'what': 'Document type declaration differs from <!DOCTYPE html>'
       },
       'An aria-disabled attribute whose value is true should not be specified on an a element that has an href attribute.': {
         'issueID': 'attributeBad',
@@ -5960,7 +5972,17 @@ const rulesData = {
       'An element with role=group must not be a descendant of an element with role=list.': {
         'issueID': 'roleHierarchyBad',
         'quality': 1,
-        'what': 'element has a group role but has an ancestor with a list role'
+        'what': 'Element has a group role but has an ancestor with a list role'
+      },
+      'An element with role=group that is a descendant of an element with role=menu or role=menubar must contain only elements with role=menuitem, role=menuitemcheckbox, or role=menuitemradio.': {
+        'issueID': 'menuItemRole',
+        'quality': 1,
+        'what': 'Element has a group role and a menu or menubar ancestor but non-menu-item descendants'
+      },
+      'An element with role=group that is a descendant of an element with role=tree must contain only elements with role=treeitem.': {
+        'issueID': 'treeItemRole',
+        'quality': 1,
+        'what': 'Element has a group role and a tree ancestor but non-tree-item descendants'
       },
       'An element with the attribute role=button must not appear as a descendant of the a element.': {
         'issueID': 'activeEmbedding',
@@ -6520,12 +6542,22 @@ const rulesData = {
         'quality': 1,
         'what': 'a element is a descendant of an element with a link role'
       },
+      'The element a should not appear as a descendant of an element with the attribute role=option.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
+      },
       'The element a with the attribute href must not appear as a descendant of an element with the attribute role=button.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'a element with a destination is a descendant of an element with a button role'
       },
       'The element a with the attribute href should not appear as a descendant of an element with the attribute role=menuitem.': {
+        'issueID': 'activeEmbedding',
+        'quality': 1,
+        'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
+      },
+      'The element a with the attribute href should not appear as a descendant of an element with the attribute role=option.': {
         'issueID': 'activeEmbedding',
         'quality': 1,
         'what': 'a element with an href attribute is a descendant of an element with a menuitem role'
@@ -7382,6 +7414,11 @@ const rulesData = {
         'issueID': 'descriptionBadID',
         'quality': 1,
         'what': 'aria-describedby attribute references an element not in the document'
+      },
+      'The aria-haspopup attribute should not be used on element li, since its implicit role is .+\\.': {
+        'issueID': 'haspopupBad',
+        'quality': 1,
+        'what': 'Element role is ineligible for an aria-haspopup attribute'
       },
       'The aria-hidden attribute must not be specified on the .+ element\\.': {
         'issueID': 'parseError',
